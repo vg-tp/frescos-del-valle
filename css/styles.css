@@ -26,6 +26,10 @@ body {
   line-height: 1.55;
   overflow-x: hidden;
 }
+h1 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font-family: inherit; }
@@ -125,7 +129,7 @@ footer .logo img {
 }
 .hero h1 {
   font-size: clamp(42px, 5.4vw, 72px);
-  line-height: .98; letter-spacing: -0.045em; font-weight: 500; max-width: 22ch;
+  line-height: 1.08; letter-spacing: -0.02em; font-weight: 500; max-width: 22ch;
 }
 .hero h1 em {
   font-family: var(--serif); font-style: italic; font-weight: 400;
@@ -135,14 +139,15 @@ footer .logo img {
 
 /* FEATURES */
 .features { padding: 72px 0 24px; }
-.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.feat { padding: 8px 8px 8px 0; }
+.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.feat { padding: 8px 32px; text-align: center; }
+.feat + .feat { border-left: 1px solid var(--line); }
 .icon-box {
   width: 54px; height: 54px; border-radius: 14px; background: var(--lime);
-  display: grid; place-items: center; margin-bottom: 18px;
+  display: grid; place-items: center; margin: 0 auto 18px;
 }
 .feat h3 { font-size: 22px; letter-spacing: -0.03em; margin-bottom: 8px; }
-.feat p { color: var(--muted); font-size: 15.5px; max-width: 36ch; }
+.feat p { color: var(--muted); font-size: 15.5px; max-width: 36ch; margin: 0 auto; }
 
 /* STATS */
 .stats {
@@ -334,7 +339,7 @@ footer ul { list-style: none; display: grid; gap: 8px; }
   background: linear-gradient(180deg, rgba(8,16,12,.2), rgba(8,16,12,.72));
 }
 .page-hero .inner { position: relative; z-index: 1; padding: 140px 64px 56px; max-width: 900px; }
-.page-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -0.045em; line-height: 1; }
+.page-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -0.02em; line-height: 1.1; font-weight: 500; }
 .page-hero h1 em { font-family: var(--serif); font-style: italic; color: var(--lime); font-weight: 400; }
 .page-hero p { margin-top: 16px; font-size: 18px; color: rgba(255,255,255,.88); max-width: 54ch; }
 
@@ -459,6 +464,8 @@ body.lightbox-open { overflow: hidden; }
   .photo-lightbox-next { right: 8px; }
   .hero-inner, .page-hero .inner { padding: 120px 24px 32px; }
   .hero p.lead { white-space: normal; }
+  .feat { padding: 24px 8px; }
+  .feat + .feat { border-left: 0; border-top: 1px solid var(--line); }
   .hero { height: 100vh; height: 100svh; min-height: 100vh; }
   .cta { padding: 40px 24px; }
   .foot-grid, .foot-menus { flex-direction: column; gap: 28px; }
