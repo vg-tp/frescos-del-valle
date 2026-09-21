@@ -1,0 +1,6 @@
+.tools
+.deploy-site
+.netlify
+node_modules
+.env
+.env.local
