@@ -44,7 +44,7 @@
       <div class="cta">
         <div>
           <h2>Abrir una cuenta</h2>
-          <p>Nos dices qué tipo de operación tienes, en qué municipio y qué volumen manejas.<br>Un asesor te contacta y acordamos la primera entrega.</p>
+          <p><span>Nos dices qué tipo de operación tienes, en qué municipio y qué volumen manejas.</span><span>Un asesor te contacta y acordamos la primera entrega.</span></p>
         </div>
         <a class="btn" href="contacto.html">Abrir una cuenta →</a>
       </div>

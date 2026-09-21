@@ -308,35 +308,36 @@ footer .logo img {
   background: #fafaf6; display: grid; place-items: center; color: #9aa394; font-size: 13px;
 }
 
-/* CTA BANNER — Greenlly dark rounded */
+/* CTA BANNER — full-bleed, flush to footer */
 .cta {
   position: relative;
   overflow: hidden;
-  width: min(var(--max), calc(100% - 48px));
-  margin: 0 auto 80px;
+  width: 100%;
+  margin: 0;
   background-color: var(--forest);
   background-image:
     linear-gradient(
-      90deg,
-      rgb(17, 44, 35) 0%,
-      rgba(17, 44, 35, 0.92) 38%,
-      rgba(17, 44, 35, 0.55) 68%,
-      rgba(17, 44, 35, 0.28) 100%
+      rgba(17, 44, 35, 0.78),
+      rgba(17, 44, 35, 0.78)
     ),
     url("../img/familia-fruta.png");
   background-size: cover;
-  background-position: center right;
+  background-position: center;
   color: #fff;
-  border-radius: 16px;
-  padding: 40px;
+  border-radius: 0;
+  padding: 88px 24px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 32px;
+  text-align: center;
+  gap: 0;
 }
 .cta > * { position: relative; z-index: 1; }
-.cta h2 { font-size: clamp(32px, 3.4vw, 48px); letter-spacing: -0.04em; max-width: 16ch; }
-.cta p { color: rgba(255,255,255,.75); margin: 12px 0 0; max-width: 70ch; }
+.cta h2 { font-size: clamp(32px, 3.4vw, 48px); letter-spacing: -0.02em; max-width: none; }
+.cta p { color: rgba(255,255,255,.8); margin: 14px auto 28px; max-width: none; }
+.cta p span { display: block; white-space: nowrap; }
+.cta .btn { align-self: center; }
 
 /* FOOTER */
 footer {
@@ -515,17 +516,8 @@ body.lightbox-open { overflow: hidden; }
   .feat { padding: 24px 8px; }
   .feat + .feat { border-left: 0; border-top: 1px solid var(--line); }
   .hero { height: 100vh; height: 100svh; min-height: 100vh; }
-  .cta {
-    padding: 40px 24px;
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(17, 44, 35, 0.92) 0%,
-        rgba(17, 44, 35, 0.78) 100%
-      ),
-      url("../img/familia-fruta.png");
-    background-position: center;
-  }
+  .cta { padding: 64px 24px; }
+  .cta p span { white-space: normal; }
   .foot-grid, .foot-menus { flex-direction: column; gap: 28px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stat + .stat { border-left: 0; }
