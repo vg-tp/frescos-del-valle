@@ -171,7 +171,7 @@ footer .logo img {
   font-size: clamp(32px, 3.6vw, 48px);
   letter-spacing: -0.02em; line-height: 1.05; font-weight: 500;
 }
-.section h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: #3d4a1a; }
+.section h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--lime); }
 .muted { color: var(--muted); }
 .split { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
 .split-media { position: relative; }
