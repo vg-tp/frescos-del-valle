@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Opciones de sección Casas — Asama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #e8e8e8;
+      --bg-2: #f3f3f3;
+      --paper: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6a6a6a;
+      --line: rgba(26, 26, 26, 0.12);
+      --ok: #1a1a1a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #dcdcdc;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    img { display: block; max-width: 100%; }
+
+    .page-bar {
+      position: sticky; top: 0; z-index: 40;
+      background: #111; color: #fff;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 14px 28px; flex-wrap: wrap;
+    }
+    .page-bar strong { font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .page-bar nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    .page-bar a {
+      color: #fff; text-decoration: none; font-size: 13px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.28); padding: 8px 12px; border-radius: 999px;
+    }
+    .page-bar a:hover { background: #fff; color: #111; }
+
+    .note {
+      width: min(1120px, calc(100% - 40px));
+      margin: 28px auto 8px;
+      color: #444; font-size: 15px;
+    }
+
+    .house {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto 8px;
+      background: var(--bg);
+      overflow: hidden;
+      scroll-margin-top: 78px;
+    }
+    .section-label {
+      width: min(1120px, calc(100% - 40px));
+      margin: 36px auto 12px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #555;
+      scroll-margin-top: 78px;
+    }
+
+    .kicker { font-size: 14px; color: var(--muted); margin-top: 8px; }
+    .kicker span { display: block; }
+    h2.name { font-size: 42px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
+    .check {
+      width: 14px; height: 14px; flex: none; margin-top: 3px;
+    }
+    .amenity {
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 14.5px; font-weight: 500;
+    }
+    .plan {
+      position: relative; background: #d3d3d3; overflow: hidden;
+    }
+    .plan img {
+      width: 100%; height: 100%; object-fit: contain; object-position: center;
+      background: #e4e4e4;
+    }
+    .dots {
+      position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%);
+      display: flex; gap: 7px;
+    }
+    .dots i {
+      width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.45); display: block;
+    }
+    .dots i.on { background: #fff; }
+
+    /* ——— Opción 1: pestañas ——— */
+    .opt1 { display: grid; grid-template-columns: minmax(320px, 1fr) minmax(280px, 0.9fr); min-height: 560px; }
+    .opt1 .copy { padding: 40px 36px 40px 44px; }
+    .tabs {
+      display: flex; gap: 0; margin: 36px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .tabs button {
+      appearance: none; background: none; border: 0; cursor: pointer;
+      font: inherit; font-size: 13px; font-weight: 600;
+      padding: 10px 18px 12px; color: var(--muted);
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+    }
+    .tabs button.is-on { color: var(--ink); border-bottom-color: var(--ink); }
+    .opt1 .list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; max-width: 540px; }
+    .opt1 .plan { min-height: 560px; }
+    .floor-panel[hidden] { display: none; }
+
+    /* ——— Opción 2: una fila por planta ——— */
+    .opt2-head {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      padding: 40px 48px 20px; gap: 16px; flex-wrap: wrap;
+    }
+    .metrics { display: flex; gap: 10px; }
+    .metric {
+      background: rgba(255,255,255,0.55); border: 1px solid var(--line);
+      padding: 10px 14px; font-size: 13px;
+    }
+    .metric b { display: block; font-size: 16px; }
+    .floor-row {
+      display: grid; grid-template-columns: 1fr 320px;
+      border-top: 1px solid var(--line);
+      min-height: 240px;
+    }
+    .floor-row .list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+    .floor-row .list .amenity { max-width: 280px; }
+    .floor-row .copy { padding: 28px 48px 28px 56px; }
+    .floor-idx {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 14px; color: #444;
+    }
+    .floor-row .list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+    .floor-row .plan { min-height: 210px; }
+
+    /* ——— Opción 3 original: fichas ——— */
+    .opt3 { display: grid; grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr); min-height: 620px; }
+    .opt3 .plan { min-height: 620px; }
+    .opt3 .copy { padding: 44px 44px 44px 40px; display: flex; flex-direction: column; gap: 18px; }
+    .cards { display: flex; flex-direction: column; gap: 12px; }
+    .card {
+      background: rgba(255,255,255,0.62);
+      border: 1px solid var(--line);
+      padding: 18px 18px 16px;
+    }
+    .card h3 {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      font-size: 13px; font-weight: 500;
+      background: #ececec; border: 1px solid var(--line);
+      padding: 6px 10px; border-radius: 999px;
+    }
+
+    /* ——— Opción 3 mejorada ——— */
+    .opt3plus {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.95fr) minmax(340px, 1.05fr);
+      min-height: 560px;
+    }
+    .opt3plus .plan {
+      min-height: 560px;
+      background: #cfcfcf;
+    }
+    .opt3plus .plan img {
+      object-fit: cover;
+      background: #cfcfcf;
+    }
+    .plan-badge {
+      position: absolute; left: 16px; top: 16px;
+      background: rgba(255,255,255,0.92);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 10px;
+    }
+    .plan-switch {
+      position: absolute; right: 16px; bottom: 16px;
+      display: flex; gap: 6px;
+    }
+    .plan-switch button {
+      appearance: none; border: 0; cursor: pointer;
+      width: 36px; height: 36px;
+      font: inherit; font-size: 12px; font-weight: 700;
+      background: rgba(255,255,255,0.72); color: var(--ink);
+    }
+    .plan-switch button.is-on { background: #111; color: #fff; }
+    .opt3plus .copy {
+      padding: 36px 36px 32px 32px;
+      display: flex; flex-direction: column; gap: 6px;
+      justify-content: center;
+    }
+    .opt3plus .head { margin-bottom: 18px; }
+    .opt3plus .name { font-size: 36px; }
+    .opt3plus .meta {
+      margin-top: 8px; font-size: 14px; color: var(--muted); font-weight: 500;
+    }
+    .floor-btn {
+      appearance: none; border: 0; background: transparent;
+      width: 100%; text-align: left; cursor: pointer;
+      display: grid; grid-template-columns: 36px 1fr; gap: 12px;
+      padding: 14px 8px 14px 4px;
+      border-top: 1px solid var(--line);
+      font: inherit; color: inherit;
+    }
+    .floor-btn:last-child { border-bottom: 1px solid var(--line); }
+    .floor-btn .n {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+      color: var(--muted); padding-top: 2px;
+    }
+    .floor-btn h3 {
+      font-size: 15px; font-weight: 600; margin-bottom: 6px;
+    }
+    .floor-btn .flow {
+      font-size: 13.5px; line-height: 1.55; color: #3d3d3d; font-weight: 500;
+    }
+    .floor-btn.is-on {
+      background: rgba(255,255,255,0.55);
+      border-left: 3px solid #111;
+      padding-left: 1px;
+    }
+    .floor-btn.is-on .n { color: var(--ink); }
+
+    @media (max-width: 640px) {
+      .opt1, .opt3, .opt3plus, .floor-row { grid-template-columns: 1fr; }
+      .opt1 .copy, .opt2-head, .floor-row .copy, .opt3 .copy, .opt3plus .copy { padding: 32px 24px; }
+      h2.name { font-size: 34px; }
+      .opt1 .plan, .opt3 .plan, .opt3plus .plan, .floor-row .plan { min-height: 320px; }
+      .page-bar { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bar">
+    <strong>Prototipos · sección Casas · Asama</strong>
+    <nav>
+      <a href="#layout-3">Opción 3 mejorada</a>
+      <a href="#layout-3-old">3 anterior</a>
+      <a href="#layout-1">Opción 1</a>
+      <a href="#layout-2">Opción 2</a>
+    </nav>
+  </div>
+
+  <p class="note">La opción 3 se compactó y se ordenó: el plano queda ligado al piso que eliges, y las amenidades ya no van en cápsulas.</p>
+
+  <svg width="0" height="0" aria-hidden="true">
+    <symbol id="check" viewBox="0 0 16 16">
+      <path fill="none" stroke="currentColor" stroke-width="1.7" d="M2.2 8.2 6.1 12 13.8 3.8"/>
+    </symbol>
+  </svg>
+
+  <div class="section-label" id="opcion-1">Opción 1 — Pestañas sincronizadas con el plano</div>
+  <section class="house opt1" id="layout-1" data-option="tabs">
+    <div class="copy">
+      <h2 class="name">Asama</h2>
+      <p class="kicker">
+        <span>Hasta 286.36 m² de construcción</span>
+        <span>216 m² de terreno</span>
+      </p>
+      <div class="tabs" role="tablist">
+        <button type="button" class="is-on" data-floor="1" role="tab" aria-selected="true">Primer nivel</button>
+        <button type="button" data-floor="2" role="tab" aria-selected="false">Segundo nivel</button>
+        <button type="button" data-floor="3" role="tab" aria-selected="false">Tercer nivel</button>
+      </div>
+
+      <div class="floor-panel" data-panel="1">
+        <div class="list">
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Jardín frontal</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Cochera triple</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Sala</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>1/2 Baño</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Alacena</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Cocina</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Área flex</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Lavandería</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Bodega interior</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Bodega exterior</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Jardín con terraza</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Comedor doble altura</div>
+        </div>
+      </div>
+      <div class="floor-panel" data-panel="2" hidden>
+        <div class="list">
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Estancia familiar</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Terraza privada</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Sink</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Recámara principal con baño completo y walk-in closet</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Recámara secundaria con baño completo y walk-in closet</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Recámara secundaria con baño completo</div>
+        </div>
+      </div>
+      <div class="floor-panel" data-panel="3" hidden>
+        <div class="list">
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Roof garden</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Área de parrilla</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Asoleadero</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Baño de visitas</div>
+        </div>
+      </div>
+    </div>
+    <div class="plan">
+      <img src="img/casas/asama-planta.jpg" alt="Tipología Asama, planta" />
+      <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    </div>
+  </section>
+
+  <div class="section-label" id="opcion-2">Opción 2 — Una fila por planta, cada una con su tipología</div>
+  <section class="house" id="layout-2">
+    <div class="opt2-head">
+      <div>
+        <h2 class="name">Asama</h2>
+        <p class="kicker">Tres plantas · tipología alineada a cada nivel</p>
+      </div>
+      <div class="metrics">
+        <div class="metric"><b>286.36 m²</b>construcción</div>
+        <div class="metric"><b>216 m²</b>terreno</div>
+      </div>
+    </div>
+
+    <article class="floor-row">
+      <div class="copy">
+        <div class="floor-idx">01 · Primer nivel</div>
+        <div class="list">
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Jardín frontal</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Cochera triple</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Sala</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>1/2 Baño</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Alacena</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Cocina</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Área flex</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Lavandería</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Bodega interior</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Bodega exterior</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Jardín con terraza</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Comedor doble altura</div>
+        </div>
+      </div>
+      <div class="plan"><img src="img/casas/asama-planta.jpg" alt="Planta primer nivel" /></div>
+    </article>
+
+    <article class="floor-row">
+      <div class="copy">
+        <div class="floor-idx">02 · Segundo nivel</div>
+        <div class="list">
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Estancia familiar</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Terraza privada</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Sink</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Recámara principal con baño completo y walk-in closet</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Recámara secundaria con baño completo y walk-in closet</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Recámara secundaria con baño completo</div>
+        </div>
+      </div>
+      <div class="plan"><img src="img/casas/asama-planta.jpg" alt="Planta segundo nivel" /></div>
+    </article>
+
+    <article class="floor-row">
+      <div class="copy">
+        <div class="floor-idx">03 · Tercer nivel</div>
+        <div class="list">
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Roof garden</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Área de parrilla</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Asoleadero</div>
+          <div class="amenity"><svg class="check"><use href="#check"/></svg>Baño de visitas</div>
+        </div>
+      </div>
+      <div class="plan"><img src="img/casas/asama-planta.jpg" alt="Planta tercer nivel" /></div>
+    </article>
+  </section>
+
+  <div class="section-label" id="opcion-3">Opción 3 mejorada — compacta, todos los pisos a la vista</div>
+  <section class="house opt3plus" id="layout-3" data-option="plus">
+    <div class="plan">
+      <img src="img/casas/asama-planta.jpg" alt="Tipología Asama" />
+      <div class="plan-badge" data-badge>01 · Primer nivel</div>
+      <div class="plan-switch" aria-label="Cambiar planta">
+        <button type="button" class="is-on" data-floor="1">01</button>
+        <button type="button" data-floor="2">02</button>
+        <button type="button" data-floor="3">03</button>
+      </div>
+    </div>
+    <div class="copy">
+      <header class="head">
+        <h2 class="name">Asama</h2>
+        <p class="meta">286.36 m² de construcción · 216 m² de terreno</p>
+      </header>
+
+      <button type="button" class="floor-btn is-on" data-floor="1">
+        <span class="n">01</span>
+        <div>
+          <h3>Primer nivel</h3>
+          <p class="flow">Jardín frontal · Cochera triple · Sala · 1/2 Baño · Alacena · Cocina · Área flex · Lavandería · Bodega interior · Bodega exterior · Jardín con terraza · Comedor doble altura</p>
+        </div>
+      </button>
+      <button type="button" class="floor-btn" data-floor="2">
+        <span class="n">02</span>
+        <div>
+          <h3>Segundo nivel</h3>
+          <p class="flow">Estancia familiar · Terraza privada · Sink · Recámara principal con baño completo y walk-in closet · Recámara secundaria con baño completo y walk-in closet · Recámara secundaria con baño completo</p>
+        </div>
+      </button>
+      <button type="button" class="floor-btn" data-floor="3">
+        <span class="n">03</span>
+        <div>
+          <h3>Tercer nivel</h3>
+          <p class="flow">Roof garden · Área de parrilla · Asoleadero · Baño de visitas</p>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <div class="section-label" id="layout-3-old">Opción 3 anterior — fichas con cápsulas</div>
+  <section class="house opt3">
+    <div class="plan">
+      <img src="img/casas/asama-planta.jpg" alt="Tipología Asama" />
+      <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    </div>
+    <div class="copy">
+      <div>
+        <h2 class="name">Asama</h2>
+        <p class="kicker">
+          <span>Hasta 286.36 m² de construcción</span>
+          <span>216 m² de terreno</span>
+        </p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Primer nivel</h3>
+          <div class="pills">
+            <span class="pill">Jardín frontal</span>
+            <span class="pill">Cochera triple</span>
+            <span class="pill">Sala</span>
+            <span class="pill">1/2 Baño</span>
+            <span class="pill">Alacena</span>
+            <span class="pill">Cocina</span>
+            <span class="pill">Área flex</span>
+            <span class="pill">Lavandería</span>
+            <span class="pill">Bodega interior</span>
+            <span class="pill">Bodega exterior</span>
+            <span class="pill">Jardín con terraza</span>
+            <span class="pill">Comedor doble altura</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Segundo nivel</h3>
+          <div class="pills">
+            <span class="pill">Estancia familiar</span>
+            <span class="pill">Terraza privada</span>
+            <span class="pill">Sink</span>
+            <span class="pill">Recámara principal + baño + walk-in</span>
+            <span class="pill">Recámara secundaria + baño + walk-in</span>
+            <span class="pill">Recámara secundaria + baño</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Tercer nivel</h3>
+          <div class="pills">
+            <span class="pill">Roof garden</span>
+            <span class="pill">Área de parrilla</span>
+            <span class="pill">Asoleadero</span>
+            <span class="pill">Baño de visitas</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <p class="note" style="margin-bottom:48px">Abre este archivo en el navegador: <code>casas-opciones.html</code>. El tercer nivel es de ejemplo para mostrar cómo se comporta el layout cuando sí existe una tercera planta.</p>
+
+  <script>
+    const labels = {
+      1: "01 · Primer nivel",
+      2: "02 · Segundo nivel",
+      3: "03 · Tercer nivel"
+    };
+
+    function setFloor(root, floor) {
+      root.querySelectorAll("[data-floor]").forEach((el) => {
+        el.classList.toggle("is-on", el.dataset.floor === floor);
+        if (el.getAttribute("role") === "tab") {
+          el.setAttribute("aria-selected", el.dataset.floor === floor ? "true" : "false");
+        }
+      });
+      root.querySelectorAll(".floor-panel").forEach((p) => {
+        p.hidden = p.dataset.panel !== floor;
+      });
+      const badge = root.querySelector("[data-badge]");
+      if (badge) badge.textContent = labels[floor];
+      root.querySelectorAll(".dots i").forEach((d, i) => {
+        d.classList.toggle("on", String(i + 1) === floor);
+      });
+    }
+
+    document.querySelectorAll("[data-option]").forEach((root) => {
+      root.querySelectorAll("[data-floor]").forEach((el) => {
+        el.addEventListener("click", () => setFloor(root, el.dataset.floor));
+      });
+    });
+  </script>
+</body>
+</html>
