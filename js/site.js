@@ -23,10 +23,16 @@
             ${link("nosotros.html", "Nosotros")}
             ${link("sectores.html", "Sectores")}
             ${link("catalogo.html", "Catálogo")}
+            ${link("contacto.html", "Contacto")}
           </div>
           <div class="nav-right">
             <div class="lang" aria-label="Idioma"><span class="on">ES</span><span>EN</span></div>
-            <a class="btn" href="contacto.html">Contacto</a>
+            <a class="btn nav-login" href="contacto.html" aria-label="Iniciar sesión">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="8" r="3.4" stroke="#111814" stroke-width="1.8"/>
+                <path d="M5.2 19.2c.8-3.4 3.4-5.2 6.8-5.2s6 1.8 6.8 5.2" stroke="#111814" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
             <button class="menu-btn" id="menu" aria-label="Menú">☰</button>
           </div>
         </nav>

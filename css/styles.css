@@ -67,6 +67,16 @@ footer .logo img {
   height: 56px;
   padding: 0 24px;
 }
+.nav-login {
+  width: 56px;
+  padding: 0;
+  justify-content: center;
+}
+.nav-login svg {
+  width: 28px;
+  height: 28px;
+  flex: none;
+}
 .lang { display: flex; background: var(--cream); border-radius: 999px; padding: 4px; font-size: 12px; font-weight: 700; }
 .lang span { padding: 6px 10px; border-radius: 999px; cursor: pointer; color: var(--muted); }
 .lang span.on { background: #fff; color: var(--ink); }
@@ -110,29 +120,18 @@ footer .logo img {
 }
 .hero-inner {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1.2fr .55fr; gap: 40px;
+  display: grid;
   align-items: end; padding: 140px 64px 56px;
-}
-.kicker {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
-  opacity: .9; margin-bottom: 18px;
 }
 .hero h1 {
   font-size: clamp(42px, 5.4vw, 72px);
-  line-height: .98; letter-spacing: -0.045em; font-weight: 700; max-width: 14ch;
+  line-height: .98; letter-spacing: -0.045em; font-weight: 500; max-width: 22ch;
 }
 .hero h1 em {
   font-family: var(--serif); font-style: italic; font-weight: 400;
   color: var(--lime); letter-spacing: -0.03em;
 }
-.hero p.lead { margin-top: 22px; max-width: 46ch; font-size: 17px; color: rgba(255,255,255,.88); }
-.hero-card {
-  background: #fff; color: var(--ink); border-radius: 22px; overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,.18);
-}
-.hero-card img { height: 190px; width: 100%; object-fit: cover; }
-.hero-card .btn { width: calc(100% - 20px); margin: 10px; justify-content: center; height: 52px; }
+.hero p.lead { margin-top: 22px; max-width: none; font-size: 17px; color: rgba(255,255,255,.88); white-space: nowrap; }
 
 /* FEATURES */
 .features { padding: 72px 0 24px; }
@@ -459,6 +458,7 @@ body.lightbox-open { overflow: hidden; }
   .photo-lightbox-prev { left: 8px; }
   .photo-lightbox-next { right: 8px; }
   .hero-inner, .page-hero .inner { padding: 120px 24px 32px; }
+  .hero p.lead { white-space: normal; }
   .hero { height: 100vh; height: 100svh; min-height: 100vh; }
   .cta { padding: 40px 24px; }
   .foot-grid, .foot-menus { flex-direction: column; gap: 28px; }
