@@ -310,9 +310,22 @@ footer .logo img {
 
 /* CTA BANNER — Greenlly dark rounded */
 .cta {
+  position: relative;
+  overflow: hidden;
   width: min(var(--max), calc(100% - 48px));
   margin: 0 auto 80px;
-  background: var(--forest);
+  background-color: var(--forest);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(17, 44, 35) 0%,
+      rgba(17, 44, 35, 0.92) 38%,
+      rgba(17, 44, 35, 0.55) 68%,
+      rgba(17, 44, 35, 0.28) 100%
+    ),
+    url("../img/familia-fruta.png");
+  background-size: cover;
+  background-position: center right;
   color: #fff;
   border-radius: 16px;
   padding: 40px;
@@ -321,8 +334,9 @@ footer .logo img {
   align-items: center;
   gap: 32px;
 }
+.cta > * { position: relative; z-index: 1; }
 .cta h2 { font-size: clamp(32px, 3.4vw, 48px); letter-spacing: -0.04em; max-width: 16ch; }
-.cta p { color: rgba(255,255,255,.75); margin: 12px 0 0; max-width: 42ch; }
+.cta p { color: rgba(255,255,255,.75); margin: 12px 0 0; max-width: 70ch; }
 
 /* FOOTER */
 footer {
@@ -501,7 +515,17 @@ body.lightbox-open { overflow: hidden; }
   .feat { padding: 24px 8px; }
   .feat + .feat { border-left: 0; border-top: 1px solid var(--line); }
   .hero { height: 100vh; height: 100svh; min-height: 100vh; }
-  .cta { padding: 40px 24px; }
+  .cta {
+    padding: 40px 24px;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(17, 44, 35, 0.92) 0%,
+        rgba(17, 44, 35, 0.78) 100%
+      ),
+      url("../img/familia-fruta.png");
+    background-position: center;
+  }
   .foot-grid, .foot-menus { flex-direction: column; gap: 28px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stat + .stat { border-left: 0; }
