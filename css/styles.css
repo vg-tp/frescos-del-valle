@@ -226,14 +226,6 @@ footer .logo img {
 .split-band-copy .place-list li::before {
   background-color: var(--lime);
 }
-.split-band-map {
-  grid-template-columns: 1.5fr 0.9fr;
-  min-height: 380px;
-}
-.split-band-map .split-band-media,
-.split-band-map .split-band-media iframe {
-  min-height: 380px;
-}
 .badge {
   position: absolute;
   left: 22px;
