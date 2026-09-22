@@ -67,7 +67,8 @@ footer .logo img {
 }
 .nav-links { display: flex; gap: 28px; font-size: 15px; font-weight: 500; justify-self: center; }
 .nav-links a { opacity: 0.72; }
-.nav-links a:hover, .nav-links a.is-active { opacity: 1; }
+.nav-links a:hover { opacity: 1; }
+.nav-links a.is-active { opacity: 1; color: #4E8615; }
 .nav-right { display: flex; align-items: center; gap: 10px; justify-self: end; }
 .nav .btn {
   border-radius: 12px;
@@ -300,6 +301,7 @@ footer .logo img {
 .card .pad { padding: 22px; }
 .card h3 { font-size: 22px; letter-spacing: -0.03em; margin-bottom: 8px; }
 .card p { color: var(--muted); font-size: 15px; }
+.card p + p { margin-top: 6px; }
 .card .meta { font-size: 13px; font-weight: 600; color: #6a7a20; margin-top: 12px; }
 
 /* PROCESS */
@@ -337,7 +339,45 @@ footer .logo img {
   min-height: 420px; border-radius: 28px; overflow: hidden; background: #d5ddd6;
   position: relative;
 }
-.map iframe { width: 100%; height: 100%; border: 0; min-height: 420px; }
+.place-full {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  background: #d5ddd6;
+  margin: 80px 0;
+}
+.place-full + .section { padding-top: 0; }
+.place-full .map,
+.place-full iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+}
+.place-tab {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  max-width: min(400px, calc(100% - 80px));
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0 16px 40px rgba(17, 40, 32, 0.16);
+}
+.place-tab h3 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.place-tab p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+}
 .place-copy { background: #fff; border-radius: 28px; padding: 40px; border: 1px solid var(--line); }
 .place > .place-copy {
   display: flex;
@@ -704,6 +744,8 @@ body.lightbox-open { overflow: hidden; }
   .split-band-copy { padding: 40px 24px 48px; }
   .split-band-copy p span { white-space: normal; }
   .install-grid { grid-template-columns: 1fr 1fr; }
+  .place-full { height: 420px; }
+  .place-tab { left: 20px; bottom: 20px; padding: 22px 24px; max-width: min(400px, calc(100% - 40px)); }
 }
 @media (max-width: 640px) {
   .install-grid { grid-template-columns: 1fr; }
