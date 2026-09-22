@@ -178,4 +178,14 @@
       if (e.key === "ArrowRight") showPhoto(index + 1);
     });
   }
+
+  const heroVideo = document.querySelector(".hero video.bg");
+  if (heroVideo && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroVideo.muted = true;
+    const playHero = () => heroVideo.play().catch(() => {});
+    playHero();
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) playHero();
+    });
+  }
 })();

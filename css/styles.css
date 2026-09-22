@@ -115,8 +115,10 @@ footer .logo img {
   display: grid;
   align-items: end;
 }
-.hero img.bg {
+.hero img.bg,
+.hero video.bg {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  pointer-events: none;
 }
 .hero::after {
   content: ""; position: absolute; inset: 0;
@@ -136,6 +138,10 @@ footer .logo img {
   color: var(--lime); letter-spacing: -0.03em;
 }
 .hero p.lead { margin-top: 22px; max-width: none; font-size: 17px; color: rgba(255,255,255,.88); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  .hero video.bg { display: none; }
+  .hero { background: #112c23 url("../img/hero-anden-amanecer.png") center / cover no-repeat; }
+}
 
 /* FEATURES */
 .features { padding: 72px 0 24px; }
