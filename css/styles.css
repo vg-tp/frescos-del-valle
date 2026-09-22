@@ -347,9 +347,8 @@ footer .logo img {
   height: 560px;
   overflow: hidden;
   background: #d5ddd6;
-  margin: 80px 0;
+  margin: 80px 0 0;
 }
-.place-full + .section { padding-top: 0; }
 .place-full .map,
 .place-full iframe {
   position: absolute;
