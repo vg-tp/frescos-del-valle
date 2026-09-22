@@ -522,6 +522,10 @@ textarea { height: 110px; padding: 12px 14px; resize: vertical; }
 }
 
 /* INSTALLATIONS */
+.section-install {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 .install-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
