@@ -175,6 +175,13 @@ footer .logo img {
 
 /* SPLIT */
 .section { padding: 40px 0 80px; }
+.section-splits {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
 .section h2 {
   font-size: clamp(32px, 3.6vw, 48px);
   letter-spacing: -0.02em; line-height: 1.05; font-weight: 500;
