@@ -230,6 +230,14 @@ footer .logo img {
   align-items: center;
   text-align: center;
 }
+.split-band-map {
+  grid-template-columns: 1.18fr 0.95fr;
+  min-height: 500px;
+}
+.split-band-map .split-band-media,
+.split-band-map .split-band-media iframe {
+  min-height: 500px;
+}
 .badge {
   position: absolute;
   left: 22px;
