@@ -221,10 +221,14 @@ footer .logo img {
 }
 .split-band-copy p span { display: block; white-space: nowrap; }
 .split-band-copy .btn { margin-top: 28px; align-self: flex-start; }
-.split-band-copy .place-list { margin-top: 28px; }
+.split-band-copy .place-list { margin-top: 28px; column-gap: 56px; }
 .split-band-copy .place-list li { color: #fff; font-weight: 400; }
 .split-band-copy .place-list li::before {
   background-color: var(--lime);
+}
+.split-band-copy.is-centered {
+  align-items: center;
+  text-align: center;
 }
 .badge {
   position: absolute;
