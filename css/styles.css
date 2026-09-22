@@ -302,6 +302,8 @@ footer .logo img {
 .card h3 { font-size: 22px; letter-spacing: -0.03em; margin-bottom: 8px; }
 .card p { color: var(--muted); font-size: 15px; }
 .card p + p { margin-top: 6px; }
+.card a { transition: color 0.2s; }
+.card a:hover { color: #4E8615; }
 .card .meta { font-size: 13px; font-weight: 600; color: #6a7a20; margin-top: 12px; }
 
 /* PROCESS */
