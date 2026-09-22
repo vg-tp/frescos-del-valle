@@ -465,6 +465,7 @@ footer ul { list-style: none; display: grid; gap: 8px; }
 .page-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -0.02em; line-height: 1.1; font-weight: 500; }
 .page-hero h1 em { font-family: var(--serif); font-style: italic; color: var(--lime); font-weight: 400; }
 .page-hero p { margin-top: 16px; font-size: 18px; color: rgba(255,255,255,.88); max-width: 54ch; }
+.page-hero p.lead { white-space: nowrap; max-width: none; }
 
 /* TABS */
 .cat-layout {
@@ -686,7 +687,7 @@ body.lightbox-open { overflow: hidden; }
   .photo-lightbox-prev { left: 8px; }
   .photo-lightbox-next { right: 8px; }
   .hero-inner, .page-hero .inner { padding: 120px 24px 32px; }
-  .hero p.lead { white-space: normal; }
+  .hero p.lead, .page-hero p.lead { white-space: normal; }
   .feat { padding: 24px 8px; }
   .feat + .feat { border-left: 0; border-top: 1px solid var(--line); }
   .hero { height: 100vh; height: 100svh; min-height: 100vh; }
