@@ -1,36 +1,31 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .announce {
-  background: var(--sysco-announce);
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  min-height: var(--announce-height);
+  min-height: var(--announce-h);
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-.announce a:hover {
+.announce span {
   text-decoration: underline;
-}
-
-.bar {
-  background: #fff;
-  border-bottom: 1px solid var(--sysco-border);
 }
 
 .barInner {
   display: flex;
   align-items: center;
-  gap: 20px;
-  min-height: var(--header-height);
+  gap: 16px;
+  min-height: var(--header-h);
 }
 
 .logo {
@@ -41,7 +36,7 @@
 
 .logo img {
   width: auto;
-  height: 48px;
+  height: 44px;
   object-fit: contain;
 }
 
@@ -55,72 +50,18 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: stretch;
-  gap: 2px;
-}
-
-.navItem {
-  position: relative;
-}
-
-.navBtn {
-  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
   align-items: center;
-  gap: 4px;
-  padding: 24px 12px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--sysco-ink);
 }
 
-.navBtn:hover,
-.navItem:hover .navBtn {
-  color: var(--sysco-green);
-}
-
-.caret {
-  font-size: 0.7rem;
-  opacity: 0.7;
-}
-
-.mega {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  gap: 36px;
-  min-width: 520px;
-  padding: 28px 32px;
-  background: #fff;
-  border: 1px solid var(--sysco-border);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-.megaCol h3 {
-  margin: 0 0 12px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--sysco-green);
-}
-
-.megaCol ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.megaCol a {
-  font-size: 0.9rem;
+.desktopNav a {
+  font-size: 0.95rem;
   font-weight: 500;
-  color: var(--sysco-ink);
+  white-space: nowrap;
 }
 
-.megaCol a:hover {
-  color: var(--sysco-green);
+.desktopNav a:hover {
   text-decoration: underline;
 }
 
@@ -128,24 +69,32 @@
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-.signIn {
+.search {
   display: none;
+  color: inherit;
+  padding: 6px;
+}
+
+.linkGreen {
+  display: none;
+  color: var(--sysco-green);
   font-weight: 700;
   font-size: 0.92rem;
-  color: var(--sysco-green);
+  white-space: nowrap;
 }
 
-.signIn:hover {
+.linkGreen:hover {
   text-decoration: underline;
 }
 
-.shop {
+.become {
   display: none;
-  min-height: 40px;
-  padding: 0 18px;
+  min-height: 38px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
 }
 
 .burger {
@@ -161,14 +110,15 @@
 .burger span {
   display: block;
   height: 2px;
-  background: var(--sysco-ink);
   border-radius: 1px;
+  background: currentColor;
 }
 
 .mobileDrawer {
   background: #fff;
   border-bottom: 1px solid var(--sysco-border);
-  padding: 12px 20px 24px;
+  padding: 8px 20px 20px;
+  color: var(--sysco-ink);
 }
 
 .mobileDrawer ul {
@@ -177,7 +127,6 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
 }
 
 .mobileDrawer a {
@@ -185,6 +134,55 @@
   padding: 12px 4px;
   font-weight: 600;
   border-bottom: 1px solid var(--sysco-border);
+  color: var(--sysco-nav);
+}
+
+/* Over hero: blue utility, transparent nav, white text */
+.overHero .announce {
+  background: var(--sysco-blue);
+  color: #fff;
+}
+
+.overHero .bar {
+  background: transparent;
+  color: #fff;
+}
+
+.overHero .desktopNav a {
+  color: #fff;
+}
+
+.overHero .search,
+.overHero .burger {
+  color: #fff;
+}
+
+.overHero .logo img {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+
+/* Scrolled / solid header */
+.solid {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.solid .announce {
+  background: var(--sysco-utility-bg);
+  color: var(--sysco-blue);
+}
+
+.solid .bar {
+  background: #fff;
+  color: var(--sysco-nav);
+}
+
+.solid .desktopNav a {
+  color: var(--sysco-nav);
+}
+
+.solid .search,
+.solid .burger {
+  color: var(--sysco-ink);
 }
 
 @media (min-width: 1024px) {
@@ -192,8 +190,9 @@
     display: block;
   }
 
-  .signIn,
-  .shop {
+  .search,
+  .linkGreen,
+  .become {
     display: inline-flex;
   }
 

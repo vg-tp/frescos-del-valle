@@ -8,6 +8,7 @@ export default function Footer() {
       <div className={`container ${styles.top}`}>
         <div className={styles.blurb}>
           <p>{footer.blurb}</p>
+          <p className={styles.stats}>{footer.stats}</p>
         </div>
         <div className={styles.columns}>
           {footer.columns.map((col) => (
@@ -36,21 +37,14 @@ export default function Footer() {
 
       <div className={`container ${styles.bottom}`}>
         <div className={styles.brand}>
-          <Image
-            src={site.logo.src}
-            alt={site.logo.alt}
-            width={120}
-            height={30}
-          />
+          <Image src={site.logo.src} alt={site.logo.alt} width={120} height={30} />
           <p>{footer.copyright}</p>
         </div>
         <div className={styles.legal}>
           {footer.legal.map((item, i) => (
             <span key={item}>
               <a href="#">{item}</a>
-              {i < footer.legal.length - 1 ? (
-                <span className={styles.bar}>|</span>
-              ) : null}
+              {i < footer.legal.length - 1 ? <span className={styles.bar}>|</span> : null}
             </span>
           ))}
         </div>

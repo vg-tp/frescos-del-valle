@@ -1,5 +1,5 @@
 .footer {
-  background: #0a2e1c;
+  background: var(--sysco-footer);
   color: #fff;
   padding: 56px 0 28px;
 }
@@ -12,10 +12,16 @@
 }
 
 .blurb p {
-  margin: 0;
+  margin: 0 0 12px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 36ch;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 40ch;
+  font-size: 0.95rem;
+}
+
+.stats {
+  font-weight: 600;
+  font-size: 0.9rem !important;
 }
 
 .columns {
@@ -26,7 +32,9 @@
 
 .col h5 {
   margin: 0 0 12px;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .col ul {
@@ -40,7 +48,7 @@
 
 .col a {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .col a:hover {
@@ -59,7 +67,7 @@
 .social a {
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -85,6 +93,7 @@
   width: 140px;
   height: auto;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .brand p {
@@ -110,9 +119,9 @@
   opacity: 0.5;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .top {
-    grid-template-columns: 1.1fr 2.4fr auto;
+    grid-template-columns: 1.2fr 2.6fr auto;
     align-items: start;
   }
 

@@ -13,177 +13,108 @@ export const site = {
   },
 };
 
-/** Exact Sysco top-nav labels / order */
+/** Exact Sysco primary nav labels / order */
 export const navItems = [
-  {
-    label: "About",
-    children: [
-      {
-        group: "Company Profile",
-        links: ["The Sysco Story", "Our Purpose", "Annual Report", "Public Policy Engagement"],
-      },
-      {
-        group: "Our People",
-        links: ["Our Management", "Better Together"],
-      },
-      {
-        group: "Sysco Today",
-        links: ["Newsroom", "Events"],
-      },
-    ],
-  },
-  {
-    label: "Products",
-    children: [
-      {
-        group: "Products",
-        links: ["Product Categories", "Sysco Brand Family", "Sysco Foodie", "Quality Assurance"],
-      },
-      {
-        group: "Solutions & Services",
-        links: [
-          "Services",
-          "Culinary and Product Solutions",
-          "Technology Solutions",
-          "Multicultural",
-          "Specialty Companies",
-        ],
-      },
-    ],
-  },
-  {
-    label: "Customers",
-    children: [
-      {
-        group: "Who We Serve",
-        links: [
-          "Restaurants",
-          "Healthcare and Senior Living",
-          "Higher Education",
-          "Government",
-          "Food Service Management",
-          "Travel",
-          "Leisure",
-          "Retail",
-        ],
-      },
-    ],
-  },
-  {
-    label: "Suppliers",
-    children: [
-      {
-        group: "Supplier Partnerships",
-        links: ["Supplier Resources", "Supplier Diversity"],
-      },
-    ],
-  },
-  { label: "Investors" },
-  { label: "Careers" },
-  {
-    label: "Sustainability",
-    children: [
-      {
-        group: "Sustainability",
-        links: ["Our Approach", "Human Rights", "People", "Products", "Planet"],
-      },
-    ],
-  },
-  {
-    label: "Contact",
-    children: [
-      {
-        group: "Contact",
-        links: ["Contact Us", "Our Locations", "Customer Care"],
-      },
-    ],
-  },
+  "About",
+  "Products",
+  "Customers",
+  "Suppliers",
+  "Investors",
+  "Careers",
+  "Sustainability",
+  "Contact",
 ] as const;
 
+/** Exact Sysco utility chrome labels */
 export const headerChrome = {
   announcement: "Lorem ipsum dolor sit amet — consectetur adipiscing elit",
-  signIn: "Sign In",
+  announcementLink: "Lorem",
   shopNow: "Shop Now",
+  becomeCustomer: "Become A Customer",
+  signIn: "Sign In",
 };
 
-export const hero = {
-  eyebrow: "Lorem ipsum",
-  headline: "Lorem ipsum dolor sit amet consectetur",
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  primaryCta: "Lorem ipsum",
-  secondaryCta: "Dolor sit amet",
-  image: "/hero.jpg",
+export const heroSlides = [
+  {
+    headline: "Lorem ipsum dolor sit amet",
+    body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    cta: "EXPLORE NOW",
+    image: "/hero.jpg",
+  },
+  {
+    headline: "Ut enim ad minim veniam",
+    body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    cta: "SHOP NOW",
+    image: "/section-produce.jpg",
+  },
+  {
+    headline: "Duis aute irure dolor",
+    body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    cta: "LEARN MORE",
+    image: "/section-kitchen.jpg",
+  },
+  {
+    headline: "Excepteur sint occaecat",
+    body: "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    cta: "LEARN MORE",
+    image: "/cta.jpg",
+  },
+];
+
+export const partnerBanner = {
+  leftTagline: "Lorem ipsum dolor sit amet",
+  rightLabel: "Lorem Ipsum",
+  headline: "Lorem ipsum & dolor sit: amet consectetur",
+  cta: "LEARN MORE",
 };
 
-export const featureStrip = {
-  items: [
-    {
-      title: "Lorem ipsum dolor",
-      body: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-    },
-    {
-      title: "Consectetur adipiscing",
-      body: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-    },
-    {
-      title: "Sed do eiusmod",
-      body: "Excepteur sint occaecat cupidatat dunt culpa qui officia deserunt mollit.",
-    },
-  ],
-};
-
-export const splitSection = {
-  eyebrow: "Lorem ipsum",
-  headline: "Ut enim ad minim veniam quis nostrud",
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-  cta: "Lorem ipsum dolor",
-  image: "/section-produce.jpg",
-};
-
-export const cardsSection = {
-  headline: "Lorem ipsum dolor sit amet",
-  body: "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  cards: [
-    {
-      title: "Lorem ipsum",
-      body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-      image: "/card-1.jpg",
-    },
-    {
-      title: "Dolor sit amet",
-      body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.",
-      image: "/card-2.jpg",
-    },
-    {
-      title: "Consectetur",
-      body: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-      image: "/card-3.jpg",
-    },
-    {
-      title: "Adipiscing elit",
-      body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam.",
-      image: "/card-4.jpg",
-    },
-  ],
-};
-
-export const specialtyBand = {
-  headline: "Specialty Products",
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-  cta: "Lorem ipsum",
-  image: "/section-kitchen.jpg",
-};
-
-export const ctaBand = {
-  headline: "Lorem ipsum dolor sit amet consectetur",
-  body: "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.",
-  cta: "Lorem ipsum dolor",
-  image: "/cta.jpg",
-};
+export const photoSections = [
+  {
+    id: "roots",
+    headline: "Lorem ipsum dolor sit amet",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    cta: "LEARN MORE",
+    image: "/section-produce.jpg",
+    align: "left" as const,
+  },
+  {
+    id: "future",
+    headline: "Consectetur adipiscing elit",
+    body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+    cta: "LEARN MORE",
+    image: "/section-cold.jpg",
+    align: "right" as const,
+  },
+  {
+    id: "people",
+    headline: "Ut enim ad minima veniam",
+    body: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    cta: "LEARN MORE",
+    image: "/section-kitchen.jpg",
+    align: "left" as const,
+  },
+  {
+    id: "careers",
+    headline: "Neque porro quisquam est",
+    body: "Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.",
+    cta: "LEARN MORE",
+    image: "/hero.jpg",
+    align: "right" as const,
+  },
+  {
+    id: "locations",
+    headline: "At vero eos et accusamus",
+    body: "Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+    cta: "GET IN TOUCH",
+    image: "/card-2.jpg",
+    align: "center" as const,
+  },
+];
 
 export const footer = {
   blurb:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.",
+  stats: "Lorem · ipsum · dolor sit amet",
   columns: [
     {
       title: "About",
@@ -219,10 +150,16 @@ export const footer = {
       links: [
         "Report A Concern",
         "Limit the Use of My Sensitive Personal Information",
-        "Cookie Settings",
+        "Cookie Preferences",
       ],
     },
   ],
   legal: ["Terms of Use", "Privacy Notice", "System Usage Policy"],
   copyright: "©2026 All Rights Reserved. Frescos del Valle",
+};
+
+export const cookieBanner = {
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cookie policy placeholder text for layout review.",
+  customize: "Customize Settings",
+  accept: "Sounds, Good!",
 };

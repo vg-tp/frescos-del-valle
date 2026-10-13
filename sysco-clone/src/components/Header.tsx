@@ -1,19 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { headerChrome, navItems, site } from "@/content/home";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<string | null>(null);
+  const [solid, setSolid] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setSolid(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${solid ? styles.solid : styles.overHero}`}>
       <div className={styles.announce}>
         <div className="container">
-          <a href="#">{headerChrome.announcement}</a>
+          <a href="#">
+            {headerChrome.announcement} — <span>{headerChrome.announcementLink}</span>
+          </a>
         </div>
       </div>
 
@@ -23,60 +32,37 @@ export default function Header() {
             <Image
               src={site.logo.src}
               alt={site.logo.alt}
-              width={220}
-              height={54}
+              width={200}
+              height={50}
               priority
             />
           </a>
 
           <nav className={styles.desktopNav} aria-label="Primary">
             <ul>
-              {navItems.map((item) => (
-                <li
-                  key={item.label}
-                  className={styles.navItem}
-                  onMouseEnter={() => setActive(item.label)}
-                  onMouseLeave={() => setActive(null)}
-                >
-                  <button
-                    type="button"
-                    className={styles.navBtn}
-                    aria-expanded={active === item.label}
-                  >
-                    {item.label}
-                    {"children" in item && item.children ? (
-                      <span className={styles.caret} aria-hidden>
-                        ▾
-                      </span>
-                    ) : null}
-                  </button>
-                  {"children" in item && item.children && active === item.label ? (
-                    <div className={styles.mega}>
-                      {item.children.map((group) => (
-                        <div key={group.group} className={styles.megaCol}>
-                          <h3>{group.group}</h3>
-                          <ul>
-                            {group.links.map((link) => (
-                              <li key={link}>
-                                <a href="#">{link}</a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  ) : null}
+              {navItems.map((label) => (
+                <li key={label}>
+                  <a href="#">{label}</a>
                 </li>
               ))}
             </ul>
           </nav>
 
           <div className={styles.actions}>
-            <a href="#" className={styles.signIn}>
-              {headerChrome.signIn}
-            </a>
-            <a href="#" className={`btn btn-primary ${styles.shop}`}>
+            <button type="button" className={styles.search} aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" />
+                <path d="M16 16l4.5 4.5" stroke="currentColor" strokeWidth="2" />
+              </svg>
+            </button>
+            <a href="#" className={styles.linkGreen}>
               {headerChrome.shopNow}
+            </a>
+            <a href="#" className={`btn btn-green ${styles.become}`}>
+              {headerChrome.becomeCustomer}
+            </a>
+            <a href="#" className={styles.linkGreen}>
+              {headerChrome.signIn}
             </a>
             <button
               type="button"
@@ -96,19 +82,22 @@ export default function Header() {
       {open ? (
         <div className={styles.mobileDrawer}>
           <ul>
-            {navItems.map((item) => (
-              <li key={item.label}>
+            {navItems.map((label) => (
+              <li key={label}>
                 <a href="#" onClick={() => setOpen(false)}>
-                  {item.label}
+                  {label}
                 </a>
               </li>
             ))}
             <li>
+              <a href="#">{headerChrome.shopNow}</a>
+            </li>
+            <li>
               <a href="#">{headerChrome.signIn}</a>
             </li>
             <li>
-              <a href="#" className="btn btn-primary">
-                {headerChrome.shopNow}
+              <a href="#" className="btn btn-green">
+                {headerChrome.becomeCustomer}
               </a>
             </li>
           </ul>

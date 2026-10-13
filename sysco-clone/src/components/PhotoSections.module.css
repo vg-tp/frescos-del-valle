@@ -1,0 +1,101 @@
+.section {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  padding-block: 80px;
+  max-width: 560px;
+}
+
+.copy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.copy p {
+  margin: 0 0 24px;
+  line-height: 1.55;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.left .copy {
+  margin-right: auto;
+}
+
+.right .shade {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.right .copy {
+  margin-left: auto;
+  text-align: left;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.center .shade {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.center .copy {
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .section {
+    min-height: 460px;
+    align-items: flex-end;
+  }
+
+  .shade,
+  .right .shade {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.75) 70%
+    );
+  }
+
+  .copy {
+    max-width: none;
+    padding-bottom: 48px;
+  }
+}

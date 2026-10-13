@@ -1,11 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FeatureStrip from "@/components/FeatureStrip";
-import SplitSection from "@/components/SplitSection";
-import CardsSection from "@/components/CardsSection";
-import SpecialtyBand from "@/components/SpecialtyBand";
-import CtaBand from "@/components/CtaBand";
+import PartnerBanner from "@/components/PartnerBanner";
+import PhotoSections from "@/components/PhotoSections";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 /**
  * Homepage composition — edit section order here.
@@ -17,13 +15,11 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <FeatureStrip />
-        <SplitSection />
-        <CardsSection />
-        <SpecialtyBand />
-        <CtaBand />
+        <PartnerBanner />
+        <PhotoSections />
       </main>
       <Footer />
+      <CookieBanner />
     </>
   );
 }

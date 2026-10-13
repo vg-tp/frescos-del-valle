@@ -8,14 +8,12 @@ All editable copy and image paths: [`src/content/home.ts`](src/content/home.ts)
 
 Components (one file per section):
 
-- `src/components/Header.tsx` — announcement, nav, Sign In, Shop Now
-- `src/components/Hero.tsx`
-- `src/components/FeatureStrip.tsx`
-- `src/components/SplitSection.tsx`
-- `src/components/CardsSection.tsx`
-- `src/components/SpecialtyBand.tsx`
-- `src/components/CtaBand.tsx`
+- `src/components/Header.tsx` — utility bar, transparent/solid nav, Search / Shop Now / Become A Customer / Sign In
+- `src/components/Hero.tsx` — carousel (arrows + dots)
+- `src/components/PartnerBanner.tsx` — blue co-brand band
+- `src/components/PhotoSections.tsx` — full-bleed photo bands
 - `src/components/Footer.tsx`
+- `src/components/CookieBanner.tsx`
 
 Page composition: `src/app/page.tsx`
 
@@ -29,4 +27,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Logo asset: `public/logo-frescos-del-valle.png` (from repo `img/logo-frescos-del-valle.png`).
+Logo: `public/logo-frescos-del-valle.png` (from repo `img/logo-frescos-del-valle.png`).
