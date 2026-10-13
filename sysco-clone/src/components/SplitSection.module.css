@@ -1,0 +1,53 @@
+.section {
+  padding: 72px 0;
+  background: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.copy .eyebrow {
+  margin: 0 0 10px;
+  color: var(--sysco-green);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.copy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--sysco-green-deeper);
+}
+
+.copy p {
+  margin: 0 0 22px;
+  color: var(--sysco-muted);
+  line-height: 1.6;
+  max-width: 48ch;
+}
+
+.media {
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+}
