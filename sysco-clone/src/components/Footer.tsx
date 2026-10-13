@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { footer, site } from "@/content/home";
 import styles from "./Footer.module.css";
 
@@ -16,8 +17,8 @@ export default function Footer() {
               <h5>{col.title}</h5>
               <ul>
                 {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#">{link}</a>
+                  <li key={link.label}>
+                    <Link href={link.href}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -42,8 +43,8 @@ export default function Footer() {
         </div>
         <div className={styles.legal}>
           {footer.legal.map((item, i) => (
-            <span key={item}>
-              <a href="#">{item}</a>
+            <span key={item.label}>
+              <Link href={item.href}>{item.label}</Link>
               {i < footer.legal.length - 1 ? <span className={styles.bar}>|</span> : null}
             </span>
           ))}

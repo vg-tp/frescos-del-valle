@@ -1,9 +1,7 @@
-import Header from "@/components/Header";
+import SiteChrome from "@/components/SiteChrome";
 import Hero from "@/components/Hero";
 import PartnerBanner from "@/components/PartnerBanner";
 import PhotoSections from "@/components/PhotoSections";
-import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
 
 /**
  * Homepage composition — edit section order here.
@@ -11,15 +9,12 @@ import CookieBanner from "@/components/CookieBanner";
  */
 export default function HomePage() {
   return (
-    <>
-      <Header />
+    <SiteChrome>
       <main>
         <Hero />
         <PartnerBanner />
         <PhotoSections />
       </main>
-      <Footer />
-      <CookieBanner />
-    </>
+    </SiteChrome>
   );
 }

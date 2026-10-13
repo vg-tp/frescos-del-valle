@@ -1,0 +1,112 @@
+.main {
+  padding-top: calc(var(--announce-h) + var(--header-h));
+  min-height: 70vh;
+}
+
+.hero {
+  background:
+    linear-gradient(135deg, rgba(0, 114, 206, 0.92), rgba(0, 111, 185, 0.88)),
+    url("/section-produce.jpg") center / cover no-repeat;
+  color: #fff;
+  padding: 72px 0 64px;
+}
+
+.heroInner h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+.lead {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.crumb {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.crumb a:hover {
+  text-decoration: underline;
+}
+
+.body {
+  padding: 56px 0 80px;
+  background:
+    linear-gradient(180deg, #f5f8fb 0%, #fff 48%),
+    #fff;
+}
+
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+.copy {
+  max-width: 68ch;
+}
+
+.copy p {
+  margin: 0 0 1.15rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--sysco-muted);
+}
+
+.copy .btn {
+  margin-top: 12px;
+}
+
+.aside {
+  border-top: 1px solid var(--sysco-border);
+  padding-top: 20px;
+}
+
+.aside h2 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+.aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.aside a {
+  color: var(--sysco-ink);
+  font-weight: 600;
+}
+
+.aside a:hover {
+  color: var(--sysco-blue);
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    align-items: start;
+  }
+
+  .aside {
+    border-top: none;
+    border-left: 1px solid var(--sysco-border);
+    padding: 0 0 0 28px;
+    position: sticky;
+    top: calc(var(--announce-h) + var(--header-h) + 24px);
+  }
+}

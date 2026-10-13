@@ -4,6 +4,8 @@
  * Everything else is placeholder lorem for design review.
  */
 
+export { headerChrome, navItems } from "./nav";
+
 export const site = {
   title: "Frescos del Valle",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -11,27 +13,6 @@ export const site = {
     src: "/logo-frescos-del-valle.png",
     alt: "Frescos del Valle",
   },
-};
-
-/** Exact Sysco primary nav labels / order */
-export const navItems = [
-  "About",
-  "Products",
-  "Customers",
-  "Suppliers",
-  "Investors",
-  "Careers",
-  "Sustainability",
-  "Contact",
-] as const;
-
-/** Exact Sysco utility chrome labels */
-export const headerChrome = {
-  announcement: "Lorem ipsum dolor sit amet — consectetur adipiscing elit",
-  announcementLink: "Lorem",
-  shopNow: "Shop Now",
-  becomeCustomer: "Become A Customer",
-  signIn: "Sign In",
 };
 
 export const heroSlides = [
@@ -119,42 +100,62 @@ export const footer = {
     {
       title: "About",
       links: [
-        "The Sysco Story",
-        "Annual Report",
-        "Sustainability",
-        "Better Together",
-        "News Room",
-        "At a Glance",
+        { label: "The Sysco Story", href: "/about/company-profile/the-sysco-story" },
+        { label: "Annual Report", href: "/about/company-profile/annual-report" },
+        { label: "Sustainability", href: "/sustainability" },
+        { label: "Better Together", href: "/about/our-people/better-together" },
+        { label: "News Room", href: "/about/sysco-today/newsroom" },
+        { label: "At a Glance", href: "/about" },
       ],
     },
     {
       title: "Customer Solutions",
       links: [
-        "Product Categories",
-        "Sysco Brand Family",
-        "Services",
-        "Culinary Solutions",
-        "Technology Solutions",
+        { label: "Product Categories", href: "/products/product-categories" },
+        { label: "Sysco Brand Family", href: "/products/sysco-brand-family" },
+        { label: "Services", href: "/products/solutions-and-services/services" },
+        {
+          label: "Culinary Solutions",
+          href: "/products/solutions-and-services/culinary-and-product-solutions",
+        },
+        {
+          label: "Technology Solutions",
+          href: "/products/solutions-and-services/technology-solutions",
+        },
       ],
     },
     {
       title: "Resources",
-      links: ["Suppliers", "Investors", "Careers"],
+      links: [
+        { label: "Suppliers", href: "/suppliers" },
+        { label: "Investors", href: "/investors" },
+        { label: "Careers", href: "/careers" },
+      ],
     },
     {
       title: "Contact Us",
-      links: ["Become A Customer", "Our Locations"],
+      links: [
+        { label: "Become A Customer", href: "/become-a-customer" },
+        { label: "Our Locations", href: "/contact/our-locations" },
+      ],
     },
     {
       title: "Support",
       links: [
-        "Report A Concern",
-        "Limit the Use of My Sensitive Personal Information",
-        "Cookie Preferences",
+        { label: "Report A Concern", href: "/contact/customer-care" },
+        {
+          label: "Limit the Use of My Sensitive Personal Information",
+          href: "/contact/contact-us",
+        },
+        { label: "Cookie Preferences", href: "/contact/contact-us" },
       ],
     },
   ],
-  legal: ["Terms of Use", "Privacy Notice", "System Usage Policy"],
+  legal: [
+    { label: "Terms of Use", href: "/about" },
+    { label: "Privacy Notice", href: "/about" },
+    { label: "System Usage Policy", href: "/about" },
+  ],
   copyright: "©2026 All Rights Reserved. Frescos del Valle",
 };
 
