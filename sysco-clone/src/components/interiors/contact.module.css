@@ -1,0 +1,495 @@
+.meta {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+/* Contact hub — light utility pathways */
+.contactHub {
+  background: var(--sysco-utility-bg);
+  padding: 56px 0 40px;
+}
+
+.contactHub h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #0a3a5c;
+}
+
+.contactHub p {
+  margin: 0;
+  max-width: 50ch;
+  color: var(--sysco-muted);
+  line-height: 1.6;
+}
+
+.pathways {
+  padding: 40px 0 64px;
+  background: #fff;
+}
+
+.pathwayGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.pathway {
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--sysco-border);
+  background: #fff;
+  overflow: hidden;
+  color: inherit;
+  height: 100%;
+}
+
+.pathwayMedia {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #dfe7ef;
+}
+
+.pathwayImg {
+  object-fit: cover;
+}
+
+.pathwayBody {
+  padding: 22px 24px 26px;
+}
+
+.pathwayBody h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  color: #0a3a5c;
+}
+
+.pathwayBody p {
+  margin: 0 0 14px;
+  color: var(--sysco-muted);
+  line-height: 1.55;
+}
+
+.pathwayCta {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sysco-blue);
+}
+
+@media (min-width: 800px) {
+  .pathwayGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Contact form — form-first two column */
+.formPage {
+  padding: 48px 0 72px;
+  background: #f5f8fb;
+}
+
+.formLayout {
+  display: grid;
+  gap: 36px;
+  align-items: start;
+}
+
+.formCopy h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: #0a3a5c;
+}
+
+.formCopy p {
+  margin: 0 0 12px;
+  color: var(--sysco-muted);
+  line-height: 1.65;
+  max-width: 48ch;
+}
+
+.formBox {
+  background: #fff;
+  border: 1px solid var(--sysco-border);
+  padding: 28px 24px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 60, 100, 0.06);
+}
+
+.helpList {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.helpList li {
+  padding: 14px 16px;
+  background: #fff;
+  border-left: 3px solid var(--sysco-blue);
+}
+
+.helpList h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.helpList p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--sysco-muted);
+  line-height: 1.45;
+}
+
+@media (min-width: 880px) {
+  .formLayout {
+    grid-template-columns: minmax(280px, 1fr) minmax(340px, 440px);
+  }
+}
+
+/* Locations — map placeholder + compact address cards */
+.locHero {
+  background: #e8eef4;
+  padding: 48px 0 36px;
+}
+
+.locHero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #0a3a5c;
+}
+
+.locHero p {
+  margin: 0;
+  max-width: 50ch;
+  color: var(--sysco-muted);
+  line-height: 1.6;
+}
+
+.mapBand {
+  height: 220px;
+  background:
+    linear-gradient(135deg, rgba(0, 90, 150, 0.15), rgba(0, 60, 100, 0.25)),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 24px,
+      rgba(0, 70, 120, 0.06) 24px,
+      rgba(0, 70, 120, 0.06) 25px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 24px,
+      rgba(0, 70, 120, 0.06) 24px,
+      rgba(0, 70, 120, 0.06) 25px
+    ),
+    #d4e0ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a3a5c;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.locGrid {
+  padding: 40px 0 64px;
+  background: #fff;
+}
+
+.locUl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.locCard {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--sysco-border);
+  padding: 18px;
+  color: inherit;
+  grid-template-columns: 88px 1fr;
+  align-items: start;
+}
+
+.locThumb {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  background: #dfe7ef;
+  overflow: hidden;
+}
+
+.locImg {
+  object-fit: cover;
+}
+
+.locCard h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.locCard .meta {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+.locCard p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--sysco-muted);
+  line-height: 1.45;
+}
+
+@media (min-width: 700px) {
+  .locUl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Utility form (sign-in / become / shop) — centered narrow card */
+.utilPage {
+  min-height: calc(100vh - var(--announce-h) - var(--header-h) - 120px);
+  display: flex;
+  align-items: center;
+  padding: 48px 0 72px;
+  background:
+    radial-gradient(ellipse at top, #e8f1f8 0%, transparent 55%),
+    #f0f4f8;
+}
+
+.utilCard {
+  width: min(100%, 440px);
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--sysco-border);
+  padding: 36px 32px;
+  box-shadow: 0 12px 40px rgba(0, 50, 90, 0.08);
+}
+
+.utilCard h1 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #0a3a5c;
+}
+
+.utilCard > p {
+  margin: 0 0 24px;
+  text-align: center;
+  color: var(--sysco-muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.utilForm {
+  display: grid;
+  gap: 14px;
+}
+
+.utilExtras {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--sysco-border);
+}
+
+.utilExtras h2 {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+  text-align: center;
+}
+
+.utilExtras ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.utilExtras li {
+  text-align: center;
+  color: var(--sysco-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.utilExtras strong {
+  display: block;
+  color: var(--sysco-ink);
+  margin-bottom: 2px;
+}
+
+/* Search — search-dominant */
+.searchPage {
+  padding: 56px 0 72px;
+  background: #fff;
+}
+
+.searchHead {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.searchHead h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color: #0a3a5c;
+}
+
+.searchHead p {
+  margin: 0 0 24px;
+  color: var(--sysco-muted);
+}
+
+.searchForm {
+  display: flex;
+  gap: 0;
+  border: 2px solid var(--sysco-blue);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.searchForm input {
+  flex: 1;
+  border: none;
+  padding: 16px 18px;
+  font: inherit;
+  font-size: 1.05rem;
+}
+
+.searchForm button {
+  background: var(--sysco-blue);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0 24px;
+  font-size: 0.9rem;
+}
+
+.results {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results h2 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  color: var(--sysco-muted);
+  font-weight: 600;
+}
+
+.resultsUl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--sysco-border);
+}
+
+.resultsUl a {
+  display: grid;
+  gap: 4px;
+  padding: 18px 4px;
+  border-bottom: 1px solid var(--sysco-border);
+  color: inherit;
+}
+
+.resultsUl strong {
+  color: var(--sysco-blue);
+  font-size: 1.1rem;
+}
+
+.resultsUl p {
+  margin: 0;
+  color: var(--sysco-muted);
+  line-height: 1.5;
+}
+
+.resultsUl a:hover strong {
+  text-decoration: underline;
+}
+
+/* Default fallback — still distinct from hubs */
+.defaultHero {
+  background: #2a3340;
+  color: #fff;
+  padding: 48px 0 40px;
+}
+
+.defaultHero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.defaultHero p {
+  margin: 0;
+  max-width: 50ch;
+  opacity: 0.9;
+  line-height: 1.55;
+}
+
+.defaultBody {
+  padding: 40px 0 64px;
+}
+
+.defaultProse p {
+  margin: 0 0 1.1rem;
+  line-height: 1.7;
+  max-width: 68ch;
+  color: var(--sysco-ink);
+}
+
+.defaultFeatures {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.defaultFeatures li {
+  padding: 16px 18px;
+  border: 1px solid var(--sysco-border);
+  background: #fafbfc;
+}
+
+.defaultFeatures h3 {
+  margin: 0 0 6px;
+}
+
+.defaultFeatures p {
+  margin: 0;
+  color: var(--sysco-muted);
+  line-height: 1.5;
+}
+
+@media (min-width: 800px) {
+  .defaultFeatures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

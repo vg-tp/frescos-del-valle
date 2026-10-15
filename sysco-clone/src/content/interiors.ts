@@ -1,6 +1,6 @@
 /**
  * Full interior page blueprints for every Sysco-nav destination.
- * Labels stay Sysco; body copy is lorem. Templates vary by section type.
+ * Labels stay Sysco; body copy is lorem. Each family maps to a distinct layout.
  */
 
 import {
@@ -11,16 +11,25 @@ import {
   type PageMeta,
 } from "./nav";
 
+/** Page-type keys — each maps to a visually distinct layout component. */
 export type InteriorTemplate =
-  | "hub"
+  | "hub-about"
+  | "hub-customers"
+  | "hub-suppliers"
+  | "hub-contact"
+  | "hub-products"
   | "story"
-  | "products"
-  | "segment"
+  | "management"
+  | "report"
   | "news"
   | "events"
-  | "careers"
+  | "products"
+  | "segment"
+  | "suppliers"
   | "investors"
+  | "careers"
   | "sustainability"
+  | "sustainability-pillar"
   | "contact"
   | "locations"
   | "form"
@@ -46,7 +55,21 @@ export type SplitBlock = {
 
 export type StatItem = { value: string; label: string };
 
-export type ListItem = { title: string; body: string; meta?: string; href?: string };
+export type ListItem = {
+  title: string;
+  body: string;
+  meta?: string;
+  href?: string;
+};
+
+export type TimelineItem = { year: string; title: string; body: string };
+
+export type BioItem = {
+  name: string;
+  role: string;
+  body: string;
+  image: string;
+};
 
 export type InteriorContent = {
   href: string;
@@ -63,7 +86,14 @@ export type InteriorContent = {
   listHeading?: string;
   features?: { title: string; body: string }[];
   featuresHeading?: string;
-  cta?: { title: string; body: string; primary: NavPage; secondary?: NavPage };
+  timeline?: TimelineItem[];
+  bios?: BioItem[];
+  cta?: {
+    title: string;
+    body: string;
+    primary: NavPage;
+    secondary?: NavPage;
+  };
   form?: {
     kind: "contact" | "signin" | "become" | "shop" | "search" | "care";
     heading: string;
@@ -95,32 +125,35 @@ function img(i: number) {
 function pickTemplate(page: PageMeta): InteriorTemplate {
   const h = page.href;
   if (h === "/search") return "search";
-  if (h === "/sign-in" || h === "/become-a-customer" || h === "/shop-now") return "form";
-  if (h === "/contact/contact-us" || h === "/contact/customer-care") return "contact";
+  if (h === "/sign-in" || h === "/become-a-customer" || h === "/shop-now")
+    return "form";
+  if (h === "/contact/contact-us" || h === "/contact/customer-care")
+    return "contact";
   if (h === "/contact/our-locations") return "locations";
   if (h === "/careers") return "careers";
   if (h === "/investors") return "investors";
   if (h === "/about/sysco-today/newsroom") return "news";
   if (h === "/about/sysco-today/events") return "events";
-  if (h.startsWith("/sustainability")) return "sustainability";
+  if (h === "/about/our-people/our-management") return "management";
+  if (h === "/about/company-profile/annual-report") return "report";
+  if (h === "/about") return "hub-about";
+  if (h === "/customers") return "hub-customers";
+  if (h === "/suppliers") return "hub-suppliers";
+  if (h === "/contact") return "hub-contact";
+  if (h === "/products") return "hub-products";
+  if (h === "/sustainability") return "sustainability";
+  if (h.startsWith("/sustainability/")) return "sustainability-pillar";
   if (h.startsWith("/customers/who-we-serve/")) return "segment";
-  if (h.startsWith("/products/") || h === "/products") return "products";
-  if (
-    h === "/about" ||
-    h === "/customers" ||
-    h === "/suppliers" ||
-    h === "/contact" ||
-    h === "/sustainability"
-  ) {
-    return "hub";
-  }
+  if (h.startsWith("/products/")) return "products";
+  if (h.startsWith("/suppliers/")) return "suppliers";
   if (h.startsWith("/about/")) return "story";
-  if (h.startsWith("/suppliers/")) return "default";
   return "default";
 }
 
 function childLinks(page: PageMeta): NavPage[] {
-  const item = navItems.find((n) => n.href === page.href || n.href === page.parentHref);
+  const item = navItems.find(
+    (n) => n.href === page.href || n.href === page.parentHref,
+  );
   if (!item) return page.related || [];
   if (page.href === item.href) {
     return item.columns.flatMap((c) => c.pages);
@@ -188,7 +221,17 @@ function buildFeatures(): { title: string; body: string }[] {
   ];
 }
 
-function defaultCta(page: PageMeta): InteriorContent["cta"] {
+function buildTimeline(): TimelineItem[] {
+  return [
+    { year: "1969", title: "Lorem ipsum founded", body: para(0) },
+    { year: "1985", title: "Dolor sit expansion", body: para(1) },
+    { year: "2001", title: "Consectetur network", body: para(2) },
+    { year: "2018", title: "Adipiscing innovation", body: para(0) },
+    { year: "2024", title: "Eiusmod tomorrow", body: para(1) },
+  ];
+}
+
+function defaultCta(): InteriorContent["cta"] {
   return {
     title: "Lorem ipsum dolor sit amet",
     body: lorem.lead,
@@ -197,9 +240,8 @@ function defaultCta(page: PageMeta): InteriorContent["cta"] {
   };
 }
 
-function buildForPage(page: PageMeta): InteriorContent {
-  const template = pickTemplate(page);
-  const base: InteriorContent = {
+function baseFor(page: PageMeta, template: InteriorTemplate): InteriorContent {
+  return {
     href: page.href,
     title: page.title,
     template,
@@ -210,71 +252,149 @@ function buildForPage(page: PageMeta): InteriorContent {
     parentLabel: page.parentLabel,
     parentHref: page.parentHref,
     sectionLabel: page.sectionLabel,
-    cta: defaultCta(page),
+    cta: defaultCta(),
   };
+}
+
+function buildForPage(page: PageMeta): InteriorContent {
+  const template = pickTemplate(page);
+  const base = baseFor(page, template);
 
   switch (template) {
-    case "hub":
+    case "hub-about":
       return {
         ...base,
-        cardsHeading: `Explore ${page.title}`,
+        heroImage: "/hero.jpg",
+        cardsHeading: "Company profile",
         cards: buildCards(page),
-        splits: [buildSplits(page)[0]],
         stats: buildStats(),
+        splits: [buildSplits(page)[0]],
+        features: buildFeatures().slice(0, 3),
+        featuresHeading: "Who we are",
+      };
+    case "hub-customers":
+      return {
+        ...base,
+        heroImage: "/section-kitchen.jpg",
+        cardsHeading: "Who we serve",
+        cards: buildCards(page),
+        intro: [para(0)],
+        cta: {
+          title: "Ready to partner?",
+          body: lorem.lead,
+          primary: { label: "Become A Customer", href: "/become-a-customer" },
+          secondary: { label: "Shop Now", href: "/shop-now" },
+        },
+      };
+    case "hub-suppliers":
+      return {
+        ...base,
+        heroImage: "/section-cold.jpg",
+        cardsHeading: "Supplier partnerships",
+        cards: buildCards(page),
+        features: buildFeatures().slice(0, 3),
+        featuresHeading: "Partner with us",
+        listHeading: "Quick links",
+        list: [
+          {
+            title: "Supplier Resources",
+            body: lorem.lead,
+            href: "/suppliers/supplier-partnerships/supplier-resources",
+          },
+          {
+            title: "Supplier Diversity",
+            body: para(0),
+            href: "/suppliers/supplier-partnerships/supplier-diversity",
+          },
+        ],
+      };
+    case "hub-contact":
+      return {
+        ...base,
+        heroImage: "/cta.jpg",
+        cardsHeading: "How can we help?",
+        cards: buildCards(page),
+        features: buildFeatures().slice(0, 3),
+        featuresHeading: "Support channels",
+      };
+    case "hub-products":
+      return {
+        ...base,
+        heroImage: "/section-produce.jpg",
+        cardsHeading: "Products & solutions",
+        cards: buildCards(page),
         features: buildFeatures(),
-        featuresHeading: "Why it matters",
+        featuresHeading: "Why operators choose us",
+        splits: [buildSplits(page)[1]],
       };
     case "story":
       return {
         ...base,
         intro: [para(0), para(1), para(2)],
+        timeline: buildTimeline(),
         splits: buildSplits(page),
-        features: buildFeatures(),
+        features: buildFeatures().slice(0, 3),
         featuresHeading: "Our commitments",
+      };
+    case "management":
+      return {
+        ...base,
+        heroImage: "/section-kitchen.jpg",
+        intro: [para(0)],
+        bios: Array.from({ length: 6 }, (_, i) => ({
+          name: `Lorem Ipsum ${i + 1}`,
+          role: ["Chief Executive", "Operations", "Culinary", "Finance", "Technology", "People"][i],
+          body: lorem.lead,
+          image: img(i + 2),
+        })),
+        features: buildFeatures().slice(0, 2),
+        featuresHeading: "Leadership principles",
+      };
+    case "report":
+      return {
+        ...base,
+        heroImage: "/cta.jpg",
+        intro: [para(0), para(1)],
+        listHeading: "Reports & documents",
+        list: Array.from({ length: 5 }, (_, i) => ({
+          title: `FY202${6 - i} Annual Report`,
+          body: para(i),
+          meta: `PDF · ${12 + i} MB`,
+          href: "/about/company-profile/annual-report",
+        })),
         stats: buildStats(),
-      };
-    case "products":
-      return {
-        ...base,
-        cardsHeading: page.href === "/products" ? "Products & solutions" : "Related offerings",
-        cards: buildCards(page, 8),
-        features: buildFeatures(),
-        featuresHeading: "Quality & service",
-        splits: [buildSplits(page)[1]],
-      };
-    case "segment":
-      return {
-        ...base,
-        featuresHeading: `Serving ${page.title}`,
-        features: buildFeatures(),
-        splits: buildSplits(page),
-        cardsHeading: "Related segments",
-        cards: (page.related || []).slice(0, 4).map((r, i) => ({
+        cardsHeading: "Related",
+        cards: (page.related || []).slice(0, 3).map((r, i) => ({
           title: r.label,
           body: lorem.lead,
           href: r.href,
-          image: img(i + 4),
+          image: img(i),
         })),
-        stats: buildStats(),
       };
     case "news":
       return {
         ...base,
         listHeading: "Latest stories",
-        list: Array.from({ length: 6 }, (_, i) => ({
+        list: Array.from({ length: 8 }, (_, i) => ({
           title: `Lorem ipsum news headline ${i + 1}`,
           body: lorem.lead,
-          meta: `Oct ${10 + i}, 2026 · Press release`,
+          meta: `Oct ${8 + i}, 2026 · Press release`,
           href: "/about/sysco-today/newsroom",
         })),
-        cardsHeading: "From the newsroom",
-        cards: buildCards(page, 3).map((c, i) => ({ ...c, image: img(i) })),
+        cardsHeading: "Featured",
+        cards: Array.from({ length: 3 }, (_, i) => ({
+          title: `Featured story ${i + 1}`,
+          body: para(i),
+          image: img(i),
+          meta: `Oct ${12 + i}, 2026`,
+          href: "/about/sysco-today/newsroom",
+        })),
       };
     case "events":
       return {
         ...base,
         listHeading: "Upcoming events",
-        list: Array.from({ length: 5 }, (_, i) => ({
+        list: Array.from({ length: 6 }, (_, i) => ({
           title: `Lorem ipsum event ${i + 1}`,
           body: para(i),
           meta: `Nov ${5 + i * 3}, 2026 · Virtual & in-person`,
@@ -282,20 +402,140 @@ function buildForPage(page: PageMeta): InteriorContent {
         })),
         splits: [buildSplits(page)[0]],
       };
+    case "products":
+      return {
+        ...base,
+        cardsHeading: "Explore offerings",
+        cards: buildCards(page, 6),
+        features: buildFeatures(),
+        featuresHeading: "Quality & service",
+        splits: [buildSplits(page)[0]],
+      };
+    case "segment":
+      return {
+        ...base,
+        featuresHeading: `Serving ${page.title}`,
+        features: buildFeatures(),
+        splits: buildSplits(page),
+        stats: buildStats(),
+        cardsHeading: "Related segments",
+        cards: (page.related || []).slice(0, 4).map((r, i) => ({
+          title: r.label,
+          body: lorem.lead,
+          href: r.href,
+          image: img(i + 4),
+        })),
+      };
+    case "suppliers":
+      return {
+        ...base,
+        intro: [para(0), para(1)],
+        listHeading: "Resources",
+        list: Array.from({ length: 5 }, (_, i) => ({
+          title: `Supplier resource ${i + 1}`,
+          body: para(i),
+          meta: "Guide",
+          href: page.href,
+        })),
+        features: buildFeatures().slice(0, 3),
+        featuresHeading: "Partnership pillars",
+        splits: [buildSplits(page)[0]],
+      };
+    case "investors":
+      return {
+        ...base,
+        heroImage: "/cta.jpg",
+        stats: buildStats(),
+        listHeading: "Recent releases",
+        list: Array.from({ length: 5 }, (_, i) => ({
+          title: `Investor update ${i + 1}`,
+          body: para(i),
+          meta: `FY2026 Q${(i % 4) + 1}`,
+          href: "/investors",
+        })),
+        cardsHeading: "Reports & resources",
+        cards: [
+          {
+            title: "Annual Report",
+            body: lorem.lead,
+            href: "/about/company-profile/annual-report",
+            image: img(0),
+          },
+          {
+            title: "SEC Filings",
+            body: lorem.lead,
+            href: "/investors",
+            image: img(1),
+          },
+          {
+            title: "Governance",
+            body: lorem.lead,
+            href: "/about",
+            image: img(2),
+          },
+          {
+            title: "Events",
+            body: lorem.lead,
+            href: "/about/sysco-today/events",
+            image: img(3),
+          },
+        ],
+        features: [
+          { title: "Corporate Governance", body: lorem.lead },
+          { title: "Investor Contacts", body: para(0) },
+          { title: "Stock Information", body: para(1) },
+        ],
+        featuresHeading: "Investor tools",
+        cta: {
+          title: "Investor relations",
+          body: lorem.lead,
+          primary: { label: "Contact IR", href: "/contact/contact-us" },
+          secondary: {
+            label: "Annual Report",
+            href: "/about/company-profile/annual-report",
+          },
+        },
+      };
     case "careers":
       return {
         ...base,
         heroImage: "/section-kitchen.jpg",
         cardsHeading: "Career paths",
         cards: [
-          { title: "Warehouse & Delivery", body: lorem.lead, image: img(2), href: "/careers" },
-          { title: "Sales & Culinary", body: lorem.lead, image: img(3), href: "/careers" },
-          { title: "Corporate & Technology", body: lorem.lead, image: img(4), href: "/careers" },
-          { title: "Operations Leadership", body: lorem.lead, image: img(5), href: "/careers" },
+          {
+            title: "Transportation",
+            body: lorem.lead,
+            image: img(2),
+            href: "/careers",
+          },
+          {
+            title: "Warehouse & Operations",
+            body: lorem.lead,
+            image: img(3),
+            href: "/careers",
+          },
+          {
+            title: "Sales & Culinary",
+            body: lorem.lead,
+            image: img(1),
+            href: "/careers",
+          },
+          {
+            title: "Technology",
+            body: lorem.lead,
+            image: img(4),
+            href: "/careers",
+          },
         ],
-        features: buildFeatures(),
+        listHeading: "Open roles (sample)",
+        list: Array.from({ length: 5 }, (_, i) => ({
+          title: `Lorem ipsum role ${i + 1}`,
+          body: "City, ST · Full-time",
+          meta: ["Operations", "Sales", "Tech", "Fleet", "Corporate"][i],
+          href: "/careers",
+        })),
+        features: buildFeatures().slice(0, 3),
         featuresHeading: "Life at Frescos del Valle",
-        splits: buildSplits(page),
         stats: buildStats(),
         cta: {
           title: "Join our team",
@@ -304,42 +544,37 @@ function buildForPage(page: PageMeta): InteriorContent {
           secondary: { label: "Contact Us", href: "/contact/contact-us" },
         },
       };
-    case "investors":
-      return {
-        ...base,
-        cardsHeading: "Reports & resources",
-        cards: [
-          { title: "Annual Report", body: lorem.lead, href: "/about/company-profile/annual-report", image: img(0) },
-          { title: "Quarterly Results", body: lorem.lead, href: "/investors", image: img(1) },
-          { title: "SEC Filings", body: lorem.lead, href: "/investors", image: img(2) },
-          { title: "Governance", body: lorem.lead, href: "/about", image: img(3) },
-        ],
-        listHeading: "Recent releases",
-        list: Array.from({ length: 4 }, (_, i) => ({
-          title: `Investor update ${i + 1}`,
-          body: para(i),
-          meta: `FY2026 Q${i + 1}`,
-          href: "/investors",
-        })),
-        stats: buildStats(),
-      };
     case "sustainability":
       return {
         ...base,
-        cardsHeading: page.href === "/sustainability" ? "Our pillars" : "Related topics",
-        cards:
-          page.href === "/sustainability"
-            ? childLinks(page).map((c, i) => ({
-                title: c.label,
-                body: lorem.lead,
-                href: c.href,
-                image: img(i + 1),
-              }))
-            : buildCards(page, 4),
-        features: buildFeatures(),
+        heroImage: "/section-produce.jpg",
+        cardsHeading: "Our pillars",
+        cards: childLinks(page).map((c, i) => ({
+          title: c.label,
+          body: lorem.lead,
+          href: c.href,
+          image: img(i + 1),
+        })),
+        stats: buildStats(),
+        features: buildFeatures().slice(0, 3),
         featuresHeading: "Progress highlights",
+        splits: [buildSplits(page)[0]],
+      };
+    case "sustainability-pillar":
+      return {
+        ...base,
+        intro: [para(0), para(1)],
+        features: buildFeatures(),
+        featuresHeading: "Focus areas",
         splits: buildSplits(page),
         stats: buildStats(),
+        cardsHeading: "More sustainability",
+        cards: (page.related || []).slice(0, 4).map((r, i) => ({
+          title: r.label,
+          body: lorem.lead,
+          href: r.href,
+          image: img(i + 2),
+        })),
       };
     case "contact":
       return {
@@ -357,18 +592,31 @@ function buildForPage(page: PageMeta): InteriorContent {
         },
         features: buildFeatures().slice(0, 3),
         featuresHeading: "How we can help",
-        cards: childLinks({ ...page, href: "/contact", parentHref: "/contact" }).length
-          ? undefined
-          : [
-              { title: "Our Locations", body: lorem.lead, href: "/contact/our-locations", image: img(6) },
-              { title: "Customer Care", body: lorem.lead, href: "/contact/customer-care", image: img(7) },
-              { title: "Become A Customer", body: lorem.lead, href: "/become-a-customer", image: img(5) },
-            ],
+        cards: [
+          {
+            title: "Our Locations",
+            body: lorem.lead,
+            href: "/contact/our-locations",
+            image: img(6),
+          },
+          {
+            title: "Customer Care",
+            body: lorem.lead,
+            href: "/contact/customer-care",
+            image: img(7),
+          },
+          {
+            title: "Become A Customer",
+            body: lorem.lead,
+            href: "/become-a-customer",
+            image: img(5),
+          },
+        ],
       };
     case "locations":
       return {
         ...base,
-        cardsHeading: "Locations",
+        cardsHeading: "Distribution centers",
         cards: Array.from({ length: 8 }, (_, i) => ({
           title: `Distribution Center ${i + 1}`,
           body: "Lorem ipsum street, City, ST 00000",
@@ -380,7 +628,10 @@ function buildForPage(page: PageMeta): InteriorContent {
           title: "Need help finding a location?",
           body: lorem.lead,
           primary: { label: "Contact Us", href: "/contact/contact-us" },
-          secondary: { label: "Customer Care", href: "/contact/customer-care" },
+          secondary: {
+            label: "Customer Care",
+            href: "/contact/customer-care",
+          },
         },
       };
     case "form": {
@@ -414,7 +665,12 @@ function buildForPage(page: PageMeta): InteriorContent {
           kind,
           heading: page.title,
           fields,
-          submit: kind === "signin" ? "SIGN IN" : kind === "shop" ? "CONTINUE" : "GET STARTED",
+          submit:
+            kind === "signin"
+              ? "SIGN IN"
+              : kind === "shop"
+                ? "CONTINUE"
+                : "GET STARTED",
         },
         features: buildFeatures().slice(0, 3),
         featuresHeading: "What to expect",
@@ -432,12 +688,32 @@ function buildForPage(page: PageMeta): InteriorContent {
         },
         listHeading: "Suggested results",
         list: [
-          { title: "Product Categories", body: lorem.lead, href: "/products/product-categories" },
-          { title: "The Sysco Story", body: lorem.lead, href: "/about/company-profile/the-sysco-story" },
-          { title: "Restaurants", body: lorem.lead, href: "/customers/who-we-serve/restaurants" },
+          {
+            title: "Product Categories",
+            body: lorem.lead,
+            href: "/products/product-categories",
+          },
+          {
+            title: "The Sysco Story",
+            body: lorem.lead,
+            href: "/about/company-profile/the-sysco-story",
+          },
+          {
+            title: "Restaurants",
+            body: lorem.lead,
+            href: "/customers/who-we-serve/restaurants",
+          },
           { title: "Careers", body: lorem.lead, href: "/careers" },
-          { title: "Our Locations", body: lorem.lead, href: "/contact/our-locations" },
-          { title: "Sustainability", body: lorem.lead, href: "/sustainability" },
+          {
+            title: "Our Locations",
+            body: lorem.lead,
+            href: "/contact/our-locations",
+          },
+          {
+            title: "Sustainability",
+            body: lorem.lead,
+            href: "/sustainability",
+          },
         ],
       };
     default:
@@ -449,7 +725,6 @@ function buildForPage(page: PageMeta): InteriorContent {
         splits: buildSplits(page),
         cards: buildCards(page, 4),
         cardsHeading: "Explore more",
-        stats: buildStats(),
       };
   }
 }
@@ -465,11 +740,19 @@ for (const page of allPages) {
   byHref.set(page.href, buildForPage(page));
 }
 
-/** Hub pages for About/Products etc. should list all mega-menu children as cards */
+/** Ensure hub pages list all mega-menu children */
 for (const item of navItems) {
   const content = byHref.get(item.href);
   if (!content) continue;
-  if (content.template === "hub" || content.template === "products" || content.template === "sustainability") {
+  const hubs = new Set([
+    "hub-about",
+    "hub-customers",
+    "hub-suppliers",
+    "hub-contact",
+    "hub-products",
+    "sustainability",
+  ]);
+  if (hubs.has(content.template)) {
     const kids = item.columns.flatMap((c) => c.pages);
     if (kids.length) {
       content.cards = kids.map((c, i) => ({
