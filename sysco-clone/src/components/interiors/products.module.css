@@ -3,6 +3,7 @@
   background: linear-gradient(90deg, #006b8f 0%, #0088a8 100%);
   color: #fff;
   padding: 48px 0 40px;
+  text-align: left;
 }
 
 .prodHero h1 {
@@ -123,6 +124,7 @@
   background: #e8f3f6;
   padding: 40px 0 32px;
   border-bottom: 3px solid #0088a8;
+  text-align: left;
 }
 
 .detailBar h1 {
