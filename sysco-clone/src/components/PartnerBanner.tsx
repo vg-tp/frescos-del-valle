@@ -5,7 +5,7 @@ import styles from "./PartnerBanner.module.css";
 
 export default function PartnerBanner() {
   return (
-    <section className={styles.section} aria-label="Partner banner">
+    <section className={styles.section} aria-label="Banner de socios">
       <div className={`container ${styles.inner}`}>
         <div className={styles.logos}>
           <div className={styles.brand}>

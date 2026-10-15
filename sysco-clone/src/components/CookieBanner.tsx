@@ -9,10 +9,10 @@ export default function CookieBanner() {
   if (!open) return null;
 
   return (
-    <div className={styles.banner} role="dialog" aria-label="Cookie notice">
+    <div className={styles.banner} role="dialog" aria-label={cookieBanner.noticeLabel}>
       <p>
         {cookieBanner.body}{" "}
-        <a href="#">Cookie Policy</a>
+        <a href="#">{cookieBanner.policyLabel}</a>
       </p>
       <div className={styles.actions}>
         <a href="#">{cookieBanner.customize}</a>
@@ -22,7 +22,7 @@ export default function CookieBanner() {
         <button
           type="button"
           className={styles.close}
-          aria-label="Close"
+          aria-label={cookieBanner.closeLabel}
           onClick={() => setOpen(false)}
         >
           ×

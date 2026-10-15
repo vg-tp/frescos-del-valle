@@ -26,7 +26,7 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
       </section>
 
       {content.stats?.length ? (
-        <section className={styles.hubStats} aria-label="Highlights">
+        <section className={styles.hubStats} aria-label="Destacados">
           <div className={`container ${styles.hubStatsGrid}`}>
             {content.stats.map((s) => (
               <div key={s.label}>
@@ -42,7 +42,7 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
         <section className={styles.hubMosaic}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Explore"}</h2>
+              <h2>{content.cardsHeading || "Explorar"}</h2>
             </header>
             <ul className={styles.hubMosaicGrid}>
               {content.cards.map((card) => (
@@ -95,7 +95,7 @@ export function StoryLayout({ content }: { content: InteriorContent }) {
           </div>
           {content.related?.length ? (
             <aside className={styles.storyAside}>
-              <h2>In this section</h2>
+              <h2>En esta sección</h2>
               <ul>
                 {content.related.map((r) => (
                   <li key={r.href}>
@@ -112,7 +112,7 @@ export function StoryLayout({ content }: { content: InteriorContent }) {
         <section className={styles.timeline}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>Our story</h2>
+              <h2>Nuestra historia</h2>
             </header>
             <ol className={styles.timelineList}>
               {content.timeline.map((t) => (
@@ -174,7 +174,7 @@ export function NewsLayout({ content }: { content: InteriorContent }) {
         <section className={styles.newsFeatured}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Featured"}</h2>
+              <h2>{content.cardsHeading || "Destacados"}</h2>
             </header>
             <ul className={styles.newsFeaturedGrid}>
               {content.cards.map((card) => (
@@ -208,7 +208,7 @@ export function NewsLayout({ content }: { content: InteriorContent }) {
         <section className={styles.newsList}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Latest"}</h2>
+              <h2>{content.listHeading || "Lo más reciente"}</h2>
             </header>
             <ul>
               {content.list.map((item) => (
@@ -251,11 +251,11 @@ export function EventsLayout({ content }: { content: InteriorContent }) {
         <section className={styles.eventsList}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Upcoming"}</h2>
+              <h2>{content.listHeading || "Próximos"}</h2>
             </header>
             <ul className={styles.eventsUl}>
               {content.list.map((item) => {
-                const dateBits = (item.meta || "TBD").split("·")[0]?.trim() || "TBD";
+                const dateBits = (item.meta || "Por confirmar").split("·")[0]?.trim() || "Por confirmar";
                 return (
                   <li key={item.title}>
                     <Link href={item.href || content.href} className={styles.eventRow}>
@@ -264,7 +264,7 @@ export function EventsLayout({ content }: { content: InteriorContent }) {
                         <strong>{item.title}</strong>
                         <p>{item.body}</p>
                       </div>
-                      <span className={styles.eventCta}>Details</span>
+                      <span className={styles.eventCta}>Detalles</span>
                     </Link>
                   </li>
                 );
@@ -303,7 +303,7 @@ export function ManagementLayout({ content }: { content: InteriorContent }) {
         <section className={styles.bioGrid}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>Leadership</h2>
+              <h2>Liderazgo</h2>
             </header>
             <ul className={styles.bioUl}>
               {content.bios.map((bio) => (
@@ -346,7 +346,7 @@ export function ReportLayout({ content }: { content: InteriorContent }) {
       </section>
 
       {content.stats?.length ? (
-        <section className={styles.reportStats} aria-label="Highlights">
+        <section className={styles.reportStats} aria-label="Destacados">
           <div className={`container ${styles.reportStatsGrid}`}>
             {content.stats.map((s) => (
               <div key={s.label}>
@@ -362,7 +362,7 @@ export function ReportLayout({ content }: { content: InteriorContent }) {
         <section className={styles.reportDocs}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Documents"}</h2>
+              <h2>{content.listHeading || "Documentos"}</h2>
             </header>
             <ul className={styles.docList}>
               {content.list.map((item) => (
@@ -371,7 +371,7 @@ export function ReportLayout({ content }: { content: InteriorContent }) {
                     {item.meta ? <span className={styles.meta}>{item.meta}</span> : null}
                     <strong>{item.title}</strong>
                     <p>{item.body}</p>
-                    <span className={styles.docDl}>Download</span>
+                    <span className={styles.docDl}>Descargar</span>
                   </Link>
                 </li>
               ))}

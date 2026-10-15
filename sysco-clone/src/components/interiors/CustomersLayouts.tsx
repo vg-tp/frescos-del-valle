@@ -24,17 +24,17 @@ export function CustomersHubLayout({ content }: { content: InteriorContent }) {
           <p>{content.lead}</p>
           <div className={styles.custActions}>
             <Link href="/become-a-customer" className="btn btn-green">
-              Become A Customer
+              Hazte cliente
             </Link>
             <Link href="/shop-now" className="btn btn-outline-white">
-              Shop Now
+              Compra ahora
             </Link>
           </div>
         </div>
       </section>
 
       {content.cards?.length ? (
-        <section className={styles.segGrid} aria-label="Who we serve">
+        <section className={styles.segGrid} aria-label="A quiénes servimos">
           <ul className={styles.segUl}>
             {content.cards.map((card) => (
               <li key={`${card.title}-${card.href}`}>
@@ -79,12 +79,12 @@ export function SegmentLayout({ content }: { content: InteriorContent }) {
         <div className={`container ${styles.industryHeroInner}`}>
           <Crumbs content={content} />
           <p className={styles.industryEyebrow}>
-            {content.parentLabel || "Who We Serve"}
+            {content.parentLabel || "A quiénes servimos"}
           </p>
           <h1>{content.title}</h1>
           <p>{content.lead}</p>
           <Link href="/become-a-customer" className="btn btn-green">
-            Become A Customer
+            Hazte cliente
           </Link>
         </div>
       </section>
@@ -93,7 +93,7 @@ export function SegmentLayout({ content }: { content: InteriorContent }) {
         <section className={styles.benefits}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "How we help"}</h2>
+              <h2>{content.featuresHeading || "Cómo te ayudamos"}</h2>
             </header>
             <ul className={styles.benefitsGrid}>
               {content.features.slice(0, 3).map((f) => (
@@ -108,7 +108,7 @@ export function SegmentLayout({ content }: { content: InteriorContent }) {
       ) : null}
 
       {content.stats?.length ? (
-        <section className={styles.statsRow} aria-label="Highlights">
+        <section className={styles.statsRow} aria-label="Destacados">
           <div className={`container ${styles.statsGrid}`}>
             {content.stats.map((s) => (
               <div key={s.label}>
@@ -153,7 +153,7 @@ export function SegmentLayout({ content }: { content: InteriorContent }) {
         <section className={styles.relatedSeg}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Related segments"}</h2>
+              <h2>{content.cardsHeading || "Segmentos relacionados"}</h2>
             </header>
             <ul className={styles.relatedSegUl}>
               {content.cards?.length

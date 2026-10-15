@@ -20,7 +20,7 @@ export function ContactHubLayout({ content }: { content: InteriorContent }) {
         <section className={styles.pathways}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "How can we help?"}</h2>
+              <h2>{content.cardsHeading || "¿Cómo podemos ayudarte?"}</h2>
             </header>
             <ul className={styles.pathwayGrid}>
               {content.cards.map((card) => (
@@ -129,14 +129,14 @@ export function LocationsLayout({ content }: { content: InteriorContent }) {
       </section>
 
       <div className={styles.mapBand} aria-hidden>
-        Map · Locations
+        Mapa · Ubicaciones
       </div>
 
       {content.cards?.length ? (
         <section className={styles.locGrid}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Locations"}</h2>
+              <h2>{content.cardsHeading || "Ubicaciones"}</h2>
             </header>
             <ul className={styles.locUl}>
               {content.cards.map((card) => (
@@ -185,7 +185,7 @@ export function UtilityFormLayout({ content }: { content: InteriorContent }) {
             </div>
             {content.features?.length ? (
               <div className={styles.utilExtras}>
-                <h2>{content.featuresHeading || "What to expect"}</h2>
+                <h2>{content.featuresHeading || "Qué esperar"}</h2>
                 <ul>
                   {content.features.map((f) => (
                     <li key={f.title}>
@@ -234,16 +234,16 @@ export function SearchLayout({ content }: { content: InteriorContent }) {
               <input
                 type="search"
                 name={field?.name || "q"}
-                placeholder="Search…"
-                aria-label="Search"
+                placeholder="Buscar…"
+                aria-label="Buscar"
               />
-              <button type="submit">{content.form?.submit || "SEARCH"}</button>
+              <button type="submit">{content.form?.submit || "BUSCAR"}</button>
             </form>
           </div>
 
           {content.list?.length ? (
             <div className={styles.results}>
-              <h2>{content.listHeading || "Suggested results"}</h2>
+              <h2>{content.listHeading || "Resultados sugeridos"}</h2>
               <ul className={styles.resultsUl}>
                 {content.list.map((item) => (
                   <li key={item.title}>

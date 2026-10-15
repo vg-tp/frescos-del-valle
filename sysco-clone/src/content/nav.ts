@@ -1,5 +1,5 @@
 /**
- * Sysco primary navigation tree (labels + structure from sysco.com).
+ * Primary navigation tree (labels + structure from sysco.com, Spanish UI).
  * Local hrefs are kebab-case routes served by this clone.
  */
 
@@ -22,74 +22,81 @@ export type NavItem = {
 
 export const headerChrome = {
   announcement: "Lorem ipsum dolor sit amet — consectetur adipiscing elit",
-  announcementLink: "Lorem",
+  announcementLink: "Más información",
   announcementHref: "/about",
-  shopNow: "Shop Now",
+  shopNow: "Compra ahora",
   shopNowHref: "/shop-now",
-  becomeCustomer: "Become A Customer",
+  becomeCustomer: "Hazte cliente",
   becomeCustomerHref: "/become-a-customer",
-  signIn: "Sign In",
+  signIn: "Iniciar sesión",
   signInHref: "/sign-in",
   searchHref: "/search",
+  searchLabel: "Buscar",
+  primaryNavLabel: "Principal",
+  openMenu: "Abrir menú",
+  closeMenu: "Cerrar menú",
+  expand: "Expandir",
+  collapse: "Contraer",
+  menuSuffix: "menú",
 };
 
-/** Exact Sysco primary nav labels / order + mega-menu columns */
+/** Exact Sysco primary nav order + mega-menu columns (Spanish labels) */
 export const navItems: NavItem[] = [
   {
-    label: "About",
+    label: "Nosotros",
     href: "/about",
     columns: [
       {
-        label: "Company Profile",
+        label: "Perfil de la empresa",
         pages: [
-          { label: "The Sysco Story", href: "/about/company-profile/the-sysco-story" },
-          { label: "Our Purpose", href: "/about/company-profile/our-purpose" },
-          { label: "Annual Report", href: "/about/company-profile/annual-report" },
+          { label: "La historia de Sysco", href: "/about/company-profile/the-sysco-story" },
+          { label: "Nuestro propósito", href: "/about/company-profile/our-purpose" },
+          { label: "Informe anual", href: "/about/company-profile/annual-report" },
           {
-            label: "Public Policy Engagement",
+            label: "Participación en políticas públicas",
             href: "/about/company-profile/public-policy-engagement",
           },
         ],
       },
       {
-        label: "Our People",
+        label: "Nuestra gente",
         pages: [
-          { label: "Our Management", href: "/about/our-people/our-management" },
-          { label: "Better Together", href: "/about/our-people/better-together" },
+          { label: "Nuestro equipo directivo", href: "/about/our-people/our-management" },
+          { label: "Mejores juntos", href: "/about/our-people/better-together" },
         ],
       },
       {
-        label: "Sysco Today",
+        label: "Sysco hoy",
         pages: [
-          { label: "Newsroom", href: "/about/sysco-today/newsroom" },
-          { label: "Events", href: "/about/sysco-today/events" },
+          { label: "Sala de prensa", href: "/about/sysco-today/newsroom" },
+          { label: "Eventos", href: "/about/sysco-today/events" },
         ],
       },
     ],
   },
   {
-    label: "Products",
+    label: "Productos",
     href: "/products",
     columns: [
       {
-        label: "Products",
+        label: "Productos",
         pages: [
-          { label: "Product Categories", href: "/products/product-categories" },
-          { label: "Sysco Brand Family", href: "/products/sysco-brand-family" },
+          { label: "Categorías de productos", href: "/products/product-categories" },
+          { label: "Familia de marcas Sysco", href: "/products/sysco-brand-family" },
           { label: "Sysco Foodie", href: "/products/sysco-foodie" },
-          { label: "Quality Assurance", href: "/products/quality-assurance" },
+          { label: "Aseguramiento de calidad", href: "/products/quality-assurance" },
         ],
       },
       {
-        label: "Solutions & Services",
+        label: "Soluciones y servicios",
         pages: [
-          { label: "Services", href: "/products/solutions-and-services/services" },
+          { label: "Servicios", href: "/products/solutions-and-services/services" },
           {
-            label: "Culinary and Product Solutions",
+            label: "Soluciones culinarias y de producto",
             href: "/products/solutions-and-services/culinary-and-product-solutions",
           },
           {
-            label: "Technology Solutions",
+            label: "Soluciones tecnológicas",
             href: "/products/solutions-and-services/technology-solutions",
           },
           {
@@ -97,7 +104,7 @@ export const navItems: NavItem[] = [
             href: "/products/solutions-and-services/multicultural",
           },
           {
-            label: "Specialty Companies",
+            label: "Empresas especializadas",
             href: "/products/solutions-and-services/specialty-companies",
           },
         ],
@@ -105,46 +112,46 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Customers",
+    label: "Clientes",
     href: "/customers",
     columns: [
       {
-        label: "Who We Serve",
+        label: "A quiénes servimos",
         pages: [
-          { label: "Restaurants", href: "/customers/who-we-serve/restaurants" },
+          { label: "Restaurantes", href: "/customers/who-we-serve/restaurants" },
           {
-            label: "Healthcare and Senior Living",
+            label: "Salud y residencias",
             href: "/customers/who-we-serve/healthcare-and-senior-living",
           },
           {
-            label: "Higher Education",
+            label: "Educación superior",
             href: "/customers/who-we-serve/higher-education",
           },
-          { label: "Government", href: "/customers/who-we-serve/government" },
+          { label: "Gobierno", href: "/customers/who-we-serve/government" },
           {
-            label: "Food Service Management",
+            label: "Gestión de servicios de alimentos",
             href: "/customers/who-we-serve/food-service-management",
           },
-          { label: "Travel", href: "/customers/who-we-serve/travel" },
-          { label: "Leisure", href: "/customers/who-we-serve/leisure" },
-          { label: "Retail", href: "/customers/who-we-serve/retail" },
+          { label: "Viajes", href: "/customers/who-we-serve/travel" },
+          { label: "Ocio", href: "/customers/who-we-serve/leisure" },
+          { label: "Comercio minorista", href: "/customers/who-we-serve/retail" },
         ],
       },
     ],
   },
   {
-    label: "Suppliers",
+    label: "Proveedores",
     href: "/suppliers",
     columns: [
       {
-        label: "Supplier Partnerships",
+        label: "Alianzas con proveedores",
         pages: [
           {
-            label: "Supplier Resources",
+            label: "Recursos para proveedores",
             href: "/suppliers/supplier-partnerships/supplier-resources",
           },
           {
-            label: "Supplier Diversity",
+            label: "Diversidad de proveedores",
             href: "/suppliers/supplier-partnerships/supplier-diversity",
           },
         ],
@@ -152,41 +159,41 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Investors",
+    label: "Inversionistas",
     href: "/investors",
     columns: [],
   },
   {
-    label: "Careers",
+    label: "Carreras",
     href: "/careers",
     columns: [],
   },
   {
-    label: "Sustainability",
+    label: "Sustentabilidad",
     href: "/sustainability",
     columns: [
       {
-        label: "Sustainability",
+        label: "Sustentabilidad",
         pages: [
-          { label: "Our Approach", href: "/sustainability/our-approach" },
-          { label: "Human Rights", href: "/sustainability/human-rights" },
-          { label: "People", href: "/sustainability/people" },
-          { label: "Products", href: "/sustainability/products" },
-          { label: "Planet", href: "/sustainability/planet" },
+          { label: "Nuestro enfoque", href: "/sustainability/our-approach" },
+          { label: "Derechos humanos", href: "/sustainability/human-rights" },
+          { label: "Personas", href: "/sustainability/people" },
+          { label: "Productos", href: "/sustainability/products" },
+          { label: "Planeta", href: "/sustainability/planet" },
         ],
       },
     ],
   },
   {
-    label: "Contact",
+    label: "Contacto",
     href: "/contact",
     columns: [
       {
-        label: "Contact",
+        label: "Contacto",
         pages: [
-          { label: "Contact Us", href: "/contact/contact-us" },
-          { label: "Our Locations", href: "/contact/our-locations" },
-          { label: "Customer Care", href: "/contact/customer-care" },
+          { label: "Contáctanos", href: "/contact/contact-us" },
+          { label: "Nuestras ubicaciones", href: "/contact/our-locations" },
+          { label: "Atención al cliente", href: "/contact/customer-care" },
         ],
       },
     ],
@@ -198,7 +205,7 @@ export const utilityPages: NavPage[] = [
   { label: headerChrome.shopNow, href: headerChrome.shopNowHref },
   { label: headerChrome.becomeCustomer, href: headerChrome.becomeCustomerHref },
   { label: headerChrome.signIn, href: headerChrome.signInHref },
-  { label: "Search", href: headerChrome.searchHref },
+  { label: headerChrome.searchLabel, href: headerChrome.searchHref },
 ];
 
 export type PageMeta = {
