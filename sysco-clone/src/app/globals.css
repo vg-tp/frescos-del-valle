@@ -80,13 +80,15 @@ button {
   background: var(--sysco-green-hover);
 }
 
-.btn-outline-white {
+.btn-outline-white,
+.btn-white-border {
   border: 2px solid #fff;
   color: #fff;
   background: transparent;
 }
 
-.btn-outline-white:hover {
+.btn-outline-white:hover,
+.btn-white-border:hover {
   background: rgba(255, 255, 255, 0.12);
 }
 

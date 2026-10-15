@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
+import FamilyTabs from "./FamilyTabs";
 import {
   CardGrid,
   CenteredHead,
@@ -78,7 +79,7 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
 
 /**
  * Sysco Story stack:
- * tall photo hero → centered Family grid → quote slider →
+ * tall photo hero → Family tab strip + image-caption → quote slider →
  * people feature callout → career cards → CTA
  */
 export function StoryLayout({ content }: { content: InteriorContent }) {
@@ -91,40 +92,15 @@ export function StoryLayout({ content }: { content: InteriorContent }) {
           image: content.splits?.[i % (content.splits.length || 1)]?.image || content.heroImage,
           href: content.href,
         }));
-
   return (
     <PageShell>
       <PhotoHero content={content} tall />
 
       {familyCards.length ? (
-        <section className={styles.familySection}>
-          <div className="container">
-            <CenteredHead title={content.cardsHeading || "La familia Sysco"} />
-            <ul className={styles.familyGrid}>
-              {familyCards.slice(0, 4).map((card) => (
-                <li key={card.title}>
-                  <Link href={card.href || content.href} className={styles.familyCard}>
-                    {card.image ? (
-                      <div className={styles.familyMedia}>
-                        <Image
-                          src={card.image}
-                          alt=""
-                          fill
-                          sizes="25vw"
-                          className={styles.familyImg}
-                        />
-                      </div>
-                    ) : null}
-                    <div className={styles.familyBody}>
-                      <h3>{card.title}</h3>
-                      <p>{card.body}</p>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <FamilyTabs
+          heading={content.cardsHeading || "La familia Sysco"}
+          cards={familyCards}
+        />
       ) : null}
 
       <QuoteBand heading="Lo que dicen nuestros clientes" quotes={STORY_QUOTES} />
@@ -239,63 +215,37 @@ export function PurposeLayout({ content }: { content: InteriorContent }) {
   );
 }
 
+/** Sysco Newsroom: tall hero → 4 equal category image tiles */
 export function NewsLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
       <PhotoHero content={content} tall />
 
       {content.cards?.length ? (
-        <section className={styles.newsFeatured}>
+        <section className={styles.newsMosaic}>
           <div className="container">
-            <CenteredHead title={content.cardsHeading || "Destacados"} />
-            <ul className={styles.newsFeaturedGrid}>
-              {content.cards.map((card) => (
+            {content.lead ? (
+              <p className={styles.newsIntro}>{content.lead}</p>
+            ) : null}
+            <ul className={styles.newsMosaicGrid}>
+              {content.cards.slice(0, 4).map((card) => (
                 <li key={card.title}>
-                  <Link href={card.href || content.href} className={styles.newsCard}>
+                  <Link href={card.href || content.href} className={styles.newsMosaicTile}>
                     {card.image ? (
-                      <div className={styles.newsCardMedia}>
-                        <Image
-                          src={card.image}
-                          alt=""
-                          fill
-                          sizes="33vw"
-                          className={styles.newsCardImg}
-                        />
-                      </div>
+                      <Image
+                        src={card.image}
+                        alt=""
+                        fill
+                        sizes="25vw"
+                        className={styles.newsMosaicImg}
+                      />
                     ) : null}
-                    <div className={styles.newsCardBody}>
-                      {card.meta ? <p className={styles.meta}>{card.meta}</p> : null}
+                    <div className={styles.newsMosaicShade} />
+                    <div className={styles.newsMosaicBody}>
                       <h3>{card.title}</h3>
                       <p>{card.body}</p>
                     </div>
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
-
-      {content.list?.length ? (
-        <section className={styles.newsList}>
-          <div className="container">
-            <CenteredHead title={content.listHeading || "Lo más reciente"} />
-            <ul>
-              {content.list.map((item) => (
-                <li key={item.title}>
-                  {item.href ? (
-                    <Link href={item.href}>
-                      {item.meta ? <span className={styles.meta}>{item.meta}</span> : null}
-                      <strong>{item.title}</strong>
-                      <p>{item.body}</p>
-                    </Link>
-                  ) : (
-                    <div>
-                      {item.meta ? <span className={styles.meta}>{item.meta}</span> : null}
-                      <strong>{item.title}</strong>
-                      <p>{item.body}</p>
-                    </div>
-                  )}
                 </li>
               ))}
             </ul>

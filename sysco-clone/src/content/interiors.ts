@@ -72,6 +72,13 @@ export type BioItem = {
   image: string;
 };
 
+export type LogoCallout = {
+  title: string;
+  body: string;
+  cta: { label: string; href: string };
+  brand?: string;
+};
+
 export type InteriorContent = {
   href: string;
   title: string;
@@ -81,6 +88,17 @@ export type InteriorContent = {
   intro: string[];
   cards?: CardItem[];
   cardsHeading?: string;
+  /** Secondary card row (e.g. Specialty Foods on Products hub) */
+  specialtyCards?: CardItem[];
+  specialtyHeading?: string;
+  /** Tertiary card row (e.g. Featured Recipes) */
+  recipeCards?: CardItem[];
+  recipeHeading?: string;
+  /** Resource card row (e.g. Product Resources) */
+  resourceCards?: CardItem[];
+  resourceHeading?: string;
+  /** Solid #008CD2 Foodie / logo callout band */
+  logoCallout?: LogoCallout;
   splits?: SplitBlock[];
   stats?: StatItem[];
   list?: ListItem[];
@@ -105,6 +123,19 @@ export type InteriorContent = {
   parentLabel?: string;
   parentHref?: string;
   sectionLabel?: string;
+  /** Products child variant for layout dispatch */
+  productsVariant?:
+    | "hub"
+    | "categories"
+    | "brand-family"
+    | "foodie"
+    | "quality"
+    | "services"
+    | "culinary"
+    | "technology"
+    | "multicultural"
+    | "specialty"
+    | "default";
 };
 
 const IMAGES = [
@@ -153,7 +184,8 @@ function pickTemplate(page: PageMeta): InteriorTemplate {
   if (h === "/customers") return "hub-customers";
   if (h === "/suppliers") return "hub-suppliers";
   if (h === "/contact") return "hub-contact";
-  if (h === "/products") return "hub-products";
+  if (h === "/products" || h === "/products/product-categories")
+    return "hub-products";
   if (h === "/sustainability") return "sustainability";
   if (h.startsWith("/sustainability/")) return "sustainability-pillar";
   if (h.startsWith("/customers/who-we-serve/")) return "segment";
@@ -214,6 +246,490 @@ function buildSplits(page: PageMeta): SplitBlock[] {
       cta: { label: "EXPLORAR", href: page.parentHref || "/products" },
     },
   ];
+}
+
+/** Sysco Product Categories tile mosaic (Spanish). */
+function productCategoryTiles(): CardItem[] {
+  const cats = [
+    "Carne y aves",
+    "Mariscos",
+    "Lácteos",
+    "Productos frescos",
+    "Panadería y postres",
+    "Foodservice",
+    "Bebidas",
+    "Especialidades y étnicos",
+    "Ver todas las categorías",
+  ];
+  return cats.map((title, i) => ({
+    title,
+    body: lorem.lead,
+    href: "/products/product-categories",
+    image: img(i + 1),
+  }));
+}
+
+function productsHubBlueprint(page: PageMeta): Partial<InteriorContent> {
+  return {
+    title: page.href === "/products" ? "Productos" : page.title,
+    heroImage: "/section-produce.jpg",
+    lead:
+      "Una alianza garantiza acceso a la mejor red de distribución — tendencias, productos frescos e ideas nuevas.",
+    productsVariant: "hub",
+    cardsHeading: "Nuestras categorías de productos",
+    cards: productCategoryTiles(),
+    splits: [
+      {
+        eyebrow: "Soluciones",
+        title: "Soluciones de vanguardia",
+        body: para(0),
+        image: "/section-kitchen.jpg",
+        align: "left",
+        cta: {
+          label: "CONOCE MÁS",
+          href: "/products/solutions-and-services/culinary-and-product-solutions",
+        },
+      },
+    ],
+    specialtyHeading: "Alimentos especializados",
+    specialtyCards: [
+      {
+        title: "Buckhead & Newport Meat and Seafood",
+        body: para(0),
+        href: "/products/solutions-and-services/specialty-companies",
+        image: "/section-cold.jpg",
+      },
+      {
+        title: "FreshPoint Specialty Produce",
+        body: para(1),
+        href: "/products/solutions-and-services/specialty-companies",
+        image: "/section-produce.jpg",
+      },
+      {
+        title: "Specialty Foods",
+        body: para(2),
+        href: "/products/solutions-and-services/specialty-companies",
+        image: "/cta.jpg",
+      },
+    ],
+    recipeHeading: "Recetas destacadas",
+    recipeCards: [
+      {
+        title: "Hamburguesa artesanal",
+        body: lorem.lead,
+        meta: "Plato principal",
+        href: "/products/sysco-foodie",
+        image: "/card-1.jpg",
+      },
+      {
+        title: "Chile poblano asado",
+        body: para(0),
+        meta: "Entrada",
+        href: "/products/sysco-foodie",
+        image: "/card-2.jpg",
+      },
+      {
+        title: "Guacamole de temporada",
+        body: para(1),
+        meta: "Acompañamiento",
+        href: "/products/sysco-foodie",
+        image: "/card-3.jpg",
+      },
+    ],
+    logoCallout: {
+      brand: "FOODIE",
+      title: "Sysco Foodie",
+      body: "Recetas, tendencias y tips operativos del equipo culinario Sysco para impulsar tu menú.",
+      cta: { label: "EXPLORAR FOODIE", href: "/products/sysco-foodie" },
+    },
+    resourceHeading: "Recursos de producto",
+    resourceCards: [
+      {
+        title: "Videos de producto",
+        body: para(0),
+        href: "/products/sysco-foodie",
+        image: "/section-kitchen.jpg",
+      },
+      {
+        title: "Market Corner",
+        body: para(1),
+        href: "/products/sysco-brand-family",
+        image: "/section-produce.jpg",
+      },
+      {
+        title: "Hojas de seguridad (MSDS)",
+        body: para(2),
+        href: "/products/quality-assurance",
+        image: "/cta.jpg",
+      },
+    ],
+  };
+}
+
+function productsVariantFor(href: string): NonNullable<InteriorContent["productsVariant"]> {
+  if (href.endsWith("/sysco-brand-family")) return "brand-family";
+  if (href.endsWith("/sysco-foodie")) return "foodie";
+  if (href.endsWith("/quality-assurance")) return "quality";
+  if (href.endsWith("/services")) return "services";
+  if (href.endsWith("/culinary-and-product-solutions")) return "culinary";
+  if (href.endsWith("/technology-solutions")) return "technology";
+  if (href.endsWith("/multicultural")) return "multicultural";
+  if (href.endsWith("/specialty-companies")) return "specialty";
+  if (href.endsWith("/product-categories")) return "categories";
+  return "default";
+}
+
+function buildProductsDetail(page: PageMeta): Partial<InteriorContent> {
+  const variant = productsVariantFor(page.href);
+  const baseLead =
+    "Una alianza garantiza acceso a la mejor red de distribución — productos frescos e ideas nuevas.";
+
+  switch (variant) {
+    case "brand-family":
+      return {
+        productsVariant: variant,
+        heroImage: "/cta.jpg",
+        lead: baseLead,
+        cardsHeading: "Familia de marcas Sysco",
+        cards: [
+          "Sysco Classic",
+          "Sysco Imperial",
+          "Sysco Reliance",
+          "Sysco Natural",
+          "Block & Barrel",
+          "Wholesome Farms",
+          "Arrezzio",
+          "House Recipe",
+          "Portico",
+        ].map((title, i) => ({
+          title,
+          body: lorem.lead,
+          href: page.href,
+          image: img(i + 1),
+        })),
+        splits: [
+          {
+            title: "Calidad que lidera",
+            body: para(0),
+            image: "/section-kitchen.jpg",
+            align: "left",
+            cta: { label: "CONOCE MÁS", href: "/products/quality-assurance" },
+          },
+        ],
+        logoCallout: {
+          brand: "FOODIE",
+          title: "Inspiración culinaria",
+          body: "Descubre recetas y tendencias con productos de la familia de marcas Sysco.",
+          cta: { label: "VER FOODIE", href: "/products/sysco-foodie" },
+        },
+        resourceHeading: "Explora más",
+        resourceCards: [
+          {
+            title: "Categorías de productos",
+            body: para(0),
+            href: "/products/product-categories",
+            image: "/section-produce.jpg",
+          },
+          {
+            title: "Aseguramiento de calidad",
+            body: para(1),
+            href: "/products/quality-assurance",
+            image: "/section-cold.jpg",
+          },
+          {
+            title: "Servicios",
+            body: para(2),
+            href: "/products/solutions-and-services/services",
+            image: "/section-kitchen.jpg",
+          },
+        ],
+      };
+    case "foodie":
+      return {
+        productsVariant: variant,
+        heroImage: "/section-kitchen.jpg",
+        lead: "Tendencias, recetas y datos para operadores de foodservice.",
+        intro: [para(0), para(1)],
+        recipeHeading: "Recetas destacadas",
+        recipeCards: [
+          {
+            title: "Parrillada",
+            body: para(0),
+            meta: "Equipo culinario Sysco",
+            href: page.href,
+            image: "/card-1.jpg",
+          },
+          {
+            title: "Chili Tex Mex",
+            body: para(1),
+            meta: "Plato principal",
+            href: page.href,
+            image: "/card-2.jpg",
+          },
+          {
+            title: "Costilla Denver BBQ",
+            body: para(2),
+            meta: "Plato principal",
+            href: page.href,
+            image: "/card-3.jpg",
+          },
+        ],
+        cardsHeading: "Formas de explorar Foodie",
+        cards: [
+          {
+            title: "Revista Foodie",
+            body: lorem.lead,
+            href: page.href,
+            image: "/cta.jpg",
+          },
+          {
+            title: "Market Corner",
+            body: para(0),
+            href: page.href,
+            image: "/section-produce.jpg",
+          },
+          {
+            title: "Marcas Sysco",
+            body: para(1),
+            href: "/products/sysco-brand-family",
+            image: "/section-cold.jpg",
+          },
+        ],
+        logoCallout: {
+          brand: "FOODIE",
+          title: "Sysco Foodie",
+          body: "La revista y hub de tendencias para operadores — recetas, tips y reportes de mercado.",
+          cta: { label: "CONOCE MÁS", href: "/products/product-categories" },
+        },
+        splits: [
+          {
+            title: "Soluciones de vanguardia",
+            body: para(0),
+            image: "/section-kitchen.jpg",
+            align: "right",
+            cta: {
+              label: "EXPLORAR",
+              href: "/products/solutions-and-services/culinary-and-product-solutions",
+            },
+          },
+        ],
+      };
+    case "quality":
+      return {
+        productsVariant: variant,
+        heroImage: "/section-cold.jpg",
+        lead: "Calidad y seguridad alimentaria en cada eslabón de la cadena.",
+        intro: [para(0), para(1)],
+        featuresHeading: "Nuestro compromiso",
+        features: [
+          { title: "Seguridad alimentaria", body: para(0) },
+          { title: "Auditorías y estándares", body: para(1) },
+          { title: "Trazabilidad", body: para(2) },
+          { title: "Sostenibilidad del suministro", body: lorem.lead },
+        ],
+        splits: [
+          {
+            title: "Frescura garantizada",
+            body: para(0),
+            image: "/section-produce.jpg",
+            align: "left",
+            cta: { label: "CONOCE MÁS", href: "/products/product-categories" },
+          },
+          {
+            title: "Socio de confianza",
+            body: para(1),
+            image: "/section-kitchen.jpg",
+            align: "right",
+            cta: { label: "CONTÁCTANOS", href: "/contact/contact-us" },
+          },
+        ],
+        resourceHeading: "Recursos",
+        resourceCards: [
+          {
+            title: "Hojas de seguridad (MSDS)",
+            body: para(0),
+            href: page.href,
+            image: "/cta.jpg",
+          },
+          {
+            title: "Videos de producto",
+            body: para(1),
+            href: "/products/sysco-foodie",
+            image: "/card-2.jpg",
+          },
+          {
+            title: "Market Corner",
+            body: para(2),
+            href: "/products/sysco-foodie",
+            image: "/card-3.jpg",
+          },
+        ],
+      };
+    case "services":
+    case "culinary":
+    case "technology":
+    case "multicultural":
+    case "specialty": {
+      const headings: Record<string, string> = {
+        services: "Servicios para tu operación",
+        culinary: "Soluciones culinarias y de producto",
+        technology: "Soluciones tecnológicas",
+        multicultural: "Recursos multiculturales",
+        specialty: "Empresas especializadas",
+      };
+      const serviceCards: CardItem[] =
+        variant === "specialty"
+          ? [
+              {
+                title: "FreshPoint",
+                body: para(0),
+                href: page.href,
+                image: "/section-produce.jpg",
+              },
+              {
+                title: "Buckhead & Newport",
+                body: para(1),
+                href: page.href,
+                image: "/section-cold.jpg",
+              },
+              {
+                title: "European Imports",
+                body: para(2),
+                href: page.href,
+                image: "/cta.jpg",
+              },
+              {
+                title: "International Food Group",
+                body: lorem.lead,
+                href: page.href,
+                image: "/section-kitchen.jpg",
+              },
+              {
+                title: "Edward Don & Company",
+                body: para(0),
+                href: page.href,
+                image: "/card-1.jpg",
+              },
+              {
+                title: "SYGMA",
+                body: para(1),
+                href: page.href,
+                image: "/card-2.jpg",
+              },
+            ]
+          : [
+              {
+                title: "Servicios",
+                body: para(0),
+                href: "/products/solutions-and-services/services",
+                image: "/section-kitchen.jpg",
+              },
+              {
+                title: "Soluciones culinarias",
+                body: para(1),
+                href: "/products/solutions-and-services/culinary-and-product-solutions",
+                image: "/section-produce.jpg",
+              },
+              {
+                title: "Tecnología",
+                body: para(2),
+                href: "/products/solutions-and-services/technology-solutions",
+                image: "/cta.jpg",
+              },
+              {
+                title: "Multicultural",
+                body: lorem.lead,
+                href: "/products/solutions-and-services/multicultural",
+                image: "/section-cold.jpg",
+              },
+              {
+                title: "Empresas especializadas",
+                body: para(0),
+                href: "/products/solutions-and-services/specialty-companies",
+                image: "/card-3.jpg",
+              },
+              {
+                title: "Familia de marcas",
+                body: para(1),
+                href: "/products/sysco-brand-family",
+                image: "/card-4.jpg",
+              },
+            ];
+      return {
+        productsVariant: variant,
+        heroImage:
+          variant === "technology"
+            ? "/cta.jpg"
+            : variant === "specialty"
+              ? "/section-cold.jpg"
+              : "/section-kitchen.jpg",
+        lead: baseLead,
+        intro: [para(0)],
+        cardsHeading: headings[variant],
+        cards: serviceCards,
+        splits: [
+          {
+            title:
+              variant === "culinary"
+                ? "Ideas frescas para tu menú"
+                : variant === "technology"
+                  ? "Herramientas que impulsan tu negocio"
+                  : "El poder de la alianza",
+            body: para(1),
+            image: "/section-produce.jpg",
+            align: "left",
+            cta: { label: "CONOCE MÁS", href: "/become-a-customer" },
+          },
+          {
+            title: "Hazte cliente",
+            body: para(2),
+            image: "/hero.jpg",
+            align: "right",
+            cta: { label: "COMENZAR", href: "/become-a-customer" },
+          },
+        ],
+        logoCallout:
+          variant === "culinary" || variant === "multicultural"
+            ? {
+                brand: "FOODIE",
+                title: "Sysco Foodie",
+                body: "Recetas y tendencias para complementar tus soluciones de producto.",
+                cta: { label: "EXPLORAR", href: "/products/sysco-foodie" },
+              }
+            : undefined,
+      };
+    }
+    default:
+      return {
+        productsVariant: "default",
+        heroImage: "/section-produce.jpg",
+        lead: baseLead,
+        cardsHeading: "Explora la oferta",
+        cards: buildCards(page, 6),
+        splits: [buildSplits(page)[0]],
+        resourceHeading: "Recursos de producto",
+        resourceCards: [
+          {
+            title: "Categorías",
+            body: para(0),
+            href: "/products/product-categories",
+            image: img(1),
+          },
+          {
+            title: "Marcas Sysco",
+            body: para(1),
+            href: "/products/sysco-brand-family",
+            image: img(2),
+          },
+          {
+            title: "Foodie",
+            body: para(2),
+            href: "/products/sysco-foodie",
+            image: img(3),
+          },
+        ],
+      };
+  }
 }
 
 function buildStats(): StatItem[] {
@@ -325,24 +841,11 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "hub-products":
       return {
         ...base,
-        heroImage: "/section-produce.jpg",
-        lead:
-          "Una alianza garantiza acceso a la mejor red de distribución — tendencias, productos frescos e ideas nuevas.",
-        cardsHeading: "Nuestras categorías de productos",
-        cards: buildCards(page),
-        features: buildFeatures(),
-        featuresHeading: "Alimentos especializados",
-        splits: [
-          {
-            eyebrow: "Soluciones",
-            title: "Soluciones de vanguardia",
-            body: para(0),
-            image: "/section-kitchen.jpg",
-            align: "left",
-            cta: { label: "CONOCE MÁS", href: "/products/solutions-and-services/culinary-and-product-solutions" },
-          },
-          buildSplits(page)[1],
-        ],
+        ...productsHubBlueprint(page),
+        title:
+          page.href === "/products" || page.href === "/products/product-categories"
+            ? "Nuestros productos"
+            : page.title,
       };
     case "story":
       return {
@@ -480,21 +983,35 @@ function buildForPage(page: PageMeta): InteriorContent {
       return {
         ...base,
         heroImage: "/section-cold.jpg",
-        listHeading: "Últimas noticias",
-        list: Array.from({ length: 8 }, (_, i) => ({
-          title: `Lorem ipsum news headline ${i + 1}`,
-          body: lorem.lead,
-          meta: `Oct ${8 + i}, 2026 · Comunicado de prensa`,
-          href: "/about/sysco-today/newsroom",
-        })),
-        cardsHeading: "Destacados",
-        cards: Array.from({ length: 3 }, (_, i) => ({
-          title: `Historia destacada ${i + 1}`,
-          body: para(i),
-          image: img(i),
-          meta: `Oct ${12 + i}, 2026`,
-          href: "/about/sysco-today/newsroom",
-        })),
+        lead: "Comunicados, perspectivas y el impacto de nuestra comunidad.",
+        /* Sysco newsroom: 4 equal category tiles (no featured+list) */
+        cardsHeading: "Sala de prensa",
+        cards: [
+          {
+            title: "Avisos a medios",
+            body: para(0),
+            image: "/section-cold.jpg",
+            href: "/about/sysco-today/newsroom",
+          },
+          {
+            title: "Comunicados de prensa",
+            body: para(1),
+            image: "/cta.jpg",
+            href: "/about/sysco-today/newsroom",
+          },
+          {
+            title: "Perspectivas frescas",
+            body: para(2),
+            image: "/section-produce.jpg",
+            href: "/about/sysco-today/newsroom",
+          },
+          {
+            title: "Impacto comunitario",
+            body: lorem.lead,
+            image: "/section-kitchen.jpg",
+            href: "/about/sysco-today/newsroom",
+          },
+        ],
       };
     case "events":
       return {
@@ -512,11 +1029,7 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "products":
       return {
         ...base,
-        cardsHeading: "Explora la oferta",
-        cards: buildCards(page, 6),
-        features: buildFeatures(),
-        featuresHeading: "Calidad y servicio",
-        splits: [buildSplits(page)[0]],
+        ...buildProductsDetail(page),
       };
     case "segment":
       return {
@@ -940,7 +1453,10 @@ for (const page of allPages) {
   byHref.set(page.href, buildForPage(page));
 }
 
-/** Ensure hub pages list all mega-menu children */
+/**
+ * Ensure hub pages list mega-menu children — except Products, which uses
+ * Sysco category tiles (Meat/Seafood/…) instead of nav destinations.
+ */
 for (const item of navItems) {
   const content = byHref.get(item.href);
   if (!content) continue;
@@ -949,7 +1465,6 @@ for (const item of navItems) {
     "hub-customers",
     "hub-suppliers",
     "hub-contact",
-    "hub-products",
     "sustainability",
   ]);
   if (hubs.has(content.template)) {
@@ -964,6 +1479,30 @@ for (const item of navItems) {
       content.cardsHeading = content.cardsHeading || `Explora ${item.label}`;
     }
   }
+}
+
+/* Keep /products and /products/product-categories on the same Sysco hub stack */
+const productsHub = byHref.get("/products");
+const productsCategories = byHref.get("/products/product-categories");
+if (productsHub && productsCategories) {
+  const shared = productsHubBlueprint(productsCategories);
+  Object.assign(productsCategories, shared, {
+    title: "Nuestros productos",
+    template: "hub-products" as const,
+    parentLabel: productsCategories.parentLabel,
+    parentHref: productsCategories.parentHref,
+    sectionLabel: productsCategories.sectionLabel,
+    related: productsCategories.related,
+    href: productsCategories.href,
+  });
+  Object.assign(productsHub, productsHubBlueprint(allPages.find((p) => p.href === "/products")!), {
+    title: "Nuestros productos",
+    href: "/products",
+    template: "hub-products" as const,
+    parentLabel: productsHub.parentLabel,
+    parentHref: productsHub.parentHref,
+    related: productsHub.related,
+  });
 }
 
 export function getInterior(pathname: string): InteriorContent | undefined {
