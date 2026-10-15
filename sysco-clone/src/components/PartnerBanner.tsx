@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { partnerBanner, site } from "@/content/home";
 import styles from "./PartnerBanner.module.css";
 
@@ -17,9 +18,9 @@ export default function PartnerBanner() {
           </div>
         </div>
         <h2>{partnerBanner.headline}</h2>
-        <a href="#" className="btn btn-outline-white">
+        <Link href={partnerBanner.href} className="btn btn-outline-white">
           {partnerBanner.cta}
-        </a>
+        </Link>
       </div>
     </section>
   );

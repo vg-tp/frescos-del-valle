@@ -28,9 +28,9 @@ export default function Footer() {
         <ul className={styles.social} aria-label="Social">
           {["f", "x", "in", "ig", "yt"].map((label) => (
             <li key={label}>
-              <a href="#" aria-label={label}>
+              <Link href="/about/sysco-today/newsroom" aria-label={label}>
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

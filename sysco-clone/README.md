@@ -4,18 +4,21 @@ Visual marketing homepage inspired by [sysco.com](https://www.sysco.com), brande
 
 ## Edit content
 
-All editable copy and image paths: [`src/content/home.ts`](src/content/home.ts)
+Homepage copy/media: [`src/content/home.ts`](src/content/home.ts)  
+Nav tree + utility routes: [`src/content/nav.ts`](src/content/nav.ts)  
+Interior page blueprints (templates by section type): [`src/content/interiors.ts`](src/content/interiors.ts)
 
-Components (one file per section):
+Components:
 
-- `src/components/Header.tsx` — utility bar, transparent/solid nav, Search / Shop Now / Become A Customer / Sign In
+- `src/components/Header.tsx` — utility bar, mega-menus, Search / Shop Now / Become A Customer / Sign In
 - `src/components/Hero.tsx` — carousel (arrows + dots)
 - `src/components/PartnerBanner.tsx` — blue co-brand band
 - `src/components/PhotoSections.tsx` — full-bleed photo bands
+- `src/components/InteriorPage.tsx` — shared interior layout (hero, cards, splits, forms, CTA)
 - `src/components/Footer.tsx`
 - `src/components/CookieBanner.tsx`
 
-Page composition: `src/app/page.tsx`
+Homepage: `src/app/page.tsx` · Interiors: `src/app/[...slug]/page.tsx`
 
 ## Run locally
 

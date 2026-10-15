@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { heroSlides } from "@/content/home";
 import styles from "./Hero.module.css";
 
@@ -59,9 +60,9 @@ export default function Hero() {
       <div className={styles.content}>
         <h1>{slide.headline}</h1>
         <p>{slide.body}</p>
-        <a href="#" className="btn btn-green">
+        <Link href={slide.href} className="btn btn-green">
           {slide.cta}
-        </a>
+        </Link>
       </div>
 
       <div className={styles.dots} role="tablist" aria-label="Slides">

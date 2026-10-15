@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import SiteChrome from "@/components/SiteChrome";
 import InteriorPage from "@/components/InteriorPage";
 import { allPages, findPage } from "@/content/nav";
+import { getInterior, interiorHrefs } from "@/content/interiors";
 import { site } from "@/content/home";
 
 type Props = {
@@ -10,8 +11,9 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return allPages.map((page) => ({
-    slug: page.href.replace(/^\//, "").split("/"),
+  const hrefs = new Set([...allPages.map((p) => p.href), ...interiorHrefs]);
+  return [...hrefs].map((href) => ({
+    slug: href.replace(/^\//, "").split("/"),
   }));
 }
 
@@ -27,12 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CatchAllPage({ params }: Props) {
   const { slug } = await params;
-  const page = findPage(`/${slug.join("/")}`);
-  if (!page) notFound();
+  const path = `/${slug.join("/")}`;
+  const content = getInterior(path);
+  if (!content) notFound();
 
   return (
     <SiteChrome>
-      <InteriorPage page={page} />
+      <InteriorPage content={content} />
     </SiteChrome>
   );
 }

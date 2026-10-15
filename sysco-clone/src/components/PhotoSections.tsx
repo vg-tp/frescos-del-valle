@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { photoSections } from "@/content/home";
 import styles from "./PhotoSections.module.css";
 
@@ -24,9 +25,9 @@ export default function PhotoSections() {
           <div className={`container ${styles.copy}`}>
             <h2>{section.headline}</h2>
             <p>{section.body}</p>
-            <a href="#" className="btn btn-green">
+            <Link href={section.href} className="btn btn-green">
               {section.cta}
-            </a>
+            </Link>
           </div>
         </section>
       ))}
