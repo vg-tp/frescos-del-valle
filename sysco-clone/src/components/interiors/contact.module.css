@@ -11,6 +11,7 @@
 .contactHub {
   background: var(--sysco-utility-bg);
   padding: 56px 0 40px;
+  text-align: left;
 }
 
 .contactHub h1 {
@@ -159,6 +160,7 @@
 .locHero {
   background: #e8eef4;
   padding: 48px 0 36px;
+  text-align: left;
 }
 
 .locHero h1 {
@@ -366,8 +368,8 @@
 
 .searchHead {
   max-width: 720px;
-  margin: 0 auto 40px;
-  text-align: center;
+  margin: 0 0 40px;
+  text-align: left;
 }
 
 .searchHead h1 {
@@ -455,6 +457,7 @@
   background: #2a3340;
   color: #fff;
   padding: 48px 0 40px;
+  text-align: left;
 }
 
 .defaultHero h1 {
