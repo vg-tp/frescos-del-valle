@@ -1,0 +1,233 @@
+/* Products hub — teal compact bar + category mosaic */
+.prodHero {
+  background: linear-gradient(90deg, #006b8f 0%, #0088a8 100%);
+  color: #fff;
+  padding: 48px 0 40px;
+}
+
+.prodHero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  letter-spacing: -0.02em;
+}
+
+.prodHero p {
+  margin: 0;
+  max-width: 52ch;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.mosaic {
+  padding: 40px 0 64px;
+  background: #fff;
+}
+
+.mosaicGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mosaicTile {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.mosaicImg {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.mosaicTile:hover .mosaicImg {
+  transform: scale(1.06);
+}
+
+.mosaicShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 40, 60, 0.85), transparent 55%);
+}
+
+.mosaicBody {
+  position: relative;
+  z-index: 2;
+  padding: 16px 18px;
+}
+
+.mosaicBody h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 720px) {
+  .mosaicGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .mosaicGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.whyStrip {
+  padding: 48px 0;
+  background: #f2f7f9;
+}
+
+.whyGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.whyGrid li {
+  background: #fff;
+  padding: 22px 24px;
+  border-top: 3px solid #0088a8;
+}
+
+.whyGrid h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #006b8f;
+}
+
+.whyGrid p {
+  margin: 0;
+  color: var(--sysco-muted);
+  line-height: 1.55;
+}
+
+@media (min-width: 800px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Product detail — breadcrumb header + content + related strip */
+.detailBar {
+  background: #e8f3f6;
+  padding: 40px 0 32px;
+  border-bottom: 3px solid #0088a8;
+}
+
+.detailBar h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #005a78;
+}
+
+.detailBar p {
+  margin: 0;
+  max-width: 55ch;
+  color: var(--sysco-muted);
+  line-height: 1.6;
+}
+
+.detailBody {
+  padding: 40px 0;
+}
+
+.detailProse p {
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--sysco-ink);
+  max-width: 68ch;
+}
+
+.detailSplit {
+  display: grid;
+  min-height: 360px;
+}
+
+.detailSplitMedia {
+  position: relative;
+  min-height: 240px;
+}
+
+.detailSplitImg {
+  object-fit: cover;
+}
+
+.detailSplitCopy {
+  background: #005a78;
+  color: #fff;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detailSplitCopy h2 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+.detailSplitCopy p {
+  margin: 0 0 20px;
+  line-height: 1.55;
+  opacity: 0.92;
+  max-width: 40ch;
+}
+
+@media (min-width: 880px) {
+  .detailSplit {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.relatedStrip {
+  padding: 40px 0 64px;
+  background: #f7fafb;
+}
+
+.relatedGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.relatedChip {
+  flex: 0 0 auto;
+  display: grid;
+  width: 200px;
+  background: #fff;
+  border: 1px solid var(--sysco-border);
+  overflow: hidden;
+  color: inherit;
+}
+
+.relatedMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #d5e4ea;
+}
+
+.relatedImg {
+  object-fit: cover;
+}
+
+.relatedChip span {
+  padding: 12px 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
