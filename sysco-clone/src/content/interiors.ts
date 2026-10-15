@@ -234,16 +234,6 @@ function buildFeatures(): { title: string; body: string }[] {
   ];
 }
 
-function buildTimeline(): TimelineItem[] {
-  return [
-    { year: "1969", title: "Lorem ipsum founded", body: para(0) },
-    { year: "1985", title: "Dolor sit expansion", body: para(1) },
-    { year: "2001", title: "Consectetur network", body: para(2) },
-    { year: "2018", title: "Adipiscing innovation", body: para(0) },
-    { year: "2024", title: "Eiusmod tomorrow", body: para(1) },
-  ];
-}
-
 function defaultCta(): InteriorContent["cta"] {
   return {
     title: "Lorem ipsum dolor sit amet",
