@@ -182,10 +182,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    115deg,
-    rgba(0, 60, 40, 0.85) 0%,
-    rgba(0, 90, 70, 0.55) 50%,
-    rgba(0, 40, 30, 0.4) 100%
+    100deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
@@ -542,10 +542,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    120deg,
-    rgba(20, 80, 50, 0.88) 0%,
-    rgba(40, 120, 70, 0.55) 50%,
-    rgba(20, 60, 40, 0.4) 100%
+    100deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
@@ -810,10 +810,10 @@
 
 .careersHeroShade {
   background: linear-gradient(
-    115deg,
-    rgba(0, 90, 110, 0.88) 0%,
-    rgba(40, 160, 90, 0.55) 55%,
-    rgba(0, 40, 50, 0.35) 100%
+    100deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
   ) !important;
 }
 

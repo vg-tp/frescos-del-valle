@@ -40,8 +40,13 @@
 .photoHeroShade {
   position: absolute;
   inset: 0;
-  /* Live Sysco: soft cool-gray wash hsla(208,7%,45%,.8) */
-  background: hsla(208, 7%, 45%, 0.72);
+  /* Black gradient overlay — keeps left-aligned white title readable */
+  background: linear-gradient(
+    100deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
 }
 
 .photoHeroInner {

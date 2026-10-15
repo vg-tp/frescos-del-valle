@@ -22,9 +22,9 @@
   inset: 0;
   background: linear-gradient(
     100deg,
-    rgba(10, 14, 22, 0.88) 0%,
-    rgba(10, 14, 22, 0.45) 55%,
-    rgba(10, 14, 22, 0.25) 100%
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
@@ -158,10 +158,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(0, 0, 0, 0.25) 55%,
-    rgba(0, 0, 0, 0.15) 100%
+    100deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
