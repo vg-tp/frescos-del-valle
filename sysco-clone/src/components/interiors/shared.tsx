@@ -1,17 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { InteriorContent } from "@/content/interiors";
+import type { InteriorContent, CardItem, SplitBlock } from "@/content/interiors";
 import styles from "./shared.module.css";
 
 export function PageShell({
   children,
   className,
+  padded = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  /** Use for cream/utility pages without a bleeding PhotoHero */
+  padded?: boolean;
 }) {
   return (
-    <main className={`${styles.main}${className ? ` ${className}` : ""}`}>
+    <main
+      className={`${styles.main}${padded ? ` ${styles.mainPadded}` : ""}${
+        className ? ` ${className}` : ""
+      }`}
+    >
       {children}
     </main>
   );
@@ -47,22 +54,35 @@ export function Crumbs({
   );
 }
 
-/** Full-bleed photo page header — breadcrumbs + title + lead (Sysco interior chrome). */
+/**
+ * Sysco `standard-page-hero`: tall full-bleed photo, dark overlay,
+ * left-aligned title + lead (crumbs kept subtle).
+ */
 export function PhotoHero({
   content,
   compact = false,
+  tall = false,
+  showCrumbs = true,
 }: {
   content: InteriorContent;
   compact?: boolean;
+  /** ~70vh Sysco marketing interior */
+  tall?: boolean;
+  showCrumbs?: boolean;
 }) {
   const heroSrc = content.heroImage || "/hero.jpg";
   const title = content.title?.trim() || "Sysco";
   const lead =
     content.lead?.trim() ||
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+  const sizeClass = compact
+    ? styles.photoHeroCompact
+    : tall
+      ? styles.photoHeroTall
+      : "";
   return (
     <section
-      className={`${styles.photoHero}${compact ? ` ${styles.photoHeroCompact}` : ""}`}
+      className={`${styles.photoHero}${sizeClass ? ` ${sizeClass}` : ""}`}
       aria-label="Encabezado de página"
     >
       <Image
@@ -75,7 +95,7 @@ export function PhotoHero({
       />
       <div className={styles.photoHeroShade} />
       <div className={`container ${styles.photoHeroInner}`}>
-        <Crumbs content={content} />
+        {showCrumbs ? <Crumbs content={content} /> : null}
         <h1>{title}</h1>
         <p className={styles.photoHeroLead}>{lead}</p>
       </div>
@@ -83,19 +103,41 @@ export function PhotoHero({
   );
 }
 
+/** Centered section title — Sysco pattern under white content bands. */
+export function CenteredHead({
+  title,
+  lead,
+}: {
+  title: string;
+  lead?: string;
+}) {
+  return (
+    <header className={styles.centeredHead}>
+      <h2>{title}</h2>
+      {lead ? <p>{lead}</p> : null}
+    </header>
+  );
+}
+
 export function FeatureGrid({
   heading,
   items,
+  centered = true,
 }: {
   heading: string;
   items: NonNullable<InteriorContent["features"]>;
+  centered?: boolean;
 }) {
   return (
     <section className={styles.featureSection}>
       <div className="container">
-        <header className={styles.sectionHead}>
-          <h2>{heading}</h2>
-        </header>
+        {centered ? (
+          <CenteredHead title={heading} />
+        ) : (
+          <header className={styles.sectionHead}>
+            <h2>{heading}</h2>
+          </header>
+        )}
         <ul className={styles.featureGrid}>
           {items.map((f) => (
             <li key={f.title}>
@@ -104,6 +146,159 @@ export function FeatureGrid({
             </li>
           ))}
         </ul>
+      </div>
+    </section>
+  );
+}
+
+/** Sysco image-tile mosaic (product categories / brand family). */
+export function ImageTileGrid({
+  heading,
+  cards,
+}: {
+  heading: string;
+  cards: CardItem[];
+}) {
+  return (
+    <section className={styles.tileSection}>
+      <div className="container">
+        <CenteredHead title={heading} />
+        <ul className={styles.tileGrid}>
+          {cards.map((card) => (
+            <li key={`${card.title}-${card.href}`}>
+              <Link href={card.href || "#"} className={styles.imageTile}>
+                {card.image ? (
+                  <Image
+                    src={card.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 700px) 50vw, 25vw"
+                    className={styles.imageTileImg}
+                  />
+                ) : null}
+                <div className={styles.imageTileShade} />
+                <span className={styles.imageTileLabel}>{card.title}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+/** Sysco card-grid with optional media (partnership / specialty / careers). */
+export function CardGrid({
+  heading,
+  cards,
+  columns = 3,
+}: {
+  heading?: string;
+  cards: CardItem[];
+  columns?: 2 | 3 | 4;
+}) {
+  const colClass =
+    columns === 2
+      ? styles.cardGrid2
+      : columns === 4
+        ? styles.cardGrid4
+        : styles.cardGrid3;
+  return (
+    <section className={styles.cardSection}>
+      <div className="container">
+        {heading ? <CenteredHead title={heading} /> : null}
+        <ul className={`${styles.cardGrid} ${colClass}`}>
+          {cards.map((card) => (
+            <li key={`${card.title}-${card.href}`}>
+              <Link href={card.href || "#"} className={styles.mediaCard}>
+                {card.image ? (
+                  <div className={styles.mediaCardMedia}>
+                    <Image
+                      src={card.image}
+                      alt=""
+                      fill
+                      sizes="33vw"
+                      className={styles.mediaCardImg}
+                    />
+                  </div>
+                ) : null}
+                <div className={styles.mediaCardBody}>
+                  {card.meta ? (
+                    <p className={styles.mediaCardMeta}>{card.meta}</p>
+                  ) : null}
+                  <h3>{card.title}</h3>
+                  <p>{card.body}</p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+/** Full-bleed feature callout (image + copy), Sysco alternating bands. */
+export function FeatureCallout({ block }: { block: SplitBlock }) {
+  return (
+    <section
+      className={`${styles.featureCallout} ${
+        block.align === "right" ? styles.featureCalloutRight : ""
+      }`}
+    >
+      <div className={styles.featureCalloutMedia}>
+        <Image
+          src={block.image}
+          alt=""
+          fill
+          sizes="(max-width: 900px) 100vw, 50vw"
+          className={styles.featureCalloutImg}
+        />
+      </div>
+      <div className={styles.featureCalloutCopy}>
+        {block.eyebrow ? (
+          <p className={styles.featureCalloutEyebrow}>{block.eyebrow}</p>
+        ) : null}
+        <h2>{block.title}</h2>
+        <p>{block.body}</p>
+        {block.cta ? (
+          <Link href={block.cta.href} className="btn btn-green">
+            {block.cta.label}
+          </Link>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+/** Customer quote band (Sysco Story “Hear What Customers Are Saying”). */
+export function QuoteBand({
+  heading,
+  quotes,
+}: {
+  heading: string;
+  quotes: { quote: string; author: string; role?: string }[];
+}) {
+  const q = quotes[0];
+  if (!q) return null;
+  return (
+    <section className={styles.quoteBand}>
+      <div className="container">
+        <CenteredHead title={heading} />
+        <blockquote className={styles.quoteBlock}>
+          <p className={styles.quoteText}>“{q.quote}”</p>
+          <footer>
+            <strong>{q.author}</strong>
+            {q.role ? <span>{q.role}</span> : null}
+          </footer>
+        </blockquote>
+        {quotes.length > 1 ? (
+          <div className={styles.quoteDots} aria-hidden>
+            {quotes.map((_, i) => (
+              <span key={i} className={i === 0 ? styles.quoteDotActive : undefined} />
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

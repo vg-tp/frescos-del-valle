@@ -1,68 +1,57 @@
-import Image from "next/image";
-import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, CtaBand, PageShell } from "./shared";
-import { sharedStyles } from "./shared";
-import styles from "./products.module.css";
+import {
+  CardGrid,
+  CtaBand,
+  FeatureCallout,
+  ImageTileGrid,
+  PageShell,
+  PhotoHero,
+} from "./shared";
 
+/**
+ * Sysco Products hub (= product-categories destination):
+ * tall photo hero “Our Products” → centered tile mosaic →
+ * feature callouts → specialty card grid → CTA
+ */
 export function ProductsHubLayout({ content }: { content: InteriorContent }) {
+  const tiles = content.cards || [];
+  const specialty = tiles.slice(0, 3);
   return (
     <PageShell>
-      <section className={styles.prodHero}>
-        <div className="container">
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero
+        content={{
+          ...content,
+          title: content.title === "Productos" ? "Nuestros productos" : content.title,
+        }}
+        tall
+      />
 
-      {content.cards?.length ? (
-        <section className={styles.mosaic}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Categorías"}</h2>
-            </header>
-            <ul className={styles.mosaicGrid}>
-              {content.cards.map((card) => (
-                <li key={`${card.title}-${card.href}`}>
-                  <Link href={card.href || "/products"} className={styles.mosaicTile}>
-                    {card.image ? (
-                      <Image
-                        src={card.image}
-                        alt=""
-                        fill
-                        sizes="25vw"
-                        className={styles.mosaicImg}
-                      />
-                    ) : null}
-                    <div className={styles.mosaicShade} />
-                    <div className={styles.mosaicBody}>
-                      <h3>{card.title}</h3>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+      {tiles.length ? (
+        <ImageTileGrid
+          heading={content.cardsHeading || "Nuestras categorías de productos"}
+          cards={tiles}
+        />
       ) : null}
 
-      {content.features?.length ? (
-        <section className={styles.whyStrip}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Por qué nosotros"}</h2>
-            </header>
-            <ul className={styles.whyGrid}>
-              {content.features.map((f) => (
-                <li key={f.title}>
-                  <h3>{f.title}</h3>
-                  <p>{f.body}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+      {content.splits?.[0] ? (
+        <FeatureCallout
+          block={{
+            ...content.splits[0],
+            title: content.splits[0].title || "Soluciones de vanguardia",
+          }}
+        />
+      ) : null}
+
+      {specialty.length ? (
+        <CardGrid
+          heading={content.featuresHeading || "Alimentos especializados"}
+          cards={specialty}
+          columns={3}
+        />
+      ) : null}
+
+      {content.splits?.[1] ? (
+        <FeatureCallout block={content.splits[1]} />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
@@ -70,95 +59,57 @@ export function ProductsHubLayout({ content }: { content: InteriorContent }) {
   );
 }
 
+/**
+ * Product detail — same Sysco chrome as hubs: photo hero + tiles/callouts
+ * (Sysco Brand Family uses standard-page-hero + image tiles).
+ */
 export function ProductsDetailLayout({ content }: { content: InteriorContent }) {
-  const split = content.splits?.[0];
   return (
     <PageShell>
-      <section className={styles.detailBar}>
-        <div className="container">
-          <Crumbs content={content} tone="light" />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} tall />
 
-      <section className={styles.detailBody}>
-        <div className={`container ${styles.detailProse}`}>
-          {content.intro.map((p) => (
-            <p key={p.slice(0, 40)}>{p}</p>
-          ))}
-        </div>
-      </section>
-
-      {split ? (
-        <section className={styles.detailSplit}>
-          <div className={styles.detailSplitMedia}>
-            <Image
-              src={split.image}
-              alt=""
-              fill
-              sizes="50vw"
-              className={styles.detailSplitImg}
-            />
-          </div>
-          <div className={styles.detailSplitCopy}>
-            <h2>{split.title}</h2>
-            <p>{split.body}</p>
-            {split.cta ? (
-              <Link href={split.cta.href} className="btn btn-green">
-                {split.cta.label}
-              </Link>
-            ) : null}
-          </div>
-        </section>
-      ) : null}
-
-      {content.features?.length ? (
-        <section className={styles.whyStrip}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Destacados"}</h2>
-            </header>
-            <ul className={styles.whyGrid}>
-              {content.features.map((f) => (
-                <li key={f.title}>
-                  <h3>{f.title}</h3>
-                  <p>{f.body}</p>
-                </li>
-              ))}
-            </ul>
+      {content.intro?.length ? (
+        <section style={{ padding: "48px 0 8px", background: "#fff" }}>
+          <div className="container" style={{ maxWidth: "68ch" }}>
+            {content.intro.map((p) => (
+              <p
+                key={p.slice(0, 40)}
+                style={{
+                  margin: "0 0 1.1rem",
+                  fontSize: "1.05rem",
+                  lineHeight: 1.7,
+                  color: "var(--sysco-ink)",
+                }}
+              >
+                {p}
+              </p>
+            ))}
           </div>
         </section>
       ) : null}
 
       {content.cards?.length ? (
-        <section className={styles.relatedStrip}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Relacionados"}</h2>
-            </header>
-            <ul className={styles.relatedGrid}>
-              {content.cards.map((card) => (
-                <li key={`${card.title}-${card.href}`}>
-                  <Link href={card.href || "/products"} className={styles.relatedChip}>
-                    {card.image ? (
-                      <div className={styles.relatedMedia}>
-                        <Image
-                          src={card.image}
-                          alt=""
-                          fill
-                          sizes="200px"
-                          className={styles.relatedImg}
-                        />
-                      </div>
-                    ) : null}
-                    <span>{card.title}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <ImageTileGrid
+          heading={content.cardsHeading || "Explora la oferta"}
+          cards={content.cards}
+        />
+      ) : null}
+
+      {content.splits?.map((block) => (
+        <FeatureCallout key={`${block.title}-${block.align}`} block={block} />
+      ))}
+
+      {content.features?.length ? (
+        <CardGrid
+          heading={content.featuresHeading || "Recursos de producto"}
+          cards={content.features.map((f, i) => ({
+            title: f.title,
+            body: f.body,
+            href: content.href,
+            image: ["/section-produce.jpg", "/section-kitchen.jpg", "/card-1.jpg"][i % 3],
+          }))}
+          columns={3}
+        />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}

@@ -1,12 +1,13 @@
 /* Customers hub — dark cinematic hero + large segment photo tiles only */
 .custHero {
   position: relative;
-  min-height: 480px;
+  min-height: min(72vh, 640px);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
   color: #fff;
-  padding: 100px 0 72px;
+  padding: calc(var(--announce-h) + var(--header-h) + 48px) 0 72px;
+  margin-top: calc(-1 * (var(--announce-h) + var(--header-h)));
   overflow: hidden;
   text-align: left;
 }
@@ -341,4 +342,114 @@
 .relatedSegUl a:hover {
   border-color: var(--sysco-blue);
   color: var(--sysco-blue);
+}
+
+/* Sysco restaurants — intro split under hero */
+.introSplit {
+  display: grid;
+  background: #fff;
+  min-height: 420px;
+}
+
+.introMedia {
+  position: relative;
+  min-height: 280px;
+}
+
+.introImg {
+  object-fit: cover;
+}
+
+.introCopy {
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introCopy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  color: #2a2f33;
+  letter-spacing: -0.02em;
+}
+
+.introRule {
+  width: 48px;
+  height: 2px;
+  background: #c5ccd3;
+  margin-bottom: 18px;
+}
+
+.introCopy p {
+  margin: 0 0 12px;
+  max-width: 42ch;
+  line-height: 1.6;
+  color: var(--sysco-muted);
+}
+
+@media (min-width: 900px) {
+  .introSplit {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.oneSysco {
+  padding: 56px 0 72px;
+  background: #f7f9fb;
+}
+
+.specialtyGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.specialtyCard {
+  display: grid;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e6e9ec;
+  padding: 0 0 20px;
+  color: inherit;
+  overflow: hidden;
+  height: 100%;
+}
+
+.specialtyMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #dfe5ea;
+}
+
+.specialtyImg {
+  object-fit: cover;
+}
+
+.specialtyCard h3 {
+  margin: 0;
+  padding: 0 18px;
+  font-size: 1.1rem;
+}
+
+.specialtyCard p {
+  margin: 0;
+  padding: 0 18px;
+  color: var(--sysco-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 700px) {
+  .specialtyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .specialtyGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

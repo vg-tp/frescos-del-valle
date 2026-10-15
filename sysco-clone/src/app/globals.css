@@ -1,15 +1,17 @@
 :root {
-  --sysco-blue: #0072ce;
-  --sysco-blue-bright: #007dbc;
-  --sysco-blue-dark: #006fb9;
-  --sysco-nav: #007da5;
-  --sysco-green: #5cb85c;
-  --sysco-green-hover: #4cae4c;
+  /* Live Sysco tokens (www.sysco.com CSS, Oct 2026 audit) */
+  --sysco-blue: #008cd2;
+  --sysco-blue-bright: #008cd2;
+  --sysco-blue-dark: #0077b3;
+  --sysco-nav: #008cd2;
+  --sysco-green: #56b146;
+  --sysco-green-hover: #145a32;
   --sysco-ink: #2a2f33;
-  --sysco-muted: #5a6066;
-  --sysco-utility-bg: #e8f1f8;
+  --sysco-muted: #6a737b;
+  --sysco-utility-bg: #f8f8f9;
+  --sysco-band: #f8f8f9;
   --sysco-footer: #333940;
-  --sysco-border: #e5e5e5;
+  --sysco-border: #e4e5e6;
   --announce-h: 40px;
   --header-h: 72px;
   --font-sans: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;

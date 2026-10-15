@@ -17,13 +17,23 @@ export default function Header() {
   const closeTimer = useRef<number | null>(null);
   const menuId = useId();
   const isHome = pathname === "/";
+  // Sysco standard-page-hero interiors keep transparent nav until scroll
+  // (same as home). Solid chrome for cream/utility pages without a photo hero.
+  const overPhotoHero =
+    isHome ||
+    (!!pathname &&
+      pathname !== "/search" &&
+      pathname !== "/sign-in" &&
+      pathname !== "/become-a-customer" &&
+      pathname !== "/shop-now" &&
+      !pathname.includes("our-purpose"));
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     setOpen(false);
@@ -70,9 +80,9 @@ export default function Header() {
     setActiveMenu(label);
   };
 
-  // Match Sysco: opening a dropdown over the hero must NOT paint the nav solid white.
-  // Solid chrome only when scrolled, on interior pages, or when the mobile drawer is open.
-  const forceSolid = !isHome || solid || open;
+  // Match Sysco: dropdown open over a photo hero must NOT paint the nav solid white.
+  // Solid chrome when scrolled, on non-photo pages, or when the mobile drawer is open.
+  const forceSolid = !overPhotoHero || solid || open;
   const shellClass = `${styles.header} ${forceSolid ? styles.solid : styles.overHero}`;
 
   return (

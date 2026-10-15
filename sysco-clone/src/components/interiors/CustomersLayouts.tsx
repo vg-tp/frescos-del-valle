@@ -1,10 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, CtaBand, PageShell } from "./shared";
-import { sharedStyles } from "./shared";
+import {
+  CardGrid,
+  CenteredHead,
+  CtaBand,
+  FeatureCallout,
+  PageShell,
+  PhotoHero,
+} from "./shared";
 import styles from "./customers.module.css";
 
+/**
+ * Customers hub — Sysco redirects /customers → restaurants.
+ * Keep a segment mosaic under a tall photo hero + CTAs.
+ */
 export function CustomersHubLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
@@ -19,7 +29,6 @@ export function CustomersHubLayout({ content }: { content: InteriorContent }) {
         />
         <div className={styles.custHeroShade} />
         <div className={`container ${styles.custHeroInner}`}>
-          <Crumbs content={content} />
           <h1>{content.title}</h1>
           <p>{content.lead}</p>
           <div className={styles.custActions}>
@@ -65,43 +74,81 @@ export function CustomersHubLayout({ content }: { content: InteriorContent }) {
   );
 }
 
+/**
+ * Sysco Restaurants / segment stack:
+ * tall photo hero → intro split (image + “At the Heart…”) →
+ * Power of Partnership cards → multicultural / One Sysco callouts →
+ * specialty company grid → brand/QA callouts → Become a Customer CTA
+ */
 export function SegmentLayout({ content }: { content: InteriorContent }) {
+  const introSplit = content.splits?.[0];
+  const moreSplits = content.splits?.slice(1) || [];
+
   return (
     <PageShell>
-      <section className={styles.industryHero}>
-        <Image
-          src={content.heroImage}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className={styles.industryHeroImg}
-        />
-        <div className={styles.industryHeroShade} />
-        <div className={`container ${styles.industryHeroInner}`}>
-          <Crumbs content={content} />
-          <p className={styles.industryEyebrow}>
-            {content.parentLabel || "A quiénes servimos"}
-          </p>
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-          <Link href="/become-a-customer" className="btn btn-green">
-            Hazte cliente
-          </Link>
-        </div>
-      </section>
+      <PhotoHero content={content} tall showCrumbs />
+
+      {introSplit ? (
+        <section className={styles.introSplit}>
+          <div className={styles.introMedia}>
+            <Image
+              src={introSplit.image}
+              alt=""
+              fill
+              sizes="50vw"
+              className={styles.introImg}
+            />
+          </div>
+          <div className={styles.introCopy}>
+            <h2>{introSplit.title || "En el corazón de la comida y el servicio"}</h2>
+            <div className={styles.introRule} aria-hidden />
+            <p>{introSplit.body}</p>
+            {content.intro.slice(0, 1).map((p) => (
+              <p key={p.slice(0, 28)}>{p}</p>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {content.features?.length ? (
-        <section className={styles.benefits}>
+        <CardGrid
+          heading={content.featuresHeading || "El poder de la alianza"}
+          cards={content.features.slice(0, 3).map((f, i) => ({
+            title: f.title,
+            body: f.body,
+            href: "/become-a-customer",
+            image: ["/section-kitchen.jpg", "/section-produce.jpg", "/card-2.jpg"][i],
+          }))}
+          columns={3}
+        />
+      ) : null}
+
+      {moreSplits.map((block) => (
+        <FeatureCallout key={`${block.title}-${block.align}`} block={block} />
+      ))}
+
+      {content.cards?.length ? (
+        <section className={styles.oneSysco}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Cómo te ayudamos"}</h2>
-            </header>
-            <ul className={styles.benefitsGrid}>
-              {content.features.slice(0, 3).map((f) => (
-                <li key={f.title}>
-                  <h3>{f.title}</h3>
-                  <p>{f.body}</p>
+            <CenteredHead title={content.cardsHeading || "One Sysco"} />
+            <ul className={styles.specialtyGrid}>
+              {content.cards.map((card) => (
+                <li key={`${card.title}-${card.href}`}>
+                  <Link href={card.href || "/customers"} className={styles.specialtyCard}>
+                    {card.image ? (
+                      <div className={styles.specialtyMedia}>
+                        <Image
+                          src={card.image}
+                          alt=""
+                          fill
+                          sizes="33vw"
+                          className={styles.specialtyImg}
+                        />
+                      </div>
+                    ) : null}
+                    <h3>{card.title}</h3>
+                    <p>{card.body}</p>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -122,59 +169,18 @@ export function SegmentLayout({ content }: { content: InteriorContent }) {
         </section>
       ) : null}
 
-      {content.splits?.map((block, i) => (
-        <section
-          key={`${block.title}-${block.align}`}
-          className={`${styles.photoCta} ${i % 2 === 1 ? styles.photoCtaFlip : ""}`}
-        >
-          <div className={styles.photoCtaMedia}>
-            <Image
-              src={block.image}
-              alt=""
-              fill
-              sizes="50vw"
-              className={styles.photoCtaImg}
-            />
-          </div>
-          <div className={styles.photoCtaCopy}>
-            {block.eyebrow ? (
-              <p className={styles.industryEyebrow}>{block.eyebrow}</p>
-            ) : null}
-            <h2>{block.title}</h2>
-            <p>{block.body}</p>
-            {block.cta ? (
-              <Link href={block.cta.href} className="btn btn-green">
-                {block.cta.label}
-              </Link>
-            ) : null}
-          </div>
-        </section>
-      ))}
-
-      {content.cards?.length || content.related?.length ? (
-        <section className={styles.relatedSeg}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Segmentos relacionados"}</h2>
-            </header>
-            <ul className={styles.relatedSegUl}>
-              {content.cards?.length
-                ? content.cards.map((card) => (
-                    <li key={card.href || card.title}>
-                      <Link href={card.href || "/customers"}>{card.title}</Link>
-                    </li>
-                  ))
-                : content.related?.map((r) => (
-                    <li key={r.href}>
-                      <Link href={r.href}>{r.label}</Link>
-                    </li>
-                  ))}
-            </ul>
-          </div>
-        </section>
+      {content.cta ? (
+        <CtaBand
+          cta={{
+            ...content.cta,
+            title: content.cta.title || "Hazte cliente",
+            primary: content.cta.primary || {
+              label: "Hazte cliente",
+              href: "/become-a-customer",
+            },
+          }}
+        />
       ) : null}
-
-      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }

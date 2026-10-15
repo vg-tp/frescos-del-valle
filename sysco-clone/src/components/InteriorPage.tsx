@@ -4,6 +4,7 @@ import {
   EventsLayout,
   ManagementLayout,
   NewsLayout,
+  PurposeLayout,
   ReportLayout,
   StoryLayout,
 } from "./interiors/AboutLayouts";
@@ -42,6 +43,8 @@ export default function InteriorPage({ content }: { content: InteriorContent }) 
       return <AboutHubLayout content={content} />;
     case "story":
       return <StoryLayout content={content} />;
+    case "purpose":
+      return <PurposeLayout content={content} />;
     case "news":
       return <NewsLayout content={content} />;
     case "events":

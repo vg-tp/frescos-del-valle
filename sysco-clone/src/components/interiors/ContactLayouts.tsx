@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
 import {
-  Crumbs,
+  CardGrid,
+  CenteredHead,
   CtaBand,
+  FeatureCallout,
   FeatureGrid,
   FormFields,
   PageShell,
@@ -12,23 +14,24 @@ import {
 import { sharedStyles } from "./shared";
 import styles from "./contact.module.css";
 
+/**
+ * Sysco Contact hub / Contact Us:
+ * tall photo hero → centered recommendation → 3 pathway cards
+ */
 export function ContactHubLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.contactHub}>
-        <div className="container">
-          <Crumbs content={content} tone="light" />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} tall />
 
-      {content.cards?.length ? (
-        <section className={styles.pathways}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "¿Cómo podemos ayudarte?"}</h2>
-            </header>
+      <section className={styles.pathways}>
+        <div className="container">
+          <CenteredHead
+            title={
+              content.cardsHeading ||
+              "Te recomendamos contactar a tu compañía operativa local para la resolución más rápida"
+            }
+          />
+          {content.cards?.length ? (
             <ul className={styles.pathwayGrid}>
               {content.cards.map((card) => (
                 <li key={`${card.title}-${card.href}`}>
@@ -53,9 +56,9 @@ export function ContactHubLayout({ content }: { content: InteriorContent }) {
                 </li>
               ))}
             </ul>
-          </div>
-        </section>
-      ) : null}
+          ) : null}
+        </div>
+      </section>
 
       {content.features?.length ? (
         <FeatureGrid
@@ -73,11 +76,12 @@ export function ContactFormLayout({ content }: { content: InteriorContent }) {
   if (!content.form) return null;
   return (
     <PageShell>
+      <PhotoHero content={content} tall />
+
       <section className={styles.formPage}>
         <div className={`container ${styles.formLayout}`}>
           <div className={styles.formCopy}>
-            <Crumbs content={content} tone="light" />
-            <h1>{content.title}</h1>
+            <h2>{content.form.heading}</h2>
             <p>{content.lead}</p>
             {content.intro.slice(0, 1).map((p) => (
               <p key={p.slice(0, 28)}>{p}</p>
@@ -100,34 +104,7 @@ export function ContactFormLayout({ content }: { content: InteriorContent }) {
       </section>
 
       {content.cards?.length ? (
-        <section className={styles.pathways}>
-          <div className="container">
-            <ul className={styles.pathwayGrid}>
-              {content.cards.map((card) => (
-                <li key={`${card.title}-${card.href}`}>
-                  <Link href={card.href || "/contact"} className={styles.pathway}>
-                    {card.image ? (
-                      <div className={styles.pathwayMedia}>
-                        <Image
-                          src={card.image}
-                          alt=""
-                          fill
-                          sizes="33vw"
-                          className={styles.pathwayImg}
-                        />
-                      </div>
-                    ) : null}
-                    <div className={styles.pathwayBody}>
-                      <h3>{card.title}</h3>
-                      <p>{card.body}</p>
-                      <span className={styles.pathwayCta}>Ir</span>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <CardGrid cards={content.cards} columns={3} />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
@@ -135,14 +112,40 @@ export function ContactFormLayout({ content }: { content: InteriorContent }) {
   );
 }
 
+/** Sysco Our Locations: photo hero → map + search filters → location cards */
 export function LocationsLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.locHero}>
-        <div className="container">
-          <Crumbs content={content} tone="light" />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
+      <PhotoHero content={content} tall />
+
+      <section className={styles.locSearch} aria-label="Buscar ubicaciones">
+        <div className={`container ${styles.locSearchRow}`}>
+          <label>
+            <span>Ciudad o código postal</span>
+            <input type="search" name="q" placeholder="Buscar…" />
+          </label>
+          <label>
+            <span>Estado</span>
+            <select defaultValue="">
+              <option value="" disabled>
+                Seleccionar
+              </option>
+              <option>CDMX</option>
+              <option>Jalisco</option>
+              <option>Nuevo León</option>
+            </select>
+          </label>
+          <label>
+            <span>Tipo</span>
+            <select defaultValue="all">
+              <option value="all">Todas</option>
+              <option>Distribución</option>
+              <option>Oficina</option>
+            </select>
+          </label>
+          <button type="button" className="btn btn-green">
+            Buscar
+          </button>
         </div>
       </section>
 
@@ -153,9 +156,7 @@ export function LocationsLayout({ content }: { content: InteriorContent }) {
       {content.cards?.length ? (
         <section className={styles.locGrid}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Ubicaciones"}</h2>
-            </header>
+            <CenteredHead title={content.cardsHeading || "Ubicaciones"} />
             <ul className={styles.locUl}>
               {content.cards.map((card) => (
                 <li key={card.title}>
@@ -219,29 +220,7 @@ export function UtilityFormLayout({ content }: { content: InteriorContent }) {
         />
       ) : null}
 
-      {split ? (
-        <section className={styles.utilSplit}>
-          <div className={styles.utilSplitMedia}>
-            <Image
-              src={split.image}
-              alt=""
-              fill
-              sizes="50vw"
-              className={styles.utilSplitImg}
-            />
-          </div>
-          <div className={styles.utilSplitCopy}>
-            {split.eyebrow ? <p className={styles.meta}>{split.eyebrow}</p> : null}
-            <h2>{split.title}</h2>
-            <p>{split.body}</p>
-            {split.cta ? (
-              <Link href={split.cta.href} className="btn btn-green">
-                {split.cta.label}
-              </Link>
-            ) : null}
-          </div>
-        </section>
-      ) : null}
+      {split ? <FeatureCallout block={split} /> : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
@@ -251,11 +230,10 @@ export function UtilityFormLayout({ content }: { content: InteriorContent }) {
 export function SearchLayout({ content }: { content: InteriorContent }) {
   const field = content.form?.fields[0];
   return (
-    <PageShell>
+    <PageShell padded>
       <section className={styles.searchPage}>
         <div className="container">
           <div className={styles.searchHead}>
-            <Crumbs content={content} tone="light" />
             <h1>{content.title}</h1>
             <p>{content.lead}</p>
             <form className={styles.searchForm} action="/search" method="get">
@@ -302,13 +280,7 @@ export function SearchLayout({ content }: { content: InteriorContent }) {
 export function DefaultLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.defaultHero}>
-        <div className="container">
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} tall />
       <section className={styles.defaultBody}>
         <div className="container">
           <div className={styles.defaultProse}>
@@ -332,3 +304,5 @@ export function DefaultLayout({ content }: { content: InteriorContent }) {
     </PageShell>
   );
 }
+
+void sharedStyles;
