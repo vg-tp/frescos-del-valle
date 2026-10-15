@@ -70,7 +70,9 @@ export default function Header() {
     setActiveMenu(label);
   };
 
-  const forceSolid = !isHome || solid || open || Boolean(activeMenu);
+  // Match Sysco: opening a dropdown over the hero must NOT paint the nav solid white.
+  // Solid chrome only when scrolled, on interior pages, or when the mobile drawer is open.
+  const forceSolid = !isHome || solid || open;
   const shellClass = `${styles.header} ${forceSolid ? styles.solid : styles.overHero}`;
 
   return (
