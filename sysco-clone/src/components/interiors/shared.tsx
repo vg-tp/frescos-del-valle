@@ -27,7 +27,7 @@ export function Crumbs({
   if (content.parentLabel && content.parentHref) {
     return (
       <p className={`${styles.crumb} ${toneClass}`}>
-        <Link href="/">Home</Link>
+        <Link href="/">Inicio</Link>
         <span aria-hidden> / </span>
         <Link href={content.parentHref}>{content.parentLabel}</Link>
         {content.sectionLabel && content.sectionLabel !== content.parentLabel ? (
@@ -41,7 +41,7 @@ export function Crumbs({
   }
   return (
     <p className={`${styles.crumb} ${toneClass}`}>
-      <Link href="/">Home</Link>
+      <Link href="/">Inicio</Link>
     </p>
   );
 }
@@ -80,13 +80,13 @@ export function FormFields({
         <label key={field.name} className={styles.field}>
           <span>{field.label}</span>
           {field.type === "textarea" ? (
-            <textarea name={field.name} rows={5} placeholder="Lorem ipsum…" />
+            <textarea name={field.name} rows={5} placeholder="Escribe aquí…" />
           ) : (
             <input
               type={field.type}
               name={field.name}
               placeholder={
-                field.type === "search" ? "Search…" : "Lorem ipsum"
+                field.type === "search" ? "Buscar…" : "Escribe aquí"
               }
             />
           )}

@@ -97,7 +97,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className={styles.desktopNav} aria-label="Primary">
+          <nav className={styles.desktopNav} aria-label={headerChrome.primaryNavLabel}>
             <ul>
               {navItems.map((item) => {
                 const hasMenu = item.columns.length > 0;
@@ -148,7 +148,7 @@ export default function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <Link href={headerChrome.searchHref} className={styles.search} aria-label="Search">
+            <Link href={headerChrome.searchHref} className={styles.search} aria-label={headerChrome.searchLabel}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" />
                 <path d="M16 16l4.5 4.5" stroke="currentColor" strokeWidth="2" />
@@ -169,7 +169,7 @@ export default function Header() {
             <button
               type="button"
               className={styles.burger}
-              aria-label={open ? "Close menu" : "Open menu"}
+              aria-label={open ? headerChrome.closeMenu : headerChrome.openMenu}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
             >
@@ -198,7 +198,7 @@ export default function Header() {
                         <button
                           type="button"
                           aria-expanded={expanded}
-                          aria-label={`${expanded ? "Collapse" : "Expand"} ${item.label}`}
+                          aria-label={`${expanded ? headerChrome.collapse : headerChrome.expand} ${item.label}`}
                           onClick={() =>
                             setMobileExpanded(expanded ? null : item.label)
                           }
@@ -280,7 +280,7 @@ function DropdownPanel({
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       role="region"
-      aria-label={`${item.label} menu`}
+      aria-label={`${item.label} ${headerChrome.menuSuffix}`}
       aria-hidden={!open}
       // Closed panels stay in the DOM for open/close motion but are not interactive.
       inert={open ? undefined : true}

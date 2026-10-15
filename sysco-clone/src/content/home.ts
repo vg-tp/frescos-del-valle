@@ -1,14 +1,14 @@
 /**
  * Editable homepage copy + media paths.
- * Nav labels intentionally match Sysco chrome (do not lorem those).
- * Everything else is placeholder lorem for design review.
+ * Nav labels intentionally match Sysco chrome structure (Spanish UI).
+ * Body blocks stay Latin lorem; headlines/CTAs are Spanish placeholders.
  */
 
 export { headerChrome, navItems } from "./nav";
 
 export const site = {
   title: "Frescos del Valle",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description: "Distribución de alimentos frescos para operadores de foodservice.",
   logo: {
     src: "/logo-frescos-del-valle.png",
     alt: "Frescos del Valle",
@@ -17,85 +17,85 @@ export const site = {
 
 export const heroSlides = [
   {
-    headline: "Lorem ipsum dolor sit amet",
+    headline: "Ingredientes frescos para tu operación",
     body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    cta: "EXPLORE NOW",
+    cta: "EXPLORA AHORA",
     href: "/about",
     image: "/hero.jpg",
   },
   {
-    headline: "Ut enim ad minim veniam",
+    headline: "Todo lo que necesitas, en un solo lugar",
     body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    cta: "SHOP NOW",
+    cta: "COMPRA AHORA",
     href: "/shop-now",
     image: "/section-produce.jpg",
   },
   {
-    headline: "Duis aute irure dolor",
+    headline: "Soluciones pensadas para tu cocina",
     body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    cta: "LEARN MORE",
+    cta: "CONOCE MÁS",
     href: "/products",
     image: "/section-kitchen.jpg",
   },
   {
-    headline: "Excepteur sint occaecat",
+    headline: "Crece con un socio de confianza",
     body: "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    cta: "LEARN MORE",
+    cta: "CONOCE MÁS",
     href: "/become-a-customer",
     image: "/cta.jpg",
   },
 ];
 
 export const partnerBanner = {
-  leftTagline: "Lorem ipsum dolor sit amet",
-  rightLabel: "Lorem Ipsum",
-  headline: "Lorem ipsum & dolor sit: amet consectetur",
-  cta: "LEARN MORE",
+  leftTagline: "Compromiso con tu negocio",
+  rightLabel: "Sustentabilidad",
+  headline: "Personas, productos y planeta: trabajando juntos",
+  cta: "CONOCE MÁS",
   href: "/sustainability",
 };
 
 export const photoSections = [
   {
     id: "roots",
-    headline: "Lorem ipsum dolor sit amet",
+    headline: "Nuestras raíces en el valle",
     body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
-    cta: "LEARN MORE",
+    cta: "CONOCE MÁS",
     href: "/about/company-profile/the-sysco-story",
     image: "/section-produce.jpg",
     align: "left" as const,
   },
   {
     id: "future",
-    headline: "Consectetur adipiscing elit",
+    headline: "Productos que impulsan tu menú",
     body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
-    cta: "LEARN MORE",
+    cta: "CONOCE MÁS",
     href: "/products",
     image: "/section-cold.jpg",
     align: "right" as const,
   },
   {
     id: "people",
-    headline: "Ut enim ad minima veniam",
+    headline: "Personas detrás de cada entrega",
     body: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    cta: "LEARN MORE",
+    cta: "CONOCE MÁS",
     href: "/about/our-people/better-together",
     image: "/section-kitchen.jpg",
     align: "left" as const,
   },
   {
     id: "careers",
-    headline: "Neque porro quisquam est",
+    headline: "Construye tu carrera con nosotros",
     body: "Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.",
-    cta: "LEARN MORE",
+    cta: "CONOCE MÁS",
     href: "/careers",
     image: "/hero.jpg",
     align: "right" as const,
   },
   {
     id: "locations",
-    headline: "At vero eos et accusamus",
+    headline: "Cerca de donde operas",
     body: "Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
-    cta: "GET IN TOUCH",
+    cta: "CONTÁCTANOS",
     href: "/contact/our-locations",
     image: "/card-2.jpg",
     align: "center" as const,
@@ -108,69 +108,72 @@ export const footer = {
   stats: "Lorem · ipsum · dolor sit amet",
   columns: [
     {
-      title: "About",
+      title: "Nosotros",
       links: [
-        { label: "The Sysco Story", href: "/about/company-profile/the-sysco-story" },
-        { label: "Annual Report", href: "/about/company-profile/annual-report" },
-        { label: "Sustainability", href: "/sustainability" },
-        { label: "Better Together", href: "/about/our-people/better-together" },
-        { label: "News Room", href: "/about/sysco-today/newsroom" },
-        { label: "At a Glance", href: "/about" },
+        { label: "La historia de Sysco", href: "/about/company-profile/the-sysco-story" },
+        { label: "Informe anual", href: "/about/company-profile/annual-report" },
+        { label: "Sustentabilidad", href: "/sustainability" },
+        { label: "Mejores juntos", href: "/about/our-people/better-together" },
+        { label: "Sala de prensa", href: "/about/sysco-today/newsroom" },
+        { label: "De un vistazo", href: "/about" },
       ],
     },
     {
-      title: "Customer Solutions",
+      title: "Soluciones para clientes",
       links: [
-        { label: "Product Categories", href: "/products/product-categories" },
-        { label: "Sysco Brand Family", href: "/products/sysco-brand-family" },
-        { label: "Services", href: "/products/solutions-and-services/services" },
+        { label: "Categorías de productos", href: "/products/product-categories" },
+        { label: "Familia de marcas Sysco", href: "/products/sysco-brand-family" },
+        { label: "Servicios", href: "/products/solutions-and-services/services" },
         {
-          label: "Culinary Solutions",
+          label: "Soluciones culinarias",
           href: "/products/solutions-and-services/culinary-and-product-solutions",
         },
         {
-          label: "Technology Solutions",
+          label: "Soluciones tecnológicas",
           href: "/products/solutions-and-services/technology-solutions",
         },
       ],
     },
     {
-      title: "Resources",
+      title: "Recursos",
       links: [
-        { label: "Suppliers", href: "/suppliers" },
-        { label: "Investors", href: "/investors" },
-        { label: "Careers", href: "/careers" },
+        { label: "Proveedores", href: "/suppliers" },
+        { label: "Inversionistas", href: "/investors" },
+        { label: "Carreras", href: "/careers" },
       ],
     },
     {
-      title: "Contact Us",
+      title: "Contáctanos",
       links: [
-        { label: "Become A Customer", href: "/become-a-customer" },
-        { label: "Our Locations", href: "/contact/our-locations" },
+        { label: "Hazte cliente", href: "/become-a-customer" },
+        { label: "Nuestras ubicaciones", href: "/contact/our-locations" },
       ],
     },
     {
-      title: "Support",
+      title: "Soporte",
       links: [
-        { label: "Report A Concern", href: "/contact/customer-care" },
+        { label: "Reportar una inquietud", href: "/contact/customer-care" },
         {
-          label: "Limit the Use of My Sensitive Personal Information",
+          label: "Limitar el uso de mi información personal sensible",
           href: "/contact/contact-us",
         },
-        { label: "Cookie Preferences", href: "/contact/contact-us" },
+        { label: "Preferencias de cookies", href: "/contact/contact-us" },
       ],
     },
   ],
   legal: [
-    { label: "Terms of Use", href: "/about" },
-    { label: "Privacy Notice", href: "/about" },
-    { label: "System Usage Policy", href: "/about" },
+    { label: "Términos de uso", href: "/about" },
+    { label: "Aviso de privacidad", href: "/about" },
+    { label: "Política de uso del sistema", href: "/about" },
   ],
-  copyright: "©2026 All Rights Reserved. Frescos del Valle",
+  copyright: "©2026 Todos los derechos reservados. Frescos del Valle",
 };
 
 export const cookieBanner = {
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cookie policy placeholder text for layout review.",
-  customize: "Customize Settings",
-  accept: "Sounds, Good!",
+  body: "Usamos cookies para mejorar tu experiencia. Texto de política de cookies para revisión de diseño.",
+  customize: "Personalizar",
+  accept: "¡De acuerdo!",
+  policyLabel: "Política de cookies",
+  noticeLabel: "Aviso de cookies",
+  closeLabel: "Cerrar",
 };

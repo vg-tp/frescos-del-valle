@@ -12,12 +12,12 @@ export default function NotFound() {
         }}
       >
         <div className="container">
-          <h1 style={{ marginBottom: 12 }}>Page not found</h1>
+          <h1 style={{ marginBottom: 12 }}>Página no encontrada</h1>
           <p style={{ color: "var(--sysco-muted)", marginBottom: 24 }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <Link href="/" className="btn btn-green">
-            Back to home
+            Volver al inicio
           </Link>
         </div>
       </main>

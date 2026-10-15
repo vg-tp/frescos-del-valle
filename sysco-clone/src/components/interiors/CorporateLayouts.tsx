@@ -17,7 +17,7 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
       </section>
 
       {content.stats?.length ? (
-        <section className={styles.irKpis} aria-label="Key figures">
+        <section className={styles.irKpis} aria-label="Cifras clave">
           <div className={`container ${styles.irKpiGrid}`}>
             {content.stats.map((s) => (
               <div key={s.label} className={styles.irKpi}>
@@ -32,7 +32,7 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
       <section className={styles.irColumns}>
         <div className={`container ${styles.irGrid}`}>
           <div className={styles.irPanel}>
-            <h2>{content.listHeading || "Recent releases"}</h2>
+            <h2>{content.listHeading || "Publicaciones recientes"}</h2>
             <ul className={styles.irTable}>
               {(content.list || []).map((item) => (
                 <li key={item.title}>
@@ -46,7 +46,7 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
             </ul>
           </div>
           <div className={styles.irPanel}>
-            <h2>{content.featuresHeading || "Investor tools"}</h2>
+            <h2>{content.featuresHeading || "Herramientas para inversionistas"}</h2>
             <ul className={styles.irTools}>
               {(content.features || []).map((f) => (
                 <li key={f.title}>
@@ -92,14 +92,14 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
           <h1>{content.title}</h1>
           <p>{content.lead}</p>
           <form className={styles.searchBar} action="/careers" method="get">
-            <input type="search" name="q" placeholder="Search jobs…" aria-label="Search jobs" />
-            <button type="submit">Search</button>
+            <input type="search" name="q" placeholder="Buscar empleos…" aria-label="Buscar empleos" />
+            <button type="submit">Buscar</button>
           </form>
         </div>
       </section>
 
       {content.cards?.length ? (
-        <section className={styles.paths} aria-label="Career paths">
+        <section className={styles.paths} aria-label="Rutas profesionales">
           <ul className={styles.pathsUl}>
             {content.cards.map((card) => (
               <li key={card.title}>
@@ -129,7 +129,7 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
         <section className={styles.openings}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Open roles"}</h2>
+              <h2>{content.listHeading || "Vacantes"}</h2>
             </header>
             <ul className={styles.openingsUl}>
               {content.list.map((item) => (
@@ -138,7 +138,7 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
                     {item.meta ? <span className={styles.meta}>{item.meta}</span> : null}
                     <strong>{item.title}</strong>
                     <p>{item.body}</p>
-                    <span className={styles.apply}>Apply</span>
+                    <span className={styles.apply}>Postularse</span>
                   </Link>
                 </li>
               ))}
@@ -151,7 +151,7 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
         <section className={styles.culture}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Our culture"}</h2>
+              <h2>{content.featuresHeading || "Nuestra cultura"}</h2>
             </header>
             <ul className={styles.cultureGrid}>
               {content.features.map((f) => (
@@ -195,14 +195,14 @@ export function SuppliersHubLayout({ content }: { content: InteriorContent }) {
         <section className={styles.supResources}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || content.cardsHeading || "Resources"}</h2>
+              <h2>{content.listHeading || content.cardsHeading || "Recursos"}</h2>
             </header>
             <ul className={styles.supResUl}>
               {(content.list || content.cards || []).map((item) => {
                 const title = "title" in item ? item.title : "";
                 const body = "body" in item ? item.body : "";
                 const href = "href" in item ? item.href : "/suppliers";
-                const meta = "meta" in item ? item.meta : "Partner";
+                const meta = "meta" in item ? item.meta : "Socio";
                 return (
                   <li key={title}>
                     <Link href={href || "/suppliers"}>
@@ -222,7 +222,7 @@ export function SuppliersHubLayout({ content }: { content: InteriorContent }) {
         <section className={styles.supPillars}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Partnership"}</h2>
+              <h2>{content.featuresHeading || "Alianza"}</h2>
             </header>
             <ul className={styles.supPillarGrid}>
               {content.features.map((f) => (
@@ -266,7 +266,7 @@ export function SustainabilityLayout({ content }: { content: InteriorContent }) 
       </section>
 
       {content.stats?.length ? (
-        <section className={styles.sustStats} aria-label="Progress">
+        <section className={styles.sustStats} aria-label="Avances">
           <div className={`container ${styles.sustStatsGrid}`}>
             {content.stats.map((s) => (
               <div key={s.label}>
@@ -282,7 +282,7 @@ export function SustainabilityLayout({ content }: { content: InteriorContent }) 
         <section className={styles.pillars}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Our pillars"}</h2>
+              <h2>{content.cardsHeading || "Nuestros pilares"}</h2>
             </header>
             <ul className={styles.pillarGrid}>
               {content.cards.map((card) => (
@@ -341,7 +341,7 @@ export function SustainabilityPillarLayout({
           {content.features?.length ? (
             <>
               <header className={sharedStyles.sectionHead} style={{ marginTop: 36 }}>
-                <h2>{content.featuresHeading || "Focus areas"}</h2>
+                <h2>{content.featuresHeading || "Áreas de enfoque"}</h2>
               </header>
               <ul className={styles.focusGrid}>
                 {content.features.map((f) => (
@@ -387,7 +387,7 @@ export function SustainabilityPillarLayout({
         <section className={styles.pillars}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "More"}</h2>
+              <h2>{content.cardsHeading || "Más"}</h2>
             </header>
             <ul className={styles.pillarGrid}>
               {content.cards.map((card) => (

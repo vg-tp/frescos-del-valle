@@ -20,7 +20,7 @@ export function ProductsHubLayout({ content }: { content: InteriorContent }) {
         <section className={styles.mosaic}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Categories"}</h2>
+              <h2>{content.cardsHeading || "Categorías"}</h2>
             </header>
             <ul className={styles.mosaicGrid}>
               {content.cards.map((card) => (
@@ -51,7 +51,7 @@ export function ProductsHubLayout({ content }: { content: InteriorContent }) {
         <section className={styles.whyStrip}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Why us"}</h2>
+              <h2>{content.featuresHeading || "Por qué nosotros"}</h2>
             </header>
             <ul className={styles.whyGrid}>
               {content.features.map((f) => (
@@ -117,7 +117,7 @@ export function ProductsDetailLayout({ content }: { content: InteriorContent }) 
         <section className={styles.whyStrip}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Highlights"}</h2>
+              <h2>{content.featuresHeading || "Destacados"}</h2>
             </header>
             <ul className={styles.whyGrid}>
               {content.features.map((f) => (
@@ -135,7 +135,7 @@ export function ProductsDetailLayout({ content }: { content: InteriorContent }) 
         <section className={styles.relatedStrip}>
           <div className="container">
             <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Related"}</h2>
+              <h2>{content.cardsHeading || "Relacionados"}</h2>
             </header>
             <ul className={styles.relatedGrid}>
               {content.cards.map((card) => (

@@ -21,7 +21,7 @@ export default function Hero() {
   const slide = heroSlides[index];
 
   return (
-    <section className={styles.hero} aria-label="Hero carousel">
+    <section className={styles.hero} aria-label="Carrusel principal">
       {heroSlides.map((s, i) => (
         <div
           key={s.headline}
@@ -43,7 +43,7 @@ export default function Hero() {
       <button
         type="button"
         className={`${styles.arrow} ${styles.prev}`}
-        aria-label="Previous slide"
+        aria-label="Diapositiva anterior"
         onClick={() => go(-1)}
       >
         ‹
@@ -51,7 +51,7 @@ export default function Hero() {
       <button
         type="button"
         className={`${styles.arrow} ${styles.next}`}
-        aria-label="Next slide"
+        aria-label="Diapositiva siguiente"
         onClick={() => go(1)}
       >
         ›
@@ -65,14 +65,14 @@ export default function Hero() {
         </Link>
       </div>
 
-      <div className={styles.dots} role="tablist" aria-label="Slides">
+      <div className={styles.dots} role="tablist" aria-label="Diapositivas">
         {heroSlides.map((s, i) => (
           <button
             key={s.headline}
             type="button"
             role="tab"
             aria-selected={i === index}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={`Diapositiva ${i + 1}`}
             className={i === index ? styles.dotActive : styles.dot}
             onClick={() => setIndex(i)}
           />

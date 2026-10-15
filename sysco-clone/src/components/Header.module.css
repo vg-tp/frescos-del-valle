@@ -28,8 +28,9 @@
 .barInner {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   min-height: var(--header-h);
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -41,7 +42,7 @@
 
 .logo img {
   width: auto;
-  height: 44px;
+  height: 40px;
   object-fit: contain;
 }
 
@@ -55,8 +56,8 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2px 4px;
+  flex-wrap: nowrap;
+  gap: 0 2px;
   align-items: center;
 }
 
@@ -68,9 +69,9 @@
 .navLink {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 10px 8px;
-  font-size: 0.9rem;
+  gap: 4px;
+  padding: 10px 6px;
+  font-size: 0.84rem;
   font-weight: 500;
   white-space: nowrap;
   color: inherit;
@@ -181,7 +182,8 @@
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-shrink: 0;
   z-index: 2;
 }
 
@@ -195,7 +197,7 @@
   display: none;
   color: var(--sysco-green);
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 
@@ -205,9 +207,11 @@
 
 .become {
   display: none;
-  min-height: 38px;
-  padding: 8px 16px;
-  font-size: 0.82rem;
+  min-height: 30px;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
 }
 
 .burger {
