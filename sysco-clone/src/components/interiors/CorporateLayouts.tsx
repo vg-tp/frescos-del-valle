@@ -1,30 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, CtaBand, PageShell } from "./shared";
+import {
+  CardGrid,
+  CenteredHead,
+  CtaBand,
+  FeatureCallout,
+  PageShell,
+  PhotoHero,
+} from "./shared";
 import { sharedStyles } from "./shared";
 import styles from "./corporate.module.css";
 
+/**
+ * Sysco IR (investors.sysco.com pattern adapted under site chrome):
+ * photo hero → centered intro → tool card grid → news/filings columns
+ */
 export function InvestorsLayout({ content }: { content: InteriorContent }) {
+  const toolCards =
+    content.cards?.length
+      ? content.cards
+      : (content.features || []).map((f, i) => ({
+          title: f.title,
+          body: f.body,
+          href: "/investors",
+          image: ["/cta.jpg", "/section-cold.jpg", "/hero.jpg", "/section-produce.jpg"][i % 4],
+        }));
+
   return (
     <PageShell>
-      <section className={styles.irHeader}>
+      <PhotoHero content={content} tall />
+
+      <section className={styles.irIntro}>
         <div className="container">
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
+          <h2>Líder global en distribución de foodservice</h2>
           <p>{content.lead}</p>
         </div>
       </section>
 
-      {content.stats?.length ? (
-        <section className={styles.irKpis} aria-label="Cifras clave">
-          <div className={`container ${styles.irKpiGrid}`}>
-            {content.stats.map((s) => (
-              <div key={s.label} className={styles.irKpi}>
-                <strong>{s.value}</strong>
-                <span>{s.label}</span>
-              </div>
-            ))}
+      {toolCards.length ? (
+        <section className={styles.irToolsGrid}>
+          <div className="container">
+            <ul className={styles.irToolUl}>
+              {toolCards.map((c) => (
+                <li key={c.title}>
+                  <Link href={c.href || "/investors"} className={styles.irToolCard}>
+                    <h3>{c.title}</h3>
+                    <p>{c.body}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       ) : null}
@@ -32,7 +58,7 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
       <section className={styles.irColumns}>
         <div className={`container ${styles.irGrid}`}>
           <div className={styles.irPanel}>
-            <h2>{content.listHeading || "Publicaciones recientes"}</h2>
+            <h2>{content.listHeading || "Comunicados recientes"}</h2>
             <ul className={styles.irTable}>
               {(content.list || []).map((item) => (
                 <li key={item.title}>
@@ -46,21 +72,13 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
             </ul>
           </div>
           <div className={styles.irPanel}>
-            <h2>{content.featuresHeading || "Herramientas para inversionistas"}</h2>
+            <h2>{content.featuresHeading || "Gobierno y contactos"}</h2>
             <ul className={styles.irTools}>
               {(content.features || []).map((f) => (
                 <li key={f.title}>
                   <Link href="/investors">
                     {f.title}
                     <p>{f.body}</p>
-                  </Link>
-                </li>
-              ))}
-              {(content.cards || []).slice(0, 4).map((c) => (
-                <li key={c.title}>
-                  <Link href={c.href || "/investors"}>
-                    {c.title}
-                    <p>{c.body}</p>
                   </Link>
                 </li>
               ))}
@@ -74,6 +92,11 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
   );
 }
 
+/**
+ * Sysco Careers:
+ * FEED YOUR hero + green search bridge → featured path tiles →
+ * culture quotes → openings → talent community CTA
+ */
 export function CareersLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
@@ -88,18 +111,41 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
         />
         <div className={styles.careersHeroShade} />
         <div className={`container ${styles.careersHeroInner}`}>
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
+          <h1 className={styles.feedYour}>
+            <span>ALIMENTA TU</span>
+            <span className={styles.feedOutline}>AMBICIÓN</span>
+          </h1>
           <p>{content.lead}</p>
-          <form className={styles.searchBar} action="/careers" method="get">
-            <input type="search" name="q" placeholder="Buscar empleos…" aria-label="Buscar empleos" />
-            <button type="submit">Buscar</button>
-          </form>
         </div>
       </section>
 
+      <section className={styles.jobSearchBridge} aria-label="Buscar empleos">
+        <form className={`container ${styles.jobSearchForm}`} action="/careers" method="get">
+          <label>
+            <span>Buscar por palabra clave</span>
+            <input type="search" name="q" placeholder="p. ej. puesto, categoría o habilidades" />
+          </label>
+          <label>
+            <span>Ubicación</span>
+            <input type="text" name="loc" placeholder="Ciudad, estado o país" />
+          </label>
+          <label>
+            <span>Radio</span>
+            <select name="radius" defaultValue="50">
+              <option value="25">25 km</option>
+              <option value="50">50 km</option>
+              <option value="100">100 km</option>
+            </select>
+          </label>
+          <button type="submit">Buscar empleos</button>
+        </form>
+      </section>
+
       {content.cards?.length ? (
-        <section className={styles.paths} aria-label="Rutas profesionales">
+        <section className={styles.paths} aria-label="Carreras destacadas">
+          <div className="container" style={{ paddingTop: 48 }}>
+            <CenteredHead title={content.cardsHeading || "Carreras destacadas"} />
+          </div>
           <ul className={styles.pathsUl}>
             {content.cards.map((card) => (
               <li key={card.title}>
@@ -117,6 +163,7 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
                   <div className={styles.pathBody}>
                     <h3>{card.title}</h3>
                     <p>{card.body}</p>
+                    <span className={styles.pathCta}>Ver vacantes</span>
                   </div>
                 </Link>
               </li>
@@ -125,12 +172,26 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
         </section>
       ) : null}
 
+      {content.features?.length ? (
+        <section className={styles.culture}>
+          <div className="container">
+            <CenteredHead title={content.featuresHeading || "Nuestra cultura"} />
+            <ul className={styles.cultureGrid}>
+              {content.features.map((f) => (
+                <li key={f.title}>
+                  <h3>{f.title}</h3>
+                  <p>{f.body}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
       {content.list?.length ? (
         <section className={styles.openings}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Vacantes"}</h2>
-            </header>
+            <CenteredHead title={content.listHeading || "Vacantes destacadas"} />
             <ul className={styles.openingsUl}>
               {content.list.map((item) => (
                 <li key={item.title}>
@@ -147,56 +208,23 @@ export function CareersLayout({ content }: { content: InteriorContent }) {
         </section>
       ) : null}
 
-      {content.features?.length ? (
-        <section className={styles.culture}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Nuestra cultura"}</h2>
-            </header>
-            <ul className={styles.cultureGrid}>
-              {content.features.map((f) => (
-                <li key={f.title}>
-                  <h3>{f.title}</h3>
-                  <p>{f.body}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
-
       {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
 
+/** Supplier Resources — standard photo hero + resource list (Sysco pattern). */
 export function SuppliersHubLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.supSplit}>
-        <div className={styles.supMedia}>
-          <Image
-            src={content.heroImage}
-            alt=""
-            fill
-            priority
-            sizes="50vw"
-            className={styles.supImg}
-          />
-        </div>
-        <div className={styles.supCopy}>
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} tall />
 
       {(content.list?.length || content.cards?.length) ? (
         <section className={styles.supResources}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || content.cardsHeading || "Recursos"}</h2>
-            </header>
+            <CenteredHead
+              title={content.listHeading || content.cardsHeading || "Recursos"}
+            />
             <ul className={styles.supResUl}>
               {(content.list || content.cards || []).map((item) => {
                 const title = "title" in item ? item.title : "";
@@ -219,21 +247,16 @@ export function SuppliersHubLayout({ content }: { content: InteriorContent }) {
       ) : null}
 
       {content.features?.length ? (
-        <section className={styles.supPillars}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.featuresHeading || "Alianza"}</h2>
-            </header>
-            <ul className={styles.supPillarGrid}>
-              {content.features.map((f) => (
-                <li key={f.title}>
-                  <h3>{f.title}</h3>
-                  <p>{f.body}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <CardGrid
+          heading={content.featuresHeading || "Alianza"}
+          cards={content.features.map((f, i) => ({
+            title: f.title,
+            body: f.body,
+            href: "/suppliers",
+            image: ["/section-cold.jpg", "/section-produce.jpg", "/cta.jpg"][i % 3],
+          }))}
+          columns={3}
+        />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
@@ -245,70 +268,74 @@ export function SuppliersDetailLayout({ content }: { content: InteriorContent })
   return <SuppliersHubLayout content={content} />;
 }
 
+/**
+ * Sysco Sustainability / Our Approach:
+ * tall photo hero → report split → progress highlights → 2030 goals cards
+ */
 export function SustainabilityLayout({ content }: { content: InteriorContent }) {
+  const report = content.splits?.[0];
   return (
     <PageShell>
-      <section className={styles.sustHero}>
-        <Image
-          src={content.heroImage}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className={styles.sustHeroImg}
-        />
-        <div className={styles.sustHeroShade} />
-        <div className={`container ${styles.sustHeroInner}`}>
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero
+        content={{
+          ...content,
+          title:
+            content.title === "Sustentabilidad"
+              ? "Juntos, podemos asegurar el futuro de la comida"
+              : content.title,
+        }}
+        tall
+      />
+
+      {report ? (
+        <section className={styles.sustReport}>
+          <div className={`container ${styles.sustReportGrid}`}>
+            <div className={styles.sustReportCopy}>
+              <h2>{content.cardsHeading || "Informe de sustentabilidad"}</h2>
+              <div className={styles.sustRule} aria-hidden />
+              <p className={styles.sustReportLead}>{report.title}</p>
+              <p>{report.body}</p>
+            </div>
+            <Link href={report.cta?.href || "/sustainability"} className={styles.sustReportCard}>
+              <Image
+                src={report.image}
+                alt=""
+                fill
+                sizes="50vw"
+                className={styles.sustReportImg}
+              />
+              <div className={styles.sustReportShade} />
+              <div className={styles.sustReportCardBody}>
+                <h3>{report.cta?.label || "Asegurar el futuro de la comida"}</h3>
+                <p>Construyendo juntos un sistema alimentario más resiliente</p>
+              </div>
+            </Link>
+          </div>
+        </section>
+      ) : null}
 
       {content.stats?.length ? (
         <section className={styles.sustStats} aria-label="Avances">
-          <div className={`container ${styles.sustStatsGrid}`}>
-            {content.stats.map((s) => (
-              <div key={s.label}>
-                <strong>{s.value}</strong>
-                <span>{s.label}</span>
-              </div>
-            ))}
+          <div className="container">
+            <CenteredHead title="Avances en sustentabilidad" />
+            <div className={styles.sustStatsGrid}>
+              {content.stats.map((s) => (
+                <div key={s.label}>
+                  <strong>{s.value}</strong>
+                  <span>{s.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       ) : null}
 
       {content.cards?.length ? (
-        <section className={styles.pillars}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Nuestros pilares"}</h2>
-            </header>
-            <ul className={styles.pillarGrid}>
-              {content.cards.map((card) => (
-                <li key={`${card.title}-${card.href}`}>
-                  <Link href={card.href || "/sustainability"} className={styles.pillarCard}>
-                    {card.image ? (
-                      <div className={styles.pillarMedia}>
-                        <Image
-                          src={card.image}
-                          alt=""
-                          fill
-                          sizes="33vw"
-                          className={styles.pillarImg}
-                        />
-                      </div>
-                    ) : null}
-                    <div className={styles.pillarBody}>
-                      <h3>{card.title}</h3>
-                      <p>{card.body}</p>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <CardGrid
+          heading="Metas 2030"
+          cards={content.cards}
+          columns={3}
+        />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
@@ -323,13 +350,7 @@ export function SustainabilityPillarLayout({
 }) {
   return (
     <PageShell>
-      <section className={styles.pillarTitle}>
-        <div className="container">
-          <Crumbs content={content} tone="light" />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} tall />
 
       <section className={styles.pillarContent}>
         <div className="container">
@@ -340,9 +361,7 @@ export function SustainabilityPillarLayout({
           </div>
           {content.features?.length ? (
             <>
-              <header className={sharedStyles.sectionHead} style={{ marginTop: 36 }}>
-                <h2>{content.featuresHeading || "Áreas de enfoque"}</h2>
-              </header>
+              <CenteredHead title={content.featuresHeading || "Áreas de enfoque"} />
               <ul className={styles.focusGrid}>
                 {content.features.map((f) => (
                   <li key={f.title}>
@@ -357,66 +376,20 @@ export function SustainabilityPillarLayout({
       </section>
 
       {content.splits?.map((block) => (
-        <section key={`${block.title}-${block.align}`} className={styles.supSplit}>
-          <div className={styles.supMedia}>
-            <Image
-              src={block.image}
-              alt=""
-              fill
-              sizes="50vw"
-              className={styles.supImg}
-            />
-          </div>
-          <div className={styles.supCopy} style={{ background: "#1b4332" }}>
-            <h1 style={{ fontSize: "1.8rem" }}>{block.title}</h1>
-            <p>{block.body}</p>
-            {block.cta ? (
-              <Link
-                href={block.cta.href}
-                className="btn btn-green"
-                style={{ marginTop: 20, alignSelf: "flex-start" }}
-              >
-                {block.cta.label}
-              </Link>
-            ) : null}
-          </div>
-        </section>
+        <FeatureCallout key={`${block.title}-${block.align}`} block={block} />
       ))}
 
       {content.cards?.length ? (
-        <section className={styles.pillars}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Más"}</h2>
-            </header>
-            <ul className={styles.pillarGrid}>
-              {content.cards.map((card) => (
-                <li key={`${card.title}-${card.href}`}>
-                  <Link href={card.href || "/sustainability"} className={styles.pillarCard}>
-                    {card.image ? (
-                      <div className={styles.pillarMedia}>
-                        <Image
-                          src={card.image}
-                          alt=""
-                          fill
-                          sizes="33vw"
-                          className={styles.pillarImg}
-                        />
-                      </div>
-                    ) : null}
-                    <div className={styles.pillarBody}>
-                      <h3>{card.title}</h3>
-                      <p>{card.body}</p>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <CardGrid
+          heading={content.cardsHeading || "Más"}
+          cards={content.cards}
+          columns={3}
+        />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
+
+void sharedStyles;

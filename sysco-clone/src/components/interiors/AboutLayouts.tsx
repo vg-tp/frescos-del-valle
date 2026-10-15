@@ -1,15 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { CtaBand, FeatureGrid, PageShell, PhotoHero } from "./shared";
+import {
+  CardGrid,
+  CenteredHead,
+  CtaBand,
+  FeatureCallout,
+  FeatureGrid,
+  PageShell,
+  PhotoHero,
+  QuoteBand,
+} from "./shared";
 import styles from "./about.module.css";
 import { sharedStyles } from "./shared";
 
+const STORY_QUOTES = [
+  {
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    author: "Dimple y Sumesh Bakshi",
+    role: "Clientes · Restaurante familiar",
+  },
+  {
+    quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    author: "Lorem Ipsum",
+    role: "Operaciones",
+  },
+  {
+    quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    author: "Consectetur Elit",
+    role: "Chef propietario",
+  },
+];
+
+/** About hub — mirrors Sysco Story destination ( /about redirects there ). */
 export function AboutHubLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      {/* Sysco About hub: full-bleed photo hero + crumbs + title */}
-      <PhotoHero content={content} />
+      <PhotoHero content={content} tall />
 
       {content.stats?.length ? (
         <section className={styles.hubStats} aria-label="Destacados">
@@ -25,26 +53,69 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
       ) : null}
 
       {content.cards?.length ? (
-        <section className={styles.hubMosaic}>
+        <CardGrid
+          heading={content.cardsHeading || "Explorar"}
+          cards={content.cards}
+          columns={3}
+        />
+      ) : null}
+
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Quiénes somos"}
+          items={content.features}
+        />
+      ) : null}
+
+      {content.splits?.map((block) => (
+        <FeatureCallout key={`${block.title}-${block.align}`} block={block} />
+      ))}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
+    </PageShell>
+  );
+}
+
+/**
+ * Sysco Story stack:
+ * tall photo hero → centered Family grid → quote slider →
+ * people feature callout → career cards → CTA
+ */
+export function StoryLayout({ content }: { content: InteriorContent }) {
+  const familyCards =
+    content.cards?.length
+      ? content.cards
+      : (content.features || []).slice(0, 4).map((f, i) => ({
+          title: f.title,
+          body: f.body,
+          image: content.splits?.[i % (content.splits.length || 1)]?.image || content.heroImage,
+          href: content.href,
+        }));
+
+  return (
+    <PageShell>
+      <PhotoHero content={content} tall />
+
+      {familyCards.length ? (
+        <section className={styles.familySection}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Explorar"}</h2>
-            </header>
-            <ul className={styles.hubMosaicGrid}>
-              {content.cards.map((card) => (
-                <li key={`${card.title}-${card.href}`}>
-                  <Link href={card.href || "/about"} className={styles.hubTile}>
+            <CenteredHead title={content.cardsHeading || "La familia Sysco"} />
+            <ul className={styles.familyGrid}>
+              {familyCards.slice(0, 4).map((card) => (
+                <li key={card.title}>
+                  <Link href={card.href || content.href} className={styles.familyCard}>
                     {card.image ? (
-                      <Image
-                        src={card.image}
-                        alt=""
-                        fill
-                        sizes="(max-width: 700px) 100vw, 50vw"
-                        className={styles.hubTileImg}
-                      />
+                      <div className={styles.familyMedia}>
+                        <Image
+                          src={card.image}
+                          alt=""
+                          fill
+                          sizes="25vw"
+                          className={styles.familyImg}
+                        />
+                      </div>
                     ) : null}
-                    <div className={styles.hubTileShade} />
-                    <div className={styles.hubTileBody}>
+                    <div className={styles.familyBody}>
                       <h3>{card.title}</h3>
                       <p>{card.body}</p>
                     </div>
@@ -56,40 +127,45 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
         </section>
       ) : null}
 
-      {content.features?.length ? (
-        <FeatureGrid
-          heading={content.featuresHeading || "Quiénes somos"}
-          items={content.features}
+      <QuoteBand heading="Lo que dicen nuestros clientes" quotes={STORY_QUOTES} />
+
+      {content.splits?.[0] ? (
+        <FeatureCallout
+          block={{
+            ...content.splits[0],
+            title: content.splits[0].title || "Nuestra gente cuenta la historia",
+            align: "left",
+          }}
         />
       ) : null}
 
-      {content.splits?.map((block) => (
-        <section
-          key={`${block.title}-${block.align}`}
-          className={`${styles.storyBand} ${block.align === "right" ? styles.storyBandRight : ""}`}
-        >
-          <div className={styles.storyBandMedia}>
-            <Image
-              src={block.image}
-              alt=""
-              fill
-              sizes="(max-width: 900px) 100vw, 50vw"
-              className={styles.storyBandImg}
-            />
-          </div>
-          <div className={styles.storyBandCopy}>
-            {block.eyebrow ? (
-              <p className={styles.timelineYear}>{block.eyebrow}</p>
-            ) : null}
-            <h2>{block.title}</h2>
-            <p>{block.body}</p>
-            {block.cta ? (
-              <Link href={block.cta.href} className="btn btn-green">
-                {block.cta.label}
-              </Link>
-            ) : null}
-          </div>
-        </section>
+      {content.list?.length ? (
+        <CardGrid
+          heading={content.listHeading || "Oportunidades frescas cada día"}
+          cards={content.list.map((item, i) => ({
+            title: item.title,
+            body: item.body,
+            href: item.href || "/careers",
+            meta: item.meta,
+            image: ["/section-kitchen.jpg", "/section-cold.jpg", "/cta.jpg"][i % 3],
+          }))}
+          columns={3}
+        />
+      ) : content.features?.length ? (
+        <CardGrid
+          heading={content.featuresHeading || "Oportunidades frescas cada día"}
+          cards={content.features.slice(0, 3).map((f, i) => ({
+            title: f.title,
+            body: f.body,
+            href: "/careers",
+            image: ["/section-kitchen.jpg", "/section-cold.jpg", "/cta.jpg"][i % 3],
+          }))}
+          columns={3}
+        />
+      ) : null}
+
+      {content.splits?.slice(1).map((block) => (
+        <FeatureCallout key={`${block.title}-${block.align}`} block={block} />
       ))}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
@@ -97,86 +173,66 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
   );
 }
 
-export function StoryLayout({ content }: { content: InteriorContent }) {
+/** Purpose-style: cream statement band + ingredients + video/media + cards */
+export function PurposeLayout({ content }: { content: InteriorContent }) {
   return (
-    <PageShell>
-      {/* Previous white title band read as “no header”; Sysco About children use photo chrome */}
-      <PhotoHero content={content} />
-
-      <section className={styles.storyBody}>
-        <div className={`container ${styles.storyColumns}`}>
-          <div className={styles.storyProse}>
-            {content.intro.map((p) => (
-              <p key={p.slice(0, 40)}>{p}</p>
-            ))}
-          </div>
-          {content.related?.length ? (
-            <aside className={styles.storyAside}>
-              <h2>En esta sección</h2>
-              <ul>
-                {content.related.map((r) => (
-                  <li key={r.href}>
-                    <Link href={r.href}>{r.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          ) : null}
+    <PageShell padded>
+      <section className={styles.purposeHero}>
+        <div className="container">
+          <p className={styles.purposeEyebrow}>{content.sectionLabel || "Nuestro propósito"}</p>
+          <h1 className={styles.purposeHeadline}>
+            {content.title === "Nuestro propósito"
+              ? "Conectando al mundo para compartir comida y cuidarnos unos a otros"
+              : content.title}
+          </h1>
+          <p className={styles.purposeLead}>{content.lead}</p>
         </div>
       </section>
 
-      {content.timeline?.length ? (
-        <section className={styles.timeline}>
-          <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>Nuestra historia</h2>
-            </header>
-            <ol className={styles.timelineList}>
-              {content.timeline.map((t) => (
-                <li key={t.year} className={styles.timelineItem}>
-                  <span className={styles.timelineYear}>{t.year}</span>
-                  <h3>{t.title}</h3>
-                  <p>{t.body}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-      ) : null}
-
-      {content.features?.length ? (
-        <FeatureGrid
-          heading={content.featuresHeading || "Nuestros compromisos"}
-          items={content.features}
-        />
-      ) : null}
-
-      {content.splits?.map((block) => (
-        <section
-          key={`${block.title}-${block.align}`}
-          className={`${styles.storyBand} ${block.align === "right" ? styles.storyBandRight : ""}`}
-        >
-          <div className={styles.storyBandMedia}>
+      <section className={styles.purposeVideo}>
+        <div className="container">
+          <div className={styles.purposeVideoFrame}>
             <Image
-              src={block.image}
+              src={content.heroImage || "/section-kitchen.jpg"}
               alt=""
               fill
-              sizes="(max-width: 900px) 100vw, 50vw"
-              className={styles.storyBandImg}
+              sizes="100vw"
+              className={styles.purposeVideoImg}
             />
+            <div className={styles.purposeVideoShade} />
+            <button type="button" className={styles.playBtn} aria-label="Reproducir">
+              ▶
+            </button>
+            <p className={styles.purposeVideoCaption}>
+              ¿Cómo se ve cuando estamos en nuestro mejor momento?
+            </p>
           </div>
-          <div className={styles.storyBandCopy}>
-            {block.eyebrow ? <p className={styles.timelineYear}>{block.eyebrow}</p> : null}
-            <h2>{block.title}</h2>
-            <p>{block.body}</p>
-            {block.cta ? (
-              <Link href={block.cta.href} className="btn btn-green">
-                {block.cta.label}
-              </Link>
-            ) : null}
+        </div>
+      </section>
+
+      {content.features?.length ? (
+        <section className={styles.ingredients}>
+          <div className="container">
+            <CenteredHead title={content.featuresHeading || "Nuestros ingredientes para el éxito"} />
+            <ul className={styles.ingredientsGrid}>
+              {content.features.map((f) => (
+                <li key={f.title}>
+                  <h3>{f.title}</h3>
+                  <p>{f.body}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
-      ))}
+      ) : null}
+
+      {content.cards?.length ? (
+        <CardGrid
+          heading={content.cardsHeading || "Más videos sobre nuestro propósito"}
+          cards={content.cards}
+          columns={2}
+        />
+      ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
@@ -186,14 +242,12 @@ export function StoryLayout({ content }: { content: InteriorContent }) {
 export function NewsLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <PhotoHero content={content} />
+      <PhotoHero content={content} tall />
 
       {content.cards?.length ? (
         <section className={styles.newsFeatured}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.cardsHeading || "Destacados"}</h2>
-            </header>
+            <CenteredHead title={content.cardsHeading || "Destacados"} />
             <ul className={styles.newsFeaturedGrid}>
               {content.cards.map((card) => (
                 <li key={card.title}>
@@ -225,9 +279,7 @@ export function NewsLayout({ content }: { content: InteriorContent }) {
       {content.list?.length ? (
         <section className={styles.newsList}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Lo más reciente"}</h2>
-            </header>
+            <CenteredHead title={content.listHeading || "Lo más reciente"} />
             <ul>
               {content.list.map((item) => (
                 <li key={item.title}>
@@ -264,12 +316,11 @@ export function EventsLayout({ content }: { content: InteriorContent }) {
       {content.list?.length ? (
         <section className={styles.eventsList}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Próximos"}</h2>
-            </header>
+            <CenteredHead title={content.listHeading || "Otros eventos Sysco"} />
             <ul className={styles.eventsUl}>
               {content.list.map((item) => {
-                const dateBits = (item.meta || "Por confirmar").split("·")[0]?.trim() || "Por confirmar";
+                const dateBits =
+                  (item.meta || "Por confirmar").split("·")[0]?.trim() || "Por confirmar";
                 return (
                   <li key={item.title}>
                     <Link href={item.href || content.href} className={styles.eventRow}>
@@ -293,17 +344,16 @@ export function EventsLayout({ content }: { content: InteriorContent }) {
   );
 }
 
+/** Sysco Management: photo hero → centered “Meet the Executive Team” → bio grid */
 export function ManagementLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <PhotoHero content={content} />
+      <PhotoHero content={content} tall />
 
       {content.bios?.length ? (
         <section className={styles.bioGrid}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>Liderazgo</h2>
-            </header>
+            <CenteredHead title="Conoce al equipo directivo" />
             <ul className={styles.bioUl}>
               {content.bios.map((bio) => (
                 <li key={bio.name} className={styles.bioCard}>
@@ -326,13 +376,6 @@ export function ManagementLayout({ content }: { content: InteriorContent }) {
             </ul>
           </div>
         </section>
-      ) : null}
-
-      {content.features?.length ? (
-        <FeatureGrid
-          heading={content.featuresHeading || "Principios de liderazgo"}
-          items={content.features}
-        />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}
@@ -361,9 +404,7 @@ export function ReportLayout({ content }: { content: InteriorContent }) {
       {content.list?.length ? (
         <section className={styles.reportDocs}>
           <div className="container">
-            <header className={sharedStyles.sectionHead}>
-              <h2>{content.listHeading || "Documentos"}</h2>
-            </header>
+            <CenteredHead title={content.listHeading || "Informes anuales"} />
             <ul className={styles.docList}>
               {content.list.map((item) => (
                 <li key={item.title}>
@@ -384,3 +425,6 @@ export function ReportLayout({ content }: { content: InteriorContent }) {
     </PageShell>
   );
 }
+
+// re-export for unused sharedStyles reference silence in older imports
+void sharedStyles;

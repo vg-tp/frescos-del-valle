@@ -1,23 +1,36 @@
 .main {
-  padding-top: calc(var(--announce-h) + var(--header-h));
+  /* Photo heroes bleed under fixed announce+nav (Sysco). Utility pages
+     that lack a PhotoHero still need clearance — see .mainPadded. */
   min-height: 70vh;
 }
 
+.mainPadded {
+  padding-top: calc(var(--announce-h) + var(--header-h));
+}
+
+/* Sysco standard-page-hero — tall, dark overlay, left text under transparent nav */
 .photoHero {
   position: relative;
   color: #fff;
-  min-height: 340px;
+  min-height: 480px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 88px 0 52px;
+  /* Clear fixed announce + header while image runs edge-to-edge underneath */
+  padding: calc(var(--announce-h) + var(--header-h) + 48px) 0 56px;
   overflow: hidden;
   text-align: left;
+  margin-top: calc(-1 * (var(--announce-h) + var(--header-h)));
+}
+
+.photoHeroTall {
+  min-height: min(78vh, 680px);
+  padding: calc(var(--announce-h) + var(--header-h) + 64px) 0 72px;
 }
 
 .photoHeroCompact {
-  min-height: 260px;
-  padding: 72px 0 40px;
+  min-height: 300px;
+  padding: calc(var(--announce-h) + var(--header-h) + 32px) 0 40px;
 }
 
 .photoHeroImg {
@@ -27,45 +40,78 @@
 .photoHeroShade {
   position: absolute;
   inset: 0;
+  /* Sysco: dark grey wash, not blue marketing gradient */
   background: linear-gradient(
     105deg,
-    rgba(0, 55, 100, 0.9) 0%,
-    rgba(0, 90, 150, 0.55) 55%,
-    rgba(0, 40, 70, 0.4) 100%
+    rgba(20, 24, 30, 0.72) 0%,
+    rgba(20, 24, 30, 0.45) 55%,
+    rgba(20, 24, 30, 0.28) 100%
   );
 }
 
 .photoHeroInner {
   position: relative;
   z-index: 1;
-  /* Keep full .container width so crumbs/title/lead share the page left edge
-     (narrow max-width + margin-inline:auto was centering the block in the hero). */
   max-width: none;
   text-align: left;
   margin-inline: auto;
 }
 
 .photoHeroInner h1 {
-  margin: 0 0 12px;
-  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+  margin: 0 0 14px;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.08;
+  line-height: 1.05;
   text-align: left;
+  max-width: 16ch;
 }
 
 .photoHeroLead {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 48ch;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 42rem;
   text-align: left;
+  font-weight: 400;
+}
+
+.centeredHead {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.centeredHead h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #2a2f33;
+}
+
+.centeredHead p {
+  margin: 12px auto 0;
+  max-width: 48ch;
+  color: var(--sysco-muted);
+  line-height: 1.55;
+  font-size: 1.05rem;
+}
+
+.sectionHead {
+  margin-bottom: 28px;
+}
+
+.sectionHead h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  letter-spacing: -0.01em;
+  color: var(--sysco-ink);
 }
 
 .featureSection {
-  padding: 56px 0;
-  background: #f5f8fb;
+  padding: 64px 0;
+  background: #fff;
 }
 
 .featureGrid {
@@ -73,26 +119,27 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
 
 .featureGrid li {
-  padding: 22px 24px;
-  background: #fff;
-  border: 1px solid var(--sysco-border);
-  border-left: 4px solid var(--sysco-blue);
+  padding: 28px 24px;
+  background: #f7f9fb;
+  border: none;
+  text-align: center;
 }
 
 .featureGrid h3 {
-  margin: 0 0 8px;
-  font-size: 1.15rem;
-  color: #0a3a5c;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #2a2f33;
 }
 
 .featureGrid p {
   margin: 0;
   color: var(--sysco-muted);
   line-height: 1.55;
+  font-size: 0.95rem;
 }
 
 @media (min-width: 800px) {
@@ -101,11 +148,289 @@
   }
 }
 
+@media (min-width: 1100px) {
+  .featureGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Image tiles — product categories */
+.tileSection {
+  padding: 64px 0 72px;
+  background: #fff;
+}
+
+.tileGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.imageTile {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.imageTileImg {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.imageTile:hover .imageTileImg {
+  transform: scale(1.06);
+}
+
+.imageTileShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 55%);
+}
+
+.imageTileLabel {
+  position: relative;
+  z-index: 2;
+  padding: 16px 18px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 720px) {
+  .tileGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .tileGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Media card grid */
+.cardSection {
+  padding: 56px 0 72px;
+  background: #fff;
+}
+
+.cardGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 24px;
+}
+
+.cardGrid2 {
+  grid-template-columns: 1fr;
+}
+
+.cardGrid3 {
+  grid-template-columns: 1fr;
+}
+
+.cardGrid4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .cardGrid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardGrid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .cardGrid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cardGrid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mediaCard {
+  display: grid;
+  background: #fff;
+  border: 1px solid #e6e9ec;
+  overflow: hidden;
+  color: inherit;
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.mediaCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mediaCardMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #dfe5ea;
+}
+
+.mediaCardImg {
+  object-fit: cover;
+}
+
+.mediaCardBody {
+  padding: 18px 20px 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.mediaCardMeta {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+.mediaCardBody h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: #2a2f33;
+}
+
+.mediaCardBody p {
+  margin: 0;
+  color: var(--sysco-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Feature callout — Sysco split band */
+.featureCallout {
+  display: grid;
+  min-height: 420px;
+  background: #fff;
+}
+
+.featureCalloutMedia {
+  position: relative;
+  min-height: 260px;
+}
+
+.featureCalloutImg {
+  object-fit: cover;
+}
+
+.featureCalloutCopy {
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.featureCalloutEyebrow {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+.featureCalloutCopy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  color: #2a2f33;
+  letter-spacing: -0.02em;
+}
+
+.featureCalloutCopy p {
+  margin: 0 0 24px;
+  line-height: 1.6;
+  max-width: 42ch;
+  color: var(--sysco-muted);
+}
+
+@media (min-width: 900px) {
+  .featureCallout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featureCalloutRight .featureCalloutMedia {
+    order: 2;
+  }
+}
+
+/* Quote slider band */
+.quoteBand {
+  padding: 72px 0;
+  background: #f4f6f8;
+}
+
+.quoteBlock {
+  margin: 0 auto;
+  max-width: 52rem;
+  text-align: center;
+}
+
+.quoteText {
+  margin: 0 0 28px;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.45;
+  color: #2a2f33;
+  font-weight: 500;
+}
+
+.quoteBlock footer {
+  display: grid;
+  gap: 4px;
+}
+
+.quoteBlock strong {
+  font-size: 1.05rem;
+  color: #2a2f33;
+}
+
+.quoteBlock span {
+  font-size: 0.95rem;
+  color: var(--sysco-muted);
+}
+
+.quoteDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.quoteDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c5ccd3;
+}
+
+.quoteDotActive {
+  background: var(--sysco-blue) !important;
+}
+
 .crumb {
   margin: 0 0 18px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-align: left;
+  opacity: 0.9;
 }
 
 .crumb a:hover {
@@ -127,7 +452,7 @@
 .ctaBand {
   padding: 72px 0;
   background:
-    linear-gradient(120deg, rgba(0, 90, 150, 0.92), rgba(0, 60, 110, 0.88)),
+    linear-gradient(120deg, rgba(20, 24, 30, 0.82), rgba(20, 24, 30, 0.72)),
     url("/cta.jpg") center / cover no-repeat;
   color: #fff;
   text-align: center;
@@ -179,15 +504,4 @@
 .field textarea:focus {
   outline: 2px solid rgba(0, 114, 206, 0.35);
   border-color: var(--sysco-blue);
-}
-
-.sectionHead {
-  margin-bottom: 28px;
-}
-
-.sectionHead h2 {
-  margin: 0;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  letter-spacing: -0.01em;
-  color: var(--sysco-ink);
 }

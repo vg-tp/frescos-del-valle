@@ -19,6 +19,7 @@ export type InteriorTemplate =
   | "hub-contact"
   | "hub-products"
   | "story"
+  | "purpose"
   | "management"
   | "report"
   | "news"
@@ -146,6 +147,7 @@ function pickTemplate(page: PageMeta): InteriorTemplate {
   if (h === "/about/sysco-today/newsroom") return "news";
   if (h === "/about/sysco-today/events") return "events";
   if (h === "/about/our-people/our-management") return "management";
+  if (h === "/about/company-profile/our-purpose") return "purpose";
   if (h === "/about/company-profile/annual-report") return "report";
   if (h === "/about") return "hub-about";
   if (h === "/customers") return "hub-customers";
@@ -323,7 +325,9 @@ function buildForPage(page: PageMeta): InteriorContent {
       return {
         ...base,
         heroImage: "/cta.jpg",
-        cardsHeading: "¿Cómo podemos ayudarte?",
+        lead: "¿Preguntas, comentarios o inquietudes? Llámanos.",
+        cardsHeading:
+          "Te recomendamos contactar a tu compañía operativa local para la resolución más rápida",
         cards: buildCards(page),
         features: buildFeatures().slice(0, 3),
         featuresHeading: "Canales de soporte",
@@ -332,27 +336,127 @@ function buildForPage(page: PageMeta): InteriorContent {
       return {
         ...base,
         heroImage: "/section-produce.jpg",
-        cardsHeading: "Productos y soluciones",
+        lead:
+          "Una alianza garantiza acceso a la mejor red de distribución — tendencias, productos frescos e ideas nuevas.",
+        cardsHeading: "Nuestras categorías de productos",
         cards: buildCards(page),
         features: buildFeatures(),
-        featuresHeading: "Por qué nos eligen",
-        splits: [buildSplits(page)[1]],
+        featuresHeading: "Alimentos especializados",
+        splits: [
+          {
+            eyebrow: "Soluciones",
+            title: "Soluciones de vanguardia",
+            body: para(0),
+            image: "/section-kitchen.jpg",
+            align: "left",
+            cta: { label: "CONOCE MÁS", href: "/products/solutions-and-services/culinary-and-product-solutions" },
+          },
+          buildSplits(page)[1],
+        ],
       };
     case "story":
       return {
         ...base,
-        // Distinct photo heroes so About children never render an empty/missing header
         heroImage: aboutStoryHero(page.href),
+        lead:
+          "Líder global en la venta, marketing y distribución de productos alimenticios y no alimenticios para restaurantes, salud, educación y hospedaje.",
         intro: [para(0), para(1), para(2)],
-        timeline: buildTimeline(),
-        splits: buildSplits(page),
+        cardsHeading: "La familia Sysco",
+        cards: [
+          {
+            title: "Broadline",
+            body: lorem.lead,
+            image: "/section-produce.jpg",
+            href: "/products",
+          },
+          {
+            title: "Empresas especializadas",
+            body: para(0),
+            image: "/section-kitchen.jpg",
+            href: "/products/solutions-and-services/specialty-companies",
+          },
+          {
+            title: "Internacional",
+            body: para(1),
+            image: "/hero.jpg",
+            href: "/about",
+          },
+          {
+            title: "SYGMA",
+            body: para(2),
+            image: "/section-cold.jpg",
+            href: "/customers/who-we-serve/restaurants",
+          },
+        ],
+        listHeading: "Oportunidades frescas cada día",
+        list: [
+          {
+            title: "Conductores",
+            body: lorem.lead,
+            meta: "Transporte",
+            href: "/careers",
+          },
+          {
+            title: "Almacén",
+            body: para(0),
+            meta: "Operaciones",
+            href: "/careers",
+          },
+          {
+            title: "Ventas",
+            body: para(1),
+            meta: "Comercial",
+            href: "/careers",
+          },
+        ],
+        splits: [
+          {
+            eyebrow: "Nuestra gente",
+            title: "Nuestra gente cuenta la historia",
+            body: para(0),
+            image: "/section-kitchen.jpg",
+            align: "left",
+            cta: { label: "CONOCE MÁS", href: "/about/our-people/better-together" },
+          },
+          buildSplits(page)[1],
+        ],
         features: buildFeatures().slice(0, 3),
-        featuresHeading: "Nuestros compromisos",
+        featuresHeading: "Oportunidades frescas cada día",
+      };
+    case "purpose":
+      return {
+        ...base,
+        heroImage: "/section-kitchen.jpg",
+        featuresHeading: "Nuestros ingredientes para el éxito",
+        features: [
+          { title: "Nuestro propósito", body: lorem.lead },
+          { title: "Nuestra misión", body: para(0) },
+          { title: "Nuestra identidad", body: para(1) },
+          { title: "Nuestros valores", body: para(2) },
+          { title: "Nuestra receta de crecimiento", body: lorem.lead },
+        ],
+        cardsHeading: "Más videos sobre nuestro propósito",
+        cards: [
+          {
+            title: "Demostrando nuestro propósito",
+            body: para(0),
+            image: "/section-produce.jpg",
+            href: page.href,
+          },
+          {
+            title: "Mensaje del CEO",
+            body: para(1),
+            image: "/cta.jpg",
+            href: page.href,
+          },
+        ],
       };
     case "management":
       return {
         ...base,
         heroImage: "/section-kitchen.jpg",
+        lead:
+          "El talento y la dedicación de nuestra fuerza laboral son la base del éxito.",
         intro: [para(0)],
         bios: Array.from({ length: 6 }, (_, i) => ({
           name: `Lorem Ipsum ${i + 1}`,
@@ -360,8 +464,6 @@ function buildForPage(page: PageMeta): InteriorContent {
           body: lorem.lead,
           image: img(i + 2),
         })),
-        features: buildFeatures().slice(0, 2),
-        featuresHeading: "Principios de liderazgo",
       };
     case "report":
       return {
@@ -429,17 +531,82 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "segment":
       return {
         ...base,
-        featuresHeading: `Atendiendo a ${page.title}`,
-        features: buildFeatures(),
-        splits: buildSplits(page),
+        lead:
+          page.href.includes("restaurants")
+            ? "Una alianza es una receta para el éxito."
+            : lorem.lead,
+        featuresHeading: "El poder de la alianza",
+        features: buildFeatures().slice(0, 3),
+        splits: [
+          {
+            title: "En el corazón de la comida y el servicio",
+            body: para(0),
+            image: "/section-kitchen.jpg",
+            align: "left",
+          },
+          {
+            eyebrow: "Recursos",
+            title: "Recursos multiculturales",
+            body: para(1),
+            image: "/section-produce.jpg",
+            align: "right",
+            cta: { label: "CONOCE MÁS", href: "/products/solutions-and-services/multicultural" },
+          },
+          {
+            eyebrow: "Marcas",
+            title: "La familia de marcas Sysco",
+            body: para(2),
+            image: "/cta.jpg",
+            align: "left",
+            cta: { label: "EXPLORAR", href: "/products/sysco-brand-family" },
+          },
+        ],
         stats: buildStats(),
-        cardsHeading: "Segmentos relacionados",
-        cards: (page.related || []).slice(0, 4).map((r, i) => ({
-          title: r.label,
+        cardsHeading: "One Sysco",
+        cards: [
+          {
+            title: "FreshPoint",
+            body: lorem.lead,
+            href: "/products/solutions-and-services/specialty-companies",
+            image: img(1),
+          },
+          {
+            title: "Buckhead & Newport",
+            body: para(0),
+            href: "/products/solutions-and-services/specialty-companies",
+            image: img(2),
+          },
+          {
+            title: "European Imports",
+            body: para(1),
+            href: "/products/solutions-and-services/specialty-companies",
+            image: img(3),
+          },
+          {
+            title: "International Food Group",
+            body: para(2),
+            href: "/products/solutions-and-services/specialty-companies",
+            image: img(4),
+          },
+          {
+            title: "Edward Don & Company",
+            body: lorem.lead,
+            href: "/products/solutions-and-services/specialty-companies",
+            image: img(5),
+          },
+          {
+            title: "Nuestro alcance global",
+            body: para(0),
+            href: "/about",
+            image: img(6),
+          },
+        ],
+        cta: {
+          title: "Hazte cliente",
           body: lorem.lead,
-          href: r.href,
-          image: img(i + 4),
-        })),
+          primary: { label: "Hazte cliente", href: "/become-a-customer" },
+          secondary: { label: "Compra ahora", href: "/shop-now" },
+        },
       };
     case "suppliers":
       return {
@@ -461,38 +628,50 @@ function buildForPage(page: PageMeta): InteriorContent {
         ...base,
         heroImage: "/cta.jpg",
         stats: buildStats(),
-        listHeading: "Publicaciones recientes",
+        listHeading: "Comunicados recientes",
         list: Array.from({ length: 5 }, (_, i) => ({
           title: `Actualización para inversionistas ${i + 1}`,
           body: para(i),
-          meta: `FY2026 Q${(i % 4) + 1}`,
+          meta: `Oct ${6 + i}, 2026`,
           href: "/investors",
         })),
-        cardsHeading: "Informes y recursos",
+        cardsHeading: "Herramientas para inversionistas",
         cards: [
           {
-            title: "Informe anual",
+            title: "Información bursátil",
             body: lorem.lead,
-            href: "/about/company-profile/annual-report",
+            href: "/investors",
             image: img(0),
+          },
+          {
+            title: "Comunicados de prensa",
+            body: lorem.lead,
+            href: "/about/sysco-today/newsroom",
+            image: img(1),
+          },
+          {
+            title: "Eventos recientes y próximos",
+            body: lorem.lead,
+            href: "/about/sysco-today/events",
+            image: img(2),
           },
           {
             title: "Presentaciones ante la SEC",
             body: lorem.lead,
             href: "/investors",
-            image: img(1),
+            image: img(3),
           },
           {
             title: "Gobierno corporativo",
             body: lorem.lead,
             href: "/about",
-            image: img(2),
+            image: img(4),
           },
           {
-            title: "Eventos",
+            title: "Contactos para inversionistas",
             body: lorem.lead,
-            href: "/about/sysco-today/events",
-            image: img(3),
+            href: "/contact/contact-us",
+            image: img(5),
           },
         ],
         features: [
@@ -500,7 +679,7 @@ function buildForPage(page: PageMeta): InteriorContent {
           { title: "Contactos para inversionistas", body: para(0) },
           { title: "Información bursátil", body: para(1) },
         ],
-        featuresHeading: "Herramientas para inversionistas",
+        featuresHeading: "Gobierno y contactos",
         cta: {
           title: "Relaciones con inversionistas",
           body: lorem.lead,
@@ -515,30 +694,42 @@ function buildForPage(page: PageMeta): InteriorContent {
       return {
         ...base,
         heroImage: "/section-kitchen.jpg",
-        cardsHeading: "Rutas profesionales",
+        cardsHeading: "Carreras destacadas",
         cards: [
           {
-            title: "Transporte",
+            title: "TRANSPORTE",
             body: lorem.lead,
             image: img(2),
             href: "/careers",
           },
           {
-            title: "Almacén y operaciones",
+            title: "ALMACÉN",
             body: lorem.lead,
             image: img(3),
             href: "/careers",
           },
           {
-            title: "Ventas y culinaria",
+            title: "VENTAS",
             body: lorem.lead,
             image: img(1),
             href: "/careers",
           },
           {
-            title: "Tecnología",
+            title: "MERCHANDISING",
             body: lorem.lead,
             image: img(4),
+            href: "/careers",
+          },
+          {
+            title: "MANTENIMIENTO",
+            body: para(0),
+            image: img(5),
+            href: "/careers",
+          },
+          {
+            title: "TECNOLOGÍA",
+            body: para(1),
+            image: img(6),
             href: "/careers",
           },
         ],
@@ -594,6 +785,7 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "contact":
       return {
         ...base,
+        lead: "¿Preguntas, comentarios o inquietudes? Llámanos.",
         form: {
           kind: page.href.includes("customer-care") ? "care" : "contact",
           heading: page.title,
