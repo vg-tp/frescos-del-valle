@@ -674,7 +674,8 @@ function buildForPage(page: PageMeta): InteriorContent {
         },
         features: buildFeatures().slice(0, 3),
         featuresHeading: "Qué esperar",
-        splits: kind === "become" ? [buildSplits(page)[0]] : undefined,
+        splits: [buildSplits(page)[0]],
+        intro: [para(0), para(1)],
       };
     }
     case "search":
@@ -715,6 +716,8 @@ function buildForPage(page: PageMeta): InteriorContent {
             href: "/sustainability",
           },
         ],
+        features: buildFeatures().slice(0, 3),
+        featuresHeading: "Explora también",
       };
     default:
       return {

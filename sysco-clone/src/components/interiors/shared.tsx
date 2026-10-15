@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
 import styles from "./shared.module.css";
@@ -43,6 +44,62 @@ export function Crumbs({
     <p className={`${styles.crumb} ${toneClass}`}>
       <Link href="/">Inicio</Link>
     </p>
+  );
+}
+
+/** Full-bleed photo page header — breadcrumbs + title + lead (Sysco interior chrome). */
+export function PhotoHero({
+  content,
+  compact = false,
+}: {
+  content: InteriorContent;
+  compact?: boolean;
+}) {
+  return (
+    <section
+      className={`${styles.photoHero}${compact ? ` ${styles.photoHeroCompact}` : ""}`}
+    >
+      <Image
+        src={content.heroImage}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className={styles.photoHeroImg}
+      />
+      <div className={styles.photoHeroShade} />
+      <div className={`container ${styles.photoHeroInner}`}>
+        <Crumbs content={content} />
+        <h1>{content.title}</h1>
+        <p className={styles.photoHeroLead}>{content.lead}</p>
+      </div>
+    </section>
+  );
+}
+
+export function FeatureGrid({
+  heading,
+  items,
+}: {
+  heading: string;
+  items: NonNullable<InteriorContent["features"]>;
+}) {
+  return (
+    <section className={styles.featureSection}>
+      <div className="container">
+        <header className={styles.sectionHead}>
+          <h2>{heading}</h2>
+        </header>
+        <ul className={styles.featureGrid}>
+          {items.map((f) => (
+            <li key={f.title}>
+              <h3>{f.title}</h3>
+              <p>{f.body}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
 
