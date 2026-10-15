@@ -266,39 +266,41 @@
   }
 }
 
-/* Utility form (sign-in / become / shop) — centered narrow card */
+/* Utility form (sign-in / become / shop) — photo hero + intro/form + features + CTA */
 .utilPage {
-  min-height: calc(100vh - var(--announce-h) - var(--header-h) - 120px);
-  display: flex;
-  align-items: center;
-  padding: 48px 0 72px;
+  padding: 48px 0 64px;
   background:
     radial-gradient(ellipse at top, #e8f1f8 0%, transparent 55%),
     #f0f4f8;
 }
 
+.utilLayout {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+}
+
+.utilIntro p {
+  margin: 0 0 1rem;
+  max-width: 52ch;
+  line-height: 1.65;
+  color: var(--sysco-muted);
+}
+
 .utilCard {
-  width: min(100%, 440px);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+  justify-self: end;
   background: #fff;
   border: 1px solid var(--sysco-border);
-  padding: 36px 32px;
+  padding: 32px 28px;
   box-shadow: 0 12px 40px rgba(0, 50, 90, 0.08);
 }
 
-.utilCard h1 {
-  margin: 0 0 8px;
-  font-size: 1.75rem;
-  text-align: center;
+.utilCardTitle {
+  margin: 0 0 20px;
+  font-size: 1.35rem;
   color: #0a3a5c;
-}
-
-.utilCard > p {
-  margin: 0 0 24px;
-  text-align: center;
-  color: var(--sysco-muted);
-  line-height: 1.5;
-  font-size: 0.95rem;
 }
 
 .utilForm {
@@ -306,40 +308,54 @@
   gap: 14px;
 }
 
-.utilExtras {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid var(--sysco-border);
-}
-
-.utilExtras h2 {
-  margin: 0 0 14px;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--sysco-nav);
-  text-align: center;
-}
-
-.utilExtras ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.utilSplit {
   display: grid;
-  gap: 10px;
+  min-height: 340px;
+  background: #0b3d66;
+  color: #fff;
 }
 
-.utilExtras li {
-  text-align: center;
-  color: var(--sysco-muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
+.utilSplitMedia {
+  position: relative;
+  min-height: 240px;
 }
 
-.utilExtras strong {
-  display: block;
-  color: var(--sysco-ink);
-  margin-bottom: 2px;
+.utilSplitImg {
+  object-fit: cover;
+}
+
+.utilSplitCopy {
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.utilSplitCopy h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.utilSplitCopy p {
+  margin: 0 0 20px;
+  max-width: 48ch;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.utilSplitCopy .meta {
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 880px) {
+  .utilLayout {
+    grid-template-columns: minmax(260px, 1fr) minmax(340px, 480px);
+  }
+
+  .utilSplit {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Search — search-dominant */

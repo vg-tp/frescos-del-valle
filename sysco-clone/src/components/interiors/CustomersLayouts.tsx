@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, PageShell } from "./shared";
+import { Crumbs, CtaBand, PageShell } from "./shared";
 import { sharedStyles } from "./shared";
 import styles from "./customers.module.css";
 
@@ -59,6 +59,8 @@ export function CustomersHubLayout({ content }: { content: InteriorContent }) {
           </ul>
         </section>
       ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
@@ -171,6 +173,8 @@ export function SegmentLayout({ content }: { content: InteriorContent }) {
           </div>
         </section>
       ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }

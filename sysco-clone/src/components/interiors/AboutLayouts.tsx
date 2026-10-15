@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, CtaBand, PageShell } from "./shared";
+import { Crumbs, CtaBand, FeatureGrid, PageShell } from "./shared";
 import styles from "./about.module.css";
 import { sharedStyles } from "./shared";
 
@@ -70,6 +70,42 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
         </section>
       ) : null}
 
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Quiénes somos"}
+          items={content.features}
+        />
+      ) : null}
+
+      {content.splits?.map((block) => (
+        <section
+          key={`${block.title}-${block.align}`}
+          className={`${styles.storyBand} ${block.align === "right" ? styles.storyBandRight : ""}`}
+        >
+          <div className={styles.storyBandMedia}>
+            <Image
+              src={block.image}
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              className={styles.storyBandImg}
+            />
+          </div>
+          <div className={styles.storyBandCopy}>
+            {block.eyebrow ? (
+              <p className={styles.timelineYear}>{block.eyebrow}</p>
+            ) : null}
+            <h2>{block.title}</h2>
+            <p>{block.body}</p>
+            {block.cta ? (
+              <Link href={block.cta.href} className="btn btn-green">
+                {block.cta.label}
+              </Link>
+            ) : null}
+          </div>
+        </section>
+      ))}
+
       {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
@@ -125,6 +161,13 @@ export function StoryLayout({ content }: { content: InteriorContent }) {
             </ol>
           </div>
         </section>
+      ) : null}
+
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Nuestros compromisos"}
+          items={content.features}
+        />
       ) : null}
 
       {content.splits?.map((block) => (
@@ -232,6 +275,8 @@ export function NewsLayout({ content }: { content: InteriorContent }) {
           </div>
         </section>
       ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
@@ -327,6 +372,13 @@ export function ManagementLayout({ content }: { content: InteriorContent }) {
             </ul>
           </div>
         </section>
+      ) : null}
+
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Principios de liderazgo"}
+          items={content.features}
+        />
       ) : null}
 
       {content.cta ? <CtaBand cta={content.cta} /> : null}

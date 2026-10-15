@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, CtaBand, FormFields, PageShell } from "./shared";
+import {
+  Crumbs,
+  CtaBand,
+  FeatureGrid,
+  FormFields,
+  PageShell,
+  PhotoHero,
+} from "./shared";
 import { sharedStyles } from "./shared";
 import styles from "./contact.module.css";
 
@@ -40,7 +47,7 @@ export function ContactHubLayout({ content }: { content: InteriorContent }) {
                     <div className={styles.pathwayBody}>
                       <h3>{card.title}</h3>
                       <p>{card.body}</p>
-                      <span className={styles.pathwayCta}>Go</span>
+                      <span className={styles.pathwayCta}>Ir</span>
                     </div>
                   </Link>
                 </li>
@@ -49,6 +56,15 @@ export function ContactHubLayout({ content }: { content: InteriorContent }) {
           </div>
         </section>
       ) : null}
+
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Canales de soporte"}
+          items={content.features}
+        />
+      ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
@@ -104,7 +120,7 @@ export function ContactFormLayout({ content }: { content: InteriorContent }) {
                     <div className={styles.pathwayBody}>
                       <h3>{card.title}</h3>
                       <p>{card.body}</p>
-                      <span className={styles.pathwayCta}>Go</span>
+                      <span className={styles.pathwayCta}>Ir</span>
                     </div>
                   </Link>
                 </li>
@@ -113,6 +129,8 @@ export function ContactFormLayout({ content }: { content: InteriorContent }) {
           </div>
         </section>
       ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
@@ -173,49 +191,59 @@ export function LocationsLayout({ content }: { content: InteriorContent }) {
 
 export function UtilityFormLayout({ content }: { content: InteriorContent }) {
   if (!content.form) return null;
+  const split = content.splits?.[0];
   return (
     <PageShell>
+      <PhotoHero content={content} compact />
+
       <section className={styles.utilPage}>
-        <div className="container">
+        <div className={`container ${styles.utilLayout}`}>
+          <div className={styles.utilIntro}>
+            {content.intro.slice(0, 2).map((p) => (
+              <p key={p.slice(0, 32)}>{p}</p>
+            ))}
+          </div>
           <div className={styles.utilCard}>
-            <h1>{content.title}</h1>
-            <p>{content.lead}</p>
+            <h2 className={styles.utilCardTitle}>{content.form.heading}</h2>
             <div className={styles.utilForm}>
               <FormFields form={content.form} action={content.href} />
             </div>
-            {content.features?.length ? (
-              <div className={styles.utilExtras}>
-                <h2>{content.featuresHeading || "Qué esperar"}</h2>
-                <ul>
-                  {content.features.map((f) => (
-                    <li key={f.title}>
-                      <strong>{f.title}</strong>
-                      {f.body}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </section>
-      {content.splits?.[0] && content.form.kind === "become" ? (
-        <section
-          style={{
-            display: "grid",
-            minHeight: 320,
-            background: "#0b3d66",
-            color: "#fff",
-          }}
-        >
-          <div className="container" style={{ padding: "48px 24px" }}>
-            <h2 style={{ marginTop: 0 }}>{content.splits[0].title}</h2>
-            <p style={{ maxWidth: "48ch", lineHeight: 1.55, opacity: 0.92 }}>
-              {content.splits[0].body}
-            </p>
+
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Qué esperar"}
+          items={content.features}
+        />
+      ) : null}
+
+      {split ? (
+        <section className={styles.utilSplit}>
+          <div className={styles.utilSplitMedia}>
+            <Image
+              src={split.image}
+              alt=""
+              fill
+              sizes="50vw"
+              className={styles.utilSplitImg}
+            />
+          </div>
+          <div className={styles.utilSplitCopy}>
+            {split.eyebrow ? <p className={styles.meta}>{split.eyebrow}</p> : null}
+            <h2>{split.title}</h2>
+            <p>{split.body}</p>
+            {split.cta ? (
+              <Link href={split.cta.href} className="btn btn-green">
+                {split.cta.label}
+              </Link>
+            ) : null}
           </div>
         </section>
       ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
@@ -258,6 +286,15 @@ export function SearchLayout({ content }: { content: InteriorContent }) {
           ) : null}
         </div>
       </section>
+
+      {content.features?.length ? (
+        <FeatureGrid
+          heading={content.featuresHeading || "Explora también"}
+          items={content.features}
+        />
+      ) : null}
+
+      {content.cta ? <CtaBand cta={content.cta} /> : null}
     </PageShell>
   );
 }
