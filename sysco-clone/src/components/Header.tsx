@@ -44,6 +44,15 @@ export default function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!activeMenu) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActiveMenu(null);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [activeMenu]);
+
   const clearClose = () => {
     if (closeTimer.current) {
       window.clearTimeout(closeTimer.current);
@@ -53,7 +62,7 @@ export default function Header() {
 
   const scheduleClose = () => {
     clearClose();
-    closeTimer.current = window.setTimeout(() => setActiveMenu(null), 160);
+    closeTimer.current = window.setTimeout(() => setActiveMenu(null), 140);
   };
 
   const openMenu = (label: string) => {
@@ -96,19 +105,35 @@ export default function Header() {
                     key={item.label}
                     className={`${styles.navItem} ${isOpen ? styles.navItemOpen : ""}`}
                     onMouseEnter={() => (hasMenu ? openMenu(item.label) : setActiveMenu(null))}
-                    onMouseLeave={scheduleClose}
+                    onMouseLeave={hasMenu ? scheduleClose : undefined}
                   >
                     {hasMenu ? (
-                      <Link
-                        href={item.href}
-                        className={styles.navTrigger}
-                        aria-expanded={isOpen}
-                        aria-controls={`${menuId}-${item.label}`}
-                        onFocus={() => openMenu(item.label)}
-                      >
-                        {item.label}
-                        <span className={styles.caret} aria-hidden />
-                      </Link>
+                      <>
+                        <Link
+                          href={item.href}
+                          className={styles.navTrigger}
+                          aria-expanded={isOpen}
+                          aria-haspopup="true"
+                          aria-controls={`${menuId}-${item.label}`}
+                          onFocus={() => openMenu(item.label)}
+                          onBlur={(e) => {
+                            const next = e.relatedTarget as Node | null;
+                            if (!e.currentTarget.parentElement?.contains(next)) {
+                              scheduleClose();
+                            }
+                          }}
+                        >
+                          {item.label}
+                          <span className={styles.caret} aria-hidden />
+                        </Link>
+                        <DropdownPanel
+                          item={item}
+                          id={`${menuId}-${item.label}`}
+                          open={isOpen}
+                          onEnter={() => openMenu(item.label)}
+                          onLeave={scheduleClose}
+                        />
+                      </>
                     ) : (
                       <Link href={item.href} className={styles.navLink}>
                         {item.label}
@@ -153,18 +178,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-
-      {navItems.map((item) =>
-        item.columns.length > 0 && activeMenu === item.label ? (
-          <MegaPanel
-            key={item.label}
-            item={item}
-            id={`${menuId}-${item.label}`}
-            onEnter={() => openMenu(item.label)}
-            onLeave={scheduleClose}
-          />
-        ) : null,
-      )}
 
       {open ? (
         <div className={styles.mobileDrawer}>
@@ -244,57 +257,48 @@ export default function Header() {
   );
 }
 
-function MegaPanel({
+function DropdownPanel({
   item,
   id,
+  open,
   onEnter,
   onLeave,
 }: {
   item: NavItem;
   id: string;
+  open: boolean;
   onEnter: () => void;
   onLeave: () => void;
 }) {
-  const cols = item.columns.filter((c) => c.pages.length > 0);
+  const sections = item.columns.filter((c) => c.pages.length > 0);
   return (
     <div
       id={id}
-      className={styles.mega}
+      className={`${styles.dropdown} ${open ? styles.dropdownOpen : ""}`}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       role="region"
       aria-label={`${item.label} menu`}
+      aria-hidden={!open}
+      // Closed panels stay in the DOM for open/close motion but are not interactive.
+      inert={open ? undefined : true}
     >
-      <div className={`container ${styles.megaInner}`}>
-        <div
-          className={styles.megaGrid}
-          style={{
-            gridTemplateColumns: `repeat(${cols.length}, minmax(140px, 1fr)) minmax(200px, 240px)`,
-          }}
-        >
-          {cols.map((col) => (
-            <div key={col.label || item.label} className={styles.megaCol}>
-              {col.label ? (
-                <Link href={item.href} className={styles.megaColTitle}>
-                  {col.label}
-                </Link>
-              ) : null}
-              <ul>
-                {col.pages.map((page) => (
-                  <li key={page.href}>
-                    <Link href={page.href}>{page.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <div className={styles.megaCta}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <Link href={item.href} className="btn btn-green">
-              Explore {item.label}
-            </Link>
+      <div className={styles.dropdownInner}>
+        {sections.map((col, index) => (
+          <div
+            key={col.label || `${item.label}-${index}`}
+            className={`${styles.dropdownSection}${index > 0 ? ` ${styles.dropdownSectionDivided}` : ""}`}
+          >
+            {col.label ? <p className={styles.dropdownHeading}>{col.label}</p> : null}
+            <ul>
+              {col.pages.map((page) => (
+                <li key={page.href}>
+                  <Link href={page.href}>{page.label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
