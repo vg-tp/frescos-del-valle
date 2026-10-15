@@ -1,0 +1,576 @@
+.main {
+  /* Photo heroes bleed under fixed announce+nav (Sysco). Utility pages
+     that lack a PhotoHero still need clearance — see .mainPadded. */
+  min-height: 70vh;
+}
+
+.mainPadded {
+  padding-top: calc(var(--announce-h) + var(--header-h));
+}
+
+/* Sysco standard-page-hero — tall, dark overlay, left text under transparent nav */
+.photoHero {
+  position: relative;
+  color: #fff;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  /* Clear fixed announce + header while image runs edge-to-edge underneath */
+  padding: calc(var(--announce-h) + var(--header-h) + 48px) 0 56px;
+  overflow: hidden;
+  text-align: left;
+  margin-top: calc(-1 * (var(--announce-h) + var(--header-h)));
+}
+
+.photoHeroTall {
+  min-height: min(78vh, 680px);
+  padding: calc(var(--announce-h) + var(--header-h) + 64px) 0 72px;
+}
+
+.photoHeroCompact {
+  min-height: 300px;
+  padding: calc(var(--announce-h) + var(--header-h) + 32px) 0 40px;
+}
+
+.photoHeroImg {
+  object-fit: cover;
+}
+
+.photoHeroShade {
+  position: absolute;
+  inset: 0;
+  /* Black gradient overlay — keeps left-aligned white title readable */
+  background: linear-gradient(
+    100deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.photoHeroInner {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  text-align: left;
+  margin-inline: auto;
+}
+
+.photoHeroInner h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.08;
+  text-align: left;
+  text-transform: uppercase;
+  max-width: 18ch;
+}
+
+.photoHeroLead {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 42rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+.centeredHead {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.centeredHead h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #2a2f33;
+}
+
+.centeredHead p {
+  margin: 12px auto 0;
+  max-width: 48ch;
+  color: var(--sysco-muted);
+  line-height: 1.55;
+  font-size: 1.05rem;
+}
+
+.sectionHead {
+  margin-bottom: 28px;
+}
+
+.sectionHead h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  letter-spacing: -0.01em;
+  color: var(--sysco-ink);
+}
+
+.featureSection {
+  padding: 64px 0;
+  background: #fff;
+}
+
+.featureGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.featureGrid li {
+  padding: 28px 24px;
+  background: #f7f9fb;
+  border: none;
+  text-align: center;
+}
+
+.featureGrid h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #2a2f33;
+}
+
+.featureGrid p {
+  margin: 0;
+  color: var(--sysco-muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 800px) {
+  .featureGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .featureGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Image tiles — product categories (Sysco 3-col by default) */
+.tileSection {
+  padding: 72px 0 80px;
+  background: #fff;
+}
+
+.tileGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.imageTile {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.imageTileImg {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.imageTile:hover .imageTileImg {
+  transform: scale(1.06);
+}
+
+.imageTileShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent 58%);
+}
+
+.imageTileLabel {
+  position: relative;
+  z-index: 2;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 720px) {
+  .tileGrid3,
+  .tileGrid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .tileGrid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Media card grid */
+.cardSection {
+  padding: 64px 0 80px;
+  background: #fff;
+}
+
+.cardSectionBand {
+  background: var(--sysco-band, #f8f8f9);
+}
+
+.cardGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 24px;
+}
+
+.cardGrid2 {
+  grid-template-columns: 1fr;
+}
+
+.cardGrid3 {
+  grid-template-columns: 1fr;
+}
+
+.cardGrid4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .cardGrid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardGrid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .cardGrid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cardGrid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mediaCard {
+  display: grid;
+  background: #fff;
+  border: 1px solid #e6e9ec;
+  overflow: hidden;
+  color: inherit;
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.mediaCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mediaCardMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #dfe5ea;
+}
+
+.mediaCardImg {
+  object-fit: cover;
+}
+
+.mediaCardBody {
+  padding: 18px 20px 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.mediaCardMeta {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+.mediaCardBody h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: #2a2f33;
+}
+
+.mediaCardBody p {
+  margin: 0;
+  color: var(--sysco-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Feature callout — Sysco split band */
+.featureCallout {
+  display: grid;
+  min-height: 420px;
+  background: #fff;
+  border-top: 1px solid var(--sysco-border, #e4e5e6);
+  border-bottom: 1px solid var(--sysco-border, #e4e5e6);
+}
+
+.featureCalloutGray {
+  background: var(--sysco-band, #f8f8f9);
+}
+
+.featureCalloutGray .featureCalloutCopy {
+  background: var(--sysco-band, #f8f8f9);
+}
+
+.featureCalloutMedia {
+  position: relative;
+  min-height: 260px;
+}
+
+.featureCalloutImg {
+  object-fit: cover;
+}
+
+.featureCalloutCopy {
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.featureCalloutEyebrow {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sysco-nav);
+}
+
+.featureCalloutCopy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  color: #2a2f33;
+  letter-spacing: -0.02em;
+}
+
+.featureCalloutCopy p {
+  margin: 0 0 24px;
+  line-height: 1.6;
+  max-width: 42ch;
+  color: var(--sysco-muted);
+}
+
+@media (min-width: 900px) {
+  .featureCallout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featureCalloutRight .featureCalloutMedia {
+    order: 2;
+  }
+}
+
+/* Quote slider band */
+.quoteBand {
+  padding: 72px 0;
+  background: var(--sysco-band, #f8f8f9);
+}
+
+.quoteBlock {
+  margin: 0 auto;
+  max-width: 52rem;
+  text-align: center;
+}
+
+.quoteText {
+  margin: 0 0 28px;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.45;
+  color: var(--sysco-blue, #008cd2);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.quoteBlock footer {
+  display: grid;
+  gap: 4px;
+}
+
+.quoteBlock strong {
+  font-size: 1.05rem;
+  color: #2a2f33;
+}
+
+.quoteBlock span {
+  font-size: 0.95rem;
+  color: var(--sysco-muted);
+}
+
+.quoteDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.quoteDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c5ccd3;
+}
+
+.quoteDotActive {
+  background: var(--sysco-blue) !important;
+}
+
+.crumb {
+  margin: 0 0 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+  opacity: 0.9;
+}
+
+.crumb a:hover {
+  text-decoration: underline;
+}
+
+.crumbOnDark {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.crumbOnLight {
+  color: var(--sysco-muted);
+}
+
+.crumbOnLight a {
+  color: var(--sysco-blue);
+}
+
+.ctaBand {
+  padding: 72px 0;
+  background:
+    linear-gradient(120deg, rgba(20, 24, 30, 0.82), rgba(20, 24, 30, 0.72)),
+    url("/cta.jpg") center / cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.ctaInner h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.ctaInner p {
+  margin: 0 auto 28px;
+  max-width: 48ch;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.formStack {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.field input,
+.field textarea {
+  font: inherit;
+  font-weight: 400;
+  padding: 12px 14px;
+  border: 1px solid #c9d2da;
+  border-radius: 4px;
+  color: var(--sysco-ink);
+  background: #fff;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid rgba(0, 114, 206, 0.35);
+  border-color: var(--sysco-blue);
+}
+
+/* Sysco blue-logo-callout — solid #008CD2 Foodie band */
+.blueLogoCallout {
+  background: var(--sysco-blue, #008cd2);
+  color: #fff;
+  padding: 56px 0;
+}
+
+.blueLogoInner {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.blueLogoMark {
+  width: min(220px, 100%);
+  aspect-ratio: 1.4 / 1;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.blueLogoMark span {
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.blueLogoCopy h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.blueLogoCopy p {
+  margin: 0 0 22px;
+  max-width: 48ch;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+}
+
+@media (min-width: 880px) {
+  .blueLogoInner {
+    grid-template-columns: minmax(180px, 240px) 1fr;
+    gap: 48px;
+  }
+}
