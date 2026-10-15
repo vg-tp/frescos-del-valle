@@ -94,30 +94,14 @@ export function InvestorsLayout({ content }: { content: InteriorContent }) {
 
 /**
  * Sysco Careers:
- * FEED YOUR hero + green search bridge → featured path tiles →
- * culture quotes → openings → talent community CTA
+ * PhotoHero (shared Products/About title type) + green search bridge →
+ * featured path tiles → culture quotes → openings → talent community CTA
  */
 export function CareersLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.careersHero}>
-        <Image
-          src={content.heroImage}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className={styles.careersHeroImg}
-        />
-        <div className={styles.careersHeroShade} />
-        <div className={`container ${styles.careersHeroInner}`}>
-          <h1 className={styles.feedYour}>
-            <span>ALIMENTA TU</span>
-            <span className={styles.feedOutline}>AMBICIÓN</span>
-          </h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      {/* Same PhotoHero title scale as Products / About — no custom display face */}
+      <PhotoHero content={content} tall showCrumbs={false} />
 
       <section className={styles.jobSearchBridge} aria-label="Buscar empleos">
         <form className={`container ${styles.jobSearchForm}`} action="/careers" method="get">
