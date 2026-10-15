@@ -40,13 +40,8 @@
 .photoHeroShade {
   position: absolute;
   inset: 0;
-  /* Sysco: dark grey wash, not blue marketing gradient */
-  background: linear-gradient(
-    105deg,
-    rgba(20, 24, 30, 0.72) 0%,
-    rgba(20, 24, 30, 0.45) 55%,
-    rgba(20, 24, 30, 0.28) 100%
-  );
+  /* Live Sysco: soft cool-gray wash hsla(208,7%,45%,.8) */
+  background: hsla(208, 7%, 45%, 0.72);
 }
 
 .photoHeroInner {
@@ -59,12 +54,13 @@
 
 .photoHeroInner h1 {
   margin: 0 0 14px;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.08;
   text-align: left;
-  max-width: 16ch;
+  text-transform: uppercase;
+  max-width: 18ch;
 }
 
 .photoHeroLead {
@@ -375,7 +371,7 @@
 /* Quote slider band */
 .quoteBand {
   padding: 72px 0;
-  background: #f4f6f8;
+  background: var(--sysco-band, #f8f8f9);
 }
 
 .quoteBlock {

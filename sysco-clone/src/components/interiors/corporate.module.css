@@ -818,7 +818,7 @@
 }
 
 .jobSearchBridge {
-  background: #5cb85c;
+  background: var(--sysco-green, #56b146);
   padding: 28px 0 32px;
 }
 
