@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { InteriorContent, CardItem, SplitBlock } from "@/content/interiors";
+import type {
+  InteriorContent,
+  CardItem,
+  LogoCallout,
+  SplitBlock,
+} from "@/content/interiors";
 import styles from "./shared.module.css";
 
 export function PageShell({
@@ -155,15 +160,19 @@ export function FeatureGrid({
 export function ImageTileGrid({
   heading,
   cards,
+  columns = 3,
 }: {
   heading: string;
   cards: CardItem[];
+  /** Live Sysco Products uses 3-col tiles */
+  columns?: 3 | 4;
 }) {
+  const colClass = columns === 4 ? styles.tileGrid4 : styles.tileGrid3;
   return (
     <section className={styles.tileSection}>
       <div className="container">
         <CenteredHead title={heading} />
-        <ul className={styles.tileGrid}>
+        <ul className={`${styles.tileGrid} ${colClass}`}>
           {cards.map((card) => (
             <li key={`${card.title}-${card.href}`}>
               <Link href={card.href || "#"} className={styles.imageTile}>
@@ -172,7 +181,7 @@ export function ImageTileGrid({
                     src={card.image}
                     alt=""
                     fill
-                    sizes="(max-width: 700px) 50vw, 25vw"
+                    sizes="(max-width: 700px) 50vw, 33vw"
                     className={styles.imageTileImg}
                   />
                 ) : null}
@@ -192,10 +201,12 @@ export function CardGrid({
   heading,
   cards,
   columns = 3,
+  tone = "white",
 }: {
   heading?: string;
   cards: CardItem[];
   columns?: 2 | 3 | 4;
+  tone?: "white" | "band";
 }) {
   const colClass =
     columns === 2
@@ -204,7 +215,11 @@ export function CardGrid({
         ? styles.cardGrid4
         : styles.cardGrid3;
   return (
-    <section className={styles.cardSection}>
+    <section
+      className={`${styles.cardSection}${
+        tone === "band" ? ` ${styles.cardSectionBand}` : ""
+      }`}
+    >
       <div className="container">
         {heading ? <CenteredHead title={heading} /> : null}
         <ul className={`${styles.cardGrid} ${colClass}`}>
@@ -239,12 +254,18 @@ export function CardGrid({
 }
 
 /** Full-bleed feature callout (image + copy), Sysco alternating bands. */
-export function FeatureCallout({ block }: { block: SplitBlock }) {
+export function FeatureCallout({
+  block,
+  band = "white",
+}: {
+  block: SplitBlock;
+  band?: "white" | "gray";
+}) {
   return (
     <section
       className={`${styles.featureCallout} ${
         block.align === "right" ? styles.featureCalloutRight : ""
-      }`}
+      } ${band === "gray" ? styles.featureCalloutGray : ""}`}
     >
       <div className={styles.featureCalloutMedia}>
         <Image
@@ -266,6 +287,26 @@ export function FeatureCallout({ block }: { block: SplitBlock }) {
             {block.cta.label}
           </Link>
         ) : null}
+      </div>
+    </section>
+  );
+}
+
+/** Sysco `.blue-logo-callout` — solid #008CD2 Foodie band. */
+export function BlueLogoCallout({ callout }: { callout: LogoCallout }) {
+  return (
+    <section className={styles.blueLogoCallout} aria-label={callout.title}>
+      <div className={`container ${styles.blueLogoInner}`}>
+        <div className={styles.blueLogoMark} aria-hidden>
+          <span>{callout.brand || "FOODIE"}</span>
+        </div>
+        <div className={styles.blueLogoCopy}>
+          <h2>{callout.title}</h2>
+          <p>{callout.body}</p>
+          <Link href={callout.cta.href} className="btn btn-white-border">
+            {callout.cta.label}
+          </Link>
+        </div>
       </div>
     </section>
   );

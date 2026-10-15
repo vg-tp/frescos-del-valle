@@ -150,9 +150,9 @@
   }
 }
 
-/* Image tiles — product categories */
+/* Image tiles — product categories (Sysco 3-col by default) */
 .tileSection {
-  padding: 64px 0 72px;
+  padding: 72px 0 80px;
   background: #fff;
 }
 
@@ -161,7 +161,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 14px;
+  gap: 16px;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -187,34 +187,40 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 55%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent 58%);
 }
 
 .imageTileLabel {
   position: relative;
   z-index: 2;
-  padding: 16px 18px;
+  padding: 18px 20px;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.25;
+  letter-spacing: 0.01em;
 }
 
 @media (min-width: 720px) {
-  .tileGrid {
+  .tileGrid3,
+  .tileGrid4 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1000px) {
-  .tileGrid {
+@media (min-width: 1100px) {
+  .tileGrid4 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* Media card grid */
 .cardSection {
-  padding: 56px 0 72px;
+  padding: 64px 0 80px;
   background: #fff;
+}
+
+.cardSectionBand {
+  background: var(--sysco-band, #f8f8f9);
 }
 
 .cardGrid {
@@ -316,6 +322,16 @@
   display: grid;
   min-height: 420px;
   background: #fff;
+  border-top: 1px solid var(--sysco-border, #e4e5e6);
+  border-bottom: 1px solid var(--sysco-border, #e4e5e6);
+}
+
+.featureCalloutGray {
+  background: var(--sysco-band, #f8f8f9);
+}
+
+.featureCalloutGray .featureCalloutCopy {
+  background: var(--sysco-band, #f8f8f9);
 }
 
 .featureCalloutMedia {
@@ -384,8 +400,9 @@
   margin: 0 0 28px;
   font-size: clamp(1.25rem, 2.4vw, 1.75rem);
   line-height: 1.45;
-  color: #2a2f33;
+  color: var(--sysco-blue, #008cd2);
   font-weight: 500;
+  font-style: italic;
 }
 
 .quoteBlock footer {
@@ -500,4 +517,55 @@
 .field textarea:focus {
   outline: 2px solid rgba(0, 114, 206, 0.35);
   border-color: var(--sysco-blue);
+}
+
+/* Sysco blue-logo-callout — solid #008CD2 Foodie band */
+.blueLogoCallout {
+  background: var(--sysco-blue, #008cd2);
+  color: #fff;
+  padding: 56px 0;
+}
+
+.blueLogoInner {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.blueLogoMark {
+  width: min(220px, 100%);
+  aspect-ratio: 1.4 / 1;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.blueLogoMark span {
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.blueLogoCopy h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.blueLogoCopy p {
+  margin: 0 0 22px;
+  max-width: 48ch;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+}
+
+@media (min-width: 880px) {
+  .blueLogoInner {
+    grid-template-columns: minmax(180px, 240px) 1fr;
+    gap: 48px;
+  }
 }
