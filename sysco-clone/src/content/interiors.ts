@@ -122,6 +122,17 @@ function img(i: number) {
   return IMAGES[i % IMAGES.length];
 }
 
+/** Stable photo heroes for About/Nosotros story children (Sysco interior chrome). */
+function aboutStoryHero(href: string): string {
+  const map: Record<string, string> = {
+    "/about/company-profile/the-sysco-story": "/section-produce.jpg",
+    "/about/company-profile/our-purpose": "/hero.jpg",
+    "/about/company-profile/public-policy-engagement": "/cta.jpg",
+    "/about/our-people/better-together": "/section-kitchen.jpg",
+  };
+  return map[href] || img(hash(href) % IMAGES.length);
+}
+
 function pickTemplate(page: PageMeta): InteriorTemplate {
   const h = page.href;
   if (h === "/search") return "search";
@@ -330,6 +341,8 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "story":
       return {
         ...base,
+        // Distinct photo heroes so About children never render an empty/missing header
+        heroImage: aboutStoryHero(page.href),
         intro: [para(0), para(1), para(2)],
         timeline: buildTimeline(),
         splits: buildSplits(page),
@@ -374,6 +387,7 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "news":
       return {
         ...base,
+        heroImage: "/section-cold.jpg",
         listHeading: "Últimas noticias",
         list: Array.from({ length: 8 }, (_, i) => ({
           title: `Lorem ipsum news headline ${i + 1}`,
@@ -393,6 +407,7 @@ function buildForPage(page: PageMeta): InteriorContent {
     case "events":
       return {
         ...base,
+        heroImage: "/section-produce.jpg",
         listHeading: "Próximos eventos",
         list: Array.from({ length: 6 }, (_, i) => ({
           title: `Lorem ipsum event ${i + 1}`,

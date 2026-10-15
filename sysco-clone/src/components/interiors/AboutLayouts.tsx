@@ -1,29 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InteriorContent } from "@/content/interiors";
-import { Crumbs, CtaBand, FeatureGrid, PageShell } from "./shared";
+import { CtaBand, FeatureGrid, PageShell, PhotoHero } from "./shared";
 import styles from "./about.module.css";
 import { sharedStyles } from "./shared";
 
 export function AboutHubLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.hubHero}>
-        <Image
-          src={content.heroImage}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className={styles.hubHeroImg}
-        />
-        <div className={styles.hubHeroShade} />
-        <div className={`container ${styles.hubHeroInner}`}>
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p className={styles.hubLead}>{content.lead}</p>
-        </div>
-      </section>
+      {/* Sysco About hub: full-bleed photo hero + crumbs + title */}
+      <PhotoHero content={content} />
 
       {content.stats?.length ? (
         <section className={styles.hubStats} aria-label="Destacados">
@@ -114,13 +100,8 @@ export function AboutHubLayout({ content }: { content: InteriorContent }) {
 export function StoryLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.storyTitle}>
-        <div className="container">
-          <Crumbs content={content} tone="light" />
-          <h1>{content.title}</h1>
-          <p className={styles.lead}>{content.lead}</p>
-        </div>
-      </section>
+      {/* Previous white title band read as “no header”; Sysco About children use photo chrome */}
+      <PhotoHero content={content} />
 
       <section className={styles.storyBody}>
         <div className={`container ${styles.storyColumns}`}>
@@ -205,13 +186,7 @@ export function StoryLayout({ content }: { content: InteriorContent }) {
 export function NewsLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.newsHero}>
-        <div className="container">
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} />
 
       {content.cards?.length ? (
         <section className={styles.newsFeatured}>
@@ -284,13 +259,7 @@ export function NewsLayout({ content }: { content: InteriorContent }) {
 export function EventsLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.eventsHero}>
-        <div className="container">
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} />
 
       {content.list?.length ? (
         <section className={styles.eventsList}>
@@ -327,22 +296,7 @@ export function EventsLayout({ content }: { content: InteriorContent }) {
 export function ManagementLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.mgmtHero}>
-        <Image
-          src={content.heroImage}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className={styles.mgmtHeroImg}
-        />
-        <div className={styles.mgmtHeroShade} />
-        <div className={`container ${styles.mgmtHeroInner}`}>
-          <Crumbs content={content} />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} />
 
       {content.bios?.length ? (
         <section className={styles.bioGrid}>
@@ -389,13 +343,7 @@ export function ManagementLayout({ content }: { content: InteriorContent }) {
 export function ReportLayout({ content }: { content: InteriorContent }) {
   return (
     <PageShell>
-      <section className={styles.reportHero}>
-        <div className="container">
-          <Crumbs content={content} tone="light" />
-          <h1>{content.title}</h1>
-          <p>{content.lead}</p>
-        </div>
-      </section>
+      <PhotoHero content={content} />
 
       {content.stats?.length ? (
         <section className={styles.reportStats} aria-label="Destacados">

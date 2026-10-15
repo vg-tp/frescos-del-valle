@@ -55,12 +55,18 @@ export function PhotoHero({
   content: InteriorContent;
   compact?: boolean;
 }) {
+  const heroSrc = content.heroImage || "/hero.jpg";
+  const title = content.title?.trim() || "Sysco";
+  const lead =
+    content.lead?.trim() ||
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
   return (
     <section
       className={`${styles.photoHero}${compact ? ` ${styles.photoHeroCompact}` : ""}`}
+      aria-label="Encabezado de página"
     >
       <Image
-        src={content.heroImage}
+        src={heroSrc}
         alt=""
         fill
         priority
@@ -70,8 +76,8 @@ export function PhotoHero({
       <div className={styles.photoHeroShade} />
       <div className={`container ${styles.photoHeroInner}`}>
         <Crumbs content={content} />
-        <h1>{content.title}</h1>
-        <p className={styles.photoHeroLead}>{content.lead}</p>
+        <h1>{title}</h1>
+        <p className={styles.photoHeroLead}>{lead}</p>
       </div>
     </section>
   );
