@@ -78,7 +78,7 @@ function chrome(data, page) {
       <div class="topbar"><a href="${esc(data.utility.href)}">${esc(data.utility.label)}</a></div>
       <header class="site-header">
         <div class="bar">
-          <a class="wordmark" href="/">${esc(data.brand)}</a>
+          <a class="wordmark" href="/"><img src="/img/logo-frescos-del-valle.png" alt="Frescos del Valle" width="1198" height="296" /></a>
           <nav class="nav-links" aria-label="${esc(data.navLabel)}">${nav}</nav>
           <div class="utils">
             <div class="search-wrap" style="position:relative">

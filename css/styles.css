@@ -85,14 +85,17 @@ h1, h2, h3, p { margin: 0; }
   padding: 0 28px 0 22px;
 }
 .wordmark {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 1;
-  color: var(--blue);
+  display: flex;
+  align-items: center;
   flex: none;
+  height: 100%;
+  line-height: 0;
 }
-.home .site-header:not(.is-solid) .wordmark { color: var(--white); }
+.wordmark img {
+  width: auto;
+  height: calc(var(--bar) - 16px);
+  max-width: none;
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -625,7 +628,7 @@ textarea { min-height: 140px; resize: vertical; }
   :root { --bar: 64px; --topbar: 36px; }
   .nav-links, .utils { display: none; }
   .burger { display: grid; place-items: center; margin-left: auto; }
-  .wordmark { font-size: 32px; }
+  .wordmark img { height: calc(var(--bar) - 12px); }
   .drawer {
     display: none;
     position: fixed;
@@ -645,8 +648,6 @@ textarea { min-height: 140px; resize: vertical; }
     background: var(--white);
     color: var(--ink);
   }
-  body.nav-open .wordmark,
-  body.nav-open.home .site-header:not(.is-solid) .wordmark { color: var(--blue); }
   .drawer .acc { border-bottom: 1px solid var(--line); }
   .drawer .acc > button,
   .drawer .acc > a.top {
