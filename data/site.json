@@ -1,0 +1,2009 @@
+{
+  "_note": "Cambia textos e imagenes aqui. Todo el texto visible es un marcador de posicion. Despues corre node scripts/pages.mjs si agregas una ruta.",
+  "brand": "VALLE",
+  "skip": "Lorem ipsum",
+  "navLabel": "Lorem",
+  "utility": {
+    "label": "Lorem ipsum dolor sit amet nunc",
+    "href": "/magna"
+  },
+  "utils": {
+    "searchLabel": "Lorem",
+    "menuLabel": "Ipsum",
+    "shop": {
+      "label": "Lorem hic",
+      "href": "/ipsum"
+    },
+    "cta": {
+      "label": "Dolor sit amet",
+      "href": "/nunc"
+    },
+    "account": {
+      "label": "Sed nunc",
+      "href": "/nunc"
+    }
+  },
+  "nav": [
+    {
+      "id": "lorem",
+      "label": "Lorem",
+      "href": "/lorem",
+      "phrase": "Lorem ipsum dolor amet",
+      "groups": [
+        {
+          "h3": "Lorem ipsum dolor",
+          "links": [
+            {
+              "label": "Dolor sit amet",
+              "href": "/lorem/perfil"
+            },
+            {
+              "label": "Ipsum dolor sit",
+              "href": "/lorem/relato"
+            },
+            {
+              "label": "Amet nunc elit",
+              "href": "/lorem/fin"
+            },
+            {
+              "label": "Sed tempor nunc",
+              "href": "/lorem/norma"
+            }
+          ]
+        },
+        {
+          "h3": "Dolor sit amet",
+          "links": [
+            {
+              "label": "Ut labore enim",
+              "href": "/lorem/gente"
+            },
+            {
+              "label": "Lorem ipsum dolor",
+              "href": "/lorem/union"
+            }
+          ]
+        },
+        {
+          "h3": "Ipsum dolor sit",
+          "links": [
+            {
+              "label": "Amet nunc elit",
+              "href": "/lorem/notas"
+            },
+            {
+              "label": "Sed tempor nunc",
+              "href": "/lorem/actos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ipsum",
+      "label": "Ipsum sit",
+      "href": "/ipsum",
+      "phrase": "Amet ipsum dolor sit consectetur",
+      "groups": [
+        {
+          "h3": "Amet nunc elit",
+          "links": [
+            {
+              "label": "Lorem ipsum",
+              "href": "/ipsum/lista"
+            },
+            {
+              "label": "Dolor sit amet",
+              "href": "/ipsum/marca"
+            },
+            {
+              "label": "Ipsum dolor sit",
+              "href": "/ipsum/notas"
+            },
+            {
+              "label": "Sed tempor nunc",
+              "href": "/ipsum/calidad"
+            }
+          ]
+        },
+        {
+          "h3": "Sed tempor nunc",
+          "links": [
+            {
+              "label": "Ut labore enim",
+              "href": "/ipsum/servicios"
+            },
+            {
+              "label": "Lorem ipsum dolor",
+              "href": "/ipsum/cocina"
+            },
+            {
+              "label": "Dolor sit amet",
+              "href": "/ipsum/tecnica"
+            },
+            {
+              "label": "Amet nunc elit",
+              "href": "/ipsum/mixto"
+            },
+            {
+              "label": "Ipsum dolor sit",
+              "href": "/ipsum/casas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dolor",
+      "label": "Dolor nec",
+      "href": "/dolor",
+      "phrase": "Ipsum dolor sit amet nunc",
+      "groups": [
+        {
+          "h3": "Ut labore enim",
+          "links": [
+            {
+              "label": "Lorem ipsum dolor",
+              "href": "/dolor/mesas"
+            },
+            {
+              "label": "Dolor sit amet",
+              "href": "/dolor/salud"
+            },
+            {
+              "label": "Ipsum dolor sit",
+              "href": "/dolor/aula"
+            },
+            {
+              "label": "Amet nunc elit",
+              "href": "/dolor/civico"
+            },
+            {
+              "label": "Sed tempor nunc",
+              "href": "/dolor/gestion"
+            },
+            {
+              "label": "Ut labore enim",
+              "href": "/dolor/viaje"
+            },
+            {
+              "label": "Lorem ipsum",
+              "href": "/dolor/ocio"
+            },
+            {
+              "label": "Dolor sit amet",
+              "href": "/dolor/tienda"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amet",
+      "label": "Amet elit",
+      "href": "/amet",
+      "phrase": "Dolor sit amet consectetur",
+      "groups": [
+        {
+          "h3": "Lorem ipsum dolor",
+          "links": [
+            {
+              "label": "Ipsum dolor sit",
+              "href": "/amet/recursos"
+            }
+          ]
+        },
+        {
+          "h3": "Dolor sit amet",
+          "links": [
+            {
+              "label": "Amet nunc elit",
+              "href": "/amet/variedad"
+            }
+          ]
+        },
+        {
+          "h3": "Sed tempor nunc",
+          "links": [
+            {
+              "label": "Ut labore enim",
+              "href": "/sed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sed",
+      "label": "Sed tempor",
+      "href": "/sed"
+    },
+    {
+      "id": "labore",
+      "label": "Ut labore",
+      "href": "/labore"
+    },
+    {
+      "id": "magna",
+      "label": "Magna aliqua",
+      "href": "/magna",
+      "phrase": "Sed do eiusmod tempor nunc",
+      "groups": [
+        {
+          "h3": "Ipsum dolor sit",
+          "links": [
+            {
+              "label": "Lorem ipsum dolor",
+              "href": "/magna/enfoque"
+            },
+            {
+              "label": "Dolor sit amet",
+              "href": "/magna/gente"
+            },
+            {
+              "label": "Amet nunc elit",
+              "href": "/magna/surtido"
+            },
+            {
+              "label": "Sed tempor nunc",
+              "href": "/magna/orbis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nunc",
+      "label": "Nunc est",
+      "href": "/nunc",
+      "phrase": "Nunc est lorem ipsum dolor",
+      "groups": [
+        {
+          "h3": "Amet nunc elit",
+          "links": [
+            {
+              "label": "Lorem ipsum",
+              "href": "/nunc"
+            }
+          ]
+        },
+        {
+          "h3": "Ut labore enim",
+          "links": [
+            {
+              "label": "Dolor sit amet",
+              "href": "/nunc/sedes"
+            }
+          ]
+        },
+        {
+          "h3": "Sed tempor nunc",
+          "links": [
+            {
+              "label": "Ipsum dolor sit",
+              "href": "/nunc"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "blurb": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "columns": [
+      {
+        "h3": "Lorem ipsum dolor",
+        "links": [
+          {
+            "label": "Dolor sit amet",
+            "href": "/lorem/relato"
+          },
+          {
+            "label": "Ipsum dolor sit",
+            "href": "/lorem/fin"
+          },
+          {
+            "label": "Amet nunc elit",
+            "href": "/magna"
+          },
+          {
+            "label": "Sed tempor nunc",
+            "href": "/lorem/union"
+          },
+          {
+            "label": "Ut labore enim",
+            "href": "/lorem/notas"
+          }
+        ]
+      },
+      {
+        "h3": "Dolor sit amet",
+        "links": [
+          {
+            "label": "Lorem ipsum",
+            "href": "/ipsum/lista"
+          },
+          {
+            "label": "Ipsum dolor sit",
+            "href": "/ipsum/marca"
+          },
+          {
+            "label": "Amet nunc elit",
+            "href": "/ipsum/cocina"
+          },
+          {
+            "label": "Sed tempor nunc",
+            "href": "/ipsum/tecnica"
+          }
+        ]
+      },
+      {
+        "h3": "Ipsum dolor sit",
+        "links": [
+          {
+            "label": "Ut labore enim",
+            "href": "/amet"
+          },
+          {
+            "label": "Lorem ipsum dolor",
+            "href": "/sed"
+          },
+          {
+            "label": "Dolor sit amet",
+            "href": "/labore"
+          }
+        ]
+      },
+      {
+        "h3": "Amet nunc elit",
+        "links": [
+          {
+            "label": "Sed tempor nunc",
+            "href": "/nunc"
+          },
+          {
+            "label": "Lorem ipsum",
+            "href": "/nunc/sedes"
+          },
+          {
+            "label": "Ipsum dolor sit",
+            "href": "/lorem/norma"
+          },
+          {
+            "label": "Ut labore enim",
+            "href": "/nunc"
+          }
+        ]
+      }
+    ],
+    "social": [
+      {
+        "label": "Lorem",
+        "href": "/nunc"
+      },
+      {
+        "label": "Ipsum",
+        "href": "/nunc"
+      },
+      {
+        "label": "Dolor",
+        "href": "/nunc"
+      },
+      {
+        "label": "Amet",
+        "href": "/nunc"
+      }
+    ],
+    "legal": "© 2026 Valle. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "legalLinks": [
+      {
+        "label": "Lorem ipsum",
+        "href": "/lorem/norma"
+      },
+      {
+        "label": "Dolor sit amet",
+        "href": "/nunc"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "href": "/",
+      "template": "home",
+      "dotLabel": "Lorem",
+      "prevLabel": "Ipsum",
+      "nextLabel": "Dolor",
+      "slides": [
+        {
+          "image": "/img/shell/shell-hero-produce.jpg",
+          "alt": "Lorem ipsum dolor",
+          "kicker": "Lorem ipso",
+          "sectionTitle": "Lorem ipsum dolor sit amet",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+          "cta": {
+            "label": "Lorem ipsum",
+            "href": "/ipsum"
+          }
+        },
+        {
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Dolor sit amet",
+          "kicker": "Dolor sit",
+          "sectionTitle": "Dolor sit amet consectetur",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+          "cta": {
+            "label": "Lorem ipsum",
+            "href": "/magna"
+          }
+        },
+        {
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Ipsum dolor sit",
+          "kicker": "Amet nunc",
+          "sectionTitle": "Ipsum dolor sit amet nunc",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "cta": {
+            "label": "Lorem ipsum",
+            "href": "/ipsum"
+          }
+        }
+      ],
+      "blue": {
+        "sectionTitle": "Amet consectetur adipiscing",
+        "cta": {
+          "label": "Ipsum nunc",
+          "href": "/magna"
+        }
+      },
+      "bands": [
+        {
+          "align": "end",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "kicker": "Amet nunc",
+          "sectionTitle": "Sed do eiusmod tempor nunc",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+          "links": [
+            {
+              "label": "Sed do eiusmod",
+              "href": "/lorem"
+            },
+            {
+              "label": "Ipsum nunc",
+              "href": "/lorem/relato"
+            }
+          ]
+        },
+        {
+          "align": "start",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "kicker": "Ipsum nec",
+          "sectionTitle": "Magna aliqua lorem ipsum est",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+          "links": [
+            {
+              "label": "Lorem ipsum",
+              "href": "/magna"
+            },
+            {
+              "label": "Dolor sit amet",
+              "href": "/magna/enfoque"
+            }
+          ]
+        },
+        {
+          "align": "end",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "kicker": "Sed labore",
+          "sectionTitle": "Nunc est lorem ipsum dolor",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "links": [
+            {
+              "label": "Amet nunc elit",
+              "href": "/nunc"
+            }
+          ]
+        },
+        {
+          "align": "start",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "kicker": "Magna est",
+          "sectionTitle": "Elit sed do eiusmod tempor",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+          "links": [
+            {
+              "label": "Ut labore enim",
+              "href": "/labore"
+            }
+          ]
+        }
+      ],
+      "closer": {
+        "align": "center",
+        "image": "/img/shell/shell-city-dusk.jpg",
+        "kicker": "Dolor sit",
+        "sectionTitle": "Consectetur adipiscing elit sed",
+        "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+        "cta": {
+          "label": "Lorem ipsum",
+          "href": "/nunc/sedes"
+        }
+      }
+    },
+    {
+      "id": "lorem",
+      "href": "/lorem",
+      "template": "hub",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit amet",
+      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Lorem ipsum dolor",
+      "h2": "Lorem ipsum dolor sit amet elit",
+      "intro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/perfil",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/lorem/fin",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "href": "/lorem/norma",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        },
+        {
+          "href": "/lorem/gente",
+          "image": "/img/shell/shell-warehouse-crew.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "href": "/lorem/notas",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        }
+      ]
+    },
+    {
+      "id": "lorem-perfil",
+      "href": "/lorem/perfil",
+      "template": "simple",
+      "kicker": "Dolor sit",
+      "h1": "Dolor sit amet nunc est",
+      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Dolor sit amet",
+      "blocks": [
+        {
+          "h2": "Dolor sit amet consectetur nunc",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "h2": "Sed tempor lorem ipsum dolor",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ]
+    },
+    {
+      "id": "lorem-relato",
+      "href": "/lorem/relato",
+      "template": "detail",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum dolor sit amet elit",
+      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Ipsum dolor sit",
+      "h2": "Ipsum dolor sit amet consectetur",
+      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "figure": "/img/shell/shell-city-dusk.jpg",
+      "h2b": "Sed tempor lorem ipsum dolor",
+      "outro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "relatedTitle": "Nunc est lorem ipsum dolor sit",
+      "cards": [
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/cocina",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "lorem-fin",
+      "href": "/lorem/fin",
+      "template": "simple",
+      "kicker": "Ipsum nec",
+      "h1": "Amet lorem ipsum dolor sit",
+      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Amet nunc elit",
+      "blocks": [
+        {
+          "h2": "Amet lorem ipsum dolor sit elit",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "h2": "Nunc est lorem ipsum dolor sit",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        }
+      ]
+    },
+    {
+      "id": "lorem-norma",
+      "href": "/lorem/norma",
+      "template": "simple",
+      "kicker": "Sed labore",
+      "h1": "Sed tempor lorem ipsum",
+      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Sed tempor nunc",
+      "blocks": [
+        {
+          "h2": "Sed tempor lorem ipsum dolor",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "h2": "Elit sed tempor lorem ipsum",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }
+      ]
+    },
+    {
+      "id": "lorem-gente",
+      "href": "/lorem/gente",
+      "template": "simple",
+      "kicker": "Magna est",
+      "h1": "Magna aliqua dolor sit",
+      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/img/shell/shell-warehouse-crew.jpg",
+      "alt": "Ut labore enim",
+      "blocks": [
+        {
+          "h2": "Magna aliqua dolor sit amet",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "h2": "Lorem ipsum dolor sit amet elit",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        }
+      ]
+    },
+    {
+      "id": "lorem-union",
+      "href": "/lorem/union",
+      "template": "simple",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit",
+      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Lorem ipsum dolor",
+      "blocks": [
+        {
+          "h2": "Nunc est lorem ipsum dolor sit",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "h2": "Dolor sit amet consectetur nunc",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    {
+      "id": "lorem-notas",
+      "href": "/lorem/notas",
+      "template": "listing",
+      "kicker": "Dolor sit",
+      "h1": "Dolor amet consectetur",
+      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Dolor sit amet",
+      "h2": "Elit sed tempor lorem ipsum",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "cards": [
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "href": "/lorem/actos",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    {
+      "id": "lorem-actos",
+      "href": "/lorem/actos",
+      "template": "listing",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum elit sed tempor",
+      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Ipsum dolor sit",
+      "h2": "Lorem ipsum dolor sit amet elit",
+      "intro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "cards": [
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/lorem/fin",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "lorem-nota",
+      "href": "/lorem/notas/nota",
+      "template": "detail",
+      "kicker": "Ipsum nec",
+      "h1": "Amet dolor lorem ipsum",
+      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Amet nunc elit",
+      "h2": "Dolor sit amet consectetur nunc",
+      "intro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "figure": "/img/shell/shell-truck-road.jpg",
+      "h2b": "Amet lorem ipsum dolor sit elit",
+      "outro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "relatedTitle": "Magna aliqua dolor sit amet",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/cocina",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "ipsum",
+      "href": "/ipsum",
+      "template": "hub",
+      "kicker": "Sed labore",
+      "h1": "Nunc lorem ipsum dolor",
+      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Sed tempor nunc",
+      "h2": "Ipsum dolor sit amet consectetur",
+      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "cards": [
+        {
+          "href": "/ipsum/lista",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "href": "/ipsum/marca",
+          "image": "/img/shell/shell-warehouse-crew.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        },
+        {
+          "href": "/ipsum/calidad",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "href": "/ipsum/cocina",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "href": "/ipsum/servicios",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "href": "/ipsum/casas",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-lista",
+      "href": "/ipsum/lista",
+      "template": "listing",
+      "kicker": "Magna est",
+      "h1": "Elit ipsum dolor amet",
+      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Ut labore enim",
+      "h2": "Amet lorem ipsum dolor sit elit",
+      "intro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "cards": [
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        },
+        {
+          "href": "/ipsum/cocina",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "href": "/ipsum/marca",
+          "image": "/img/shell/shell-warehouse-crew.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "href": "/ipsum/calidad",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "href": "/ipsum/mixto",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "href": "/ipsum/tecnica",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-pieza",
+      "href": "/ipsum/lista/pieza",
+      "template": "detail",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit amet",
+      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Lorem ipsum dolor",
+      "h2": "Sed tempor lorem ipsum dolor",
+      "intro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "figure": "/img/shell/shell-hero-produce.jpg",
+      "h2b": "Nunc est lorem ipsum dolor sit",
+      "outro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "relatedTitle": "Lorem ipsum dolor sit amet elit",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/cocina",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-marca",
+      "href": "/ipsum/marca",
+      "template": "simple",
+      "kicker": "Dolor sit",
+      "h1": "Dolor sit amet nunc est",
+      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/img/shell/shell-warehouse-crew.jpg",
+      "alt": "Dolor sit amet",
+      "blocks": [
+        {
+          "h2": "Magna aliqua dolor sit amet",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "h2": "Lorem ipsum dolor sit amet elit",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-notas",
+      "href": "/ipsum/notas",
+      "template": "simple",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum dolor sit amet elit",
+      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Ipsum dolor sit",
+      "blocks": [
+        {
+          "h2": "Nunc est lorem ipsum dolor sit",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "h2": "Dolor sit amet consectetur nunc",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-calidad",
+      "href": "/ipsum/calidad",
+      "template": "simple",
+      "kicker": "Ipsum nec",
+      "h1": "Amet lorem ipsum dolor sit",
+      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Amet nunc elit",
+      "blocks": [
+        {
+          "h2": "Elit sed tempor lorem ipsum",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "h2": "Ipsum dolor sit amet consectetur",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-servicios",
+      "href": "/ipsum/servicios",
+      "template": "simple",
+      "kicker": "Sed labore",
+      "h1": "Sed tempor lorem ipsum",
+      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Sed tempor nunc",
+      "blocks": [
+        {
+          "h2": "Lorem ipsum dolor sit amet elit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "h2": "Amet lorem ipsum dolor sit elit",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-cocina",
+      "href": "/ipsum/cocina",
+      "template": "detail",
+      "kicker": "Magna est",
+      "h1": "Magna aliqua dolor sit",
+      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Ut labore enim",
+      "h2": "Dolor sit amet consectetur nunc",
+      "intro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "figure": "/img/shell/shell-truck-road.jpg",
+      "h2b": "Amet lorem ipsum dolor sit elit",
+      "outro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "relatedTitle": "Magna aliqua dolor sit amet",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-tecnica",
+      "href": "/ipsum/tecnica",
+      "template": "simple",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit",
+      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Lorem ipsum dolor",
+      "blocks": [
+        {
+          "h2": "Ipsum dolor sit amet consectetur",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        },
+        {
+          "h2": "Magna aliqua dolor sit amet",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-mixto",
+      "href": "/ipsum/mixto",
+      "template": "simple",
+      "kicker": "Dolor sit",
+      "h1": "Dolor amet consectetur",
+      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Dolor sit amet",
+      "blocks": [
+        {
+          "h2": "Amet lorem ipsum dolor sit elit",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "h2": "Nunc est lorem ipsum dolor sit",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        }
+      ]
+    },
+    {
+      "id": "ipsum-casas",
+      "href": "/ipsum/casas",
+      "template": "simple",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum elit sed tempor",
+      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Ipsum dolor sit",
+      "blocks": [
+        {
+          "h2": "Sed tempor lorem ipsum dolor",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "h2": "Elit sed tempor lorem ipsum",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }
+      ]
+    },
+    {
+      "id": "dolor",
+      "href": "/dolor",
+      "template": "hub",
+      "kicker": "Ipsum nec",
+      "h1": "Amet dolor lorem ipsum",
+      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/img/shell/shell-warehouse-crew.jpg",
+      "alt": "Amet nunc elit",
+      "h2": "Magna aliqua dolor sit amet",
+      "intro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "cards": [
+        {
+          "href": "/dolor/mesas",
+          "image": "/img/shell/shell-hero-produce.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "href": "/dolor/salud",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "href": "/dolor/aula",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "href": "/dolor/civico",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/dolor/gestion",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/dolor/viaje",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-mesas",
+      "href": "/dolor/mesas",
+      "template": "detail",
+      "kicker": "Sed labore",
+      "h1": "Nunc lorem ipsum dolor",
+      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Sed tempor nunc",
+      "h2": "Nunc est lorem ipsum dolor sit",
+      "intro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "figure": "/img/shell/shell-field-crate.jpg",
+      "h2b": "Lorem ipsum dolor sit amet elit",
+      "outro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "relatedTitle": "Ipsum dolor sit amet consectetur",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-salud",
+      "href": "/dolor/salud",
+      "template": "detail",
+      "kicker": "Magna est",
+      "h1": "Elit ipsum dolor amet",
+      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Ut labore enim",
+      "h2": "Elit sed tempor lorem ipsum",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "figure": "/img/shell/shell-farm-equipment.jpg",
+      "h2b": "Dolor sit amet consectetur nunc",
+      "outro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "relatedTitle": "Amet lorem ipsum dolor sit elit",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-aula",
+      "href": "/dolor/aula",
+      "template": "detail",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit amet",
+      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Lorem ipsum dolor",
+      "h2": "Lorem ipsum dolor sit amet elit",
+      "intro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "figure": "/img/shell/shell-kitchen-pass.jpg",
+      "h2b": "Ipsum dolor sit amet consectetur",
+      "outro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "relatedTitle": "Sed tempor lorem ipsum dolor",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-civico",
+      "href": "/dolor/civico",
+      "template": "detail",
+      "kicker": "Dolor sit",
+      "h1": "Dolor sit amet nunc est",
+      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Dolor sit amet",
+      "h2": "Dolor sit amet consectetur nunc",
+      "intro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "figure": "/img/shell/shell-truck-road.jpg",
+      "h2b": "Amet lorem ipsum dolor sit elit",
+      "outro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "relatedTitle": "Magna aliqua dolor sit amet",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-gestion",
+      "href": "/dolor/gestion",
+      "template": "detail",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum dolor sit amet elit",
+      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Ipsum dolor sit",
+      "h2": "Ipsum dolor sit amet consectetur",
+      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "figure": "/img/shell/shell-city-dusk.jpg",
+      "h2b": "Sed tempor lorem ipsum dolor",
+      "outro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "relatedTitle": "Nunc est lorem ipsum dolor sit",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-viaje",
+      "href": "/dolor/viaje",
+      "template": "detail",
+      "kicker": "Ipsum nec",
+      "h1": "Amet lorem ipsum dolor sit",
+      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Amet nunc elit",
+      "h2": "Amet lorem ipsum dolor sit elit",
+      "intro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "figure": "/img/shell/shell-warehouse-crew.jpg",
+      "h2b": "Magna aliqua dolor sit amet",
+      "outro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "relatedTitle": "Elit sed tempor lorem ipsum",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-ocio",
+      "href": "/dolor/ocio",
+      "template": "detail",
+      "kicker": "Sed labore",
+      "h1": "Sed tempor lorem ipsum",
+      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Sed tempor nunc",
+      "h2": "Sed tempor lorem ipsum dolor",
+      "intro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "figure": "/img/shell/shell-hero-produce.jpg",
+      "h2b": "Nunc est lorem ipsum dolor sit",
+      "outro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "relatedTitle": "Lorem ipsum dolor sit amet elit",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "dolor-tienda",
+      "href": "/dolor/tienda",
+      "template": "detail",
+      "kicker": "Magna est",
+      "h1": "Magna aliqua dolor sit",
+      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/img/shell/shell-warehouse-crew.jpg",
+      "alt": "Ut labore enim",
+      "h2": "Magna aliqua dolor sit amet",
+      "intro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "figure": "/img/shell/shell-hero-plates.jpg",
+      "h2b": "Elit sed tempor lorem ipsum",
+      "outro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "relatedTitle": "Dolor sit amet consectetur nunc",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "amet",
+      "href": "/amet",
+      "template": "hub",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit",
+      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Lorem ipsum dolor",
+      "h2": "Nunc est lorem ipsum dolor sit",
+      "intro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "cards": [
+        {
+          "href": "/amet/recursos",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "href": "/amet/variedad",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "href": "/sed",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        }
+      ]
+    },
+    {
+      "id": "amet-recursos",
+      "href": "/amet/recursos",
+      "template": "simple",
+      "kicker": "Dolor sit",
+      "h1": "Dolor amet consectetur",
+      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Dolor sit amet",
+      "blocks": [
+        {
+          "h2": "Elit sed tempor lorem ipsum",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "h2": "Ipsum dolor sit amet consectetur",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "amet-variedad",
+      "href": "/amet/variedad",
+      "template": "simple",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum elit sed tempor",
+      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Ipsum dolor sit",
+      "blocks": [
+        {
+          "h2": "Lorem ipsum dolor sit amet elit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "h2": "Amet lorem ipsum dolor sit elit",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        }
+      ]
+    },
+    {
+      "id": "sed",
+      "href": "/sed",
+      "template": "simple",
+      "kicker": "Ipsum nec",
+      "h1": "Amet dolor lorem ipsum",
+      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Amet nunc elit",
+      "blocks": [
+        {
+          "h2": "Dolor sit amet consectetur nunc",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "h2": "Sed tempor lorem ipsum dolor",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ]
+    },
+    {
+      "id": "labore",
+      "href": "/labore",
+      "template": "listing",
+      "kicker": "Sed labore",
+      "h1": "Nunc lorem ipsum dolor",
+      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Sed tempor nunc",
+      "h2": "Ipsum dolor sit amet consectetur",
+      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "cards": [
+        {
+          "href": "/labore/puesto",
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "href": "/labore/otro",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        },
+        {
+          "href": "/labore/tercio",
+          "image": "/img/shell/shell-warehouse-crew.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "href": "/lorem/gente",
+          "image": "/img/shell/shell-warehouse-crew.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "href": "/amet/recursos",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "href": "/magna/gente",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }
+      ]
+    },
+    {
+      "id": "labore-puesto",
+      "href": "/labore/puesto",
+      "template": "detail",
+      "kicker": "Magna est",
+      "h1": "Elit ipsum dolor amet",
+      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Ut labore enim",
+      "h2": "Amet lorem ipsum dolor sit elit",
+      "intro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "figure": "/img/shell/shell-warehouse-crew.jpg",
+      "h2b": "Magna aliqua dolor sit amet",
+      "outro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "relatedTitle": "Elit sed tempor lorem ipsum",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "labore-otro",
+      "href": "/labore/otro",
+      "template": "detail",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit amet",
+      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Lorem ipsum dolor",
+      "h2": "Sed tempor lorem ipsum dolor",
+      "intro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "figure": "/img/shell/shell-hero-produce.jpg",
+      "h2b": "Nunc est lorem ipsum dolor sit",
+      "outro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "relatedTitle": "Lorem ipsum dolor sit amet elit",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "labore-tercio",
+      "href": "/labore/tercio",
+      "template": "detail",
+      "kicker": "Dolor sit",
+      "h1": "Dolor sit amet nunc est",
+      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/img/shell/shell-warehouse-crew.jpg",
+      "alt": "Dolor sit amet",
+      "h2": "Magna aliqua dolor sit amet",
+      "intro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "figure": "/img/shell/shell-hero-plates.jpg",
+      "h2b": "Elit sed tempor lorem ipsum",
+      "outro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "relatedTitle": "Dolor sit amet consectetur nunc",
+      "cards": [
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/lorem/notas/nota",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/ipsum/lista/pieza",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "magna",
+      "href": "/magna",
+      "template": "hub",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum dolor sit amet elit",
+      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Ipsum dolor sit",
+      "h2": "Nunc est lorem ipsum dolor sit",
+      "intro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "filterLabel": "Lorem ipsum",
+      "empty": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "cards": [
+        {
+          "href": "/magna/enfoque",
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+        },
+        {
+          "href": "/magna/gente",
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "href": "/magna/surtido",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Ut labore enim",
+          "h3": "Ut labore enim",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "href": "/magna/orbis",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "href": "/nunc/sedes",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Dolor sit amet",
+          "h3": "Dolor sit amet",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Ipsum dolor sit",
+          "h3": "Ipsum dolor sit",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        }
+      ]
+    },
+    {
+      "id": "magna-enfoque",
+      "href": "/magna/enfoque",
+      "template": "simple",
+      "kicker": "Ipsum nec",
+      "h1": "Amet lorem ipsum dolor sit",
+      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Amet nunc elit",
+      "blocks": [
+        {
+          "h2": "Elit sed tempor lorem ipsum",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        },
+        {
+          "h2": "Ipsum dolor sit amet consectetur",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        }
+      ]
+    },
+    {
+      "id": "magna-gente",
+      "href": "/magna/gente",
+      "template": "simple",
+      "kicker": "Sed labore",
+      "h1": "Sed tempor lorem ipsum",
+      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Sed tempor nunc",
+      "blocks": [
+        {
+          "h2": "Lorem ipsum dolor sit amet elit",
+          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "h2": "Amet lorem ipsum dolor sit elit",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        }
+      ]
+    },
+    {
+      "id": "magna-surtido",
+      "href": "/magna/surtido",
+      "template": "simple",
+      "kicker": "Magna est",
+      "h1": "Magna aliqua dolor sit",
+      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Ut labore enim",
+      "blocks": [
+        {
+          "h2": "Dolor sit amet consectetur nunc",
+          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+        },
+        {
+          "h2": "Sed tempor lorem ipsum dolor",
+          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ]
+    },
+    {
+      "id": "magna-orbis",
+      "href": "/magna/orbis",
+      "template": "simple",
+      "kicker": "Lorem ipso",
+      "h1": "Lorem ipsum dolor sit",
+      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Lorem ipsum dolor",
+      "blocks": [
+        {
+          "h2": "Ipsum dolor sit amet consectetur",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+        },
+        {
+          "h2": "Magna aliqua dolor sit amet",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        }
+      ]
+    },
+    {
+      "id": "nunc",
+      "href": "/nunc",
+      "template": "contact",
+      "kicker": "Dolor sit",
+      "h1": "Dolor amet consectetur",
+      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Dolor sit amet",
+      "fields": [
+        {
+          "name": "nomen",
+          "label": "Lorem ipsum",
+          "type": "text"
+        },
+        {
+          "name": "nota",
+          "label": "Dolor sit amet",
+          "type": "email"
+        },
+        {
+          "name": "nuntia",
+          "label": "Ipsum dolor sit",
+          "type": "textarea"
+        }
+      ],
+      "submit": "Lorem ipsum",
+      "sideH3": "Dolor sit amet",
+      "sideSupport": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "thanks": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+    },
+    {
+      "id": "nunc-sedes",
+      "href": "/nunc/sedes",
+      "template": "simple",
+      "kicker": "Amet nunc",
+      "h1": "Ipsum elit sed tempor",
+      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Ipsum dolor sit",
+      "blocks": [
+        {
+          "h2": "Sed tempor lorem ipsum dolor",
+          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+        },
+        {
+          "h2": "Elit sed tempor lorem ipsum",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }
+      ]
+    }
+  ]
+}
