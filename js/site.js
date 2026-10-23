@@ -133,7 +133,7 @@ function cards(items) {
   if (!items.length) return `<p class="empty support" data-empty></p>`;
   return `<div class="cards">${items.map((item) => `
     <a class="card" href="${esc(item.href)}">
-      <img src="${esc(item.image)}" alt="${esc(item.alt)}" width="640" height="360" />
+      ${item.image ? `<img src="${esc(item.image)}" alt="${esc(item.alt)}" width="640" height="360" />` : ""}
       <h3>${esc(item.h3)}</h3>
       <p class="support">${esc(item.support)}</p>
     </a>`).join("")}</div>`;
@@ -261,9 +261,17 @@ function renderPage(data, page) {
         : `<input id="${esc(field.name)}" name="${esc(field.name)}" type="${esc(field.type)}" required />`;
       return `<div><label for="${esc(field.name)}">${esc(field.label)}</label>${control}</div>`;
     }).join("");
+    const reach = page.reach;
+    const places = page.places;
+    const care = page.care;
     return `
       ${hero}
-      <section class="section">
+      <section class="section" id="nuntia">
+        <div class="wrap">
+          <p class="kicker">${esc(reach.kicker)}</p>
+          <h2>${esc(reach.h2)}</h2>
+          <p class="support">${esc(reach.support)}</p>
+        </div>
         <div class="wrap form-grid">
           <form id="contact-form">
             ${fields}
@@ -275,6 +283,31 @@ function renderPage(data, page) {
             <p class="support">${esc(page.sideSupport)}</p>
           </div>
           <p class="support form-note" id="form-note" hidden>${esc(page.thanks)}</p>
+        </div>
+        <div class="wrap">${cards(page.channels)}</div>
+      </section>
+      <section class="section" id="sedes">
+        <div class="wrap">
+          <p class="kicker">${esc(places.kicker)}</p>
+          <h2>${esc(places.h2)}</h2>
+          <p class="support">${esc(places.support)}</p>
+        </div>
+        <div class="filter-band">
+          <div class="wrap">
+            <label for="filter">${esc(places.filterLabel)}</label>
+            <input id="filter" type="search" />
+          </div>
+        </div>
+        <div class="wrap">
+          <div id="card-grid">${cards(places.cards)}</div>
+        </div>
+      </section>
+      <section class="section" id="cura">
+        <div class="wrap">
+          <p class="kicker">${esc(care.kicker)}</p>
+          <h2>${esc(care.h2)}</h2>
+          <p class="support">${esc(care.support)}</p>
+          ${cards(care.cards)}
         </div>
       </section>`;
   }
@@ -364,14 +397,16 @@ function bind(data, page) {
   }
 
   const filter = document.getElementById("filter");
-  if (filter && page.cards) {
+  const listed = page.places?.cards || page.cards;
+  if (filter && listed) {
     const grid = document.getElementById("card-grid");
+    const emptyText = page.places?.empty || page.empty;
     filter.addEventListener("input", () => {
       const q = filter.value.trim().toLowerCase();
-      const hits = page.cards.filter((item) => item.h3.toLowerCase().includes(q) || item.support.toLowerCase().includes(q));
+      const hits = listed.filter((item) => item.h3.toLowerCase().includes(q) || item.support.toLowerCase().includes(q));
       grid.innerHTML = cards(hits);
       const empty = grid.querySelector("[data-empty]");
-      if (empty) empty.textContent = page.empty;
+      if (empty) empty.textContent = emptyText;
     });
   }
 

@@ -78,6 +78,9 @@ for (const page of site.pages) {
   const dest = path.join(root, file);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, htmlFor(page));
+  if (page.href === "/nunc") {
+    fs.writeFileSync(path.join(root, "nunc/index.html"), htmlFor(page));
+  }
 }
 
 console.log(`validated and wrote ${site.pages.length} pages`);

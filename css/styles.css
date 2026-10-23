@@ -497,6 +497,7 @@ h1, h2, h3, p { margin: 0; }
   line-height: 1.35;
 }
 .section { padding: 80px 0; background: var(--white); }
+.section[id] { scroll-margin-top: calc(var(--topbar) + var(--bar)); }
 .section h2,
 .simple h2 {
   font-size: 40px;
