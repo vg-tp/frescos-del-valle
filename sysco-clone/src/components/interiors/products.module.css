@@ -1,0 +1,44 @@
+/* Products family — Sysco product-categories stack chrome */
+
+.productsShell {
+  background: #fff;
+}
+
+.introBand {
+  padding: 48px 0 8px;
+  background: #fff;
+}
+
+.introInner {
+  max-width: 68ch;
+}
+
+.introInner p {
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--sysco-ink);
+}
+
+/* Legacy teal mosaic kept only if referenced; hub now uses shared tiles */
+.prodHero {
+  background: linear-gradient(90deg, #008cd2 0%, #0077b3 100%);
+  color: #fff;
+  padding: 48px 0 40px;
+  text-align: left;
+}
+
+.prodHero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.prodHero p {
+  margin: 0;
+  max-width: 52ch;
+  line-height: 1.55;
+  opacity: 0.92;
+}
