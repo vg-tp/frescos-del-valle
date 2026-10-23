@@ -254,38 +254,8 @@
     },
     {
       "id": "nunc",
-      "label": "Nunc est",
-      "href": "/nunc",
-      "phrase": "Nunc est lorem ipsum dolor",
-      "groups": [
-        {
-          "h3": "Amet nunc elit",
-          "links": [
-            {
-              "label": "Lorem ipsum",
-              "href": "/nunc"
-            }
-          ]
-        },
-        {
-          "h3": "Ut labore enim",
-          "links": [
-            {
-              "label": "Dolor sit amet",
-              "href": "/nunc/sedes"
-            }
-          ]
-        },
-        {
-          "h3": "Sed tempor nunc",
-          "links": [
-            {
-              "label": "Ipsum dolor sit",
-              "href": "/nunc"
-            }
-          ]
-        }
-      ]
+      "label": "Contacto",
+      "href": "/nunc"
     }
   ],
   "footer": {
@@ -1959,10 +1929,15 @@
       "href": "/nunc",
       "template": "contact",
       "kicker": "Dolor sit",
-      "h1": "Dolor amet consectetur",
+      "h1": "Lorem ipsum dolor sit",
       "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
       "image": "/img/shell/shell-truck-road.jpg",
       "alt": "Dolor sit amet",
+      "reach": {
+        "kicker": "Sed labore",
+        "h2": "Lorem ipsum dolor sit amet",
+        "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
       "fields": [
         {
           "name": "nomen",
@@ -1983,7 +1958,76 @@
       "submit": "Lorem ipsum",
       "sideH3": "Dolor sit amet",
       "sideSupport": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "thanks": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+      "thanks": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "channels": [
+        {
+          "href": "/nunc#nuntia",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Lorem ipsum dolor",
+          "h3": "Lorem ipsum dolor",
+          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi ut."
+        },
+        {
+          "href": "/nunc#sedes",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Sed tempor nunc",
+          "h3": "Sed tempor nunc",
+          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+        {
+          "href": "/nunc#cura",
+          "image": "/img/shell/shell-warehouse-crew.jpg",
+          "alt": "Amet nunc elit",
+          "h3": "Amet nunc elit",
+          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+        }
+      ],
+      "places": {
+        "kicker": "Amet nunc",
+        "h2": "Sed tempor lorem ipsum dolor",
+        "support": "Ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "filterLabel": "Lorem ipsum",
+        "empty": "Nunc lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "cards": [
+          {
+            "href": "/nunc#sedes",
+            "h3": "Lorem sedes prima",
+            "support": "Amet lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          },
+          {
+            "href": "/nunc#sedes",
+            "h3": "Ipsum sedes altera",
+            "support": "Ipsum sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris."
+          },
+          {
+            "href": "/nunc#sedes",
+            "h3": "Dolor sedes tertia",
+            "support": "Dolor magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+          }
+        ]
+      },
+      "care": {
+        "kicker": "Magna est",
+        "h2": "Ipsum dolor sit amet elit",
+        "support": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud exercitation.",
+        "cards": [
+          {
+            "href": "/nunc#cura",
+            "h3": "Lorem cura prima",
+            "support": "Lorem quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor sit."
+          },
+          {
+            "href": "/nunc#cura",
+            "h3": "Ipsum cura altera",
+            "support": "Amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          },
+          {
+            "href": "/nunc#nuntia",
+            "h3": "Dolor cura tertia",
+            "support": "Elit ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          }
+        ]
+      }
     },
     {
       "id": "nunc-sedes",
