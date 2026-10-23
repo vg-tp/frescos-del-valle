@@ -255,37 +255,7 @@
     {
       "id": "nunc",
       "label": "Contacto",
-      "href": "/nunc",
-      "phrase": "Nunc est lorem ipsum dolor",
-      "groups": [
-        {
-          "h3": "Amet nunc elit",
-          "links": [
-            {
-              "label": "Lorem ipsum",
-              "href": "/nunc#nuntia"
-            }
-          ]
-        },
-        {
-          "h3": "Ut labore enim",
-          "links": [
-            {
-              "label": "Dolor sit amet",
-              "href": "/nunc#sedes"
-            }
-          ]
-        },
-        {
-          "h3": "Sed tempor nunc",
-          "links": [
-            {
-              "label": "Ipsum dolor sit",
-              "href": "/nunc#cura"
-            }
-          ]
-        }
-      ]
+      "href": "/nunc"
     }
   ],
   "footer": {
