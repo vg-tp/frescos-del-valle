@@ -93,7 +93,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .wordmark img {
   width: auto;
-  height: calc(var(--bar) - 16px);
+  height: 40px;
   max-width: none;
 }
 .nav-links {
@@ -628,7 +628,6 @@ textarea { min-height: 140px; resize: vertical; }
   :root { --bar: 64px; --topbar: 36px; }
   .nav-links, .utils { display: none; }
   .burger { display: grid; place-items: center; margin-left: auto; }
-  .wordmark img { height: calc(var(--bar) - 12px); }
   .drawer {
     display: none;
     position: fixed;
