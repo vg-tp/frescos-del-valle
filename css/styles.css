@@ -516,6 +516,7 @@ h1, h2, h3, p { margin: 0; }
   gap: 32px 28px;
   margin-top: 32px;
 }
+.contact-channels .cards { margin-top: 0; }
 .card { color: inherit; }
 .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .card h3 {

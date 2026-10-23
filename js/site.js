@@ -284,6 +284,8 @@ function renderPage(data, page) {
           </div>
           <p class="support form-note" id="form-note" hidden>${esc(page.thanks)}</p>
         </div>
+      </section>
+      <section class="section contact-channels">
         <div class="wrap">${cards(page.channels)}</div>
       </section>
       <section class="section" id="sedes">
