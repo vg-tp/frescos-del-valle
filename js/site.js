@@ -75,7 +75,6 @@ function chrome(data, page) {
 
   return `
     <div class="chrome">
-      <div class="topbar"><a href="${esc(data.utility.href)}">${esc(data.utility.label)}</a></div>
       <header class="site-header">
         <div class="bar">
           <a class="logo" href="/" aria-label="Frescos del Valle">

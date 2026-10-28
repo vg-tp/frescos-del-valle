@@ -3,10 +3,6 @@
   "brand": "VALLE",
   "skip": "Lorem ipsum",
   "navLabel": "Lorem",
-  "utility": {
-    "label": "Lorem ipsum dolor sit amet nunc",
-    "href": "/magna"
-  },
   "utils": {
     "searchLabel": "Lorem",
     "menuLabel": "Ipsum",
