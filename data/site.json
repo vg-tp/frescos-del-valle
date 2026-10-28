@@ -1,73 +1,73 @@
 {
-  "_note": "Cambia textos e imagenes aqui. Todo el texto visible es un marcador de posicion. Despues corre node scripts/pages.mjs si agregas una ruta.",
+  "_note": "Textos e imagenes editables. Espanol primario (cuestionario FDV). Tras agregar rutas: node scripts/pages.mjs.",
   "brand": "VALLE",
-  "skip": "Lorem ipsum",
-  "navLabel": "Lorem",
+  "skip": "Saltar al contenido",
+  "navLabel": "Principal",
   "utils": {
-    "menuLabel": "Ipsum",
+    "menuLabel": "Menú",
     "shop": {
-      "label": "Lorem hic",
+      "label": "Comprar",
       "href": "/ipsum"
     },
     "cta": {
-      "label": "Dolor sit amet",
-      "href": "/nunc"
+      "label": "Hazte cliente",
+      "href": "/contacto"
     },
     "account": {
-      "label": "Sed nunc",
+      "label": "Iniciar sesión",
       "href": "/nunc"
     }
   },
   "nav": [
     {
       "id": "lorem",
-      "label": "Lorem",
+      "label": "Nosotros",
       "href": "/lorem",
-      "phrase": "Lorem ipsum dolor amet",
+      "phrase": "Quiénes somos y cómo trabajamos",
       "groups": [
         {
-          "h3": "Lorem ipsum dolor",
+          "h3": "Perfil",
           "links": [
             {
-              "label": "Dolor sit amet",
+              "label": "Perfil de empresa",
               "href": "/lorem/perfil"
             },
             {
-              "label": "Ipsum dolor sit",
+              "label": "Nuestra historia",
               "href": "/lorem/relato"
             },
             {
-              "label": "Amet nunc elit",
+              "label": "Propósito",
               "href": "/lorem/fin"
             },
             {
-              "label": "Sed tempor nunc",
+              "label": "Ética y normas",
               "href": "/lorem/norma"
             }
           ]
         },
         {
-          "h3": "Dolor sit amet",
+          "h3": "Gente",
           "links": [
             {
-              "label": "Ut labore enim",
+              "label": "Nuestra gente",
               "href": "/lorem/gente"
             },
             {
-              "label": "Lorem ipsum dolor",
+              "label": "Cultura",
               "href": "/lorem/union"
             }
           ]
         },
         {
-          "h3": "Ipsum dolor sit",
+          "h3": "Noticias",
           "links": [
             {
-              "label": "Amet nunc elit",
+              "label": "Noticias",
               "href": "/lorem/notas"
             },
             {
-              "label": "Sed tempor nunc",
+              "label": "Comunidad",
               "href": "/lorem/actos"
             }
           ]
@@ -76,52 +76,52 @@
     },
     {
       "id": "ipsum",
-      "label": "Ipsum sit",
+      "label": "Productos",
       "href": "/ipsum",
-      "phrase": "Amet ipsum dolor sit consectetur",
+      "phrase": "Categorías, calidad y soluciones B2B",
       "groups": [
         {
-          "h3": "Amet nunc elit",
+          "h3": "Catálogo",
           "links": [
             {
-              "label": "Lorem ipsum",
+              "label": "Categorías",
               "href": "/ipsum/lista"
             },
             {
-              "label": "Dolor sit amet",
+              "label": "Marcas",
               "href": "/ipsum/marca"
             },
             {
-              "label": "Ipsum dolor sit",
+              "label": "Ideas culinarias",
               "href": "/ipsum/notas"
             },
             {
-              "label": "Sed tempor nunc",
+              "label": "Calidad",
               "href": "/ipsum/calidad"
             }
           ]
         },
         {
-          "h3": "Sed tempor nunc",
+          "h3": "Soluciones",
           "links": [
             {
-              "label": "Ut labore enim",
+              "label": "Servicios",
               "href": "/ipsum/servicios"
             },
             {
-              "label": "Lorem ipsum dolor",
+              "label": "Showroom",
               "href": "/ipsum/cocina"
             },
             {
-              "label": "Dolor sit amet",
+              "label": "Pedidos en línea",
               "href": "/ipsum/tecnica"
             },
             {
-              "label": "Amet nunc elit",
+              "label": "Especialidades",
               "href": "/ipsum/mixto"
             },
             {
-              "label": "Ipsum dolor sit",
+              "label": "Divisiones",
               "href": "/ipsum/casas"
             }
           ]
@@ -130,43 +130,43 @@
     },
     {
       "id": "dolor",
-      "label": "Dolor nec",
+      "label": "Clientes",
       "href": "/dolor",
-      "phrase": "Ipsum dolor sit amet nunc",
+      "phrase": "Sectores que abastecemos cada día",
       "groups": [
         {
-          "h3": "Ut labore enim",
+          "h3": "Sectores",
           "links": [
             {
-              "label": "Lorem ipsum dolor",
+              "label": "Restaurantes",
               "href": "/dolor/mesas"
             },
             {
-              "label": "Dolor sit amet",
+              "label": "Salud",
               "href": "/dolor/salud"
             },
             {
-              "label": "Ipsum dolor sit",
+              "label": "Educación",
               "href": "/dolor/aula"
             },
             {
-              "label": "Amet nunc elit",
+              "label": "Gobierno",
               "href": "/dolor/civico"
             },
             {
-              "label": "Sed tempor nunc",
+              "label": "Comedores",
               "href": "/dolor/gestion"
             },
             {
-              "label": "Ut labore enim",
+              "label": "Viajes",
               "href": "/dolor/viaje"
             },
             {
-              "label": "Lorem ipsum",
+              "label": "Ocio",
               "href": "/dolor/ocio"
             },
             {
-              "label": "Dolor sit amet",
+              "label": "Retail",
               "href": "/dolor/tienda"
             }
           ]
@@ -175,33 +175,33 @@
     },
     {
       "id": "amet",
-      "label": "Amet elit",
+      "label": "Proveedores",
       "href": "/amet",
-      "phrase": "Dolor sit amet consectetur",
+      "phrase": "Alianzas y recursos para socios",
       "groups": [
         {
-          "h3": "Lorem ipsum dolor",
+          "h3": "Recursos",
           "links": [
             {
-              "label": "Ipsum dolor sit",
+              "label": "Recursos",
               "href": "/amet/recursos"
             }
           ]
         },
         {
-          "h3": "Dolor sit amet",
+          "h3": "Diversidad",
           "links": [
             {
-              "label": "Amet nunc elit",
+              "label": "Diversidad",
               "href": "/amet/variedad"
             }
           ]
         },
         {
-          "h3": "Sed tempor nunc",
+          "h3": "Inversionistas",
           "links": [
             {
-              "label": "Ut labore enim",
+              "label": "Inversionistas",
               "href": "/sed"
             }
           ]
@@ -210,37 +210,37 @@
     },
     {
       "id": "sed",
-      "label": "Sed tempor",
+      "label": "Inversionistas",
       "href": "/sed"
     },
     {
       "id": "labore",
-      "label": "Ut labore",
+      "label": "Carreras",
       "href": "/labore"
     },
     {
       "id": "magna",
-      "label": "Magna aliqua",
+      "label": "Sustentabilidad",
       "href": "/magna",
-      "phrase": "Sed do eiusmod tempor nunc",
+      "phrase": "Personas, productos y planeta",
       "groups": [
         {
-          "h3": "Ipsum dolor sit",
+          "h3": "Pilares",
           "links": [
             {
-              "label": "Lorem ipsum dolor",
+              "label": "Nuestro enfoque",
               "href": "/magna/enfoque"
             },
             {
-              "label": "Dolor sit amet",
+              "label": "Personas",
               "href": "/magna/gente"
             },
             {
-              "label": "Amet nunc elit",
+              "label": "Productos",
               "href": "/magna/surtido"
             },
             {
-              "label": "Sed tempor nunc",
+              "label": "Planeta",
               "href": "/magna/orbis"
             }
           ]
@@ -254,120 +254,120 @@
     }
   ],
   "footer": {
-    "blurb": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "blurb": "Frescos del Valle abastece foodservice B2B desde Monterrey hacia México y Estados Unidos, con calidad certificada y entrega diaria.",
     "columns": [
       {
-        "h3": "Lorem ipsum dolor",
+        "h3": "Nosotros",
         "links": [
           {
-            "label": "Dolor sit amet",
+            "label": "Historia",
             "href": "/lorem/relato"
           },
           {
-            "label": "Ipsum dolor sit",
+            "label": "Propósito",
             "href": "/lorem/fin"
           },
           {
-            "label": "Amet nunc elit",
+            "label": "Sustentabilidad",
             "href": "/magna"
           },
           {
-            "label": "Sed tempor nunc",
+            "label": "Cultura",
             "href": "/lorem/union"
           },
           {
-            "label": "Ut labore enim",
+            "label": "Noticias",
             "href": "/lorem/notas"
           }
         ]
       },
       {
-        "h3": "Dolor sit amet",
+        "h3": "Productos",
         "links": [
           {
-            "label": "Lorem ipsum",
+            "label": "Categorías",
             "href": "/ipsum/lista"
           },
           {
-            "label": "Ipsum dolor sit",
+            "label": "Marcas",
             "href": "/ipsum/marca"
           },
           {
-            "label": "Amet nunc elit",
+            "label": "Showroom",
             "href": "/ipsum/cocina"
           },
           {
-            "label": "Sed tempor nunc",
+            "label": "Pedidos en línea",
             "href": "/ipsum/tecnica"
           }
         ]
       },
       {
-        "h3": "Ipsum dolor sit",
+        "h3": "Empresa",
         "links": [
           {
-            "label": "Ut labore enim",
+            "label": "Proveedores",
             "href": "/amet"
           },
           {
-            "label": "Lorem ipsum dolor",
+            "label": "Inversionistas",
             "href": "/sed"
           },
           {
-            "label": "Dolor sit amet",
+            "label": "Carreras",
             "href": "/labore"
           }
         ]
       },
       {
-        "h3": "Amet nunc elit",
+        "h3": "Ayuda",
         "links": [
           {
-            "label": "Sed tempor nunc",
-            "href": "/nunc"
+            "label": "Hazte cliente",
+            "href": "/contacto"
           },
           {
-            "label": "Lorem ipsum",
+            "label": "Sedes",
             "href": "/nunc/sedes"
           },
           {
-            "label": "Ipsum dolor sit",
+            "label": "Ética",
             "href": "/lorem/norma"
           },
           {
-            "label": "Ut labore enim",
-            "href": "/nunc"
+            "label": "Atención",
+            "href": "/contacto"
           }
         ]
       }
     ],
     "social": [
       {
-        "label": "Lorem",
-        "href": "/nunc"
+        "label": "Facebook",
+        "href": "https://www.frescosdelvalle.com"
       },
       {
-        "label": "Ipsum",
-        "href": "/nunc"
+        "label": "X",
+        "href": "https://www.frescosdelvalle.com"
       },
       {
-        "label": "Dolor",
-        "href": "/nunc"
+        "label": "LinkedIn",
+        "href": "https://www.frescosdelvalle.com"
       },
       {
-        "label": "Amet",
-        "href": "/nunc"
+        "label": "Instagram",
+        "href": "https://www.frescosdelvalle.com"
       }
     ],
-    "legal": "© 2026 Valle. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "legal": "© 2026 Depósitos Frescos del Valle. Monterrey, N.L. y Estados Unidos. frescosdelvalle.com",
     "legalLinks": [
       {
-        "label": "Lorem ipsum",
+        "label": "Ética y normas",
         "href": "/lorem/norma"
       },
       {
-        "label": "Dolor sit amet",
-        "href": "/nunc"
+        "label": "Contacto",
+        "href": "/contacto"
       }
     ]
   },
@@ -376,48 +376,48 @@
       "id": "home",
       "href": "/",
       "template": "home",
-      "dotLabel": "Lorem",
-      "prevLabel": "Ipsum",
-      "nextLabel": "Dolor",
+      "dotLabel": "Diapositiva",
+      "prevLabel": "Anterior",
+      "nextLabel": "Siguiente",
       "slides": [
         {
           "image": "/img/shell/shell-hero-produce.jpg",
-          "alt": "Lorem ipsum dolor",
-          "kicker": "Lorem ipso",
-          "sectionTitle": "Lorem ipsum dolor sit amet",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+          "alt": "Producto fresco para foodservice",
+          "kicker": "Desde 2013",
+          "sectionTitle": "El proveedor confiable de tu cocina",
+          "support": "Distribución B2B de alimentos para hoteles, restaurantes, hospitales y más, con entrega diaria en Monterrey.",
           "cta": {
-            "label": "Lorem ipsum",
+            "label": "Ver productos",
             "href": "/ipsum"
           }
         },
         {
           "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Dolor sit amet",
-          "kicker": "Dolor sit",
-          "sectionTitle": "Dolor sit amet consectetur",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+          "alt": "Platos y servicio foodservice",
+          "kicker": "Calidad ISO",
+          "sectionTitle": "Inocuidad y frescura en cada pedido",
+          "support": "Certificaciones y cadena de frío multitemperatura para que tu operación reciba producto listo para servir.",
           "cta": {
-            "label": "Lorem ipsum",
-            "href": "/magna"
+            "label": "Conoce calidad",
+            "href": "/ipsum/calidad"
           }
         },
         {
           "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Ipsum dolor sit",
-          "kicker": "Amet nunc",
-          "sectionTitle": "Ipsum dolor sit amet nunc",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "alt": "Abasto desde el campo",
+          "kicker": "Monterrey y EE. UU.",
+          "sectionTitle": "Abasto amplio, un solo socio",
+          "support": "Fruta, verdura, cárnicos, lácteos, jugos, hierbas, latas, abarrotes y suministros en plataforma 24/7.",
           "cta": {
-            "label": "Lorem ipsum",
-            "href": "/ipsum"
+            "label": "Hazte cliente",
+            "href": "/contacto"
           }
         }
       ],
       "blue": {
-        "sectionTitle": "Amet consectetur adipiscing",
+        "sectionTitle": "Sustentabilidad con impacto real",
         "cta": {
-          "label": "Ipsum nunc",
+          "label": "Ver enfoque",
           "href": "/magna"
         }
       },
@@ -425,16 +425,16 @@
         {
           "align": "end",
           "image": "/img/shell/shell-field-crate.jpg",
-          "kicker": "Amet nunc",
-          "sectionTitle": "Sed do eiusmod tempor nunc",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+          "kicker": "Nosotros",
+          "sectionTitle": "Más de una década a tu lado",
+          "support": "Fundados en 2013 para elevar el abasto a hotelería y restaurantes; hoy ~300 colaboradores y flota refrigerada.",
           "links": [
             {
-              "label": "Sed do eiusmod",
+              "label": "Quiénes somos",
               "href": "/lorem"
             },
             {
-              "label": "Ipsum nunc",
+              "label": "Nuestra historia",
               "href": "/lorem/relato"
             }
           ]
@@ -442,16 +442,16 @@
         {
           "align": "start",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "kicker": "Ipsum nec",
-          "sectionTitle": "Magna aliqua lorem ipsum est",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+          "kicker": "Sustentabilidad",
+          "sectionTitle": "Personas, producto y planeta",
+          "support": "Preservamos el entorno y potenciamos el desarrollo humano alineando gobernanza con el servicio al cliente.",
           "links": [
             {
-              "label": "Lorem ipsum",
+              "label": "Nuestro enfoque",
               "href": "/magna"
             },
             {
-              "label": "Dolor sit amet",
+              "label": "Ver pilares",
               "href": "/magna/enfoque"
             }
           ]
@@ -459,25 +459,25 @@
         {
           "align": "end",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "kicker": "Sed labore",
-          "sectionTitle": "Nunc est lorem ipsum dolor",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "kicker": "Contacto",
+          "sectionTitle": "Habla con un asesor FDV",
+          "support": "WhatsApp ventas, sedes en Monterrey y formulario para abrir cuenta empresarial en pocos pasos.",
           "links": [
             {
-              "label": "Amet nunc elit",
-              "href": "/nunc"
+              "label": "Ir a contacto",
+              "href": "/contacto"
             }
           ]
         },
         {
           "align": "start",
           "image": "/img/shell/shell-truck-road.jpg",
-          "kicker": "Magna est",
-          "sectionTitle": "Elit sed do eiusmod tempor",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+          "kicker": "Carreras",
+          "sectionTitle": "Trabaja con nosotros",
+          "support": "Equipo basado en honestidad, responsabilidad compartida y un entorno laboral positivo y motivador.",
           "links": [
             {
-              "label": "Ut labore enim",
+              "label": "Ver carreras",
               "href": "/labore"
             }
           ]
@@ -486,11 +486,11 @@
       "closer": {
         "align": "center",
         "image": "/img/shell/shell-city-dusk.jpg",
-        "kicker": "Dolor sit",
-        "sectionTitle": "Consectetur adipiscing elit sed",
-        "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+        "kicker": "Sedes",
+        "sectionTitle": "CEDIS y corporativo en Monterrey",
+        "support": "Oficinas, CEDIS y cobertura metropolitana; pedidos a EE. UU. bajo calendario y contrato.",
         "cta": {
-          "label": "Lorem ipsum",
+          "label": "Ver ubicaciones",
           "href": "/nunc/sedes"
         }
       }
@@ -499,57 +499,57 @@
       "id": "lorem",
       "href": "/lorem",
       "template": "hub",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit amet",
-      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "kicker": "Nosotros",
+      "h1": "Frescos del Valle",
+      "support": "Proveedor B2B de alimentos desde Monterrey: calidad certificada, ~300 personas y entrega diaria a foodservice.",
       "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Lorem ipsum dolor",
-      "h2": "Lorem ipsum dolor sit amet elit",
-      "intro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "alt": "Operación Frescos del Valle",
+      "h2": "Conoce la empresa",
+      "intro": "Perfil, historia, propósito, ética, gente y cultura: lo esencial para confiar en tu socio de abasto.",
+      "filterLabel": "Buscar",
+      "empty": "No hay resultados con ese filtro.",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Historia de la empresa",
+          "h3": "Nuestra historia",
+          "support": "Fundada en 2013 para abastecer frutas y verduras de alta calidad a hoteles y restaurantes."
         },
         {
           "href": "/lorem/perfil",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Perfil corporativo",
+          "h3": "Perfil de empresa",
+          "support": "Misión, visión y afiliaciones que sostienen nuestro crecimiento en México y EE. UU."
         },
         {
           "href": "/lorem/fin",
           "image": "/img/shell/shell-truck-road.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Propósito",
+          "h3": "Propósito",
+          "support": "Excelencia en cada pedido para ser el proveedor más confiable y valioso de nuestros clientes."
         },
         {
           "href": "/lorem/norma",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "alt": "Ética y normas",
+          "h3": "Ética y normas",
+          "support": "Política de calidad, conducta y anticorrupción alineadas a un servicio digno y transparente."
         },
         {
           "href": "/lorem/gente",
           "image": "/img/shell/shell-warehouse-crew.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "alt": "Colaboradores",
+          "h3": "Nuestra gente",
+          "support": "Cerca de 300 colaboradores impulsan logística, calidad y atención comercial cada día."
         },
         {
           "href": "/lorem/notas",
           "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Lorem ipsum dolor",
-          "h3": "Lorem ipsum dolor",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "alt": "Noticias",
+          "h3": "Noticias",
+          "support": "Actualizaciones de operación, calidad y comunidad alrededor de Frescos del Valle."
         }
       ]
     },
@@ -557,19 +557,23 @@
       "id": "lorem-perfil",
       "href": "/lorem/perfil",
       "template": "simple",
-      "kicker": "Dolor sit",
-      "h1": "Dolor sit amet nunc est",
-      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "kicker": "Perfil",
+      "h1": "Perfil de la empresa",
+      "support": "Depósitos Frescos del Valle: abasto y distribución de alimentos para clientes comerciales en Monterrey y EE. UU.",
       "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Dolor sit amet",
+      "alt": "Infraestructura operativa",
       "blocks": [
         {
-          "h2": "Dolor sit amet consectetur nunc",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "h2": "Misión",
+          "support": "Ser el proveedor de alimentos más valioso y confiable de nuestros clientes, reconocido en cada pedido entregado."
         },
         {
-          "h2": "Sed tempor lorem ipsum dolor",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "h2": "Visión",
+          "support": "Ser una empresa institucional, proveedora de alimentos, con talento y tecnología clave que asegura la excelencia en cada pedido."
+        },
+        {
+          "h2": "Afiliaciones",
+          "support": "Asociación de Hoteles de Nuevo León, CANACO, CAINTRA y Cluster Agro Alimentario (Agroalim)."
         }
       ]
     },
@@ -577,38 +581,38 @@
       "id": "lorem-relato",
       "href": "/lorem/relato",
       "template": "detail",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum dolor sit amet elit",
-      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "kicker": "Historia",
+      "h1": "Nuestra historia",
+      "support": "Desde 2013 crecimos de un abasto fresco enfocado a hoteles y restaurantes hasta un socio integral de foodservice.",
       "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Ipsum dolor sit",
-      "h2": "Ipsum dolor sit amet consectetur",
-      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "alt": "Cocina y abasto",
+      "h2": "Cómo empezamos",
+      "intro": "Fundada en 2013, Frescos del Valle nació con la misión de abastecer con frutas y verduras de la más alta calidad al sector hotelero y restaurantero. Desde el primer día apostamos por inocuidad, frescura y un servicio cercano a cocinas profesionales en Monterrey y su área metropolitana.",
       "figure": "/img/shell/shell-city-dusk.jpg",
-      "h2b": "Sed tempor lorem ipsum dolor",
-      "outro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "relatedTitle": "Nunc est lorem ipsum dolor sit",
+      "h2b": "Hoy en día",
+      "outro": "A lo largo de más de una década de trayectoria, consolidamos un crecimiento que hoy se refleja en infraestructura operativa sólida: flota vehicular expandida —cerca de 50 unidades locales con refrigeración multitemperatura—, instalaciones de vanguardia y una cartera de clientes comerciales que confían en entregas diarias. Respaldados por certificación ISO y estándares reconocidos como GLOBALG.A.P., registros FDA y permisos SENASICA, nos posicionamos entre los proveedores de referencia en foodservice. Ampliamos el surtido más allá del fresco hacia cárnicos, lácteos, jugos, hierbas, latas, abarrotes y suministros, y abrimos capacidad de pedidos programados hacia Estados Unidos bajo calendario y contrato. Cerca de 300 colaboradores impulsan calidad, logística y atención, con el propósito de ser el proveedor de alimentos más confiable y valioso en cada pedido entregado.",
+      "relatedTitle": "Sigue explorando",
       "cards": [
         {
-          "href": "/lorem/notas/nota",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "href": "/lorem/relato",
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/calidad",
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
+        },
+        {
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "href": "/ipsum/cocina",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -616,19 +620,19 @@
       "id": "lorem-fin",
       "href": "/lorem/fin",
       "template": "simple",
-      "kicker": "Ipsum nec",
-      "h1": "Amet lorem ipsum dolor sit",
-      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "kicker": "Propósito",
+      "h1": "Para qué existimos",
+      "support": "Una sola promesa: excelencia operativa con un equipo en desarrollo continuo y un entorno laboral motivador.",
       "image": "/img/shell/shell-truck-road.jpg",
-      "alt": "Amet nunc elit",
+      "alt": "Entrega a clientes",
       "blocks": [
         {
-          "h2": "Amet lorem ipsum dolor sit elit",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "h2": "Nuestro propósito",
+          "support": "Lograr la excelencia en cada pedido entregado, con el objetivo de ser el proveedor de alimentos más confiable y valioso para nuestros clientes, mediante un equipo humano en constante desarrollo, que colabora en un entorno laboral positivo y motivador."
         },
         {
-          "h2": "Nunc est lorem ipsum dolor sit",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "h2": "Cómo se nota",
+          "support": "Pedidos cumplidos, cadena de frío cuidada y atención personalizada desde la apertura de cuenta hasta la reposición del mismo día."
         }
       ]
     },
@@ -636,19 +640,19 @@
       "id": "lorem-norma",
       "href": "/lorem/norma",
       "template": "simple",
-      "kicker": "Sed labore",
-      "h1": "Sed tempor lorem ipsum",
-      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "kicker": "Ética",
+      "h1": "Ética y calidad",
+      "support": "Compromiso de satisfacer a clientes con proveeduría eficiente bajo principios claros de calidad y conducta.",
       "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Sed tempor nunc",
+      "alt": "Estándares corporativos",
       "blocks": [
         {
-          "h2": "Sed tempor lorem ipsum dolor",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "h2": "Política de calidad",
+          "support": "Calidad y frescura en cada entrega; mejora continua; cumplimiento puntual; atención oportuna; y un ambiente laboral de dignidad, respeto y colaboración."
         },
         {
-          "h2": "Elit sed tempor lorem ipsum",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "h2": "Código y anticorrupción",
+          "support": "Operamos con políticas públicas, código de ética y lineamientos anticorrupción alineados a un servicio transparente para clientes y socios."
         }
       ]
     },
@@ -656,19 +660,19 @@
       "id": "lorem-gente",
       "href": "/lorem/gente",
       "template": "simple",
-      "kicker": "Magna est",
-      "h1": "Magna aliqua dolor sit",
-      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "kicker": "Gente",
+      "h1": "Nuestra gente",
+      "support": "Cerca de 300 colaboradores impulsan ventas, CEDIS, calidad y rutas refrigeradas todos los días.",
       "image": "/img/shell/shell-warehouse-crew.jpg",
-      "alt": "Ut labore enim",
+      "alt": "Equipo en CEDIS",
       "blocks": [
         {
-          "h2": "Magna aliqua dolor sit amet",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "h2": "Un equipo de ~300 personas",
+          "support": "Talento en constante desarrollo que colabora para que cada pedido cumpla estándares de inocuidad, frescura y puntualidad."
         },
         {
-          "h2": "Lorem ipsum dolor sit amet elit",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "h2": "Cómo trabajamos",
+          "support": "Fundamentamos la labor en trabajo en equipo, honestidad y responsabilidad compartida, uniendo personas a través de la alimentación."
         }
       ]
     },
@@ -676,19 +680,15 @@
       "id": "lorem-union",
       "href": "/lorem/union",
       "template": "simple",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit",
-      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      "image": "/img/shell/shell-hero-produce.jpg",
-      "alt": "Lorem ipsum dolor",
+      "kicker": "Cultura",
+      "h1": "Cultura FDV",
+      "support": "Honestidad, responsabilidad compartida y un entorno positivo para servir mejor a cada cliente comercial.",
+      "image": "/img/shell/shell-warehouse-crew.jpg",
+      "alt": "Cultura de equipo",
       "blocks": [
         {
-          "h2": "Nunc est lorem ipsum dolor sit",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-        },
-        {
-          "h2": "Dolor sit amet consectetur nunc",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "h2": "Mejor juntos",
+          "support": "Frescos del Valle fundamenta su labor en el trabajo en equipo, la honestidad y la responsabilidad compartida, con el firme objetivo de unir a las personas a través de la alimentación y el bienestar común."
         }
       ]
     },
@@ -696,36 +696,36 @@
       "id": "lorem-notas",
       "href": "/lorem/notas",
       "template": "listing",
-      "kicker": "Dolor sit",
-      "h1": "Dolor amet consectetur",
-      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "kicker": "Noticias",
+      "h1": "Noticias FDV",
+      "support": "Novedades de operación, calidad y comunidad. Contenido editorial en actualización continua.",
       "image": "/img/shell/shell-hero-plates.jpg",
-      "alt": "Dolor sit amet",
-      "h2": "Elit sed tempor lorem ipsum",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "alt": "Noticias",
+      "h2": "Últimas notas",
+      "intro": "Historias cortas sobre abasto, certificaciones y servicio a sectores foodservice.",
+      "filterLabel": "Filtrar notas",
+      "empty": "Sin notas para ese filtro.",
       "cards": [
         {
           "href": "/lorem/notas/nota",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "alt": "Entrega con cadena de frío",
+          "h3": "Calidad en la ruta",
+          "support": "Cómo mantenemos frescura e inocuidad desde el CEDIS hasta tu cocina."
         },
         {
           "href": "/lorem/actos",
           "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Impacto comunitario",
+          "h3": "Comunidad",
+          "support": "Iniciativas locales y bienestar alrededor de nuestra operación en Monterrey."
         },
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Historia FDV",
+          "h3": "Una década de crecimiento",
+          "support": "De 2013 a hoy: infraestructura, flota y clientes que confían en el servicio."
         }
       ]
     },
@@ -733,36 +733,36 @@
       "id": "lorem-actos",
       "href": "/lorem/actos",
       "template": "listing",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum elit sed tempor",
-      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "kicker": "Comunidad",
+      "h1": "Comunidad y actos",
+      "support": "Impacto positivo en colaboradores, clientes y comunidades donde operamos.",
       "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Ipsum dolor sit",
-      "h2": "Lorem ipsum dolor sit amet elit",
-      "intro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "alt": "Comunidad",
+      "h2": "Participación",
+      "intro": "Promovemos hábitos saludables y un entorno de trabajo digno e inclusivo.",
+      "filterLabel": "Filtrar",
+      "empty": "Sin resultados.",
       "cards": [
         {
           "href": "/lorem/notas/nota",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Bienestar",
+          "h3": "Bienestar",
+          "support": "Espacios seguros y trato digno para cada colaborador de Frescos del Valle."
         },
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Historia",
+          "h3": "Historia",
+          "support": "Cómo crecimos con hoteles y restaurantes como primer foco de servicio."
         },
         {
           "href": "/lorem/fin",
           "image": "/img/shell/shell-truck-road.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Propósito",
+          "h3": "Propósito",
+          "support": "Excelencia en cada pedido con un equipo humano en desarrollo continuo."
         }
       ]
     },
@@ -770,38 +770,38 @@
       "id": "lorem-nota",
       "href": "/lorem/notas/nota",
       "template": "detail",
-      "kicker": "Ipsum nec",
-      "h1": "Amet dolor lorem ipsum",
-      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
-      "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Amet nunc elit",
-      "h2": "Dolor sit amet consectetur nunc",
-      "intro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "figure": "/img/shell/shell-truck-road.jpg",
-      "h2b": "Amet lorem ipsum dolor sit elit",
-      "outro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "relatedTitle": "Magna aliqua dolor sit amet",
+      "kicker": "Nota",
+      "h1": "Calidad en cada entrega",
+      "support": "Inocuidad, frescura y puntualidad son el estándar que prometemos a foodservice.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Ruta de entrega",
+      "h2": "Cadena de frío",
+      "intro": "Casi toda la flota local cuenta con refrigeración multitemperatura para congelados, frescos y secos en un mismo viaje.",
+      "figure": "/img/shell/shell-warehouse-crew.jpg",
+      "h2b": "Reposición ágil",
+      "outro": "Devoluciones al recibir; reportes matutinos se reponen el mismo día y los de la tarde al día siguiente con aviso al cliente.",
+      "relatedTitle": "También te puede interesar",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/lista/pieza",
-          "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "href": "/ipsum/cocina",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
+        },
+        {
+          "href": "/ipsum/lista",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -809,57 +809,57 @@
       "id": "ipsum",
       "href": "/ipsum",
       "template": "hub",
-      "kicker": "Sed labore",
-      "h1": "Nunc lorem ipsum dolor",
-      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Sed tempor nunc",
-      "h2": "Ipsum dolor sit amet consectetur",
-      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "kicker": "Productos",
+      "h1": "Todo tu abasto B2B",
+      "support": "Visibilidad total de alimentos y suministros para restaurantes, hoteles, hospitales, escuelas y más.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Productos Frescos del Valle",
+      "h2": "Explora soluciones",
+      "intro": "Categorías, calidad, servicios, showroom y pedidos en línea en un solo ecosistema.",
+      "filterLabel": "Buscar",
+      "empty": "Sin resultados.",
       "cards": [
         {
           "href": "/ipsum/lista",
-          "image": "/img/shell/shell-truck-road.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "image": "/img/shell/shell-hero-produce.jpg",
+          "alt": "Categorías de producto",
+          "h3": "Categorías",
+          "support": "Fruta, verdura, latas y secos, hierbas, jugos, cárnicos, lácteos, abarrotes y suministros."
         },
         {
           "href": "/ipsum/marca",
-          "image": "/img/shell/shell-warehouse-crew.jpg",
-          "alt": "Lorem ipsum dolor",
-          "h3": "Lorem ipsum dolor",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Marcas",
+          "h3": "Marcas",
+          "support": "Amplia variedad de marcas para armar menús consistentes sin multiplicar proveedores."
         },
         {
           "href": "/ipsum/calidad",
-          "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Aseguramiento de calidad",
+          "h3": "Calidad",
+          "support": "ISO 9001, GLOBALG.A.P., FDA y SENASICA respaldan inocuidad de punta a punta."
         },
         {
           "href": "/ipsum/cocina",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Showroom culinario",
+          "h3": "Showroom",
+          "support": "Cocina profesional, refrigeración y espacio para degustaciones y capacitaciones."
         },
         {
           "href": "/ipsum/servicios",
-          "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Servicios de entrega",
+          "h3": "Servicios",
+          "support": "Entregas diarias L–D en MTY; pedidos EE. UU. programados bajo contrato."
         },
         {
           "href": "/ipsum/casas",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "alt": "Plataforma de pedidos",
+          "h3": "Plataforma",
+          "support": "Portal 24/7 en frescosdelvalle.com con catálogo de más de 5,000 artículos."
         }
       ]
     },
@@ -867,57 +867,57 @@
       "id": "ipsum-lista",
       "href": "/ipsum/lista",
       "template": "listing",
-      "kicker": "Magna est",
-      "h1": "Elit ipsum dolor amet",
-      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
-      "image": "/img/shell/shell-truck-road.jpg",
-      "alt": "Ut labore enim",
-      "h2": "Amet lorem ipsum dolor sit elit",
-      "intro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "kicker": "Categorías",
+      "h1": "Categorías de producto",
+      "support": "Fruta, verdura, latas y secos, hierbas, jugos, cárnicos y mariscos, lácteos y huevo, abarrotes y suministros.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Categorías",
+      "h2": "Nuestro surtido",
+      "intro": "Ocho familias para centralizar compras foodservice: fresco diario, proteínas, despensa y suministros en un solo pedido B2B.",
+      "filterLabel": "Filtrar categorías",
+      "empty": "Sin categorías para ese filtro.",
       "cards": [
         {
           "href": "/ipsum/lista/pieza",
-          "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Lorem ipsum dolor",
-          "h3": "Lorem ipsum dolor",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "image": "/img/shell/shell-hero-produce.jpg",
+          "alt": "Fruta",
+          "h3": "Fruta",
+          "support": "Fruta fresca seleccionada para hotelería y restaurantes. Priorizamos madurez, inocuidad y consistencia de temporada para menús diarios y banquetes."
         },
         {
           "href": "/ipsum/cocina",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "image": "/img/shell/shell-field-crate.jpg",
+          "alt": "Verdura",
+          "h3": "Verdura",
+          "support": "Verdura de alta rotación con cadena de frío cuidada. Ideal para prep diaria, institucionales y eventos de alto volumen."
         },
         {
           "href": "/ipsum/marca",
-          "image": "/img/shell/shell-warehouse-crew.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "image": "/img/shell/shell-hero-plates.jpg",
+          "alt": "Latas y secos",
+          "h3": "Latas y secos",
+          "support": "Despensa estable para recetas base y back-up de menú. Complementa el fresco sin romper costos ni tiempos de cocina."
         },
         {
           "href": "/ipsum/calidad",
-          "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "image": "/img/shell/shell-farm-equipment.jpg",
+          "alt": "Hierbas",
+          "h3": "Hierbas",
+          "support": "Hierbas aromáticas para remates y salsas. Frescura y presentación pensadas para chefs y operaciones de alto estándar."
         },
         {
           "href": "/ipsum/mixto",
-          "image": "/img/shell/shell-truck-road.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "image": "/img/shell/shell-kitchen-pass.jpg",
+          "alt": "Jugos",
+          "h3": "Jugos",
+          "support": "Jugos y bebidas para desayunos, banquetes y servicio continuo. Opciones listas para complementar tu carta."
         },
         {
           "href": "/ipsum/tecnica",
-          "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "image": "/img/shell/shell-truck-road.jpg",
+          "alt": "Cárnicos y mariscos",
+          "h3": "Cárnicos y mariscos",
+          "support": "Proteínas con cortes a la medida cuando tu operación lo requiere. Cadena de frío y estándares claros de recepción."
         }
       ]
     },
@@ -925,38 +925,38 @@
       "id": "ipsum-pieza",
       "href": "/ipsum/lista/pieza",
       "template": "detail",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit amet",
-      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Lorem ipsum dolor",
-      "h2": "Sed tempor lorem ipsum dolor",
-      "intro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "figure": "/img/shell/shell-hero-produce.jpg",
-      "h2b": "Nunc est lorem ipsum dolor sit",
-      "outro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "relatedTitle": "Lorem ipsum dolor sit amet elit",
+      "kicker": "Categoría",
+      "h1": "Fruta fresca",
+      "support": "Selección diaria para hoteles, restaurantes e institucionales con control de calidad.",
+      "image": "/img/shell/shell-hero-produce.jpg",
+      "alt": "Fruta",
+      "h2": "Para tu menú",
+      "intro": "Abastecemos fruta con foco en frescura e inocuidad. Ideal para buffet, room service y prep de cocina profesional.",
+      "figure": "/img/shell/shell-field-crate.jpg",
+      "h2b": "Cómo pedimos",
+      "outro": "Arma listas frecuentes en el portal, elige cajas o split cases y confirma antes del corte de las 00:00 hrs en MTY.",
+      "relatedTitle": "Relacionado",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/cocina",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "href": "/ipsum/lista",
+          "image": "/img/shell/shell-city-dusk.jpg",
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -964,19 +964,19 @@
       "id": "ipsum-marca",
       "href": "/ipsum/marca",
       "template": "simple",
-      "kicker": "Dolor sit",
-      "h1": "Dolor sit amet nunc est",
-      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "/img/shell/shell-warehouse-crew.jpg",
-      "alt": "Dolor sit amet",
+      "kicker": "Marcas",
+      "h1": "Marcas y surtido",
+      "support": "Variedad de marcas para estandarizar calidad sin negociar con decenas de proveedores.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Marcas",
       "blocks": [
         {
-          "h2": "Magna aliqua dolor sit amet",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "h2": "Un catálogo amplio",
+          "support": "Más de 5,000 artículos: carnes, vegetales, lácteos, suministros y más, listos en plataforma 24/7."
         },
         {
-          "h2": "Lorem ipsum dolor sit amet elit",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "h2": "Especialidades",
+          "support": "Líneas como germinados, brotes y vegetales baby para menús diferenciados y cocina contemporánea."
         }
       ]
     },
@@ -984,19 +984,19 @@
       "id": "ipsum-notas",
       "href": "/ipsum/notas",
       "template": "simple",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum dolor sit amet elit",
-      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      "image": "/img/shell/shell-hero-produce.jpg",
-      "alt": "Ipsum dolor sit",
+      "kicker": "Ideas",
+      "h1": "Ideas culinarias",
+      "support": "Inspiración práctica para menús foodservice con el surtido FDV.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Ideas de cocina",
       "blocks": [
         {
-          "h2": "Nunc est lorem ipsum dolor sit",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "h2": "De la bodega al plato",
+          "support": "Aprovecha fresco, secos y proteínas en un solo pedido para reducir mermas y tiempos de compra."
         },
         {
-          "h2": "Dolor sit amet consectetur nunc",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "h2": "Showroom FDV",
+          "support": "Prueba productos en nuestra cocina profesional con refrigeración, mobiliario y espacio para capacitaciones."
         }
       ]
     },
@@ -1004,19 +1004,19 @@
       "id": "ipsum-calidad",
       "href": "/ipsum/calidad",
       "template": "simple",
-      "kicker": "Ipsum nec",
-      "h1": "Amet lorem ipsum dolor sit",
-      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "image": "/img/shell/shell-hero-plates.jpg",
-      "alt": "Amet nunc elit",
+      "kicker": "Calidad",
+      "h1": "Aseguramiento de calidad",
+      "support": "Estándares internacionales y procesos claros desde recepción hasta entrega.",
+      "image": "/img/shell/shell-farm-equipment.jpg",
+      "alt": "Calidad e inocuidad",
       "blocks": [
         {
-          "h2": "Elit sed tempor lorem ipsum",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "h2": "Certificaciones",
+          "support": "ISO 9001; GLOBALG.A.P. para buenas prácticas agrícolas; registros en EE. UU. (FDA); certificaciones y permisos SENASICA México–EE. UU."
         },
         {
-          "h2": "Ipsum dolor sit amet consectetur",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "h2": "Nuestro compromiso",
+          "support": "Depósitos Frescos del Valle satisface clientes con proveeduría eficiente: frescura, mejora continua, puntualidad y atención personalizada."
         }
       ]
     },
@@ -1024,19 +1024,19 @@
       "id": "ipsum-servicios",
       "href": "/ipsum/servicios",
       "template": "simple",
-      "kicker": "Sed labore",
-      "h1": "Sed tempor lorem ipsum",
-      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Sed tempor nunc",
+      "kicker": "Servicios",
+      "h1": "Logística y servicio",
+      "support": "Entrega diaria, flotilla refrigerada y reglas claras de pedido mínimo y reposición.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Logística",
       "blocks": [
         {
-          "h2": "Lorem ipsum dolor sit amet elit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "h2": "Entregas y cobertura",
+          "support": "Entregas diarias lunes a domingo en Monterrey y área metropolitana. Pedidos a EE. UU. programados bajo calendario y contrato. Flotilla local de ~50 unidades con refrigeración multitemperatura."
         },
         {
-          "h2": "Amet lorem ipsum dolor sit elit",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "h2": "Pedidos y devoluciones",
+          "support": "Pedido mínimo local $2,000 MXN; corte antes de las 00:00 hrs. EE. UU. desde $60,000 USD. Devoluciones al recibir; reportes AM se reponen el mismo día."
         }
       ]
     },
@@ -1044,38 +1044,38 @@
       "id": "ipsum-cocina",
       "href": "/ipsum/cocina",
       "template": "detail",
-      "kicker": "Magna est",
-      "h1": "Magna aliqua dolor sit",
-      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
-      "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Ut labore enim",
-      "h2": "Dolor sit amet consectetur nunc",
-      "intro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "figure": "/img/shell/shell-truck-road.jpg",
-      "h2b": "Amet lorem ipsum dolor sit elit",
-      "outro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "relatedTitle": "Magna aliqua dolor sit amet",
+      "kicker": "Showroom",
+      "h1": "Showroom culinario",
+      "support": "Cocina profesional en instalaciones FDV para degustaciones, eventos y capacitaciones.",
+      "image": "/img/shell/shell-kitchen-pass.jpg",
+      "alt": "Showroom",
+      "h2": "Qué incluye",
+      "intro": "Cocina y refrigeración de última generación, mobiliario versátil, pantalla e internet de alta velocidad, e iluminación ideal para foto y video.",
+      "figure": "/img/shell/shell-hero-plates.jpg",
+      "h2b": "Para tu equipo",
+      "outro": "Ideal para pruebas de menú, streamings y capacitaciones con tu personal de cocina o compras.",
+      "relatedTitle": "Sigue explorando",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1083,19 +1083,19 @@
       "id": "ipsum-tecnica",
       "href": "/ipsum/tecnica",
       "template": "simple",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit",
-      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Lorem ipsum dolor",
+      "kicker": "Tecnología",
+      "h1": "Pedidos en línea",
+      "support": "Portal oficial 24/7 en frescosdelvalle.com; app móvil prevista en una segunda etapa.",
+      "image": "/img/shell/shell-city-dusk.jpg",
+      "alt": "Plataforma digital",
       "blocks": [
         {
-          "h2": "Ipsum dolor sit amet consectetur",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "h2": "Cómo comprar",
+          "support": "Un vendedor asigna tu clave. Entra al portal, busca en +5,000 artículos, arma listas sheet-to-shelf y elige cajas o split cases."
         },
         {
-          "h2": "Magna aliqua dolor sit amet",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "h2": "Apertura de cuenta",
+          "support": "Solicitud formal con verificación fiscal y bancaria. Condiciones de crédito según historial y volumen; algunos inicios operan en prepago."
         }
       ]
     },
@@ -1103,19 +1103,19 @@
       "id": "ipsum-mixto",
       "href": "/ipsum/mixto",
       "template": "simple",
-      "kicker": "Dolor sit",
-      "h1": "Dolor amet consectetur",
-      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
-      "image": "/img/shell/shell-truck-road.jpg",
-      "alt": "Dolor sit amet",
+      "kicker": "Especialidades",
+      "h1": "Líneas especializadas",
+      "support": "Germinados, brotes y vegetales baby para menús que buscan diferenciación.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Especialidades",
       "blocks": [
         {
-          "h2": "Amet lorem ipsum dolor sit elit",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "h2": "Fresco diferenciado",
+          "support": "Variedad de germinados y brotes, además de vegetales baby, para elevar presentación y valor percibido."
         },
         {
-          "h2": "Nunc est lorem ipsum dolor sit",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "h2": "Integrado a tu pedido",
+          "support": "Pide especialidades junto con el resto del surtido en la misma plataforma y ruta de entrega."
         }
       ]
     },
@@ -1123,19 +1123,19 @@
       "id": "ipsum-casas",
       "href": "/ipsum/casas",
       "template": "simple",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum elit sed tempor",
-      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "kicker": "Divisiones",
+      "h1": "Divisiones de negocio",
+      "support": "Información de unidades especializadas en actualización. Mientras tanto, conoce el abasto integral.",
       "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Ipsum dolor sit",
+      "alt": "Divisiones",
       "blocks": [
         {
-          "h2": "Sed tempor lorem ipsum dolor",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "h2": "Próximamente",
+          "support": "Detalle de divisiones especializadas pendiente de entrega por FDV. Consulta categorías y servicios actuales en Productos."
         },
         {
-          "h2": "Elit sed tempor lorem ipsum",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "h2": "Exportación",
+          "support": "Atendemos compradores en EE. UU. con foco en inocuidad, certificaciones y continuidad de suministro bajo contrato."
         }
       ]
     },
@@ -1143,57 +1143,57 @@
       "id": "dolor",
       "href": "/dolor",
       "template": "hub",
-      "kicker": "Ipsum nec",
-      "h1": "Amet dolor lorem ipsum",
-      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "kicker": "Clientes",
+      "h1": "A quién servimos",
+      "support": "Soluciones B2B para hotelería, restaurantes, salud, educación, viajes, ocio, retail y más.",
       "image": "/img/shell/shell-warehouse-crew.jpg",
-      "alt": "Amet nunc elit",
-      "h2": "Magna aliqua dolor sit amet",
-      "intro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "alt": "Clientes foodservice",
+      "h2": "Sectores",
+      "intro": "Elige tu segmento y conoce el beneficio principal de trabajar con Frescos del Valle.",
+      "filterLabel": "Buscar sector",
+      "empty": "Sin sectores.",
       "cards": [
         {
           "href": "/dolor/mesas",
           "image": "/img/shell/shell-hero-produce.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "alt": "Restaurantes",
+          "h3": "Restaurantes",
+          "support": "Abasto estable y logística eficiente para independents, cadenas y cocina familiar."
         },
         {
           "href": "/dolor/salud",
           "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "alt": "Salud",
+          "h3": "Salud",
+          "support": "Volumen institucional con foco en nutrición, inocuidad y operación culinaria hospitalaria."
         },
         {
           "href": "/dolor/aula",
           "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Lorem ipsum dolor",
-          "h3": "Lorem ipsum dolor",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "alt": "Educación",
+          "h3": "Educación",
+          "support": "Compra centralizada de fresco, básicos y equipo para campus de alto volumen diario."
         },
         {
           "href": "/dolor/civico",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Gobierno",
+          "h3": "Gobierno",
+          "support": "Flexibilidad de marcas, alimentos y suministros para centralizar compras públicas."
         },
         {
           "href": "/dolor/gestion",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Comedores industriales",
+          "h3": "Comedores",
+          "support": "Modelo unificado de suministro para consistencia, eficiencia y menor costo logístico."
         },
         {
           "href": "/dolor/viaje",
           "image": "/img/shell/shell-truck-road.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Viajes y aeropuerto",
+          "h3": "Viajes",
+          "support": "One-stop-shop para aeropuertos, VIP y foodservice de viaje con inventario simplificado."
         }
       ]
     },
@@ -1201,38 +1201,38 @@
       "id": "dolor-mesas",
       "href": "/dolor/mesas",
       "template": "detail",
-      "kicker": "Sed labore",
-      "h1": "Nunc lorem ipsum dolor",
-      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "kicker": "Restaurantes",
+      "h1": "Restaurantes",
+      "support": "De chefs independientes a cadenas: un solo socio para abastecer con calidad uniforme.",
       "image": "/img/shell/shell-hero-produce.jpg",
-      "alt": "Sed tempor nunc",
-      "h2": "Nunc est lorem ipsum dolor sit",
-      "intro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "alt": "Restaurantes",
+      "h2": "Beneficio principal",
+      "intro": "Optimizamos tu cadena de suministro, reducimos costos logísticos y garantizamos abastecimiento estable de ingredientes y básicos.",
       "figure": "/img/shell/shell-field-crate.jpg",
-      "h2b": "Lorem ipsum dolor sit amet elit",
-      "outro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
-      "relatedTitle": "Ipsum dolor sit amet consectetur",
+      "h2b": "Para tu operación",
+      "outro": "Eficiencia de compra a escala frente a múltiples proveedores pequeños, con estándar de calidad uniforme pedido tras pedido.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1240,38 +1240,38 @@
       "id": "dolor-salud",
       "href": "/dolor/salud",
       "template": "detail",
-      "kicker": "Magna est",
-      "h1": "Elit ipsum dolor amet",
-      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "kicker": "Salud",
+      "h1": "Hospitales y salud",
+      "support": "Servicios especializados para optimizar cocina institucional y seguridad alimentaria.",
       "image": "/img/shell/shell-hero-plates.jpg",
-      "alt": "Ut labore enim",
-      "h2": "Elit sed tempor lorem ipsum",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "figure": "/img/shell/shell-farm-equipment.jpg",
-      "h2b": "Dolor sit amet consectetur nunc",
-      "outro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "relatedTitle": "Amet lorem ipsum dolor sit elit",
+      "alt": "Sector salud",
+      "h2": "Beneficio principal",
+      "intro": "Plataforma integral para hospitales: operaciones culinarias más ágiles, cumplimiento nutricional e inocuidad elevada.",
+      "figure": "/img/shell/shell-kitchen-pass.jpg",
+      "h2b": "Escala institucional",
+      "outro": "Alimentación a gran escala con controles y surtido pensados para instalaciones sanitarias exigentes.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1279,38 +1279,38 @@
       "id": "dolor-aula",
       "href": "/dolor/aula",
       "template": "detail",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit amet",
-      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "kicker": "Educación",
+      "h1": "Educación",
+      "support": "Escuelas y universidades con volúmenes diarios altos y logística de campus compleja.",
       "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Lorem ipsum dolor",
-      "h2": "Lorem ipsum dolor sit amet elit",
-      "intro": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
-      "figure": "/img/shell/shell-kitchen-pass.jpg",
-      "h2b": "Ipsum dolor sit amet consectetur",
-      "outro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
-      "relatedTitle": "Sed tempor lorem ipsum dolor",
+      "alt": "Educación",
+      "h2": "Beneficio principal",
+      "intro": "Centraliza fresco, básicos y equipo de cocina en una compra, simplificando la logística del campus.",
+      "figure": "/img/shell/shell-hero-produce.jpg",
+      "h2b": "Operación escolar",
+      "outro": "Menos proveedores que gestionar y más consistencia en comidas diarias para alumnado y staff.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1318,38 +1318,38 @@
       "id": "dolor-civico",
       "href": "/dolor/civico",
       "template": "detail",
-      "kicker": "Dolor sit",
-      "h1": "Dolor sit amet nunc est",
-      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "kicker": "Gobierno",
+      "h1": "Gobierno",
+      "support": "Compras centralizadas con flexibilidad de marcas, alimentos y suministros de cocina.",
       "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Dolor sit amet",
-      "h2": "Dolor sit amet consectetur nunc",
-      "intro": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "figure": "/img/shell/shell-truck-road.jpg",
-      "h2b": "Amet lorem ipsum dolor sit elit",
-      "outro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "relatedTitle": "Magna aliqua dolor sit amet",
+      "alt": "Gobierno",
+      "h2": "Beneficio principal",
+      "intro": "Reduce la necesidad de múltiples proveedores independientes gracias a un catálogo amplio y flexible.",
+      "figure": "/img/shell/shell-city-dusk.jpg",
+      "h2b": "Abasto institucional",
+      "outro": "Alimentos y equipo de cocina en un modelo orientado a eficiencia y trazabilidad de servicio.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1357,38 +1357,38 @@
       "id": "dolor-gestion",
       "href": "/dolor/gestion",
       "template": "detail",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum dolor sit amet elit",
-      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "kicker": "Comedores",
+      "h1": "Comedores industriales",
+      "support": "Infraestructura robusta para foodservice management e institucionales.",
       "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Ipsum dolor sit",
-      "h2": "Ipsum dolor sit amet consectetur",
-      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
-      "figure": "/img/shell/shell-city-dusk.jpg",
-      "h2b": "Sed tempor lorem ipsum dolor",
-      "outro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "relatedTitle": "Nunc est lorem ipsum dolor sit",
+      "alt": "Comedores",
+      "h2": "Beneficio principal",
+      "intro": "Suministro unificado que busca eficiencia operativa, consistencia de calidad y menor costo logístico.",
+      "figure": "/img/shell/shell-truck-road.jpg",
+      "h2b": "Modelo unificado",
+      "outro": "Un socio para mantener continuidad de menú y estándares en operaciones de alto volumen.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1396,38 +1396,38 @@
       "id": "dolor-viaje",
       "href": "/dolor/viaje",
       "template": "detail",
-      "kicker": "Ipsum nec",
-      "h1": "Amet lorem ipsum dolor sit",
-      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "kicker": "Viajes",
+      "h1": "Viajes y aeropuerto",
+      "support": "Excelencia en cada detalle para aerolíneas, bares, restaurantes y salas VIP.",
       "image": "/img/shell/shell-truck-road.jpg",
-      "alt": "Amet nunc elit",
-      "h2": "Amet lorem ipsum dolor sit elit",
-      "intro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "figure": "/img/shell/shell-warehouse-crew.jpg",
-      "h2b": "Magna aliqua dolor sit amet",
-      "outro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      "relatedTitle": "Elit sed tempor lorem ipsum",
+      "alt": "Viajes",
+      "h2": "Beneficio principal",
+      "intro": "Proveedor integral (one-stop-shop) que simplifica inventario en aeropuerto: fresco, congelado, procesado y no alimentario.",
+      "figure": "/img/shell/shell-city-dusk.jpg",
+      "h2b": "Servicio de viaje",
+      "outro": "Cortes personalizados, pescados y artículos esenciales para elevar la oferta gastronómica en tránsito.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1435,38 +1435,38 @@
       "id": "dolor-ocio",
       "href": "/dolor/ocio",
       "template": "detail",
-      "kicker": "Sed labore",
-      "h1": "Sed tempor lorem ipsum",
-      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
-      "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Sed tempor nunc",
-      "h2": "Sed tempor lorem ipsum dolor",
-      "intro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "figure": "/img/shell/shell-hero-produce.jpg",
-      "h2b": "Nunc est lorem ipsum dolor sit",
-      "outro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "relatedTitle": "Lorem ipsum dolor sit amet elit",
+      "kicker": "Ocio",
+      "h1": "Ocio y entretenimiento",
+      "support": "Parques, casinos, boleras, cines, golf y entretenimiento familiar con abasto confiable.",
+      "image": "/img/shell/shell-hero-plates.jpg",
+      "alt": "Ocio",
+      "h2": "Beneficio principal",
+      "intro": "Soluciones para volumen, consistencia y experiencia premium que exige hospitalidad y entretenimiento.",
+      "figure": "/img/shell/shell-kitchen-pass.jpg",
+      "h2b": "Sin desabasto",
+      "outro": "Proteínas de especialidad y logística continua para temporadas altas y eventos masivos sin contratiempos.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1474,38 +1474,38 @@
       "id": "dolor-tienda",
       "href": "/dolor/tienda",
       "template": "detail",
-      "kicker": "Magna est",
-      "h1": "Magna aliqua dolor sit",
-      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "/img/shell/shell-warehouse-crew.jpg",
-      "alt": "Ut labore enim",
-      "h2": "Magna aliqua dolor sit amet",
-      "intro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      "figure": "/img/shell/shell-hero-plates.jpg",
-      "h2b": "Elit sed tempor lorem ipsum",
-      "outro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "relatedTitle": "Dolor sit amet consectetur nunc",
+      "kicker": "Retail",
+      "h1": "Retail y comercio",
+      "support": "Aliado para frescos y foodservice en supermercados, conveniencia y clubes de precio.",
+      "image": "/img/shell/shell-field-crate.jpg",
+      "alt": "Retail",
+      "h2": "Beneficio principal",
+      "intro": "Seguridad alimentaria, apoyo operativo y red de distribución para crecer puntos de venta de cualquier escala.",
+      "figure": "/img/shell/shell-hero-produce.jpg",
+      "h2b": "Crecimiento retail",
+      "outro": "Respaldo culinario y formación con distribución eficiente para cadenas o tu primer local.",
+      "relatedTitle": "También útil",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1513,36 +1513,36 @@
       "id": "amet",
       "href": "/amet",
       "template": "hub",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit",
-      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "kicker": "Proveedores",
+      "h1": "Proveedores",
+      "support": "Información detallada de altas y alianzas en actualización. Contacto de compras disponible.",
       "image": "/img/shell/shell-hero-produce.jpg",
-      "alt": "Lorem ipsum dolor",
-      "h2": "Nunc est lorem ipsum dolor sit",
-      "intro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "alt": "Proveedores",
+      "h2": "Recursos",
+      "intro": "Mientras completamos materiales, escribe a compras o revisa diversidad e inversionistas.",
+      "filterLabel": "Buscar",
+      "empty": "Sin resultados.",
       "cards": [
         {
           "href": "/amet/recursos",
           "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "alt": "Recursos",
+          "h3": "Recursos",
+          "support": "Formatos y guías de proveedor: contenido pendiente de entrega oficial FDV."
         },
         {
           "href": "/amet/variedad",
           "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "alt": "Diversidad",
+          "h3": "Diversidad",
+          "support": "Interés en abastecimiento responsable y desarrollo de socios locales."
         },
         {
           "href": "/sed",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Inversionistas",
+          "h3": "Inversionistas",
+          "support": "Información corporativa de alto nivel mientras se define el paquete completo."
         }
       ]
     },
@@ -1550,19 +1550,19 @@
       "id": "amet-recursos",
       "href": "/amet/recursos",
       "template": "simple",
-      "kicker": "Dolor sit",
-      "h1": "Dolor amet consectetur",
-      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "kicker": "Recursos",
+      "h1": "Recursos para proveedores",
+      "support": "Manuales, formatos y calendario se publicarán cuando FDV complete la entrega.",
       "image": "/img/shell/shell-hero-plates.jpg",
-      "alt": "Dolor sit amet",
+      "alt": "Recursos proveedores",
       "blocks": [
         {
-          "h2": "Elit sed tempor lorem ipsum",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "h2": "Contacto de compras",
+          "support": "Correo: noe.soria@frescosdelvalle.com. Comparte capacidad, certificaciones y categoría de producto."
         },
         {
-          "h2": "Ipsum dolor sit amet consectetur",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "h2": "Qué pediremos",
+          "support": "Documentación, certificaciones y condiciones comerciales. Detalle de requisitos: próximamente."
         }
       ]
     },
@@ -1570,19 +1570,19 @@
       "id": "amet-variedad",
       "href": "/amet/variedad",
       "template": "simple",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum elit sed tempor",
-      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "kicker": "Diversidad",
+      "h1": "Diversidad de proveedores",
+      "support": "Buscamos abastecimiento responsable con respeto a derechos humanos en la red de suministro.",
       "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Ipsum dolor sit",
+      "alt": "Diversidad",
       "blocks": [
         {
-          "h2": "Lorem ipsum dolor sit amet elit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "h2": "Enfoque",
+          "support": "Mitigamos impactos ambientales, sociales y éticos de compras, elevando estándares en la cadena."
         },
         {
-          "h2": "Amet lorem ipsum dolor sit elit",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "h2": "Próximos programas",
+          "support": "Programas con productores locales: detalle pendiente. Escríbenos a compras para iniciar diálogo."
         }
       ]
     },
@@ -1590,19 +1590,19 @@
       "id": "sed",
       "href": "/sed",
       "template": "simple",
-      "kicker": "Ipsum nec",
-      "h1": "Amet dolor lorem ipsum",
-      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "kicker": "Inversionistas",
+      "h1": "Inversionistas",
+      "support": "Empresa institucional con operación en Monterrey y EE. UU., fundada en 2013.",
       "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Amet nunc elit",
+      "alt": "Inversionistas",
       "blocks": [
         {
-          "h2": "Dolor sit amet consectetur nunc",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "h2": "Panorama",
+          "support": "Foodservice B2B con certificaciones, ~300 colaboradores y plataforma comercial en frescosdelvalle.com."
         },
         {
-          "h2": "Sed tempor lorem ipsum dolor",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "h2": "Contacto",
+          "support": "Para información corporativa, usa el formulario de contacto o escribe a ventas nacionales."
         }
       ]
     },
@@ -1610,57 +1610,57 @@
       "id": "labore",
       "href": "/labore",
       "template": "listing",
-      "kicker": "Sed labore",
-      "h1": "Nunc lorem ipsum dolor",
-      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "kicker": "Carreras",
+      "h1": "Trabaja en FDV",
+      "support": "Cultura de equipo, honestidad y responsabilidad compartida. Vacantes detalladas en actualización.",
       "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Sed tempor nunc",
-      "h2": "Ipsum dolor sit amet consectetur",
-      "intro": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "alt": "Carreras",
+      "h2": "Áreas",
+      "intro": "Almacén, reparto, ventas, calidad y administración son focos típicos de contratación.",
+      "filterLabel": "Filtrar puestos",
+      "empty": "Sin vacantes para ese filtro. Escribe a RH.",
       "cards": [
         {
           "href": "/labore/puesto",
           "image": "/img/shell/shell-truck-road.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Operaciones",
+          "h3": "Operaciones",
+          "support": "CEDIS, rutas y cadena de frío. Detalle de vacante: próximamente."
         },
         {
           "href": "/labore/otro",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Lorem ipsum dolor",
-          "h3": "Lorem ipsum dolor",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "alt": "Comercial",
+          "h3": "Comercial",
+          "support": "Ventas y atención a cuentas foodservice. Postula vía RH mientras publicamos roles."
         },
         {
           "href": "/labore/tercio",
           "image": "/img/shell/shell-warehouse-crew.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "alt": "Calidad y admin",
+          "h3": "Calidad y admin",
+          "support": "Inocuidad, soporte y administración. Contacto: Alejandra.padilla@frescosdelvalle.com"
         },
         {
           "href": "/lorem/gente",
           "image": "/img/shell/shell-warehouse-crew.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "alt": "Nuestra gente",
+          "h3": "Nuestra gente",
+          "support": "Conoce la cultura de ~300 colaboradores detrás de cada entrega."
         },
         {
           "href": "/amet/recursos",
           "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "alt": "Proveedores",
+          "h3": "¿Eres proveedor?",
+          "support": "Altas de proveedor van por compras, no por bolsa de trabajo."
         },
         {
           "href": "/magna/gente",
           "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "alt": "Personas y sustentabilidad",
+          "h3": "Personas",
+          "support": "Bienestar, inclusión y desarrollo humano en nuestro pilar de sustentabilidad."
         }
       ]
     },
@@ -1668,38 +1668,38 @@
       "id": "labore-puesto",
       "href": "/labore/puesto",
       "template": "detail",
-      "kicker": "Magna est",
-      "h1": "Elit ipsum dolor amet",
-      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "kicker": "Vacante",
+      "h1": "Operaciones",
+      "support": "Placeholder: descripción completa de puesto pendiente de entrega FDV.",
       "image": "/img/shell/shell-truck-road.jpg",
-      "alt": "Ut labore enim",
-      "h2": "Amet lorem ipsum dolor sit elit",
-      "intro": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "alt": "Operaciones",
+      "h2": "Por qué FDV",
+      "intro": "Trabajo en equipo, honestidad y responsabilidad compartida, con entorno laboral positivo y motivador.",
       "figure": "/img/shell/shell-warehouse-crew.jpg",
-      "h2b": "Magna aliqua dolor sit amet",
-      "outro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      "relatedTitle": "Elit sed tempor lorem ipsum",
+      "h2b": "Cómo aplicar",
+      "outro": "Escribe a Alejandra.padilla@frescosdelvalle.com con tu CV y área de interés.",
+      "relatedTitle": "Más sobre FDV",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1707,38 +1707,38 @@
       "id": "labore-otro",
       "href": "/labore/otro",
       "template": "detail",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit amet",
-      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "kicker": "Vacante",
+      "h1": "Comercial",
+      "support": "Placeholder comercial: vacantes vigentes se publicarán cuando FDV las confirme.",
       "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Lorem ipsum dolor",
-      "h2": "Sed tempor lorem ipsum dolor",
-      "intro": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "alt": "Comercial",
+      "h2": "El rol",
+      "intro": "Acompañamos cuentas foodservice desde la apertura hasta el pedido recurrente en portal.",
       "figure": "/img/shell/shell-hero-produce.jpg",
-      "h2b": "Nunc est lorem ipsum dolor sit",
-      "outro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "relatedTitle": "Lorem ipsum dolor sit amet elit",
+      "h2b": "Postulación",
+      "outro": "Envía CV a RH. Un asesor responderá cuando abramos el proceso formal de esa vacante.",
+      "relatedTitle": "Más sobre FDV",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1746,38 +1746,38 @@
       "id": "labore-tercio",
       "href": "/labore/tercio",
       "template": "detail",
-      "kicker": "Dolor sit",
-      "h1": "Dolor sit amet nunc est",
-      "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "kicker": "Vacante",
+      "h1": "Calidad y admin",
+      "support": "Placeholder: requisitos y horarios se cargarán con el paquete de bolsa de trabajo.",
       "image": "/img/shell/shell-warehouse-crew.jpg",
-      "alt": "Dolor sit amet",
-      "h2": "Magna aliqua dolor sit amet",
-      "intro": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "alt": "Calidad",
+      "h2": "Enfoque",
+      "intro": "Perfiles que cuidan inocuidad, procesos y soporte administrativo a la operación.",
       "figure": "/img/shell/shell-hero-plates.jpg",
-      "h2b": "Elit sed tempor lorem ipsum",
-      "outro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "relatedTitle": "Dolor sit amet consectetur nunc",
+      "h2b": "Contacto RH",
+      "outro": "Alejandra.padilla@frescosdelvalle.com — indica ciudad, experiencia y disponibilidad.",
+      "relatedTitle": "Más sobre FDV",
       "cards": [
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Operación Frescos del Valle",
+          "h3": "Nuestra historia",
+          "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/lorem/notas/nota",
+          "href": "/ipsum/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Control de calidad",
+          "h3": "Calidad certificada",
+          "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/ipsum/lista",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Catálogo de productos",
+          "h3": "Más de 5,000 artículos",
+          "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
         }
       ]
     },
@@ -1785,57 +1785,57 @@
       "id": "magna",
       "href": "/magna",
       "template": "hub",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum dolor sit amet elit",
-      "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      "kicker": "Sustentabilidad",
+      "h1": "Sustentabilidad FDV",
+      "support": "Preservar el entorno y potenciar el desarrollo humano con gobernanza responsable.",
       "image": "/img/shell/shell-hero-produce.jpg",
-      "alt": "Ipsum dolor sit",
-      "h2": "Nunc est lorem ipsum dolor sit",
-      "intro": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "filterLabel": "Lorem ipsum",
-      "empty": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "alt": "Sustentabilidad",
+      "h2": "Pilares",
+      "intro": "Enfoque, personas, productos y planeta alineados a nuestros objetivos comerciales.",
+      "filterLabel": "Buscar",
+      "empty": "Sin resultados.",
       "cards": [
         {
           "href": "/magna/enfoque",
           "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Amet nunc elit",
-          "h3": "Amet nunc elit",
-          "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation."
+          "alt": "Enfoque",
+          "h3": "Nuestro enfoque",
+          "support": "Gobernanza, responsabilidad social y ambiental con metas claras de servicio."
         },
         {
           "href": "/magna/gente",
           "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Sed tempor nunc",
-          "h3": "Sed tempor nunc",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "alt": "Personas",
+          "h3": "Personas",
+          "support": "Trabajo digno, inclusión y hábitos saludables en comunidades y equipo."
         },
         {
           "href": "/magna/surtido",
           "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Ut labore enim",
-          "h3": "Ut labore enim",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "alt": "Productos",
+          "h3": "Productos",
+          "support": "Abasto responsable y respeto a derechos humanos en toda la red de suministro."
         },
         {
           "href": "/magna/orbis",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Lorem ipsum dolor",
-          "h3": "Lorem ipsum dolor",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "alt": "Planeta",
+          "h3": "Planeta",
+          "support": "Agricultura ecológica, residuos y un entorno sano para futuras generaciones."
         },
         {
           "href": "/nunc/sedes",
           "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Dolor sit amet",
-          "h3": "Dolor sit amet",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "alt": "Sedes",
+          "h3": "Sedes",
+          "support": "Operación en Monterrey con cobertura metropolitana y servicio a EE. UU."
         },
         {
           "href": "/lorem/relato",
           "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Ipsum dolor sit",
-          "h3": "Ipsum dolor sit",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "alt": "Historia",
+          "h3": "Historia",
+          "support": "Más de una década construyendo confianza en foodservice."
         }
       ]
     },
@@ -1843,19 +1843,19 @@
       "id": "magna-enfoque",
       "href": "/magna/enfoque",
       "template": "simple",
-      "kicker": "Ipsum nec",
-      "h1": "Amet lorem ipsum dolor sit",
-      "support": "Elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
+      "kicker": "Enfoque",
+      "h1": "Nuestro enfoque",
+      "support": "Sostenibilidad alineada a gobernanza, responsabilidad social y ambiental.",
       "image": "/img/shell/shell-hero-plates.jpg",
-      "alt": "Amet nunc elit",
+      "alt": "Enfoque",
       "blocks": [
         {
-          "h2": "Elit sed tempor lorem ipsum",
-          "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc."
+          "h2": "Principio rector",
+          "support": "El enfoque de sostenibilidad de Frescos del Valle se estructura bajo el principio de preservar el entorno y potenciar el desarrollo humano."
         },
         {
-          "h2": "Ipsum dolor sit amet consectetur",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "h2": "Derechos humanos",
+          "support": "Cada colaborador merece espacio seguro y trato digno. Mejoramos de forma continua el abastecimiento responsable."
         }
       ]
     },
@@ -1863,19 +1863,19 @@
       "id": "magna-gente",
       "href": "/magna/gente",
       "template": "simple",
-      "kicker": "Sed labore",
-      "h1": "Sed tempor lorem ipsum",
-      "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "kicker": "Personas",
+      "h1": "Personas",
+      "support": "Impacto positivo en comunidades y un entorno diverso e inclusivo en FDV.",
       "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Sed tempor nunc",
+      "alt": "Personas",
       "blocks": [
         {
-          "h2": "Lorem ipsum dolor sit amet elit",
-          "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "h2": "Bienestar social",
+          "support": "Generamos impacto positivo y transformamos vidas en nuestras comunidades, impulsando hábitos alimenticios más saludables."
         },
         {
-          "h2": "Amet lorem ipsum dolor sit elit",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "h2": "Inclusión",
+          "support": "Promovemos diversidad e inclusión mientras desarrollamos a colaboradores, clientes y futuras generaciones."
         }
       ]
     },
@@ -1883,19 +1883,19 @@
       "id": "magna-surtido",
       "href": "/magna/surtido",
       "template": "simple",
-      "kicker": "Magna est",
-      "h1": "Magna aliqua dolor sit",
-      "support": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nunc.",
+      "kicker": "Productos",
+      "h1": "Productos responsables",
+      "support": "Compras con criterio ético y ambiental a lo largo de la cadena.",
       "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Ut labore enim",
+      "alt": "Productos",
       "blocks": [
         {
-          "h2": "Dolor sit amet consectetur nunc",
-          "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum."
+          "h2": "Abasto responsable",
+          "support": "Elevamos estándares de bienestar animal y mitigamos impactos ambientales, sociales y éticos de nuestras compras."
         },
         {
-          "h2": "Sed tempor lorem ipsum dolor",
-          "support": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "h2": "Derechos en la red",
+          "support": "Aseguramos respeto a derechos humanos en operaciones internas y en toda la red de suministro."
         }
       ]
     },
@@ -1903,19 +1903,19 @@
       "id": "magna-orbis",
       "href": "/magna/orbis",
       "template": "simple",
-      "kicker": "Lorem ipso",
-      "h1": "Lorem ipsum dolor sit",
-      "support": "Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "kicker": "Planeta",
+      "h1": "Planeta",
+      "support": "Proteger la Tierra con metas científicas, agricultura ecológica y mejor gestión de residuos.",
       "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Lorem ipsum dolor",
+      "alt": "Planeta",
       "blocks": [
         {
-          "h2": "Ipsum dolor sit amet consectetur",
-          "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi."
+          "h2": "Compromiso",
+          "support": "Implementamos metas científicas, apoyamos agricultura ecológica y transformamos la gestión de residuos."
         },
         {
-          "h2": "Magna aliqua dolor sit amet",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "h2": "Legado",
+          "support": "Buscamos dejar un entorno sano y preservado a las futuras generaciones desde nuestra operación diaria."
         }
       ]
     },
@@ -1925,116 +1925,126 @@
       "template": "contact",
       "kicker": "Contáctanos",
       "h1": "Hablemos de tu cocina",
-      "support": "¿Dudas, comentarios o pedidos? Escríbenos y un asesor de VALLE te orienta con surtido, entrega y servicio para tu operación.",
+      "support": "Abre cuenta, aclara pedidos o habla con ventas. Un asesor FDV responde en 1 o 2 días hábiles.",
       "image": "/img/shell/shell-truck-road.jpg",
       "alt": "Camión en ruta",
       "care": {
-        "h2": "Atención al cliente VALLE",
-        "intro": "Llama o escribe con tu número de cuenta. Te ayudamos con pedidos, entregas, facturas, disponibilidad y cambios urgentes del día.",
+        "h2": "Atención a clientes",
+        "intro": "Celular y WhatsApp 81 1024 2136 · servicio.clientes@frescosdelvalle.com · facturación en el mismo correo.",
         "items": [
           {
-            "h3": "Pedidos y cambios",
-            "support": "Coloca pedidos, agrega o quita piezas, cancela entregas y confirma disponibilidad antes de que salga la ruta del día."
+            "h3": "Ventas nacionales",
+            "support": "WhatsApp 81 8027 3433 · mquiroga@frescosdelvalle.com"
           },
           {
-            "h3": "Entrega y ruta",
-            "support": "Consulta el estado de tu camión, recupera faltantes y coordina recolecciones o will-call según la capacidad de tu sede."
+            "h3": "Compras / proveedores",
+            "support": "noe.soria@frescosdelvalle.com para altas y alianzas de suministro."
           },
           {
-            "h3": "Facturas y notas",
-            "support": "Solicita copias de factura, notas de crédito y aclaraciones de cobro con tu número de cuenta listo al marcar o escribir."
+            "h3": "Recursos humanos",
+            "support": "Alejandra.padilla@frescosdelvalle.com para vacantes y postulaciones."
           }
         ]
       },
       "locations": {
-        "h2": "Nuestras sedes y rutas",
-        "intro": "Operamos centros de distribución que abastecen cocinas, hoteles, hospitales y colegios en el valle con entrega confiable cada semana.",
+        "h2": "Nuestras ubicaciones",
+        "intro": "Oficinas, CEDIS en Monterrey y servicio programado hacia Estados Unidos.",
         "items": [
           {
-            "h3": "Centro Valle Norte",
-            "support": "Avenida del Campo 120, Parque Logístico Norte. Tel. 55 1000 2100. Lunes a sábado con despacho desde las cuatro."
+            "h3": "CEDIS Monterrey",
+            "support": "Ave. Los Ángeles 552 Ote., Col. Del Norte, Monterrey, N.L. Tel. 81 8351 5122 / 5123."
           },
           {
-            "h3": "Centro Valle Sur",
-            "support": "Carretera Central km 18, Bodega Sur. Tel. 55 1000 2200. Atención a mesas, salud, aula y cocina institucional local."
+            "h3": "Corporativo",
+            "support": "C. Capitán Aguilar 350, Col. Deportivo Obispado (María Luisa), C.P. 64040, Monterrey, N.L."
           },
           {
-            "h3": "Centro Valle Este",
-            "support": "Calle del Mercado 45, Zona Este. Tel. 55 1000 2300. Rutas diarias para hoteles, ocio, viaje y gestión de eventos."
+            "h3": "Estados Unidos",
+            "support": "Pedidos programados bajo calendario y contrato por productos determinados."
           }
         ]
       },
-      "formTitle": "Envía tu mensaje",
+      "formTitle": "Hazte cliente",
       "fields": [
         {
           "name": "nombre",
-          "label": "Nombre completo",
+          "label": "Nombre de contacto",
+          "type": "text"
+        },
+        {
+          "name": "empresa",
+          "label": "Negocio / empresa",
           "type": "text"
         },
         {
           "name": "correo",
-          "label": "Correo electrónico",
+          "label": "Correo",
           "type": "email"
         },
         {
+          "name": "telefono",
+          "label": "Teléfono",
+          "type": "text"
+        },
+        {
           "name": "mensaje",
-          "label": "Tu mensaje",
+          "label": "Mensaje / volumen estimado",
           "type": "textarea"
         }
       ],
-      "submit": "Enviar mensaje",
-      "sideH3": "Habla con tu sede",
-      "sideSupport": "Para una respuesta más rápida, contacta tu centro local. También puedes dejar el formulario y te devolvemos la llamada en horario hábil.",
-      "thanks": "Gracias por escribirnos. Revisamos tu mensaje y un asesor de VALLE te responde con la información o el siguiente paso que necesitas."
+      "submit": "Enviar solicitud",
+      "sideH3": "Siguiente paso",
+      "sideSupport": "Completa el formulario. Un asesor de ventas FDV se comunica en 1 o 2 días hábiles para continuar el alta.",
+      "thanks": "Gracias. Recibimos tu solicitud; un asesor de Frescos del Valle te contactará en 1 o 2 días hábiles."
     },
     {
       "id": "nunc",
       "href": "/nunc",
       "template": "contact",
-      "kicker": "Dolor sit",
-      "h1": "Dolor amet consectetur",
-      "support": "Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem ipsum.",
+      "kicker": "Cuenta",
+      "h1": "Iniciar sesión",
+      "support": "Clientes con clave acceden al portal 24/7 en frescosdelvalle.com para armar pedidos.",
       "image": "/img/shell/shell-truck-road.jpg",
-      "alt": "Dolor sit amet",
+      "alt": "Portal de clientes",
       "fields": [
         {
-          "name": "nomen",
-          "label": "Lorem ipsum",
+          "name": "correo",
+          "label": "Correo",
+          "type": "email"
+        },
+        {
+          "name": "clave",
+          "label": "Clave de acceso",
           "type": "text"
         },
         {
           "name": "nota",
-          "label": "Dolor sit amet",
-          "type": "email"
-        },
-        {
-          "name": "nuntia",
-          "label": "Ipsum dolor sit",
+          "label": "Comentario (opcional)",
           "type": "textarea"
         }
       ],
-      "submit": "Lorem ipsum",
-      "sideH3": "Dolor sit amet",
-      "sideSupport": "Magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "thanks": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+      "submit": "Continuar",
+      "sideH3": "¿Aún no eres cliente?",
+      "sideSupport": "Solicita alta en Contacto. Un vendedor te asignará clave para el portal oficial de compras.",
+      "thanks": "Si ya tienes cuenta, usa el portal en frescosdelvalle.com. Para alta nueva, ve a Contacto."
     },
     {
       "id": "nunc-sedes",
       "href": "/nunc/sedes",
       "template": "simple",
-      "kicker": "Amet nunc",
-      "h1": "Ipsum elit sed tempor",
-      "support": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.",
+      "kicker": "Sedes",
+      "h1": "Nuestras sedes",
+      "support": "CEDIS y corporativo en Monterrey; cobertura metropolitana y servicio a EE. UU.",
       "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Ipsum dolor sit",
+      "alt": "Sedes Monterrey",
       "blocks": [
         {
-          "h2": "Sed tempor lorem ipsum dolor",
-          "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+          "h2": "CEDIS / oficinas",
+          "support": "Ave. Los Ángeles 552 Ote., Col. Del Norte, Monterrey, N.L. Tel. 81 8351 5122 y 5123."
         },
         {
-          "h2": "Elit sed tempor lorem ipsum",
-          "support": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          "h2": "Corporativo",
+          "support": "C. Capitán Aguilar 350, Col. Deportivo Obispado (María Luisa), C.P. 64040, Monterrey, N.L."
         }
       ]
     }
