@@ -35,7 +35,7 @@ function chrome(data, page) {
         ${linkList(group.links)}
       </div>`).join("");
     return `<div class="nav-item">
-      <button class="nav-link" type="button" aria-expanded="false">${esc(item.label)}</button>
+      <button class="nav-link" type="button" aria-expanded="false">${esc(item.label)}<span class="caret" aria-hidden="true"></span></button>
       <div class="mega">
         <div class="mega-panel">
           <p class="mega-phrase">${esc(item.phrase)}</p>
@@ -78,7 +78,9 @@ function chrome(data, page) {
       <div class="topbar"><a href="${esc(data.utility.href)}">${esc(data.utility.label)}</a></div>
       <header class="site-header">
         <div class="bar">
-          <a class="wordmark" href="/">${esc(data.brand)}</a>
+          <a class="logo" href="/" aria-label="Frescos del Valle">
+            <img src="/img/logo-frescos-del-valle.png" alt="Frescos del Valle" width="1024" height="253" />
+          </a>
           <nav class="nav-links" aria-label="${esc(data.navLabel)}">${nav}</nav>
           <div class="utils">
             <div class="search-wrap" style="position:relative">
@@ -289,6 +291,18 @@ function bind(data, page) {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+
+  document.querySelectorAll(".nav-item").forEach((item) => {
+    const btn = item.querySelector(":scope > .nav-link");
+    if (!btn) return;
+    const setOpen = (open) => btn.setAttribute("aria-expanded", String(open));
+    item.addEventListener("mouseenter", () => setOpen(true));
+    item.addEventListener("mouseleave", () => setOpen(false));
+    item.addEventListener("focusin", () => setOpen(true));
+    item.addEventListener("focusout", (event) => {
+      if (!item.contains(event.relatedTarget)) setOpen(false);
+    });
+  });
 
   const burger = document.getElementById("burger");
   burger.addEventListener("click", () => {
