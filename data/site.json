@@ -249,39 +249,9 @@
       ]
     },
     {
-      "id": "nunc",
-      "label": "Nunc est",
-      "href": "/nunc",
-      "phrase": "Nunc est lorem ipsum dolor",
-      "groups": [
-        {
-          "h3": "Amet nunc elit",
-          "links": [
-            {
-              "label": "Lorem ipsum",
-              "href": "/nunc"
-            }
-          ]
-        },
-        {
-          "h3": "Ut labore enim",
-          "links": [
-            {
-              "label": "Dolor sit amet",
-              "href": "/nunc/sedes"
-            }
-          ]
-        },
-        {
-          "h3": "Sed tempor nunc",
-          "links": [
-            {
-              "label": "Ipsum dolor sit",
-              "href": "/nunc"
-            }
-          ]
-        }
-      ]
+      "id": "contacto",
+      "label": "Contacto",
+      "href": "/contacto"
     }
   ],
   "footer": {
@@ -1949,6 +1919,74 @@
           "support": "Nunc est lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
         }
       ]
+    },
+    {
+      "id": "contacto",
+      "href": "/contacto",
+      "template": "contact",
+      "kicker": "Contáctanos",
+      "h1": "Hablemos de tu cocina",
+      "support": "¿Dudas, comentarios o pedidos? Escríbenos y un asesor de VALLE te orienta con surtido, entrega y servicio para tu operación.",
+      "image": "/img/shell/shell-truck-road.jpg",
+      "alt": "Camión en ruta",
+      "care": {
+        "h2": "Atención al cliente VALLE",
+        "intro": "Llama o escribe con tu número de cuenta. Te ayudamos con pedidos, entregas, facturas, disponibilidad y cambios urgentes del día.",
+        "items": [
+          {
+            "h3": "Pedidos y cambios",
+            "support": "Coloca pedidos, agrega o quita piezas, cancela entregas y confirma disponibilidad antes de que salga la ruta del día."
+          },
+          {
+            "h3": "Entrega y ruta",
+            "support": "Consulta el estado de tu camión, recupera faltantes y coordina recolecciones o will-call según la capacidad de tu sede."
+          },
+          {
+            "h3": "Facturas y notas",
+            "support": "Solicita copias de factura, notas de crédito y aclaraciones de cobro con tu número de cuenta listo al marcar o escribir."
+          }
+        ]
+      },
+      "locations": {
+        "h2": "Nuestras sedes y rutas",
+        "intro": "Operamos centros de distribución que abastecen cocinas, hoteles, hospitales y colegios en el valle con entrega confiable cada semana.",
+        "items": [
+          {
+            "h3": "Centro Valle Norte",
+            "support": "Avenida del Campo 120, Parque Logístico Norte. Tel. 55 1000 2100. Lunes a sábado con despacho desde las cuatro."
+          },
+          {
+            "h3": "Centro Valle Sur",
+            "support": "Carretera Central km 18, Bodega Sur. Tel. 55 1000 2200. Atención a mesas, salud, aula y cocina institucional local."
+          },
+          {
+            "h3": "Centro Valle Este",
+            "support": "Calle del Mercado 45, Zona Este. Tel. 55 1000 2300. Rutas diarias para hoteles, ocio, viaje y gestión de eventos."
+          }
+        ]
+      },
+      "formTitle": "Envía tu mensaje",
+      "fields": [
+        {
+          "name": "nombre",
+          "label": "Nombre completo",
+          "type": "text"
+        },
+        {
+          "name": "correo",
+          "label": "Correo electrónico",
+          "type": "email"
+        },
+        {
+          "name": "mensaje",
+          "label": "Tu mensaje",
+          "type": "textarea"
+        }
+      ],
+      "submit": "Enviar mensaje",
+      "sideH3": "Habla con tu sede",
+      "sideSupport": "Para una respuesta más rápida, contacta tu centro local. También puedes dejar el formulario y te devolvemos la llamada en horario hábil.",
+      "thanks": "Gracias por escribirnos. Revisamos tu mensaje y un asesor de VALLE te responde con la información o el siguiente paso que necesitas."
     },
     {
       "id": "nunc",

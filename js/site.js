@@ -262,20 +262,54 @@ function renderPage(data, page) {
         : `<input id="${esc(field.name)}" name="${esc(field.name)}" type="${esc(field.type)}" required />`;
       return `<div><label for="${esc(field.name)}">${esc(field.label)}</label>${control}</div>`;
     }).join("");
+    const care = page.care ? `
+      <section class="section contact-care">
+        <div class="wrap">
+          <p class="kicker">${esc(page.kicker)}</p>
+          <h2>${esc(page.care.h2)}</h2>
+          <p class="support">${esc(page.care.intro)}</p>
+          <div class="contact-grid">
+            ${page.care.items.map((item) => `
+              <div class="contact-block">
+                <h3>${esc(item.h3)}</h3>
+                <p class="support">${esc(item.support)}</p>
+              </div>`).join("")}
+          </div>
+        </div>
+      </section>` : "";
+    const locations = page.locations ? `
+      <section class="section contact-locations">
+        <div class="wrap">
+          <h2>${esc(page.locations.h2)}</h2>
+          <p class="support">${esc(page.locations.intro)}</p>
+          <div class="location-list">
+            ${page.locations.items.map((item) => `
+              <div class="location-item">
+                <h3>${esc(item.h3)}</h3>
+                <p class="support">${esc(item.support)}</p>
+              </div>`).join("")}
+          </div>
+        </div>
+      </section>` : "";
     return `
       ${hero}
+      ${care}
+      ${locations}
       <section class="section">
-        <div class="wrap form-grid">
-          <form id="contact-form">
-            ${fields}
-            <button class="btn btn-green btn-hero" type="submit">${esc(page.submit)}</button>
-          </form>
-          <div class="side">
-            <p class="kicker">${esc(page.kicker)}</p>
-            <h3>${esc(page.sideH3)}</h3>
-            <p class="support">${esc(page.sideSupport)}</p>
+        <div class="wrap">
+          ${page.formTitle ? `<h2>${esc(page.formTitle)}</h2>` : ""}
+          <div class="form-grid">
+            <form id="contact-form">
+              ${fields}
+              <button class="btn btn-green btn-hero" type="submit">${esc(page.submit)}</button>
+            </form>
+            <div class="side">
+              <p class="kicker">${esc(page.kicker)}</p>
+              <h3>${esc(page.sideH3)}</h3>
+              <p class="support">${esc(page.sideSupport)}</p>
+            </div>
+            <p class="support form-note" id="form-note" hidden>${esc(page.thanks)}</p>
           </div>
-          <p class="support form-note" id="form-note" hidden>${esc(page.thanks)}</p>
         </div>
       </section>`;
   }
