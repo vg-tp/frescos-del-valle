@@ -414,6 +414,11 @@ h1, h2, h3, p { margin: 0; }
 }
 .align-center .rule { margin-left: auto; margin-right: auto; }
 .band .support { max-width: 46ch; }
+.band.align-center .support {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 .band-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 22px; }
 .align-center .band-links { align-items: center; }
 .band-links a {
