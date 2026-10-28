@@ -405,7 +405,12 @@ h1, h2, h3, p { margin: 0; }
   line-height: 1.05;
   letter-spacing: -0.02em;
   text-wrap: balance;
-  max-width: min(22ch, 100%);
+  max-width: min(34ch, 100%);
+}
+.band.align-center h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .rule {
   width: 64px;
@@ -420,8 +425,15 @@ h1, h2, h3, p { margin: 0; }
   margin-left: auto;
   margin-right: auto;
 }
-.band-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 22px; }
-.align-center .band-links { align-items: center; }
+.band-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 28px;
+  margin-top: 22px;
+}
+.align-center .band-links { justify-content: center; }
 .band-links a {
   color: var(--white);
   font-size: 14px;
