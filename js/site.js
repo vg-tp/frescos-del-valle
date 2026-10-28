@@ -8,7 +8,6 @@ const esc = (value) =>
   }[ch]));
 
 const svg = {
-  search: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M16 16.5 20 20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
   chevL: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 5 8 12l6.5 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   chevR: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 5 16 12l-6.5 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   social: [
@@ -82,13 +81,6 @@ function chrome(data, page) {
           </a>
           <nav class="nav-links" aria-label="${esc(data.navLabel)}">${nav}</nav>
           <div class="utils">
-            <div class="search-wrap" style="position:relative">
-              <button class="icon-btn" type="button" id="search-open" aria-expanded="false" aria-controls="search-pop" aria-label="${esc(data.utils.searchLabel)}">${svg.search}</button>
-              <div class="search-pop" id="search-pop">
-                <input id="search-input" type="search" aria-label="${esc(data.utils.searchLabel)}" />
-                <div id="search-results"></div>
-              </div>
-            </div>
             <a class="util-link" href="${esc(data.utils.shop.href)}">${esc(data.utils.shop.label)}</a>
             <a class="btn btn-green btn-nav" href="${esc(data.utils.cta.href)}">${esc(data.utils.cta.label)}</a>
             <a class="util-link" href="${esc(data.utils.account.href)}">${esc(data.utils.account.label)}</a>
@@ -350,32 +342,10 @@ function bind(data, page) {
     });
   });
 
-  const searchPop = document.getElementById("search-pop");
-  const searchBtn = document.getElementById("search-open");
-  const searchInput = document.getElementById("search-input");
-  const searchResults = document.getElementById("search-results");
-  const pages = data.pages.filter((item) => item.template !== "home");
-  const showResults = () => {
-    const q = searchInput.value.trim().toLowerCase();
-    const hits = pages.filter((item) => !q || `${item.h1} ${item.sectionTitle || ""}`.toLowerCase().includes(q)).slice(0, 6);
-    searchResults.innerHTML = hits.map((item) => `<a href="${esc(item.href)}">${esc(item.h1 || item.sectionTitle)}</a>`).join("");
-  };
-  searchBtn.addEventListener("click", () => {
-    const open = searchPop.classList.toggle("open");
-    searchBtn.setAttribute("aria-expanded", String(open));
-    if (open) {
-      showResults();
-      searchInput.focus();
-    }
-  });
-  searchInput.addEventListener("input", showResults);
-
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       document.body.classList.remove("nav-open");
       burger.setAttribute("aria-expanded", "false");
-      searchPop.classList.remove("open");
-      searchBtn.setAttribute("aria-expanded", "false");
     }
   });
 

@@ -180,16 +180,6 @@ h1, h2, h3, p { margin: 0; }
   gap: 16px;
   flex: none;
 }
-.icon-btn {
-  width: 36px;
-  height: 36px;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  display: grid;
-  place-items: center;
-  padding: 0;
-}
 .util-link {
   color: var(--green);
   font-size: 15px;
@@ -237,33 +227,6 @@ h1, h2, h3, p { margin: 0; }
   text-transform: uppercase;
 }
 .btn-ghost:hover { background: var(--white); color: var(--ink); }
-.search-pop {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  width: 280px;
-  background: var(--white);
-  color: var(--ink);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-  padding: 12px;
-  display: none;
-}
-.search-pop.open { display: block; }
-.search-pop input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #cfd5da;
-  border-radius: 3px;
-  padding: 0 10px;
-  font-size: 16px;
-}
-.search-pop a {
-  display: block;
-  padding: 8px 2px;
-  font-size: 15px;
-  border-bottom: 1px solid var(--line);
-}
-.search-pop a:hover { color: var(--green); }
 .burger {
   display: none;
   width: 44px;
