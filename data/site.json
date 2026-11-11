@@ -8,7 +8,7 @@
     "menuLabel": "Menú",
     "shop": {
       "label": "Comprar",
-      "href": "/ipsum"
+      "href": "/productos"
     },
     "cta": {
       "label": "Hazte cliente",
@@ -16,14 +16,14 @@
     },
     "account": {
       "label": "Iniciar sesión",
-      "href": "/nunc"
+      "href": "/cuenta"
     }
   },
   "nav": [
     {
-      "id": "lorem",
+      "id": "nosotros",
       "label": "Nosotros",
-      "href": "/lorem",
+      "href": "/nosotros",
       "phrase": "Quiénes somos y cómo trabajamos",
       "groups": [
         {
@@ -31,19 +31,19 @@
           "links": [
             {
               "label": "Perfil de empresa",
-              "href": "/lorem/perfil"
+              "href": "/perfil"
             },
             {
               "label": "Nuestra historia",
-              "href": "/lorem/relato"
+              "href": "/historia"
             },
             {
               "label": "Propósito",
-              "href": "/lorem/fin"
+              "href": "/proposito"
             },
             {
               "label": "Ética y normas",
-              "href": "/lorem/norma"
+              "href": "/etica"
             }
           ]
         },
@@ -52,11 +52,11 @@
           "links": [
             {
               "label": "Nuestra gente",
-              "href": "/lorem/gente"
+              "href": "/gente"
             },
             {
               "label": "Cultura",
-              "href": "/lorem/union"
+              "href": "/cultura"
             }
           ]
         },
@@ -65,20 +65,20 @@
           "links": [
             {
               "label": "Noticias",
-              "href": "/lorem/notas"
+              "href": "/noticias"
             },
             {
               "label": "Comunidad",
-              "href": "/lorem/actos"
+              "href": "/comunidad"
             }
           ]
         }
       ]
     },
     {
-      "id": "ipsum",
+      "id": "productos",
       "label": "Productos",
-      "href": "/ipsum",
+      "href": "/productos",
       "phrase": "Categorías, calidad y soluciones B2B",
       "groups": [
         {
@@ -86,19 +86,19 @@
           "links": [
             {
               "label": "Categorías",
-              "href": "/ipsum/lista"
+              "href": "/categorias"
             },
             {
               "label": "Marcas",
-              "href": "/ipsum/marca"
+              "href": "/marcas"
             },
             {
               "label": "Ideas culinarias",
-              "href": "/ipsum/notas"
+              "href": "/ideas-culinarias"
             },
             {
               "label": "Calidad",
-              "href": "/ipsum/calidad"
+              "href": "/calidad"
             }
           ]
         },
@@ -107,28 +107,28 @@
           "links": [
             {
               "label": "Servicios",
-              "href": "/ipsum/servicios"
+              "href": "/servicios"
             },
             {
               "label": "Showroom",
-              "href": "/ipsum/cocina"
+              "href": "/showroom"
             },
             {
               "label": "Pedidos en línea",
-              "href": "/ipsum/tecnica"
+              "href": "/pedidos"
             },
             {
               "label": "Especialidades",
-              "href": "/ipsum/mixto"
+              "href": "/especialidades"
             }
           ]
         }
       ]
     },
     {
-      "id": "dolor",
+      "id": "clientes",
       "label": "Clientes",
-      "href": "/dolor",
+      "href": "/clientes",
       "phrase": "Sectores que abastecemos cada día",
       "groups": [
         {
@@ -136,44 +136,44 @@
           "links": [
             {
               "label": "Restaurantes",
-              "href": "/dolor/mesas"
+              "href": "/restaurantes"
             },
             {
               "label": "Salud",
-              "href": "/dolor/salud"
+              "href": "/salud"
             },
             {
               "label": "Educación",
-              "href": "/dolor/aula"
+              "href": "/educacion"
             },
             {
               "label": "Gobierno",
-              "href": "/dolor/civico"
+              "href": "/gobierno"
             },
             {
               "label": "Comedores",
-              "href": "/dolor/gestion"
+              "href": "/comedores"
             },
             {
               "label": "Viajes",
-              "href": "/dolor/viaje"
+              "href": "/viajes"
             },
             {
               "label": "Ocio",
-              "href": "/dolor/ocio"
+              "href": "/ocio"
             },
             {
               "label": "Retail",
-              "href": "/dolor/tienda"
+              "href": "/retail"
             }
           ]
         }
       ]
     },
     {
-      "id": "amet",
+      "id": "proveedores",
       "label": "Proveedores",
-      "href": "/amet",
+      "href": "/proveedores",
       "phrase": "Alianzas y recursos para socios",
       "groups": [
         {
@@ -181,7 +181,7 @@
           "links": [
             {
               "label": "Recursos",
-              "href": "/amet/recursos"
+              "href": "/recursos"
             }
           ]
         },
@@ -190,7 +190,7 @@
           "links": [
             {
               "label": "Diversidad",
-              "href": "/amet/variedad"
+              "href": "/diversidad"
             }
           ]
         },
@@ -199,21 +199,21 @@
           "links": [
             {
               "label": "Inversionistas",
-              "href": "/sed"
+              "href": "/inversionistas"
             }
           ]
         }
       ]
     },
     {
-      "id": "sed",
+      "id": "inversionistas",
       "label": "Inversionistas",
-      "href": "/sed"
+      "href": "/inversionistas"
     },
     {
-      "id": "labore",
+      "id": "carreras",
       "label": "Carreras",
-      "href": "/labore"
+      "href": "/carreras"
     },
     {
       "id": "contacto",
@@ -229,19 +229,19 @@
         "links": [
           {
             "label": "Historia",
-            "href": "/lorem/relato"
+            "href": "/historia"
           },
           {
             "label": "Propósito",
-            "href": "/lorem/fin"
+            "href": "/proposito"
           },
           {
             "label": "Cultura",
-            "href": "/lorem/union"
+            "href": "/cultura"
           },
           {
             "label": "Noticias",
-            "href": "/lorem/notas"
+            "href": "/noticias"
           }
         ]
       },
@@ -250,19 +250,19 @@
         "links": [
           {
             "label": "Categorías",
-            "href": "/ipsum/lista"
+            "href": "/categorias"
           },
           {
             "label": "Marcas",
-            "href": "/ipsum/marca"
+            "href": "/marcas"
           },
           {
             "label": "Showroom",
-            "href": "/ipsum/cocina"
+            "href": "/showroom"
           },
           {
             "label": "Pedidos en línea",
-            "href": "/ipsum/tecnica"
+            "href": "/pedidos"
           }
         ]
       },
@@ -271,15 +271,15 @@
         "links": [
           {
             "label": "Proveedores",
-            "href": "/amet"
+            "href": "/proveedores"
           },
           {
             "label": "Inversionistas",
-            "href": "/sed"
+            "href": "/inversionistas"
           },
           {
             "label": "Carreras",
-            "href": "/labore"
+            "href": "/carreras"
           }
         ]
       },
@@ -292,11 +292,11 @@
           },
           {
             "label": "Sedes",
-            "href": "/nunc/sedes"
+            "href": "/sedes"
           },
           {
             "label": "Ética",
-            "href": "/lorem/norma"
+            "href": "/etica"
           },
           {
             "label": "Atención",
@@ -327,7 +327,7 @@
     "legalLinks": [
       {
         "label": "Ética y normas",
-        "href": "/lorem/norma"
+        "href": "/etica"
       },
       {
         "label": "Contacto",
@@ -352,7 +352,7 @@
           "support": "Distribución B2B de alimentos para hoteles, restaurantes, hospitales y más, con entrega diaria en Monterrey.",
           "cta": {
             "label": "Ver productos",
-            "href": "/ipsum"
+            "href": "/productos"
           }
         },
         {
@@ -363,7 +363,7 @@
           "support": "Certificaciones y cadena de frío multitemperatura para que tu operación reciba producto listo para servir.",
           "cta": {
             "label": "Conoce calidad",
-            "href": "/ipsum/calidad"
+            "href": "/calidad"
           }
         },
         {
@@ -388,11 +388,11 @@
           "links": [
             {
               "label": "Quiénes somos",
-              "href": "/lorem"
+              "href": "/nosotros"
             },
             {
               "label": "Nuestra historia",
-              "href": "/lorem/relato"
+              "href": "/historia"
             }
           ]
         },
@@ -418,7 +418,7 @@
           "links": [
             {
               "label": "Ver carreras",
-              "href": "/labore"
+              "href": "/carreras"
             }
           ]
         }
@@ -431,13 +431,13 @@
         "support": "Oficinas, CEDIS y entregas los siete días en Monterrey; pedidos a EE. UU. bajo calendario y contrato acordado.",
         "cta": {
           "label": "Ver ubicaciones",
-          "href": "/nunc/sedes"
+          "href": "/sedes"
         }
       }
     },
     {
-      "id": "lorem",
-      "href": "/lorem",
+      "id": "nosotros",
+      "href": "/nosotros",
       "template": "hub",
       "kicker": "Nosotros",
       "h1": "Frescos del Valle",
@@ -450,42 +450,42 @@
       "empty": "No hay resultados con ese filtro.",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Historia de la empresa",
           "h3": "Nuestra historia",
           "support": "Fundada en 2013 para abastecer frutas y verduras de alta calidad a hoteles y restaurantes."
         },
         {
-          "href": "/lorem/perfil",
+          "href": "/perfil",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Perfil corporativo",
           "h3": "Perfil de empresa",
           "support": "Misión, visión y afiliaciones que sostienen nuestro crecimiento en México y EE. UU."
         },
         {
-          "href": "/lorem/fin",
+          "href": "/proposito",
           "image": "/img/shell/shell-truck-road.jpg",
           "alt": "Propósito",
           "h3": "Propósito",
           "support": "Excelencia en cada pedido para ser el proveedor más confiable y valioso de nuestros clientes."
         },
         {
-          "href": "/lorem/norma",
+          "href": "/etica",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Ética y normas",
           "h3": "Ética y normas",
           "support": "Política de calidad, conducta y anticorrupción alineadas a un servicio digno y transparente."
         },
         {
-          "href": "/lorem/gente",
+          "href": "/gente",
           "image": "/img/shell/shell-warehouse-crew.jpg",
           "alt": "Colaboradores",
           "h3": "Nuestra gente",
           "support": "Cerca de 300 colaboradores impulsan logística, calidad y atención comercial cada día."
         },
         {
-          "href": "/lorem/notas",
+          "href": "/noticias",
           "image": "/img/shell/shell-hero-plates.jpg",
           "alt": "Noticias",
           "h3": "Noticias",
@@ -494,8 +494,8 @@
       ]
     },
     {
-      "id": "lorem-perfil",
-      "href": "/lorem/perfil",
+      "id": "perfil",
+      "href": "/perfil",
       "template": "simple",
       "kicker": "Perfil",
       "h1": "Perfil de la empresa",
@@ -518,8 +518,8 @@
       ]
     },
     {
-      "id": "lorem-relato",
-      "href": "/lorem/relato",
+      "id": "historia",
+      "href": "/historia",
       "template": "detail",
       "kicker": "Historia",
       "h1": "Nuestra historia",
@@ -534,21 +534,21 @@
       "relatedTitle": "Sigue explorando",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -557,8 +557,8 @@
       ]
     },
     {
-      "id": "lorem-fin",
-      "href": "/lorem/fin",
+      "id": "proposito",
+      "href": "/proposito",
       "template": "simple",
       "kicker": "Propósito",
       "h1": "Para qué existimos",
@@ -577,8 +577,8 @@
       ]
     },
     {
-      "id": "lorem-norma",
-      "href": "/lorem/norma",
+      "id": "etica",
+      "href": "/etica",
       "template": "simple",
       "kicker": "Ética",
       "h1": "Ética y calidad",
@@ -597,8 +597,8 @@
       ]
     },
     {
-      "id": "lorem-gente",
-      "href": "/lorem/gente",
+      "id": "gente",
+      "href": "/gente",
       "template": "simple",
       "kicker": "Gente",
       "h1": "Nuestra gente",
@@ -617,8 +617,8 @@
       ]
     },
     {
-      "id": "lorem-union",
-      "href": "/lorem/union",
+      "id": "cultura",
+      "href": "/cultura",
       "template": "simple",
       "kicker": "Cultura",
       "h1": "Cultura FDV",
@@ -633,8 +633,8 @@
       ]
     },
     {
-      "id": "lorem-notas",
-      "href": "/lorem/notas",
+      "id": "noticias",
+      "href": "/noticias",
       "template": "listing",
       "kicker": "Noticias",
       "h1": "Noticias FDV",
@@ -647,21 +647,21 @@
       "empty": "Sin notas para ese filtro.",
       "cards": [
         {
-          "href": "/lorem/notas/nota",
+          "href": "/noticias/nota",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Entrega con cadena de frío",
           "h3": "Calidad en la ruta",
           "support": "Cómo mantenemos frescura e inocuidad desde el CEDIS hasta tu cocina."
         },
         {
-          "href": "/lorem/actos",
+          "href": "/comunidad",
           "image": "/img/shell/shell-field-crate.jpg",
           "alt": "Impacto comunitario",
           "h3": "Comunidad",
           "support": "Iniciativas locales y bienestar alrededor de nuestra operación en Monterrey."
         },
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Historia FDV",
           "h3": "Una década de crecimiento",
@@ -670,8 +670,8 @@
       ]
     },
     {
-      "id": "lorem-actos",
-      "href": "/lorem/actos",
+      "id": "comunidad",
+      "href": "/comunidad",
       "template": "listing",
       "kicker": "Comunidad",
       "h1": "Comunidad y actos",
@@ -684,21 +684,21 @@
       "empty": "Sin resultados.",
       "cards": [
         {
-          "href": "/lorem/notas/nota",
+          "href": "/noticias/nota",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Bienestar",
           "h3": "Bienestar",
           "support": "Espacios seguros y trato digno para cada colaborador de Frescos del Valle."
         },
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Historia",
           "h3": "Historia",
           "support": "Cómo crecimos con hoteles y restaurantes como primer foco de servicio."
         },
         {
-          "href": "/lorem/fin",
+          "href": "/proposito",
           "image": "/img/shell/shell-truck-road.jpg",
           "alt": "Propósito",
           "h3": "Propósito",
@@ -707,8 +707,8 @@
       ]
     },
     {
-      "id": "lorem-nota",
-      "href": "/lorem/notas/nota",
+      "id": "noticias-nota",
+      "href": "/noticias/nota",
       "template": "detail",
       "kicker": "Nota",
       "h1": "Calidad en cada entrega",
@@ -723,21 +723,21 @@
       "relatedTitle": "También te puede interesar",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -746,8 +746,8 @@
       ]
     },
     {
-      "id": "ipsum",
-      "href": "/ipsum",
+      "id": "productos",
+      "href": "/productos",
       "template": "hub",
       "kicker": "Productos",
       "h1": "Todo tu abasto B2B",
@@ -760,42 +760,42 @@
       "empty": "Sin resultados.",
       "cards": [
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-hero-produce.jpg",
           "alt": "Categorías de producto",
           "h3": "Categorías",
           "support": "Fruta, verdura, latas y secos, hierbas, jugos, cárnicos, lácteos, abarrotes y suministros."
         },
         {
-          "href": "/ipsum/marca",
+          "href": "/marcas",
           "image": "/img/shell/shell-hero-plates.jpg",
           "alt": "Marcas",
           "h3": "Marcas",
           "support": "Amplia variedad de marcas para armar menús consistentes sin multiplicar proveedores."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Aseguramiento de calidad",
           "h3": "Calidad",
           "support": "ISO 9001, GLOBALG.A.P., FDA y SENASICA respaldan inocuidad de punta a punta."
         },
         {
-          "href": "/ipsum/cocina",
+          "href": "/showroom",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Showroom culinario",
           "h3": "Showroom",
           "support": "Cocina profesional, refrigeración y espacio para degustaciones y capacitaciones."
         },
         {
-          "href": "/ipsum/servicios",
+          "href": "/servicios",
           "image": "/img/shell/shell-truck-road.jpg",
           "alt": "Servicios de entrega",
           "h3": "Servicios",
           "support": "Entregas diarias L–D en MTY; pedidos EE. UU. programados bajo contrato."
         },
         {
-          "href": "/ipsum/tecnica",
+          "href": "/pedidos",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Plataforma de pedidos",
           "h3": "Plataforma",
@@ -804,8 +804,8 @@
       ]
     },
     {
-      "id": "ipsum-lista",
-      "href": "/ipsum/lista",
+      "id": "categorias",
+      "href": "/categorias",
       "template": "listing",
       "kicker": "Categorías",
       "h1": "Categorías de producto",
@@ -818,42 +818,42 @@
       "empty": "Sin categorías para ese filtro.",
       "cards": [
         {
-          "href": "/ipsum/lista/pieza",
+          "href": "/categorias/pieza",
           "image": "/img/shell/shell-hero-produce.jpg",
           "alt": "Fruta",
           "h3": "Fruta",
           "support": "Fruta fresca seleccionada para hotelería y restaurantes. Priorizamos madurez, inocuidad y consistencia de temporada para menús diarios y banquetes."
         },
         {
-          "href": "/ipsum/cocina",
+          "href": "/showroom",
           "image": "/img/shell/shell-field-crate.jpg",
           "alt": "Verdura",
           "h3": "Verdura",
           "support": "Verdura de alta rotación con cadena de frío cuidada. Ideal para prep diaria, institucionales y eventos de alto volumen."
         },
         {
-          "href": "/ipsum/marca",
+          "href": "/marcas",
           "image": "/img/shell/shell-hero-plates.jpg",
           "alt": "Latas y secos",
           "h3": "Latas y secos",
           "support": "Despensa estable para recetas base y back-up de menú. Complementa el fresco sin romper costos ni tiempos de cocina."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Hierbas",
           "h3": "Hierbas",
           "support": "Hierbas aromáticas para remates y salsas. Frescura y presentación pensadas para chefs y operaciones de alto estándar."
         },
         {
-          "href": "/ipsum/mixto",
+          "href": "/especialidades",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Jugos",
           "h3": "Jugos",
           "support": "Jugos y bebidas para desayunos, banquetes y servicio continuo. Opciones listas para complementar tu carta."
         },
         {
-          "href": "/ipsum/tecnica",
+          "href": "/pedidos",
           "image": "/img/shell/shell-truck-road.jpg",
           "alt": "Cárnicos y mariscos",
           "h3": "Cárnicos y mariscos",
@@ -862,8 +862,8 @@
       ]
     },
     {
-      "id": "ipsum-pieza",
-      "href": "/ipsum/lista/pieza",
+      "id": "categorias-pieza",
+      "href": "/categorias/pieza",
       "template": "detail",
       "kicker": "Categoría",
       "h1": "Fruta fresca",
@@ -878,21 +878,21 @@
       "relatedTitle": "Relacionado",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -901,8 +901,8 @@
       ]
     },
     {
-      "id": "ipsum-marca",
-      "href": "/ipsum/marca",
+      "id": "marcas",
+      "href": "/marcas",
       "template": "simple",
       "kicker": "Marcas",
       "h1": "Marcas y surtido",
@@ -921,8 +921,8 @@
       ]
     },
     {
-      "id": "ipsum-notas",
-      "href": "/ipsum/notas",
+      "id": "ideas-culinarias",
+      "href": "/ideas-culinarias",
       "template": "simple",
       "kicker": "Ideas",
       "h1": "Ideas culinarias",
@@ -941,8 +941,8 @@
       ]
     },
     {
-      "id": "ipsum-calidad",
-      "href": "/ipsum/calidad",
+      "id": "calidad",
+      "href": "/calidad",
       "template": "simple",
       "kicker": "Calidad",
       "h1": "Aseguramiento de calidad",
@@ -961,8 +961,8 @@
       ]
     },
     {
-      "id": "ipsum-servicios",
-      "href": "/ipsum/servicios",
+      "id": "servicios",
+      "href": "/servicios",
       "template": "simple",
       "kicker": "Servicios",
       "h1": "Logística y servicio",
@@ -993,8 +993,8 @@
       ]
     },
     {
-      "id": "ipsum-cocina",
-      "href": "/ipsum/cocina",
+      "id": "showroom",
+      "href": "/showroom",
       "template": "detail",
       "kicker": "Showroom",
       "h1": "Showroom culinario",
@@ -1009,21 +1009,21 @@
       "relatedTitle": "Sigue explorando",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1032,8 +1032,8 @@
       ]
     },
     {
-      "id": "ipsum-tecnica",
-      "href": "/ipsum/tecnica",
+      "id": "pedidos",
+      "href": "/pedidos",
       "template": "simple",
       "kicker": "Tecnología",
       "h1": "Pedidos en línea",
@@ -1052,8 +1052,8 @@
       ]
     },
     {
-      "id": "ipsum-mixto",
-      "href": "/ipsum/mixto",
+      "id": "especialidades",
+      "href": "/especialidades",
       "template": "simple",
       "kicker": "Especialidades",
       "h1": "Líneas especializadas",
@@ -1072,8 +1072,8 @@
       ]
     },
     {
-      "id": "dolor",
-      "href": "/dolor",
+      "id": "clientes",
+      "href": "/clientes",
       "template": "hub",
       "kicker": "Clientes",
       "h1": "A quién servimos",
@@ -1086,42 +1086,42 @@
       "empty": "Sin sectores.",
       "cards": [
         {
-          "href": "/dolor/mesas",
+          "href": "/restaurantes",
           "image": "/img/shell/shell-hero-produce.jpg",
           "alt": "Restaurantes",
           "h3": "Restaurantes",
           "support": "Abasto estable y logística eficiente para independents, cadenas y cocina familiar."
         },
         {
-          "href": "/dolor/salud",
+          "href": "/salud",
           "image": "/img/shell/shell-hero-plates.jpg",
           "alt": "Salud",
           "h3": "Salud",
           "support": "Volumen institucional con foco en nutrición, inocuidad y operación culinaria hospitalaria."
         },
         {
-          "href": "/dolor/aula",
+          "href": "/educacion",
           "image": "/img/shell/shell-field-crate.jpg",
           "alt": "Educación",
           "h3": "Educación",
           "support": "Compra centralizada de fresco, básicos y equipo para campus de alto volumen diario."
         },
         {
-          "href": "/dolor/civico",
+          "href": "/gobierno",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Gobierno",
           "h3": "Gobierno",
           "support": "Flexibilidad de marcas, alimentos y suministros para centralizar compras públicas."
         },
         {
-          "href": "/dolor/gestion",
+          "href": "/comedores",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Comedores industriales",
           "h3": "Comedores",
           "support": "Modelo unificado de suministro para consistencia, eficiencia y menor costo logístico."
         },
         {
-          "href": "/dolor/viaje",
+          "href": "/viajes",
           "image": "/img/shell/shell-truck-road.jpg",
           "alt": "Viajes y aeropuerto",
           "h3": "Viajes",
@@ -1130,8 +1130,8 @@
       ]
     },
     {
-      "id": "dolor-mesas",
-      "href": "/dolor/mesas",
+      "id": "restaurantes",
+      "href": "/restaurantes",
       "template": "detail",
       "kicker": "Restaurantes",
       "h1": "Restaurantes",
@@ -1146,21 +1146,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1169,8 +1169,8 @@
       ]
     },
     {
-      "id": "dolor-salud",
-      "href": "/dolor/salud",
+      "id": "salud",
+      "href": "/salud",
       "template": "detail",
       "kicker": "Salud",
       "h1": "Hospitales y salud",
@@ -1185,21 +1185,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1208,8 +1208,8 @@
       ]
     },
     {
-      "id": "dolor-aula",
-      "href": "/dolor/aula",
+      "id": "educacion",
+      "href": "/educacion",
       "template": "detail",
       "kicker": "Educación",
       "h1": "Educación",
@@ -1224,21 +1224,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1247,8 +1247,8 @@
       ]
     },
     {
-      "id": "dolor-civico",
-      "href": "/dolor/civico",
+      "id": "gobierno",
+      "href": "/gobierno",
       "template": "detail",
       "kicker": "Gobierno",
       "h1": "Gobierno",
@@ -1263,21 +1263,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1286,8 +1286,8 @@
       ]
     },
     {
-      "id": "dolor-gestion",
-      "href": "/dolor/gestion",
+      "id": "comedores",
+      "href": "/comedores",
       "template": "detail",
       "kicker": "Comedores",
       "h1": "Comedores industriales",
@@ -1302,21 +1302,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1325,8 +1325,8 @@
       ]
     },
     {
-      "id": "dolor-viaje",
-      "href": "/dolor/viaje",
+      "id": "viajes",
+      "href": "/viajes",
       "template": "detail",
       "kicker": "Viajes",
       "h1": "Viajes y aeropuerto",
@@ -1341,21 +1341,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1364,8 +1364,8 @@
       ]
     },
     {
-      "id": "dolor-ocio",
-      "href": "/dolor/ocio",
+      "id": "ocio",
+      "href": "/ocio",
       "template": "detail",
       "kicker": "Ocio",
       "h1": "Ocio y entretenimiento",
@@ -1380,21 +1380,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1403,8 +1403,8 @@
       ]
     },
     {
-      "id": "dolor-tienda",
-      "href": "/dolor/tienda",
+      "id": "retail",
+      "href": "/retail",
       "template": "detail",
       "kicker": "Retail",
       "h1": "Retail y comercio",
@@ -1419,21 +1419,21 @@
       "relatedTitle": "También útil",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1442,8 +1442,8 @@
       ]
     },
     {
-      "id": "amet",
-      "href": "/amet",
+      "id": "proveedores",
+      "href": "/proveedores",
       "template": "hub",
       "kicker": "Proveedores",
       "h1": "Proveedores",
@@ -1456,21 +1456,21 @@
       "empty": "Sin resultados.",
       "cards": [
         {
-          "href": "/amet/recursos",
+          "href": "/recursos",
           "image": "/img/shell/shell-hero-plates.jpg",
           "alt": "Recursos",
           "h3": "Recursos",
           "support": "Formatos y guías de proveedor: contenido pendiente de entrega oficial FDV."
         },
         {
-          "href": "/amet/variedad",
+          "href": "/diversidad",
           "image": "/img/shell/shell-field-crate.jpg",
           "alt": "Diversidad",
           "h3": "Diversidad",
           "support": "Interés en abastecimiento responsable y desarrollo de socios locales."
         },
         {
-          "href": "/sed",
+          "href": "/inversionistas",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Inversionistas",
           "h3": "Inversionistas",
@@ -1479,8 +1479,8 @@
       ]
     },
     {
-      "id": "amet-recursos",
-      "href": "/amet/recursos",
+      "id": "recursos",
+      "href": "/recursos",
       "template": "simple",
       "kicker": "Recursos",
       "h1": "Recursos para proveedores",
@@ -1499,8 +1499,8 @@
       ]
     },
     {
-      "id": "amet-variedad",
-      "href": "/amet/variedad",
+      "id": "diversidad",
+      "href": "/diversidad",
       "template": "simple",
       "kicker": "Diversidad",
       "h1": "Diversidad de proveedores",
@@ -1519,8 +1519,8 @@
       ]
     },
     {
-      "id": "sed",
-      "href": "/sed",
+      "id": "inversionistas",
+      "href": "/inversionistas",
       "template": "simple",
       "kicker": "Inversionistas",
       "h1": "Inversionistas",
@@ -1539,8 +1539,8 @@
       ]
     },
     {
-      "id": "labore",
-      "href": "/labore",
+      "id": "carreras",
+      "href": "/carreras",
       "template": "listing",
       "kicker": "Carreras",
       "h1": "Trabaja en FDV",
@@ -1553,35 +1553,35 @@
       "empty": "Sin vacantes para ese filtro. Escribe a RH.",
       "cards": [
         {
-          "href": "/labore/puesto",
+          "href": "/operaciones",
           "image": "/img/shell/shell-truck-road.jpg",
           "alt": "Operaciones",
           "h3": "Operaciones",
           "support": "CEDIS, rutas y cadena de frío. Detalle de vacante: próximamente."
         },
         {
-          "href": "/labore/otro",
+          "href": "/comercial",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Comercial",
           "h3": "Comercial",
           "support": "Ventas y atención a cuentas foodservice. Postula vía RH mientras publicamos roles."
         },
         {
-          "href": "/labore/tercio",
+          "href": "/calidad-admin",
           "image": "/img/shell/shell-warehouse-crew.jpg",
           "alt": "Calidad y admin",
           "h3": "Calidad y admin",
           "support": "Inocuidad, soporte y administración. Contacto: Alejandra.padilla@frescosdelvalle.com"
         },
         {
-          "href": "/lorem/gente",
+          "href": "/gente",
           "image": "/img/shell/shell-warehouse-crew.jpg",
           "alt": "Nuestra gente",
           "h3": "Nuestra gente",
           "support": "Conoce la cultura de ~300 colaboradores detrás de cada entrega."
         },
         {
-          "href": "/amet/recursos",
+          "href": "/recursos",
           "image": "/img/shell/shell-hero-plates.jpg",
           "alt": "Proveedores",
           "h3": "¿Eres proveedor?",
@@ -1590,8 +1590,8 @@
       ]
     },
     {
-      "id": "labore-puesto",
-      "href": "/labore/puesto",
+      "id": "operaciones",
+      "href": "/operaciones",
       "template": "detail",
       "kicker": "Vacante",
       "h1": "Operaciones",
@@ -1606,21 +1606,21 @@
       "relatedTitle": "Más sobre FDV",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1629,8 +1629,8 @@
       ]
     },
     {
-      "id": "labore-otro",
-      "href": "/labore/otro",
+      "id": "comercial",
+      "href": "/comercial",
       "template": "detail",
       "kicker": "Vacante",
       "h1": "Comercial",
@@ -1645,21 +1645,21 @@
       "relatedTitle": "Más sobre FDV",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1668,8 +1668,8 @@
       ]
     },
     {
-      "id": "labore-tercio",
-      "href": "/labore/tercio",
+      "id": "calidad-admin",
+      "href": "/calidad-admin",
       "template": "detail",
       "kicker": "Vacante",
       "h1": "Calidad y admin",
@@ -1684,21 +1684,21 @@
       "relatedTitle": "Más sobre FDV",
       "cards": [
         {
-          "href": "/lorem/relato",
+          "href": "/historia",
           "image": "/img/shell/shell-kitchen-pass.jpg",
           "alt": "Operación Frescos del Valle",
           "h3": "Nuestra historia",
           "support": "Desde 2013 abastecemos hoteles y restaurantes con frescura e inocuidad en cada entrega."
         },
         {
-          "href": "/ipsum/calidad",
+          "href": "/calidad",
           "image": "/img/shell/shell-farm-equipment.jpg",
           "alt": "Control de calidad",
           "h3": "Calidad certificada",
           "support": "ISO 9001, GLOBALG.A.P., registros FDA y permisos SENASICA respaldan nuestra cadena."
         },
         {
-          "href": "/ipsum/lista",
+          "href": "/categorias",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
@@ -1785,8 +1785,8 @@
       "thanks": "Gracias. Recibimos tu solicitud; un asesor de Frescos del Valle te contactará en 1 o 2 días hábiles."
     },
     {
-      "id": "nunc",
-      "href": "/nunc",
+      "id": "cuenta",
+      "href": "/cuenta",
       "template": "contact",
       "kicker": "Cuenta",
       "h1": "Iniciar sesión",
@@ -1816,8 +1816,8 @@
       "thanks": "Si ya tienes cuenta, usa el portal en frescosdelvalle.com. Para alta nueva, ve a Contacto."
     },
     {
-      "id": "nunc-sedes",
-      "href": "/nunc/sedes",
+      "id": "sedes",
+      "href": "/sedes",
       "template": "simple",
       "kicker": "Sedes",
       "h1": "Nuestras sedes",
