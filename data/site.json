@@ -216,35 +216,6 @@
       "href": "/labore"
     },
     {
-      "id": "magna",
-      "label": "Sustentabilidad",
-      "href": "/magna",
-      "phrase": "Personas, productos y planeta",
-      "groups": [
-        {
-          "h3": "Pilares",
-          "links": [
-            {
-              "label": "Nuestro enfoque",
-              "href": "/magna/enfoque"
-            },
-            {
-              "label": "Personas",
-              "href": "/magna/gente"
-            },
-            {
-              "label": "Productos",
-              "href": "/magna/surtido"
-            },
-            {
-              "label": "Planeta",
-              "href": "/magna/orbis"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "contacto",
       "label": "Contacto",
       "href": "/contacto"
@@ -263,10 +234,6 @@
           {
             "label": "Propósito",
             "href": "/lorem/fin"
-          },
-          {
-            "label": "Sustentabilidad",
-            "href": "/magna"
           },
           {
             "label": "Cultura",
@@ -411,13 +378,6 @@
           }
         }
       ],
-      "blue": {
-        "sectionTitle": "Sustentabilidad con impacto real",
-        "cta": {
-          "label": "Ver enfoque",
-          "href": "/magna"
-        }
-      },
       "bands": [
         {
           "align": "end",
@@ -433,23 +393,6 @@
             {
               "label": "Nuestra historia",
               "href": "/lorem/relato"
-            }
-          ]
-        },
-        {
-          "align": "start",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "kicker": "Sustentabilidad",
-          "sectionTitle": "Personas, producto y planeta",
-          "support": "Preservamos el entorno y potenciamos el desarrollo humano alineando gobernanza con el servicio al cliente.",
-          "links": [
-            {
-              "label": "Nuestro enfoque",
-              "href": "/magna"
-            },
-            {
-              "label": "Ver pilares",
-              "href": "/magna/enfoque"
             }
           ]
         },
@@ -1643,13 +1586,6 @@
           "alt": "Proveedores",
           "h3": "¿Eres proveedor?",
           "support": "Altas de proveedor van por compras, no por bolsa de trabajo."
-        },
-        {
-          "href": "/magna/gente",
-          "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Personas y sustentabilidad",
-          "h3": "Personas",
-          "support": "Bienestar, inclusión y desarrollo humano en nuestro pilar de sustentabilidad."
         }
       ]
     },
@@ -1767,144 +1703,6 @@
           "alt": "Catálogo de productos",
           "h3": "Más de 5,000 artículos",
           "support": "Fruta, verdura, cárnicos, lácteos, abarrotes y suministros en un solo pedido B2B."
-        }
-      ]
-    },
-    {
-      "id": "magna",
-      "href": "/magna",
-      "template": "hub",
-      "kicker": "Sustentabilidad",
-      "h1": "Sustentabilidad FDV",
-      "support": "Preservar el entorno y potenciar el desarrollo humano con gobernanza responsable.",
-      "image": "/img/shell/shell-hero-produce.jpg",
-      "alt": "Sustentabilidad",
-      "h2": "Pilares",
-      "intro": "Enfoque, personas, productos y planeta alineados a nuestros objetivos comerciales.",
-      "filterLabel": "Buscar",
-      "empty": "Sin resultados.",
-      "cards": [
-        {
-          "href": "/magna/enfoque",
-          "image": "/img/shell/shell-hero-plates.jpg",
-          "alt": "Enfoque",
-          "h3": "Nuestro enfoque",
-          "support": "Gobernanza, responsabilidad social y ambiental con metas claras de servicio."
-        },
-        {
-          "href": "/magna/gente",
-          "image": "/img/shell/shell-field-crate.jpg",
-          "alt": "Personas",
-          "h3": "Personas",
-          "support": "Trabajo digno, inclusión y hábitos saludables en comunidades y equipo."
-        },
-        {
-          "href": "/magna/surtido",
-          "image": "/img/shell/shell-farm-equipment.jpg",
-          "alt": "Productos",
-          "h3": "Productos",
-          "support": "Abasto responsable y respeto a derechos humanos en toda la red de suministro."
-        },
-        {
-          "href": "/magna/orbis",
-          "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Planeta",
-          "h3": "Planeta",
-          "support": "Agricultura ecológica, residuos y un entorno sano para futuras generaciones."
-        },
-        {
-          "href": "/nunc/sedes",
-          "image": "/img/shell/shell-city-dusk.jpg",
-          "alt": "Sedes",
-          "h3": "Sedes",
-          "support": "Operación en Monterrey con cobertura metropolitana y servicio a EE. UU."
-        },
-        {
-          "href": "/lorem/relato",
-          "image": "/img/shell/shell-kitchen-pass.jpg",
-          "alt": "Historia",
-          "h3": "Historia",
-          "support": "Más de una década construyendo confianza en foodservice."
-        }
-      ]
-    },
-    {
-      "id": "magna-enfoque",
-      "href": "/magna/enfoque",
-      "template": "simple",
-      "kicker": "Enfoque",
-      "h1": "Nuestro enfoque",
-      "support": "Sostenibilidad alineada a gobernanza, responsabilidad social y ambiental.",
-      "image": "/img/shell/shell-hero-plates.jpg",
-      "alt": "Enfoque",
-      "blocks": [
-        {
-          "h2": "Principio rector",
-          "support": "El enfoque de sostenibilidad de Frescos del Valle se estructura bajo el principio de preservar el entorno y potenciar el desarrollo humano."
-        },
-        {
-          "h2": "Derechos humanos",
-          "support": "Cada colaborador merece espacio seguro y trato digno. Mejoramos de forma continua el abastecimiento responsable."
-        }
-      ]
-    },
-    {
-      "id": "magna-gente",
-      "href": "/magna/gente",
-      "template": "simple",
-      "kicker": "Personas",
-      "h1": "Personas",
-      "support": "Impacto positivo en comunidades y un entorno diverso e inclusivo en FDV.",
-      "image": "/img/shell/shell-field-crate.jpg",
-      "alt": "Personas",
-      "blocks": [
-        {
-          "h2": "Bienestar social",
-          "support": "Generamos impacto positivo y transformamos vidas en nuestras comunidades, impulsando hábitos alimenticios más saludables."
-        },
-        {
-          "h2": "Inclusión",
-          "support": "Promovemos diversidad e inclusión mientras desarrollamos a colaboradores, clientes y futuras generaciones."
-        }
-      ]
-    },
-    {
-      "id": "magna-surtido",
-      "href": "/magna/surtido",
-      "template": "simple",
-      "kicker": "Productos",
-      "h1": "Productos responsables",
-      "support": "Compras con criterio ético y ambiental a lo largo de la cadena.",
-      "image": "/img/shell/shell-farm-equipment.jpg",
-      "alt": "Productos",
-      "blocks": [
-        {
-          "h2": "Abasto responsable",
-          "support": "Elevamos estándares de bienestar animal y mitigamos impactos ambientales, sociales y éticos de nuestras compras."
-        },
-        {
-          "h2": "Derechos en la red",
-          "support": "Aseguramos respeto a derechos humanos en operaciones internas y en toda la red de suministro."
-        }
-      ]
-    },
-    {
-      "id": "magna-orbis",
-      "href": "/magna/orbis",
-      "template": "simple",
-      "kicker": "Planeta",
-      "h1": "Planeta",
-      "support": "Proteger la Tierra con metas científicas, agricultura ecológica y mejor gestión de residuos.",
-      "image": "/img/shell/shell-kitchen-pass.jpg",
-      "alt": "Planeta",
-      "blocks": [
-        {
-          "h2": "Compromiso",
-          "support": "Implementamos metas científicas, apoyamos agricultura ecológica y transformamos la gestión de residuos."
-        },
-        {
-          "h2": "Legado",
-          "support": "Buscamos dejar un entorno sano y preservado a las futuras generaciones desde nuestra operación diaria."
         }
       ]
     },

@@ -170,10 +170,10 @@ function renderPage(data, page) {
         <button class="hero-arrow next" type="button" id="hero-next" aria-label="${esc(page.nextLabel)}">${svg.chevR}</button>
         <div class="dots" id="hero-dots">${dots}</div>
       </section>
-      <section class="blue-band">
+      ${page.blue ? `<section class="blue-band">
         <h2>${esc(page.blue.sectionTitle)}</h2>
         <a class="btn btn-ghost" href="${esc(page.blue.cta.href)}">${esc(page.blue.cta.label)}</a>
-      </section>
+      </section>` : ""}
       ${page.bands.map(band).join("")}
       ${band(page.closer)}`;
   }
