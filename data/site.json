@@ -120,10 +120,6 @@
             {
               "label": "Especialidades",
               "href": "/ipsum/mixto"
-            },
-            {
-              "label": "Divisiones",
-              "href": "/ipsum/casas"
             }
           ]
         }
@@ -856,7 +852,7 @@
           "support": "Entregas diarias L–D en MTY; pedidos EE. UU. programados bajo contrato."
         },
         {
-          "href": "/ipsum/casas",
+          "href": "/ipsum/tecnica",
           "image": "/img/shell/shell-city-dusk.jpg",
           "alt": "Plataforma de pedidos",
           "h3": "Plataforma",
@@ -1129,26 +1125,6 @@
         {
           "h2": "Integrado a tu pedido",
           "support": "Pide especialidades junto con el resto del surtido en la misma plataforma y ruta de entrega."
-        }
-      ]
-    },
-    {
-      "id": "ipsum-casas",
-      "href": "/ipsum/casas",
-      "template": "simple",
-      "kicker": "Divisiones",
-      "h1": "Divisiones de negocio",
-      "support": "Información de unidades especializadas en actualización. Mientras tanto, conoce el abasto integral.",
-      "image": "/img/shell/shell-city-dusk.jpg",
-      "alt": "Divisiones",
-      "blocks": [
-        {
-          "h2": "Próximamente",
-          "support": "Detalle de divisiones especializadas pendiente de entrega por FDV. Consulta categorías y servicios actuales en Productos."
-        },
-        {
-          "h2": "Exportación",
-          "support": "Atendemos compradores en EE. UU. con foco en inocuidad, certificaciones y continuidad de suministro bajo contrato."
         }
       ]
     },
