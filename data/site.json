@@ -1,6 +1,7 @@
 {
   "_note": "Textos e imagenes editables. Espanol primario (cuestionario FDV). Tras agregar rutas: node scripts/pages.mjs.",
-  "brand": "VALLE",
+  "brand": "Frescos del Valle",
+  "siteName": "Frescos del Valle",
   "skip": "Saltar al contenido",
   "navLabel": "Principal",
   "utils": {

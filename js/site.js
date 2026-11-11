@@ -408,5 +408,9 @@ const id = document.body.dataset.page;
 const page = data.pages.find((item) => item.id === id) || data.pages[0];
 const app = document.getElementById("app");
 app.innerHTML = `${chrome(data, page)}<main id="contenido">${renderPage(data, page)}</main>${footer(data)}`;
-document.title = `${data.brand} — ${page.h1 || page.slides?.[0]?.sectionTitle || data.brand}`;
+const siteName = data.siteName || data.brand;
+const pageTitle = page.h1 || page.slides?.[0]?.sectionTitle || siteName;
+document.title = page.template === "home" || pageTitle === siteName
+  ? siteName
+  : `${pageTitle} — ${siteName}`;
 bind(data, page);

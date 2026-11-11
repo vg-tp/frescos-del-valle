@@ -55,12 +55,47 @@ function walk(node, trail) {
 
 walk(site, "site");
 
-const htmlFor = (page) => `<!DOCTYPE html>
+const siteName = site.siteName || site.brand;
+const description = site.footer?.blurb || siteName;
+const origin = "https://frescos-del-valle.vercel.app";
+const escAttr = (value) =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+const htmlFor = (page) => {
+  const pageTitle = page.h1 || page.slides?.[0]?.sectionTitle || siteName;
+  const shareTitle = page.template === "home" || pageTitle === siteName
+    ? siteName
+    : `${pageTitle} — ${siteName}`;
+  const pageUrl = `${origin}${page.href === "/" ? "/" : page.href}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: origin,
+    description,
+  };
+
+  return `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${site.brand}</title>
+  <title>${escAttr(shareTitle)}</title>
+  <meta name="application-name" content="${escAttr(siteName)}" />
+  <meta name="description" content="${escAttr(description)}" />
+  <meta property="og:site_name" content="${escAttr(siteName)}" />
+  <meta property="og:title" content="${escAttr(shareTitle)}" />
+  <meta property="og:description" content="${escAttr(description)}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${escAttr(pageUrl)}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="${escAttr(shareTitle)}" />
+  <meta name="twitter:description" content="${escAttr(description)}" />
+  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -73,6 +108,7 @@ const htmlFor = (page) => `<!DOCTYPE html>
 </body>
 </html>
 `;
+};
 
 for (const page of site.pages) {
   const file = page.href === "/" ? "index.html" : `${page.href.slice(1)}.html`;
