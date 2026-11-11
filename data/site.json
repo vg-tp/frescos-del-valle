@@ -489,7 +489,7 @@
         "image": "/img/shell/shell-city-dusk.jpg",
         "kicker": "Sedes",
         "sectionTitle": "CEDIS y corporativo en Monterrey",
-        "support": "Oficinas, CEDIS y cobertura metropolitana; pedidos a EE. UU. bajo calendario y contrato.",
+        "support": "Oficinas, CEDIS y entregas los siete días en Monterrey; pedidos a EE. UU. bajo calendario y contrato acordado.",
         "cta": {
           "label": "Ver ubicaciones",
           "href": "/nunc/sedes"
@@ -574,7 +574,7 @@
         },
         {
           "h2": "Afiliaciones",
-          "support": "Asociación de Hoteles de Nuevo León, CANACO, CAINTRA y Cluster Agro Alimentario (Agroalim)."
+          "support": "Afiliados a Asociación de Hoteles de NL, CANACO, CAINTRA y Clúster Agroalimentario, con respaldo institucional."
         }
       ]
     },
@@ -1027,17 +1027,29 @@
       "template": "simple",
       "kicker": "Servicios",
       "h1": "Logística y servicio",
-      "support": "Entrega diaria, flotilla refrigerada y reglas claras de pedido mínimo y reposición.",
+      "support": "Entrega diaria, flotilla refrigerada, corte a las 0:00 y reglas claras de pedido mínimo, cobertura y reposición.",
       "image": "/img/shell/shell-truck-road.jpg",
       "alt": "Logística",
       "blocks": [
         {
           "h2": "Entregas y cobertura",
-          "support": "Entregas diarias lunes a domingo en Monterrey y área metropolitana. Pedidos a EE. UU. programados bajo calendario y contrato. Flotilla local de ~50 unidades con refrigeración multitemperatura."
+          "support": "Entregas los siete días en Monterrey y área metropolitana. Envíos a EE. UU. bajo calendario y contrato según productos."
         },
         {
-          "h2": "Pedidos y devoluciones",
-          "support": "Pedido mínimo local $2,000 MXN; corte antes de las 00:00 hrs. EE. UU. desde $60,000 USD. Devoluciones al recibir; reportes AM se reponen el mismo día."
+          "h2": "Flotilla",
+          "support": "Flotilla de 50 unidades en rutas locales; casi todas con refrigeración multitemperatura para frescos y congelados."
+        },
+        {
+          "h2": "Corte de pedidos",
+          "support": "Corte operativo: pedidos antes de las 0:00 horas para entrega al día siguiente en Monterrey y zona metropolitana."
+        },
+        {
+          "h2": "Devoluciones",
+          "support": "Devoluciones al recibir: lo reportado en la mañana se repone el mismo día; lo reportado en la tarde, al siguiente."
+        },
+        {
+          "h2": "Pedido mínimo",
+          "support": "Pedido mínimo de 2,000 pesos en rutas locales y de 60,000 dólares en exportación; confírmalo al abrir tu cuenta."
         }
       ]
     },
@@ -1994,8 +2006,8 @@
         }
       ],
       "submit": "Enviar solicitud",
-      "sideH3": "Siguiente paso",
-      "sideSupport": "Completa el formulario. Un asesor de ventas FDV se comunica en 1 o 2 días hábiles para continuar el alta.",
+      "sideH3": "Pedido mínimo",
+      "sideSupport": "Pedido mínimo: 2,000 pesos local y 60,000 dólares exportación. Completa el formulario y un asesor FDV te guía.",
       "thanks": "Gracias. Recibimos tu solicitud; un asesor de Frescos del Valle te contactará en 1 o 2 días hábiles."
     },
     {
@@ -2035,7 +2047,7 @@
       "template": "simple",
       "kicker": "Sedes",
       "h1": "Nuestras sedes",
-      "support": "CEDIS y corporativo en Monterrey; cobertura metropolitana y servicio a EE. UU.",
+      "support": "CEDIS y corporativo en Monterrey; cobertura metropolitana los siete días y servicio a EE. UU. bajo calendario.",
       "image": "/img/shell/shell-city-dusk.jpg",
       "alt": "Sedes Monterrey",
       "blocks": [
@@ -2046,6 +2058,14 @@
         {
           "h2": "Corporativo",
           "support": "C. Capitán Aguilar 350, Col. Deportivo Obispado (María Luisa), C.P. 64040, Monterrey, N.L."
+        },
+        {
+          "h2": "Cómo operamos",
+          "support": "Desde el CEDIS Monterrey operamos entregas los siete días de la semana; a EE. UU. bajo calendario y contrato fijo."
+        },
+        {
+          "h2": "Flotilla",
+          "support": "Flotilla de 50 unidades en rutas locales; casi todas con refrigeración multitemperatura para frescos y congelados."
         }
       ]
     }
